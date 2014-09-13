@@ -143,7 +143,7 @@
                 background-position: -100% 0%;
             }
 
-            #press {
+            .press {
                 position: relative;
                 left: 24px;
                 top: 34px;
@@ -181,6 +181,38 @@
             	border-bottom-color: #f1c40f;
             	border-width: 36px;
             	margin-left: -36px;
+            }
+
+            #notification {
+                width: 100%;
+                text-align: center;
+            }
+            #notification img {
+                width: 90%;
+                max-width: 294px;
+
+            }
+            #notification .arrow_box {
+                -moz-transform:    scale(.81);
+                -o-transform:      scale(.81);
+                -webkit-transform: scale(.81);
+                transform:         scale(.81);
+                width: 311px;
+                height: 58px;
+                position: relative;
+                right: 27px;
+                bottom: 11px;
+            }
+            #notification .arrow_box p {
+
+            }
+
+            .asterisk {
+                position: relative;
+                top: 13px;
+                font-size: 2em;
+                font-weight: 500;
+                margin: 0 4px;
             }
 
             p {
@@ -231,9 +263,24 @@
 
                 #screen-content {
                     display: block;
-                    top: 0;
+                    position: relative;
+                    bottom: 92px;
                     left: 0;
-                    zoom: .7;
+                    -moz-transform:    scale(.7);
+                    -o-transform:      scale(.7);
+                    -webkit-transform: scale(.7);
+                    transform:         scale(.7);
+                    margin: 0 auto;
+                }
+
+                #notification .arrow_box {
+                    -moz-transform:    scale(.7);
+                    -o-transform:      scale(.7);
+                    -webkit-transform: scale(.7);
+                    transform:         scale(.7);
+                    position: relative;
+                    right: 0;
+                    bottom: -3px;
                     margin: 0 auto;
                 }
             }
@@ -271,11 +318,17 @@
                 <div id="screen-content">
                     <div class="yo-row-hold" id="row-hold"></div>
                     <div class="yo-row">SENDING LINK</div>
-                    <div class="yo-row-hold" id="spinner"><img src="http://alex.miller.im/img/spinner.gif"></div>
-                    <div class="arrow_box" id="press">Press and hold YOFEED in the Yo app</div>
+                    <div class="yo-row-hold" id="spinner"><img src="http://www.yofeed.rocks/img/spinner.gif"></div>
+                    <div class="arrow_box press">Press and hold YOFEED in the Yo app</div>
                 </div>
             </div>
             <h2>3. YOFEED will Yo you with the latest link from your RSS feed every time it updates!</h2>
+            <div id="notification">
+                <img src="http://www.yofeed.rocks/img/yofeed-notif.jpg">
+                <div class="arrow_box press">
+                    Just tap any Yo with a <span class="asterisk">*</span> to visit the link
+                </div>
+            </div>
             <br>
             <p>Once you've added at least one feed, send a plain Yo (without link) to YOFEED to manage your subscriptions.</p>
             <br>
