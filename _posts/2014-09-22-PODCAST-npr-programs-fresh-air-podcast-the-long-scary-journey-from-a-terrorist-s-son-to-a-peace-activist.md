@@ -7,5 +7,5 @@ provider_display: NPR Programs: Fresh Air Podcast
 provider_url: http://freshair.npr.org
 source: http://pca.st/P0L2
 provider_name: NPR Programs: Fresh Air Podcast
-published: 2014-09-19T00:00:00
+published: 2014-09-19
 ---
