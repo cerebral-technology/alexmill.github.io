@@ -3,7 +3,8 @@ layout: post
 title: "Python 3 Feedfinder: Detecting Feeds on Websites in Python 3"
 categories: blog
 author: "Alex Miller"
-meta:
+meta: "Hello world 1"
+description: "Hello world 2"
 tags: template
 source: default
 ---
