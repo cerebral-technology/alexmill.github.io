@@ -8,7 +8,7 @@ tags: template
 source: default
 ---
 
-I recently built an RSS feed reader that plugs into [Yo](http://justyo.co) called [YOFEED](http://www.yofeed.rocks). After monitoring my usage logs, I noticed several people tried to submit links of plain websites, rather than specifying a valid RSS feed for me to parse. Rather than losing my potential customers, I decided to write a script to detect RSS feeds given a plain web URL.
+I recently built an RSS feed reader that plugs into [Yo](http://justyo.co) called [YOFEED](http://www.yofeed.rocks). After monitoring my usage logs, I noticed several people tried to submit links of plain websites, rather than specifying a valid RSS feed for me to parse. Instead of losing my potential customers, I decided to write a script to detect RSS feeds given a plain web URL.
 
 ### The Problem: feedfinder.py was not written for Python 3
 
