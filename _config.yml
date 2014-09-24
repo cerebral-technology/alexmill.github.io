@@ -1,6 +1,6 @@
-name: Alex Miller
+name: Alex Miller | Philadelphia, PA
 markdown: redcarpet
 pygments: true
-description: "Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-url: "http://alexpmil.github.io"
+description: "I'm Alex Miller, a Philadelphia-based programmer, mathematician, and student. Click to find out what I've been doing lately and connect with me online."
+url: "http://alex.miller.im"
 permalink: /posts/:title
