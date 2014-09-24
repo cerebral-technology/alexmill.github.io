@@ -3,8 +3,8 @@ layout: post
 title: "Python 3 Feedfinder: Detecting Feeds on Websites in Python 3"
 categories: blog
 author: "Alex Miller"
-meta: "Hello world 1"
-description: "Hello world 2"
+meta:
+description: "Alternative to Aaron Swartz great feedfinder.py script for find RSS/Atom feeds on websites given a plain URL—updated for a Python 3 world."
 tags: template
 source: default
 ---
