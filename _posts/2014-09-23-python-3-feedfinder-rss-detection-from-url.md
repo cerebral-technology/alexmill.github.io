@@ -9,17 +9,18 @@ tags: template
 source: default
 ---
 
-I recently built an RSS feed reader that plugs into [Yo](http://justyo.co) called [YOFEED](http://www.yofeed.rocks). After monitoring my usage logs, I noticed several people tried to submit links of plain websites, rather than specifying a valid RSS feed for me to parse. Instead of losing my potential customers, I decided to write a script to detect RSS feeds given a plain web URL.
+I recently built an RSS feed reader that plugs into [Yo](http://justyo.co) called [YOFEED](http://www.yofeed.rocks). After monitoring my usage logs, I noticed several people tried to submit links of plain websites (rather than specifying a valid RSS feed). Instead of losing my potential customers, I decided to write a script to detect RSS feeds given a plain web URL.
 
 ### The Problem: feedfinder.py was not written for Python 3
 
 It turns out I wasn't the first person to come across this problem. Aaron Swartz (RIP) wrote his own script called [feedfinder.py](http://www.aaronsw.com/2002/feedfinder/) which does this exact same thing. Problem is: this was written for Python 2.
 
-After fighting a losing battle trying to deal with Python's 2to3 conversion tool, I realized I'd already wasted more time trying to port this old script than it would take me to write a new one. So, lo and behold, here it is.
+After fighting a losing battle trying to deal with Python's 2to3 conversion tool, I realized I'd already wasted more time trying to port this old script than it would take me to write a new one.
 
 ### The Solution: Write my own script!
 
-I wanted my script to be pretty thorough, which means
+I wanted my script to be accruate and thorough, which (for me) means:
+
     1. I wouldn't miss any legitimate feeds that were on a website and
     2. I wouldn't include any links that were not valid RSS feeds.
 
@@ -41,14 +42,13 @@ def findfeed(site):
     possible_feeds = []
     html = bs4(raw)
     feed_urls = html.findAll("link", rel="alternate")
-    if len(feed_urls) > 1:
-        for f in feed_urls:
-            t = f.get("type",None)
-            if t:
-                if "rss" in t or "xml" in t:
-                    href = f.get("href",None)
-                    if href:
-                        possible_feeds.append(href)
+    for f in feed_urls:
+        t = f.get("type",None)
+        if t:
+            if "rss" in t or "xml" in t:
+                href = f.get("href",None)
+                if href:
+                    possible_feeds.append(href)
     parsed_url = urllib.parse.urlparse(site)
     base = parsed.scheme+"://"+parsed_url.hostname
     atags = html.findAll("a")
