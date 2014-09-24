@@ -10,24 +10,29 @@ source: default
 
 I recently built an RSS feed reader that plugs into [Yo](http://justyo.co) called [YOFEED](http://www.yofeed.rocks). After monitoring my usage logs, I noticed several people tried to submit links of plain websites, rather than specifying a valid RSS feed for me to parse. Rather than losing my potential customers, I decided to write a script to detect RSS feeds given a plain web URL.
 
-## The Problem: feedfinder.py was not written for Python 3
+### The Problem: feedfinder.py was not written for Python 3
 
 It turns out I wasn't the first person to come across this problem. Aaron Swartz (RIP) wrote his own script called [feedfinder.py](http://www.aaronsw.com/2002/feedfinder/) which does this exact same thing. Problem is: this was written for Python 2.
 
 After fighting a losing battle trying to deal with Python's 2to3 conversion tool, I realized I'd already wasted more time trying to port this old script than it would take me to write a new one. So, lo and behold, here it is.
 
-## The Solution: I wrote my own script!
+### The Solution: Write my own script!
 
-I wanted my script to be pretty thorough, which means (1) I wouldn't miss any legitimate feeds that were on a website and (2) I wouldn't include any links that were not valid RSS feeds. This script does have some dependencies, both of which you are already using if you're doing anything related to web scraping or feed reading: [feedparser](https://pypi.python.org/pypi/feedparser) and [beautifulsoup4](https://pypi.python.org/pypi/beautifulsoup4).
+I wanted my script to be pretty thorough, which means
+    1. I wouldn't miss any legitimate feeds that were on a website and
+    2. I wouldn't include any links that were not valid RSS feeds.
+
+This script does have some non-standard dependencies, both of which you are probably already using if you're doing anything related to web scraping or feed reading: [feedparser](https://pypi.python.org/pypi/feedparser) and [beautifulsoup4](https://pypi.python.org/pypi/beautifulsoup4).
 
 Here's the solution I came up with:
 
 ```python
 #!/usr/local/bin/python3.3
-from bs4 import BeautifulSoup as bs4
+import urllib.parse
 import requests
 import feedparser
-import urllib.parse
+from bs4 import BeautifulSoup as bs4
+
 
 def findfeed(site):
     raw = requests.get(site).text
