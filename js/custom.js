@@ -6,7 +6,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-37920818-1', 'auto');
 ga('send', 'pageview');
 
-try{
+/*try{
 $(document).ready(function(){
     var title = $(".site-title").text();
     var map = { };
@@ -96,4 +96,4 @@ else{
 }
 } catch(err){
     console.log(err);
-}
+}*/
