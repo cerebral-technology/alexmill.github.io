@@ -21,8 +21,8 @@ After fighting a losing battle trying to deal with Python's 2to3 conversion tool
 
 I wanted my script to be accruate and thorough, which (for me) means:
 
-    1. I wouldn't miss any legitimate feeds that were on a website and
-    2. I wouldn't include any links that were not valid RSS feeds.
+1. I wouldn't miss any legitimate feeds that were on a website and
+2. I wouldn't include any links that were not valid RSS feeds.
 
 This script does have some non-standard dependencies, both of which you are probably already using if you're doing anything related to web scraping or feed reading: [feedparser](https://pypi.python.org/pypi/feedparser) and [beautifulsoup4](https://pypi.python.org/pypi/beautifulsoup4).
 
