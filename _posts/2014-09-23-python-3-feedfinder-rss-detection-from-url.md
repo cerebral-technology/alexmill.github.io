@@ -30,6 +30,8 @@ Here's the solution I came up with:
 
 ```python
 #!/usr/local/bin/python3.3
+# python3feedfinder.py / Alex Miller / @alexpmil
+
 import urllib.parse
 import requests
 import feedparser
