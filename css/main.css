@@ -376,7 +376,7 @@ blink {
     padding: 8px 12px;
     border-radius: 3px;
     font-size: 15px;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 .post code { padding: 1px 5px; }
