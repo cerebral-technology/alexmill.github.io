@@ -68,16 +68,6 @@ layout: default
     </ul>
 
 
-    <h1>Tunes I'm Grooving</h1>
-
-    <ul class="posts">
-        {% for post in site.categories.bop limit:1 %}
-        <li class="bop-card">
-            <a data-width="100%" data-bop-link href="{{ post.source }}"></a>
-            <script async src="http://assets.bop.fm/embed.js"></script>
-        </li>
-        {% endfor %}
-    </ul>
 
     <h1>Podcasts I'm Listening To</h1>
 
@@ -98,6 +88,17 @@ layout: default
                 <br>
                 <span class="post-date">{{ post.published | date: "%b %-d, %Y" }}</span>
             </div>
+        </li>
+        {% endfor %}
+    </ul>
+    
+    <h1>Tunes I'm Grooving</h1>
+
+    <ul class="posts">
+        {% for post in site.categories.bop limit:1 %}
+        <li class="bop-card">
+            <a data-width="100%" data-bop-link href="{{ post.source }}"></a>
+            <script async src="http://assets.bop.fm/embed.js"></script>
         </li>
         {% endfor %}
     </ul>
