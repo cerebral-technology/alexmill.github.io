@@ -55,7 +55,7 @@ However, it's not always practical to create custom transitions between two very
 
 This transition isn't as fancy as Google's custom transitions, but it is still a very smooth way to switch between icons. As promised, here is the code for this transition:
 
-## CSS
+### CSS
 ```
 .button {
     background-color: #db4437;
@@ -108,7 +108,7 @@ This transition isn't as fancy as Google's custom transitions, but it is still a
 }
 ```
 
-## HTML
+### HTML
 ```
 <button class="button">
     <img class="icon second-icon" src="/img/pencil.png" />
@@ -116,7 +116,7 @@ This transition isn't as fancy as Google's custom transitions, but it is still a
 </button>
 ```
 
-## Live Example
+### Live Example
 
 <div class="interprev">
 <button class="button">
@@ -125,6 +125,6 @@ This transition isn't as fancy as Google's custom transitions, but it is still a
 </button>
 </div>
 
-## [JSFiddle](http://jsfiddle.net/alexpmil/9Lwtw9vy/1/)
+### [JSFiddle](http://jsfiddle.net/alexpmil/9Lwtw9vy/1/)
 
 
