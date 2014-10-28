@@ -30,8 +30,8 @@ However, it's not always practical to create custom transitions between two very
 
 <div class="slomo">
     <button class="button">
-        <img class="icon second-icon" src="/img/pencil.png" />
-        <img class="icon first-icon" src="/img/plus.png" />
+        <img class="md-icon second-icon" src="/img/pencil.png" />
+        <img class="md-icon first-icon" src="/img/plus.png" />
     </button>
 </div>
 
