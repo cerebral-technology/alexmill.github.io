@@ -30,7 +30,7 @@ However, it's not always practical to create custom transitions between two very
         </button>
     </div>
     <br/>
-    <p>Here's the same animation in slomo:</p>
+    <p style="text-align: left">Here's the same animation in slomo:</p>
     <br/>
     <div class="slomo">
         <button class="button">
@@ -40,6 +40,7 @@ However, it's not always practical to create custom transitions between two very
     </div>
 </div>
 <br/>
+
 <script type="text/javascript">
     setInterval(function(){$('.md-preview .button').addClass('hover')}, 4000);
     setTimeout(function(){
