@@ -21,19 +21,25 @@ Several of Google's best icon transitions have been meticulously designed:
 </div>
 
 However, it's not always practical to create custom transitions between two very different icons. An example of this the transition below, which is using what I would call a "universal" icon transition in Material Design:
-<div class="md-preview">
-    <button class="button" id="auto-icon-transition">
-        <img class="md-icon second-icon" src="/img/pencil.png" />
-        <img class="md-icon first-icon" src="/img/plus.png" />
-    </button>
+<br/>
+<div style="text-align:center;">
+    <div class="md-preview">
+        <button class="button" id="auto-icon-transition">
+            <img class="md-icon second-icon" src="/img/pencil.png" />
+            <img class="md-icon first-icon" src="/img/plus.png" />
+        </button>
+    </div>
+    <br/>
+    <p>Here's the same animation in slomo:</p>
+    <br/>
+    <div class="slomo">
+        <button class="button">
+            <img class="md-icon second-icon" src="/img/pencil.png" />
+            <img class="md-icon first-icon" src="/img/plus.png" />
+        </button>
+    </div>
 </div>
-
-<div class="slomo">
-    <button class="button">
-        <img class="md-icon second-icon" src="/img/pencil.png" />
-        <img class="md-icon first-icon" src="/img/plus.png" />
-    </button>
-</div>
+<br/>
 <script type="text/javascript">
     setInterval(function(){$('.md-preview .button').addClass('hover')}, 4000);
     setTimeout(function(){
@@ -45,5 +51,6 @@ However, it's not always practical to create custom transitions between two very
         setInterval(function(){$('.slomo .button').removeClass('hover')}, 10000);
     }, 5000);
 </script>
+
 
 http://jsfiddle.net/alexpmil/9Lwtw9vy/1/
