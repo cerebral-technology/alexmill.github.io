@@ -21,7 +21,7 @@ Several of Google's best icon transitions have been meticulously designed:
 </div>
 
 However, it's not always practical to create custom transitions between two very different icons. An example of this the transition below (used in GMail's new "Inbox" UI), which is using what I would call a "universal" icon transition in Material Design:
-<br/>
+<br/><br/>
 <div style="text-align:center;">
     <div class="md-preview">
         <button class="button" id="auto-icon-transition">
@@ -39,7 +39,6 @@ However, it's not always practical to create custom transitions between two very
         </button>
     </div>
 </div>
-<br/>
 
 <script type="text/javascript">
     setInterval(function(){$('.md-preview .button').addClass('hover')}, 3000);
