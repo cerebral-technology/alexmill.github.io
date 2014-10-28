@@ -14,5 +14,9 @@
         <!--[if IE]>
             <link rel="stylesheet" href="/css/IEsucks.css" type="text/css" media="screen, projection">
         <![endif]-->
+        {% if page.css %}<style>
+            {{ page.css }}
+        </style>{% endif %}
+        
 
     </head>
