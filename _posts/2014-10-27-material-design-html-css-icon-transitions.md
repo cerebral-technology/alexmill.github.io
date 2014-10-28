@@ -38,7 +38,7 @@ However, it's not always practical to create custom transitions between two very
     setInterval(function(){$('.md-preview .button').addClass('hover')}, 1000);
     setTimeout(function(){
         setInterval(function(){$('.md-preview .button').removeClass('hover')}, 1000);
-    });
+    }, 1000);
 </script>
 
 http://jsfiddle.net/alexpmil/9Lwtw9vy/1/
