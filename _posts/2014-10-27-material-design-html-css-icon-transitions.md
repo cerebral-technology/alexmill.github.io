@@ -14,6 +14,10 @@ Google has done an excellent job documenting and sharing their [Material Design]
 
 Several of Google's best icon transitions have been meticulously designed:
 
+<video id="" crossorigin="anonymous" loop="" width="150" height="150">
+    <source src="http://gfycat.com/OddballScalyGuppy" type="video/webm">
+</video>
+
 However, it's not always practical to create custom transitions between two very different icons. An example of this it the transition below, which is using what I would call a "universal" icon transition in Material Design:
 
 <button class="button" id="auto-icon-transition">
