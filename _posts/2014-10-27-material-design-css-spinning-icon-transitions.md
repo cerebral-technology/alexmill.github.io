@@ -116,13 +116,15 @@ This transition isn't as fancy as Google's custom transitions, but it is still a
 </button>
 ```
 
-## Interactive Example
+## Live Example
 
 <div class="interprev">
 <button class="button">
-    <img class="md-icon second-icon" src="//ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/bt_compose2_1x.png" />
-    <img class="md-icon first-icon" src="//ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/2x/bt_speed_dial_2x.png" />
+    <img class="md-icon second-icon" src="/img/pencil.png" />
+    <img class="md-icon first-icon" src="/img/plus.png" />
 </button>
 </div>
 
-http://jsfiddle.net/alexpmil/9Lwtw9vy/1/
+## [JSFiddle](http://jsfiddle.net/alexpmil/9Lwtw9vy/1/)
+
+
