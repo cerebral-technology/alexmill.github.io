@@ -16,14 +16,16 @@ Several of Google's best icon transitions have been meticulously designed:
 
 <div style="text-align:center;">
     <iframe id="gfy-embed" src="http://gfycat.com/ifr/OddballScalyGuppy" frameborder="0" scrolling="no" width="150" height="150" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
-    _[Source](http://www.google.com/design/spec/animation/delightful-details.html)_
+    <br/>
+    <a href="http://www.google.com/design/spec/animation/delightful-details.html" style="text-decoration: none; font-size: .5em; color: rgba(0,0,0,.5);">source</a>
 </div>
 
-However, it's not always practical to create custom transitions between two very different icons. An example of this it the transition below, which is using what I would call a "universal" icon transition in Material Design:
-
-<button class="button" id="auto-icon-transition">
-    <img class="icon second-icon" src="/img/pencil.png" />
-    <img class="icon first-icon" src="/img/plus.png" />
-</button>
+However, it's not always practical to create custom transitions between two very different icons. An example of this the transition below, which is using what I would call a "universal" icon transition in Material Design:
+<div style="text-align: center;">
+    <button class="button" id="auto-icon-transition">
+        <img class="icon second-icon" src="/img/pencil.png" />
+        <img class="icon first-icon" src="/img/plus.png" />
+    </button>
+</div>
 
 http://jsfiddle.net/alexpmil/9Lwtw9vy/1/
