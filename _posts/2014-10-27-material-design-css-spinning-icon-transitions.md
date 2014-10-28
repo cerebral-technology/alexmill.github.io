@@ -116,7 +116,7 @@ This transition isn't as fancy as Google's custom transitions, but it is still a
 </button>
 ```
 
-### Live Example (on [JSFiddle](http://jsfiddle.net/alexpmil/9Lwtw9vy/1/))
+### Live Example (also on [JSFiddle](http://jsfiddle.net/alexpmil/9Lwtw9vy/1/))
 
 <div class="interprev">
 <button class="button">
