@@ -42,15 +42,15 @@ However, it's not always practical to create custom transitions between two very
 <br/>
 
 <script type="text/javascript">
-    setInterval(function(){$('.md-preview .button').addClass('hover')}, 4000);
+    setInterval(function(){$('.md-preview .button').addClass('hover')}, 3000);
     setTimeout(function(){
-        setInterval(function(){$('.md-preview .button').removeClass('hover')}, 4000);
-    }, 2000);
+        setInterval(function(){$('.md-preview .button').removeClass('hover')}, 3000);
+    }, 1500);
     
-    setInterval(function(){$('.slomo .button').addClass('hover')}, 10000);
+    setInterval(function(){$('.slomo .button').addClass('hover')}, 8000);
     setTimeout(function(){
-        setInterval(function(){$('.slomo .button').removeClass('hover')}, 10000);
-    }, 5000);
+        setInterval(function(){$('.slomo .button').removeClass('hover')}, 8000);
+    }, 4000);
 </script>
 
 
