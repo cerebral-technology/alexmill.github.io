@@ -14,7 +14,10 @@ Google has done an excellent job documenting and sharing their [Material Design]
 
 Several of Google's best icon transitions have been meticulously designed:
 
-<iframe id="gfy-embed" src="http://gfycat.com/ifr/OddballScalyGuppy" frameborder="0" scrolling="no" width="150" height="150" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
+<div style="text-align:center;">
+    <iframe id="gfy-embed" src="http://gfycat.com/ifr/OddballScalyGuppy" frameborder="0" scrolling="no" width="150" height="150" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
+    [_Source_](http://www.google.com/design/spec/animation/delightful-details.html)
+</div>
 
 However, it's not always practical to create custom transitions between two very different icons. An example of this it the transition below, which is using what I would call a "universal" icon transition in Material Design:
 
