@@ -55,7 +55,7 @@ However, it's not always practical to create custom transitions between two very
 
 This transition isn't as fancy as Google's custom transitions, but it is still a very smooth way to switch between icons. As promised, here is the code for this transition:
 
-### CSS
+<!--### CSS
 ```
 .button {
     background-color: #db4437;
@@ -124,8 +124,9 @@ This transition isn't as fancy as Google's custom transitions, but it is still a
     <img class="md-icon first-icon" src="/img/plus.png" />
 </button>
 </div>
+-->
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/alexpmil/9Lwtw9vy/1/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="300" src="http://jsfiddle.net/alexpmil/9Lwtw9vy/1/embedded/html,css,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
 
