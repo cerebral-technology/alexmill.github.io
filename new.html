@@ -81,6 +81,25 @@ layout: homepage
                     </div>
                 </a>
                 {% endif %}
+
+                {% if post.categories contains 'podcasts' %}
+                <a class="link-nocolor" href="{{ post.source }}">
+                    <div class=" article card">
+                        <div class="row">>
+                            <div class="col md s12 m2">
+                                <img src="{{ post.thumbnail }}">
+                            </div>
+                            <div class="col md s12 m10">
+                                <p>{{ post.title }}</p>
+                                <div class="provider">
+                                    <span class="provider-text">{{ post.provider_name }} |&nbsp;</span>
+                                    <span class="post-date">{{ post.published | date: "%b %-d, %Y" }}</span>
+                                </div>
+                            </div>
+                        </div
+                    </div>
+                </a>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
