@@ -2,122 +2,122 @@
 layout: homepage
 ---
 
-<nav class="cyan darken-3" role="navigation">
+<nav class"white" role="navigation">
 <div class="container">
-  <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Logo</a>
-    <ul id="nav-mobile" class="right side-nav">
-      <li><a href="#">Navbar Link</a></li>
-    </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-  </div>
+  <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Alex Miller</a>
+    <ul id="nav-mobile" class="right side-nav">
+      <li><a href="#">CV</a></li>
+    </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+  </div>
 </div>
 </nav>
 
 <div id="index-banner" class="parallax-container">
 <div class="section no-pad-bot">
-  <!--<div class="container">
-    <br><br>
-    <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
-    <div class="row center">
-      <h5 class="header col s12 light">Philadelphia, PA</h5>
-    </div>
-    <div class="row center">
-      <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-    </div>
-    <br><br>
+  <!--<div class="container">
+    <br><br>
+    <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
+    <div class="row center">
+      <h5 class="header col s12 light">Philadelphia, PA</h5>
+    </div>
+    <div class="row center">
+      <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+    </div>
+    <br><br>
 
-  </div>-->
+  </div>-->
 </div>
 <div class="parallax"><img src="/img/top-bg.jpg" alt="Unsplashed background img 2"></div>
 </div>
 
 
 <div class="container">
-    <div class="section">
-        <div class="row">
-            <div class="col s12 m6">
-                <h5>Things I'm writing</h5>
-                {% for post in site.categories.blog limit:3  %}
+    <div class="section">
+        <div class="row">
+            <div class="col s12 m6">
+                <h5>Things I'm writing</h5>
+                {% for post in site.categories.blog limit:6  %}
 
-                {% if post.source == "default" %}
-                <a class="link-nocolor" href="{{ post.url }}">
-                {% else %}
-                <a class="link-nocolor" href="{{ post.source }}">
-                {% endif %}
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="http://placehold.it/500x400">
-                        </div>
-                        <div class="card-content">
-                            <p>{{ post.title }}</p>
-                            <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                        </div>
-                    </div>
-                </a>
-                {% endfor %}
-            </div>
-            <div class="col s12 m6">
-                <h5>Things I find interesting</h5>
-                {% for post in site.posts limit:10  %}
+                {% if post.source == "default" %}
+                <a class="link-nocolor" href="{{ post.url }}">
+                {% else %}
+                <a class="link-nocolor" href="{{ post.source }}">
+                {% endif %}
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="http://placehold.it/500x400">
+                        </div>
+                        <div class="card-content">
+                            <p>{{ post.title }}</p>
+                            <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            <div class="col s12 m6">
+                <h5>Things I find interesting</h5>
+                {% for post in site.posts limit:10  %}
 
-                {% if post.categories contains 'articles' %}
-                <a class="link-nocolor" href="{{ post.source }}">
-                    <div class=" article card small">
-                        <div class="card-image">
-                            <img src="{{ post.thumbnail }}">
-                        </div>
-                        <div class="card-content">
-                            <p>{{ post.title }}</p>
-                            <div class="provider">
-                                <img class="provider-favicon" src="{{ post.favicon_url }}"/>
-                                <span class="provider-text">{{ post.provider_display }} |&nbsp;</span>
-                                <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-    </div>
+                {% if post.categories contains 'articles' %}
+                <a class="link-nocolor" href="{{ post.source }}">
+                    <div class=" article card small">
+                        <div class="card-image">
+                            <img src="{{ post.thumbnail }}">
+                        </div>
+                        <div class="card-content">
+                            <p>{{ post.title }}</p>
+                            <div class="provider">
+                                <img class="provider-favicon" src="{{ post.favicon_url }}"/>
+                                <span class="provider-text">{{ post.provider_display }} |&nbsp;</span>
+                                <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </div>
 
 
-<footer class="page-footer teal">
+<--<footer class="page-footer teal">
 <div class="container">
-  <div class="row">
-    <div class="col l6 s12">
-      <h5 class="white-text">Company Bio</h5>
-      <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+  <div class="row">
+    <div class="col l6 s12">
+      <h5 class="white-text">Company Bio</h5>
+      <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
 
 
-    </div>
-    <div class="col l3 s12">
-      <h5 class="white-text">Settings</h5>
-      <ul>
-        <li><a class="white-text" href="#!">Link 1</a></li>
-        <li><a class="white-text" href="#!">Link 2</a></li>
-        <li><a class="white-text" href="#!">Link 3</a></li>
-        <li><a class="white-text" href="#!">Link 4</a></li>
-      </ul>
-    </div>
-    <div class="col l3 s12">
-      <h5 class="white-text">Connect</h5>
-      <ul>
-        <li><a class="white-text" href="#!">Link 1</a></li>
-        <li><a class="white-text" href="#!">Link 2</a></li>
-        <li><a class="white-text" href="#!">Link 3</a></li>
-        <li><a class="white-text" href="#!">Link 4</a></li>
-      </ul>
-    </div>
-  </div>
+    </div>
+    <div class="col l3 s12">
+      <h5 class="white-text">Settings</h5>
+      <ul>
+        <li><a class="white-text" href="#!">Link 1</a></li>
+        <li><a class="white-text" href="#!">Link 2</a></li>
+        <li><a class="white-text" href="#!">Link 3</a></li>
+        <li><a class="white-text" href="#!">Link 4</a></li>
+      </ul>
+    </div>
+    <div class="col l3 s12">
+      <h5 class="white-text">Connect</h5>
+      <ul>
+        <li><a class="white-text" href="#!">Link 1</a></li>
+        <li><a class="white-text" href="#!">Link 2</a></li>
+        <li><a class="white-text" href="#!">Link 3</a></li>
+        <li><a class="white-text" href="#!">Link 4</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 <div class="footer-copyright">
-  <div class="container">
-  Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-  </div>
+  <div class="container">
+  Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+  </div>
 </div>
-</footer>
+</footer>-->
 
 </div>
 
@@ -125,11 +125,11 @@ layout: homepage
 <script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
 <script>
 (function($){
-  $(function(){
+  $(function(){
 
-    $('.button-collapse').sideNav();
-    $('.parallax').parallax();
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
 
-  });
+  });
 })(jQuery);
 </script>
