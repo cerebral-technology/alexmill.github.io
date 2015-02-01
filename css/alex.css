@@ -38,6 +38,10 @@ p {
     height: auto;
 }
 
+.article.card.small .card-image {
+    height: auto;
+}
+
 .article.card.small .card-content {
     height: auto;
     display: inline-block;
