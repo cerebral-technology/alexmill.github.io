@@ -5,6 +5,8 @@ categories: blog
 author: "Alex Miller"
 meta:
 tags: template
+thumbnail: custom_style
+custom_style: 'height: 300px; display: inline-block; background-color: #8dffad;'
 source: http://alex.miller.im/yo/
 ---
 
