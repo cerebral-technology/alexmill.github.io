@@ -4,6 +4,7 @@ title: "Material Design CSS Animations: Spinning Icon Transitions"
 categories: blog
 author: "Alex Miller"
 meta:
+thumbnail: /img/mdIconsThumbnail.jpg
 description: "Pure HTML5/CSS3 example of Google's fancy material design spinning icon effect. No Javascript required!"
 tags: template
 source: default
@@ -45,7 +46,7 @@ However, it's not always practical to create custom transitions between two very
     setTimeout(function(){
         setInterval(function(){$('.md-preview .button').removeClass('hover')}, 3000);
     }, 1500);
-    
+
     setInterval(function(){$('.slomo .button').addClass('hover')}, 8000);
     setTimeout(function(){
         setInterval(function(){$('.slomo .button').removeClass('hover')}, 8000);
