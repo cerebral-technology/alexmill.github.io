@@ -2,7 +2,7 @@
 layout: homepage
 ---
 
-<nav class="white" role="navigation">
+<nav class="amber" role="navigation">
 <div class="container">
   <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Logo</a>
     <ul id="nav-mobile" class="right side-nav">
@@ -41,7 +41,7 @@ layout: homepage
                 {% if post.source == "default" %}
                 <a class="link-nocolor" href="{{ post.url }}">
                 {% else %}
-                <a href="{{ post.source }}">
+                <a "link-nocolor" href="{{ post.source }}">
                 {% endif %}
                     <div class="card">
                         <div class="card-image">
@@ -59,7 +59,7 @@ layout: homepage
                 <h5>Things I find interesting</h5>
                 {% for post in site.categories limit:10  %}
 
-                {% if post.categories contains "articles" %}
+                {% if post.categories contains 'articles' %}
                 <a class="link-nocolor" href="{{ post.source }}">
                     <div class="card small">
                         <div class="card-image">
