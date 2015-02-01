@@ -44,7 +44,7 @@ layout: homepage
                 <a class="link-nocolor" href="{{ post.source }}">
                 {% endif %}
                     <div class="card">
-                        {% if post.thumbnail != "default" and post.thumbnail != "custom_style"  %}
+                        {% if post.thumbnail and post.thumbnail != "custom_style"  %}
                         <div class="card-image">
                             <img src="{{ post.thumbnail }}">
                         </div>
