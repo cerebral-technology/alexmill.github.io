@@ -2,7 +2,7 @@
 layout: homepage
 ---
 
-<nav class"white" role="navigation">
+<nav class="white" role="navigation">
 <div class="container">
   <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Alex Miller</a>
     <ul id="nav-mobile" class="right side-nav">
@@ -44,9 +44,14 @@ layout: homepage
                 <a class="link-nocolor" href="{{ post.source }}">
                 {% endif %}
                     <div class="card">
+                        {% if post.thumbnail != "default" and post.thumbnail != "custom_style"  %}
                         <div class="card-image">
-                            <img src="http://placehold.it/500x400">
+                            <img src="{{ post.thumbnail }}">
                         </div>
+                        {% else if post.source == "default" %}
+                        <div class="card-image" style="{{ post.custom_style }}"></div>
+                        {% else %}
+                        {% endif %}
                         <div class="card-content">
                             <p>{{ post.title }}</p>
                             <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
