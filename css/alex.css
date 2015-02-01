@@ -7,6 +7,14 @@ p {
   line-height: 2rem;
 }
 
+.link-nocolor {
+    color: inherit;
+}
+
+.link-nocolor:hover {
+    color: inherit;
+}
+
 .button-collapse {
   color: #26a69a;
 }
