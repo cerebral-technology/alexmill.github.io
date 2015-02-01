@@ -6,7 +6,7 @@ author: "Alex Miller"
 meta:
 tags: template
 thumbnail: custom_style
-custom_style: 'height: 300px; display: inline-block; background-color: #8dffad;'
+custom_style: 'height: 300px; display: inline-block; background-color: #8dffad; background-size: 100% 100%;'
 source: http://alex.miller.im/yo/
 ---
 
