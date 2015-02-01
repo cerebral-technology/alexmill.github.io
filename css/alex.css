@@ -30,11 +30,24 @@ p {
     width: 100%;
 }
 
+.article .card.small {
+    height: auto;
+}
+
+.article.card.small {
+    height: auto;
+}
+
+.article.card.small .card-content {
+    height: auto;
+    display: inline-block;
+}
+
 
 .provider {
     display: block;
     font-size: 15px;
-    color: #818181;
+    color: rgba(0,0,0,.5);
     margin-top: 5px;
 }
 
@@ -48,7 +61,7 @@ p {
 
 .provider-text {
     float: left;
-    color: #000;
+    color: rgba(0,0,0,.5);
 }
 
 .provider-text:hover {
