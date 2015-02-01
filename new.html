@@ -57,7 +57,7 @@ layout: homepage
             </div>
             <div class="col s12 m6">
                 <h5>Things I find interesting</h5>
-                {% for post in site limit:10  %}
+                {% for post in site.posts limit:10  %}
 
                 {% if post.categories contains 'articles' %}
                 <a class="link-nocolor" href="{{ post.source }}">
