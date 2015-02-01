@@ -59,7 +59,7 @@ layout: homepage
                 <h5>Things I find interesting</h5>
                 {% for post in site.categories limit:10  %}
 
-                {% if post.categories contains "article" %}
+                {% if post.categories contains "articles" %}
                 <a class="link-nocolor" href="{{ post.source }}">
                     <div class="card small">
                         <div class="card-image">
