@@ -41,7 +41,7 @@ layout: homepage
                 {% if post.source == "default" %}
                 <a class="link-nocolor" href="{{ post.url }}">
                 {% else %}
-                <a "link-nocolor" href="{{ post.source }}">
+                <a class="link-nocolor" href="{{ post.source }}">
                 {% endif %}
                     <div class="card">
                         <div class="card-image">
@@ -57,7 +57,7 @@ layout: homepage
             </div>
             <div class="col s12 m6">
                 <h5>Things I find interesting</h5>
-                {% for post in site.categories limit:10  %}
+                {% for post in site limit:10  %}
 
                 {% if post.categories contains 'articles' %}
                 <a class="link-nocolor" href="{{ post.source }}">
