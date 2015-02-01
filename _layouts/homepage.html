@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+    <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrap">
+      {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    <script>
+        (function($){
+          $(function(){
+
+            $('.button-collapse').sideNav();
+            $('.parallax').parallax();
+
+          });
+        })(jQuery);
+    </script>
+    </body>
+</html>
