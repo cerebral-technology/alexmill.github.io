@@ -149,6 +149,7 @@ a.button-collapse:hover {
 .insta-card img {
     width: 100%;
     height: auto;
+    margin-bottom: -6px;
 }
 
 .insta-card .insta-text {
