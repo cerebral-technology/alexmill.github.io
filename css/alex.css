@@ -26,10 +26,6 @@ p {
     margin-left: 15px;
 }
 
-nav a:visited {
-    color: inherit;
-}
-
 .nav-text:hover {
     text-decoration: none;
 }
