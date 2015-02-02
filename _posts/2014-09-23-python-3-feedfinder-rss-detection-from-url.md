@@ -6,6 +6,7 @@ author: "Alex Miller"
 meta:
 description: "Alternative to Aaron Swartz great feedfinder.py script for finding RSS/Atom feeds on websites given a plain URL—updated for a Python 3 world."
 tags: template
+thumbnail: /img/feedfinder-thumb.png
 source: default
 ---
 

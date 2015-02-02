@@ -5,7 +5,7 @@ categories: blog
 author: "Alex Miller"
 meta:
 tags: template
-thumbnail: custom_style
+thumbnail: /img/yofeed-thumb.png
 custom_style: 'height: 200px; width: 100%; display: inline-block; background-color: #8d44ad; background-size: 100% 100%;'
 source: http://alex.miller.im/yo/
 ---
