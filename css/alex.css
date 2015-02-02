@@ -171,7 +171,7 @@ footer.page-footer {
 @media only screen and (max-width : 992px) {
 
     .nav-icon .nav-icon-text {
-        display: block;
+        display: inline-block;
     }
 
     .parallax-container {
