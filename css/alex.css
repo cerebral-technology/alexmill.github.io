@@ -39,6 +39,11 @@ p {
     bottom: 3px;
 }
 
+.nav-icon .nav-icon-text {
+    margin-left: 10px;
+    display: none;
+}
+
 i#cv-icon {
     font-size: 20px;
     position: relative;
@@ -160,18 +165,24 @@ footer.page-footer {
 
 
 @media only screen and (max-width : 992px) {
+
+    .nav-icon .nav-icon-text {
+        display: block;
+    }
+
     .parallax-container {
       min-height: 0;
       max-height: 380px;
     }
 
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
+    .parallax-container .section {
+        position: absolute;
+        top: 40%;
+    }
+
+    #index-banner .section {
+        top: 10%;
+    }
 }
 
 @media only screen and (min-width: 1025px) {
