@@ -26,6 +26,18 @@ p {
     margin-left: 15px;
 }
 
+a#logo:visited {
+    color: inherit;
+}
+
+.nav-text:hover {
+    text-decoration: none;
+}
+
+.nav-text:visted {
+    color: inherit;
+}
+
 .button-collapse {
   color: #26a69a;
 }
@@ -39,6 +51,7 @@ a.button-collapse:hover {
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
+  width: 100%;
 }
 
 .parallax-container .section {
