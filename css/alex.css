@@ -48,7 +48,16 @@ div.drag-target {
     display: none !important;
 }
 
-i#cv-icon {
+#cv-link {
+    max-height: 64px;
+}
+
+#cv-link span {
+    position: relative;
+    bottom: 3px;
+}
+
+#cv-link i{
     font-size: 20px;
     position: relative;
     top: 1px;
