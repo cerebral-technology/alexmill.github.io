@@ -26,7 +26,7 @@ p {
     margin-left: 15px;
 }
 
-a#logo:visited {
+nav a:visited {
     color: inherit;
 }
 
@@ -188,8 +188,7 @@ footer.page-footer {
 
 @media only screen and (min-width : 1200px) {
     .parallax-container {
-      min-height: 400px;
-      max-height: 700px;
+      min-height: 520px;
     }
 
 }
