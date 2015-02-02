@@ -43,7 +43,7 @@ a#logo:visited {
     bottom: 3px;
 }
 
-.nav-text i {
+i#cv-icon {
     font-size: 20px;
     position: relative;
     top: 1px;
