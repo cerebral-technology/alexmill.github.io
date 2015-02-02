@@ -7,10 +7,11 @@ p {
   line-height: 2rem;
 }
 
-.full-contianer {
+.full-container {
     width: 100%;
     max-width: 1200px;
-    padding: 0 2.5rem;
+    padding: 0 .5rem;
+    margin: 0 auto;
 }
 
 .link-nocolor {
@@ -129,6 +130,13 @@ a.button-collapse:hover {
     font-size: .8em;
 }
 
+.icon-block {
+  padding: 0 15px;
+}
+
+footer.page-footer {
+  margin: 0;
+}
 
 
 @media only screen and (max-width : 992px) {
@@ -147,10 +155,11 @@ a.button-collapse:hover {
 }
 
 
-.icon-block {
-  padding: 0 15px;
+@media only screen and (min-width : 1200px) {
+    .parallax-container {
+      min-height: 400px;
+      max-height: 700px;
+    }
+
 }
 
-footer.page-footer {
-  margin: 0;
-}
