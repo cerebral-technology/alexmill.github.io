@@ -9,7 +9,7 @@ p {
 
 .full-contianer {
     width: 100%;
-    padding: 0 1.5rem;
+    padding: 0 2.5rem;
 }
 
 .link-nocolor {
@@ -105,7 +105,7 @@ a.button-collapse:hover {
     bottom: 1rem;
     width: 100%;
     height: auto;
-    padding: 0 0 5px 5px;
+    padding-left: 10px;
     display: none;
 }
 
@@ -113,8 +113,8 @@ a.button-collapse:hover {
     display: inline-block;
 }
 
-.insta-card .caption, .insta-card .post-date {
-
+.insta-card .post-date {
+    font-size: .8em;
 }
 
 
