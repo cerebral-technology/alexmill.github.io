@@ -91,6 +91,7 @@ a.button-collapse:hover {
     width: 100%;
     height: auto;
     display: inline-block;
+    color: #fff;
     text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
 }
 
@@ -102,6 +103,13 @@ a.button-collapse:hover {
 .insta-card .insta-text {
     position: absolute;
     bottom: 1rem;
+    width: 100%;
+    height: auto;
+    padding: 0 0 5px 5px;
+    display: none;
+}
+
+.insta-card:hover .insta-text {
     display: inline-block;
 }
 
