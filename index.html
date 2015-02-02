@@ -21,10 +21,10 @@ layout: homepage
 </div>
 
 
-<div class="container">
+<div class="full-container">
     <div class="section">
         <div class="row">
-            <div class="col s12 m6">
+            <div class="col s12 m4">
                 <h5>Things I'm writing</h5>
                 {% for post in site.categories.blog limit:6  %}
 
@@ -50,7 +50,7 @@ layout: homepage
                 </a>
                 {% endfor %}
             </div>
-            <div class="col s12 m6">
+            <div class="col s12 m4">
                 <h5>Things I find interesting</h5>
                 {% for post in site.posts limit:10  %}
 
@@ -92,6 +92,20 @@ layout: homepage
                 </a>
                 {% endif %}
                 -->
+                {% endfor %}
+            </div>
+            <div class="col s12 m4">
+                <h5>Photos I'm taking</h5>
+                {% for post in site.categories.photos limit:6  %}
+                <a class="link-nocolor" href="{{ post.source }}">
+                    <div class="insta-card">
+                        <img src="{{ post.thumbnail }}">
+                        <div class="insta-text">
+                            <p class="caption">{{ post.title }}</p>
+                            <p class="post-date">{{ post.date | date: "%b %-d, %Y" }}</p>
+                        </div>
+                    </div>
+                </a>
                 {% endfor %}
             </div>
         </div>

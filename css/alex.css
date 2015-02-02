@@ -7,6 +7,11 @@ p {
   line-height: 2rem;
 }
 
+.full-contianer {
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
 .link-nocolor {
     color: inherit;
 }
@@ -78,6 +83,25 @@ a.button-collapse:hover {
 
 .provider-text:hover {
     text-decoration: underline;
+}
+
+.insta-card {
+    border-radius: 2px;
+    position: relative;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
+}
+
+.insta-card .insta-text {
+    position: absolute;
+    bottom: 1rem;
+    display: inline-block;
+}
+
+.insta-card .caption, .insta-card .post-date {
+
 }
 
 
