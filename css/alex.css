@@ -44,6 +44,10 @@ p {
     display: none;
 }
 
+div.drag-target {
+    display: none !important;
+}
+
 i#cv-icon {
     font-size: 20px;
     position: relative;
@@ -186,9 +190,6 @@ footer.page-footer {
 }
 
 @media only screen and (min-width: 1025px) {
-    div.drag-target {
-        display: none !important;
-    }
 
 }
 
