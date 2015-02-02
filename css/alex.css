@@ -38,6 +38,17 @@ a#logo:visited {
     color: inherit;
 }
 
+.nav-text span {
+    position: relative;
+    bottom: 3px;
+}
+
+.nav-text i {
+    font-size: 20px;
+    position: relative;
+    top: 1px;
+}
+
 .button-collapse {
   color: #26a69a;
 }
