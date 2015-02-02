@@ -88,10 +88,15 @@ a.button-collapse:hover {
 .insta-card {
     border-radius: 2px;
     position: relative;
-    width: auto;
+    width: 100%;
     height: auto;
     display: inline-block;
     text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
+}
+
+.insta-card img {
+    width: 100%;
+    height: auto;
 }
 
 .insta-card .insta-text {
