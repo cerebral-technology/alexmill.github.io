@@ -131,6 +131,7 @@ a.button-collapse:hover {
 @media only screen and (max-width : 992px) {
     .parallax-container {
       min-height: 0;
+      max-height: 380px;
     }
 
   .parallax-container .section {
