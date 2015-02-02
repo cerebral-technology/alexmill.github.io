@@ -26,7 +26,7 @@ p {
     margin: 0 1.5em;
 }
 
-.nav-text:hover {
+.no-underline:hover {
     text-decoration: none;
 }
 
