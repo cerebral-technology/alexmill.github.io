@@ -102,6 +102,8 @@ a.button-collapse:hover {
     display: inline-block;
     color: #fff;
     text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    margin: 0.5rem 0 1rem 0;
 }
 
 .insta-card img {

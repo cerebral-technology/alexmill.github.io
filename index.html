@@ -52,7 +52,7 @@ layout: homepage
             </div>
             <div class="col s12 m4">
                 <h5>Things I find interesting</h5>
-                {% for post in site.posts limit:10  %}
+                {% for post in site.posts limit:8  %}
 
                 {% if post.categories contains 'articles' %}
                 <a class="link-nocolor" href="{{ post.source }}">
@@ -96,7 +96,7 @@ layout: homepage
             </div>
             <div class="col s12 m4">
                 <h5>Photos I'm taking</h5>
-                {% for post in site.categories.photos limit:6  %}
+                {% for post in site.categories.photos limit:4  %}
                 <a class="link-nocolor" href="{{ post.source }}">
                     <div class="insta-card">
                         <img src="{{ post.thumbnail }}">
