@@ -178,6 +178,13 @@ footer.page-footer {
   }
 }
 
+@media only screen and (min-width: 1025px) {
+    div.drag-target {
+        display: none !important;
+    }
+
+}
+
 
 @media only screen and (min-width : 1200px) {
     .parallax-container {
