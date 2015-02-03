@@ -29,9 +29,9 @@ layout: homepage
                 {% for post in site.categories.blog limit:6  %}
 
                 {% if post.source == "default" %}
-                <a class="link-nocolor" href="{{ post.url }}">
+                <a class="link-nocolor no-underline" href="{{ post.url }}">
                 {% else %}
-                <a class="link-nocolor" href="{{ post.source }}">
+                <a class="link-nocolor no-underline" href="{{ post.source }}">
                 {% endif %}
                     <div class="card">
                         {% if post.thumbnail and post.thumbnail != "custom_style"  %}
@@ -64,8 +64,8 @@ layout: homepage
                             <p>{{ post.title }}</p>
                             <div class="provider">
                                 <img class="provider-favicon" src="{{ post.favicon_url }}"/>
-                                <span class="provider-text">{{ post.provider_display }} |&nbsp;</span>
-                                <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                                <span class="provider-text">{{ post.provider_display }}</span>
+                                <span class="post-date">&nbsp;|&nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
                             </div>
                         </div>
                     </div>
