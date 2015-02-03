@@ -1528,14 +1528,17 @@ pdf2htmlEX.defaultViewer = new pdf2htmlEX.Viewer({});
 </script>
 <style>
     #download {position: fixed; bottom: 30px; right: 30px;}
-    #downlaod span {font-size: 30px; font-family: sans-serif; float: left;}
-    #download img {float: left; margin-left: 15px;}
+    #downlaod .dl-text {font-size: 30px; font-family: sans-serif;}
+    #download img {position: relative; top: 11px; height: 50px;}
+    #download a:hover {text-decoration: none;}
 </style>
 </head>
 <body>
 <div id="download">
-    <span>PDF</span>
+    <a href="http://alex.miller.im/files/Godwins-Law-Statistical-Analysis-Alex-Miller.pdf">
+    <span class="dl-text">PDF</span>
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAA1VBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8O23QDAAAARXRSTlMAAQIDBQYHCAkKCw0QERQaICIoKSorLE1cXV5naIOEh4iOj5CUlZiZoqOkpaanra6vs7S1tsPJys7P0NHS1OPk7O37/P3LgJRIAAAB1ElEQVR42u3XaU/CQBSF4RkHKopFRBH3DcVdFNx3xfv//5I0E3JjbhqG2Osk5rwfSCgk54ECKQb9rtlWazbmfvpAdD8XEbBBw9YjAnYzwC4AAAAAAAAAAAAAAAAAAAAAAAAAAACm2GyaVyUUUEnzsgGAGuX1eVMPAdRvPimv2kQA2W0I4I5IDTAojweUB4qAh5B34FEP8LIYAlh6KQIwn8qqod+CaiqbnxAwU/TvwAwAAAAAAAAAAAAAAL8HNNaaYYDltYYGYPWLaDMEsEX0taIAeMsO79lxALuXHXstHjD1QVnb4wA7lPVuCweYA/ICCZD7tK9wCtwRkT8L+QDb9s85cgoA445ZIABiXwEgBAwQ+woAIRAA2/GPHjujBGBB2wqA2FcACAEDxL4WwLgTFjBA7CsApIABvH/ijBpAChgg9jUBxp36tY4dAcS+EkAKPMAe+vunzugCpMADeF8bwIIzv/mU3TzzvjZACrgz97fXhMkV/eiq/NcXpe5cvH5VgCzp8X4viXFZXuqO9s9dnP8FSZ9ffxSAKV3SsG4p3j+j6WuifmIiAPhzcFEyMQEmSUwcAAcAAAAAAAAAAAAAAAAAAADAfwU0FwquOQFAJwAAyAF8AzSycTQ3dTjbAAAAAElFTkSuQmCC" />
+    </a>
 </div>
 <div id="sidebar">
 <div id="outline">
