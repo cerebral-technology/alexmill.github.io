@@ -152,6 +152,14 @@ a.button-collapse:hover {
     margin-bottom: -6px;
 }
 
+.insta-card .landscape img {
+    margin: -22% 0;
+}
+
+.insta-card .portrait img {
+    margin: -22% 0;
+}
+
 .insta-card .insta-text {
     position: absolute;
     bottom: 1rem;
