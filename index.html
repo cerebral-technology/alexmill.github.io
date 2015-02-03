@@ -98,8 +98,8 @@ layout: homepage
                 <h5>Photos I'm taking</h5>
                 {% for post in site.categories.photos limit:4  %}
                 <a class="link-nocolor" href="{{ post.source }}">
-                    <div class="insta-card {% if post.orientation %} {{post.orientation}} {% endif %}">
-                        <img src="{{ post.thumbnail }}">
+                    <div class="insta-card">
+                        <img src="{{ post.thumbnail }}" {% if post.orientation %}class="{{post.orientation}}"{% endif %}>
                         <div class="insta-text">
                             <p class="caption">{{ post.title }}</p>
                             <p class="post-date">{{ post.date | date: "%b %-d, %Y" }}</p>
