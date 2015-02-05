@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "On Godwin’s Law: A Statistical Analysis on theDistribution of Nazi Analogies in Online Discussion"
+title: "On Godwin’s Law: A Statistical Analysis on the Distribution of Nazi Analogies in Online Discussion"
 categories: blog
 author: "Alex Miller"
 meta:
