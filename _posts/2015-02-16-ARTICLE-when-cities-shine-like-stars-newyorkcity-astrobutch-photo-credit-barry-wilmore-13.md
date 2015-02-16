@@ -1,5 +1,5 @@
 ---
-categories: all_articles
+categories: all_articles, articles
 provider_display: "instagram.com"
 provider_name: "instagram.com"
 favicon_url: http://instagramstatic-a.akamaihd.net/bluebar/c4b4b0a/images/ico/favicon.ico
