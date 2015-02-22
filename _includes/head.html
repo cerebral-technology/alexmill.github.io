@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/alex.css">
 
+        {% if page.head %} {{ page.head }} {% endif %}
+
         {% if page.css %}<style>
             {{ page.css }}
         </style>{% endif %}
