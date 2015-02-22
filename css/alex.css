@@ -84,8 +84,14 @@ a.button-collapse:hover {
     height: 100%;
 }
 
+.parallax-container .title-container .container {
+    position: absolute;
+    bottom: 40px;
+}
+
 .hero-image-title {
     font-size: 2em;
+    line-height: 1.35em;
     text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
 }
 
