@@ -81,6 +81,12 @@ a.button-collapse:hover {
 
 .parallax-container .section {
     width: 100%;
+    height: 100%;
+}
+
+.hero-image-title {
+    font-size: 2em;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
 }
 
 .article .card.small {
