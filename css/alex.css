@@ -85,8 +85,7 @@ a.button-collapse:hover {
 }
 
 .parallax-container .title-container .wrap {
-    position: absolute;
-    bottom: 0;
+    top: 37%;
 }
 
 .hero-image-title {
