@@ -5,8 +5,11 @@
         {% include header.html %}
         {% if page.hero_image %}
         <div id="index-banner" class="parallax-container">
-            <div class="section no-pad-bot">
-                <h1 class="hero-image-title">{{ page.title }}</h1>
+            <div class="section title-container no-pad-bot">
+                <div class="wrap">
+                    <h1 class="hero-image-title">{{ page.title }}</h1>
+                    <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}</p>
+                </div>
             </div>
             <div class="parallax"><img src="{{ page.hero_image }} "></div>
         </div>
