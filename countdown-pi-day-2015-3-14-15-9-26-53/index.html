@@ -115,7 +115,7 @@ var sec_interval = setInterval(function() {
 
 var ms_interval = setInterval(function() {
      var timespan = countdown(deadline, null, countdown.HOURS|countdown.MINUTES|countdown.SECONDS|countdown.MILLISECONDS );
-     if(deadline < new Date.now){
+     if(deadline < new Date){
          clearInterval(sec_interval);
          clearInterval(ms_interval);
          $("#hrs").text("0");
