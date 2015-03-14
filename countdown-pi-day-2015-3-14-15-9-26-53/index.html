@@ -14,6 +14,10 @@
     #cd { margin-top: 45px; font-size: 50px;}
     #secs {width: 50px}
     #ms {width: 110px}
+
+    #ampm-switch .switch label input[type=checkbox]:first-child:checked+.lever:after {
+        background-color: #818181;
+    }
 </style>
 </head>
 <body>
@@ -26,12 +30,12 @@
             <span id="hrs"></span> hours, <span id="mins"></span> minutes, <span id="secs"></span> seconds, and <span id="ms"></span> milliseconds
         </div>
         <h2>Until 3/14/15 9:26:53.5897</h2>
-        <div style="margin: 0 auto; width: 114px; display: inline-block;">
+        <div id="ampm-switch" style="margin: 0 auto; width: 114px; display: inline-block;">
             <div class="switch" style="text-align: left;">
                 <label style="font-size: 15px; color: #000;">
                   AM
                   <input id="ampm" type="checkbox">
-                  <span class="lever" style="background-color: rgba(0,0,0,.5);"></span>
+                  <span class="lever" style="background-color: rgba(0,0,0,.5); position: relative; left: 4px; bottom: 2px;"></span>
                   PM
                 </label>
             </div>
