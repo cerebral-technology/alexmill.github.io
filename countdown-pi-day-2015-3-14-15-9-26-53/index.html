@@ -69,6 +69,14 @@ var am = new Date(2015, 2, 14, 9, 26, 53, 5897)
 var pm = new Date(2015, 2, 14, 21, 26, 53, 5897)
 var amORpm = countdown(new Date(2015, 2, 14, 9, 26, 53, 5897), null, countdown.HOURS|countdown.MINUTES|countdown.SECONDS|countdown.MILLISECONDS )
 
+
+$("#ampm").change(function(){
+    if($(this).is(':checked')){
+        console.log("PM")
+    }
+    else{ console.log("AM")}
+});
+
 var deadline = am;
 if(amORpm.hours<1 && amORpm.minutes<1 && amORpm.seconds<1 )
 { deadline = pm;}
