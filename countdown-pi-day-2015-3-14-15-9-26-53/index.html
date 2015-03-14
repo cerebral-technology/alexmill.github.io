@@ -67,8 +67,8 @@ r=" and ";t=", ";u="";v=function(a){return a}})();y&&y.exports?y.exports=e:"func
 
 var am = new Date(2015, 2, 14, 9, 26, 53, 5897)
 
-//var am = new Date();
-//am.setSeconds(am.getSeconds() + 6);
+var am = new Date();
+am.setSeconds(am.getSeconds() + 6);
 
 
 var pm = new Date(2015, 2, 14, 21, 26, 53, 5897)
@@ -113,10 +113,11 @@ var sec_interval = setInterval(function() {
      $("#secs").text(('0' + String(timespan.seconds)).substr(-2));
 }, 1000);
 
-setInterval(function() {
+var ms_interval = setInterval(function() {
      var timespan = countdown(deadline, null, countdown.HOURS|countdown.MINUTES|countdown.SECONDS|countdown.MILLISECONDS );
-     if(timespan.milliseconds < 0){
+     if(deadline < new Date.now){
          clearInterval(sec_interval);
+         clearInterval(ms_interval);
          $("#hrs").text("0");
          $("#mins").text("0");
          $("#secs").text("00");
