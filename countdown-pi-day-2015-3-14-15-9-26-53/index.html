@@ -71,15 +71,13 @@ var amORpm = countdown(new Date(2015, 2, 14, 9, 26, 53, 5897), null, countdown.H
 
 
 $("#ampm").change(function(){
-    if($(this).is(':checked')){
-        console.log("PM")
+    if($(this).is(':checked') || (amORpm.hours<1 && amORpm.minutes<1 && amORpm.seconds<1) ){
+        deadline = pm;
     }
-    else{ console.log("AM")}
+    else{
+        deadline = am;
+    }
 });
-
-var deadline = am;
-if(amORpm.hours<1 && amORpm.minutes<1 && amORpm.seconds<1 )
-{ deadline = pm;}
 
 var timespan = countdown(deadline, null, countdown.HOURS|countdown.MINUTES|countdown.SECONDS|countdown.MILLISECONDS );
 $("#hrs").text(timespan.hours);
