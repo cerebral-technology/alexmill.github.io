@@ -4,6 +4,22 @@
 <title>Countdown to Pi Day 2015 | 3/14/15 9:26:53 | Online</title>
 <meta name="description" content="A countdown to the Pi Day of the Century, 3/14/15 9:26:53 (both AM & PM). Happy Pi Day to all!">
 <link rel="stylesheet" href="/materialize/css/materialize.min.css" type="text/css" media="screen,projection" />
+
+<meta property="og:title" content="Countdown to Super Pi Day: 3/14/15 9:26:53" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://alex.miller.im/countdown-pi-day-2015-3-14-15-9-26-53/" />
+<meta property="og:image" content="http://alex.miller.im/countdown-pi-day-2015-3-14-15-9-26-53/pi-day-share.jpg" />
+<meta property="og:description" content="A countdown to the Pi Day of the Century, 3/14/15 9:26:53 (both AM & PM). Happy Pi Day to all!" />
+<meta property="og:site_name" content="Alex Miller" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="http://alex.miller.im/countdown-pi-day-2015-3-14-15-9-26-53/">
+<meta name="twitter:title" content="Countdown to Super Pi Day: 3/14/15 9:26:53">
+<meta name="twitter:description" content="A countdown to the Pi Day of the Century, 3/14/15 9:26:53 (both AM & PM). Happy Pi Day to all!">
+<meta name="twitter:image" content="http://alex.miller.im/countdown-pi-day-2015-3-14-15-9-26-53/pi-day-share.jpg">
+<meta name="twitter:site" content="http://alex.miller.im">
+<meta name="twitter:creator" content="@alexpmil">
+
 <style>
     @import url(http://fonts.googleapis.com/css?family=Open+Sans:200,400,700);
     body {font-family: 'Open Sans', sans-serif; text-align: center; width: 100%; padding: 15px;}
@@ -18,6 +34,8 @@
     #ampm-switch .switch label input[type=checkbox]:first-child:checked+.lever:after {
         background-color: #818181;
     }
+
+    @-webkit-keyframes spin{0%{-moz-transform:rotateZ(0deg);-webkit-transform:rotateZ(0deg);-o-transform:rotateZ(0deg);-ms-transform:rotateZ(0deg)}100%{-moz-transform:rotateZ(360deg);-webkit-transform:rotateZ(360deg);-o-transform:rotateZ(360deg);-ms-transform:rotateZ(360deg)}}@-moz-keyframes spin{0%{-moz-transform:rotateZ(0deg);-webkit-transform:rotateZ(0deg);-o-transform:rotateZ(0deg);-ms-transform:rotateZ(0deg)}100%{-moz-transform:rotateZ(360deg);-webkit-transform:rotateZ(360deg);-o-transform:rotateZ(360deg);-ms-transform:rotateZ(360deg)}}@-o-keyframes spin{0%{-moz-transform:rotateZ(0deg);-webkit-transform:rotateZ(0deg);-o-transform:rotateZ(0deg);-ms-transform:rotateZ(0deg)}100%{-moz-transform:rotateZ(360deg);-webkit-transform:rotateZ(360deg);-o-transform:rotateZ(360deg);-ms-transform:rotateZ(360deg)}}@-ms-keyframes spin{0%{-moz-transform:rotateZ(0deg);-webkit-transform:rotateZ(0deg);-o-transform:rotateZ(0deg);-ms-transform:rotateZ(0deg)}100%{-moz-transform:rotateZ(360deg);-webkit-transform:rotateZ(360deg);-o-transform:rotateZ(360deg);-ms-transform:rotateZ(360deg)}}.sub-border{position:absolute;border-radius:50%;border-top:10px solid #404040;border-right:10px solid grey;border-bottom:10px solid #B0B0B0;border-left:10px solid #E0E0E0}
 </style>
 </head>
 <body>
@@ -25,16 +43,25 @@
     <div id="content">
         <h1>Countdown to Super Pi Day 2015</h1>
         <h2 style="font-size: 20px; line-height: 25px;">Second-by-second online countdown to the Pi Day of the Century: 3/14/15 9:26:53.5897<br><span style="font-size: 14px;">(in your local time zone!)</span></h2>
-        <img alt="Online countdown to Super Pi Day 2015" id="pimg" src="/img/Pi-symbol.svg.png" style="height: 200px;">
+
+        <div id="animation">
+            <div style="position: relative; bottom: 5px; text-align: center; width:100%">
+                <div id="wrapper" style="position: relative; display: inline-block;"></div>
+            </div>
+            <img alt="Online countdown to Super Pi Day 2015" id="pimg" src="/img/Pi-symbol.svg.png" style="height: 121px; margin-top: 75px; margin-bottom: 33px;">
+        </div>
+
         <div id="cd">
             <span id="hrs"></span> hours, <span id="mins"></span> minutes, <span id="secs"></span> seconds, and <span id="ms"></span> milliseconds
         </div>
         <h2>Until 3/14/15 9:26:53.5897</h2>
 
-        <a href="https://twitter.com/intent/tweet?button_hashtag=PiDayCountdown&text=Happy%20Pi%20Day!%20Celebrate%20at%20exactly%203%2F14%2F15%209%3A26%3A53.5897%20with%20this%20countdown." class="twitter-hashtag-button" data-size="large" data-url="http://alex.miller.im/countdown-pi-day-2015-3-14-15-9-26-53/">Tweet #PiDayCountdown</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <div style="margin-top: 150px;">
+            <a href="https://twitter.com/intent/tweet?button_hashtag=PiDayCountdown&text=Happy%20Pi%20Day!%20Celebrate%20at%20exactly%203%2F14%2F15%209%3A26%3A53.5897%20with%20this%20countdown." class="twitter-hashtag-button" data-size="large" data-url="http://alex.miller.im/countdown-pi-day-2015-3-14-15-9-26-53/">Tweet #PiDayCountdown</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-        <div style="font-size: 15px; margin-top: 15px;">by <a href="https://twitter.com/alexpmil" target="_blank">@alexpmil</a></div>
+            <div style="font-size: 15px; margin-top: 15px;">by <a href="https://twitter.com/alexpmil" target="_blank">@alexpmil</a></div>
+        </div>
 
         <!--<div id="ampm-switch" style="margin: 0 auto; width: 114px; display: inline-block;">
             <div class="switch" style="text-align: left;">
@@ -137,12 +164,57 @@ var ms_interval = setInterval(function() {
          $("#mins").text("0");
          $("#secs").text("00");
          $("#ms").text("000");
-         $("#pimg").replaceWith(pi_vid);
+         $("#animation").replaceWith(pi_vid);
      }
      else{
         $("#ms").text(('000' + String(timespan.milliseconds)).substr(-3))
      }
 }, 50);
+
+
+// Circle animation http://codepen.io/naoyashiga/pen/HnCub
+
+//set largest circle
+var base_w = 275;
+var base_h = 275;
+
+
+for(var i = 0;i < 3;i++){
+    $("#wrapper").append("<div class='circle"+i+" sub-border'></div>");
+    //set current circle width
+    $(".circle"+i).css("width",base_w - 40 * i);
+    //set current circle height
+    $(".circle"+i).css("height",base_h - 40 * i);
+    //get half current width
+    var cur_w = $(".circle"+i).width() / 2;
+    //get half current height
+    var cur_h = $(".circle"+i).height() / 2;
+
+    if(i !== 0){
+        //get half previous width
+        var pre_w = $(".circle"+(i-1)).width() / 2;
+        //get half previous height
+        var pre_h = $(".circle"+(i-1)).height() / 2;
+        //get previous position
+        var pre_top = $(".circle"+(i-1)).position().top;
+        var pre_left = $(".circle"+(i-1)).position().left;
+
+        //set current position
+        $(".circle"+i).css("top",pre_top + pre_h - cur_h);
+        $(".circle"+i).css("left",pre_left + pre_w - cur_w);
+
+
+    }else{//first circle
+        $(".circle"+i).css("top",0);
+        $(".circle"+i).css("left",-138);
+    	//base_h - cur_w
+                           }
+    //rotate animation
+    $(".circle"+i).css("-webkit-animation","spin "+(i+10)*1.5+"s infinite linear");
+    $(".circle"+i).css("-moz-animation","spin "+(i+10)*1.5+"s infinite linear");
+    $(".circle"+i).css("-o-animation","spin "+(i+10)*1.5+"s infinite linear");
+    $(".circle"+i).css("-ms-animation","spin "+(i+10)*1.5+"s infinite linear");
+}
 
 </script>
 </body>
