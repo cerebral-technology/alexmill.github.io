@@ -69,9 +69,14 @@ var am = new Date(2015, 2, 14, 9, 26, 53, 5897)
 var pm = new Date(2015, 2, 14, 21, 26, 53, 5897)
 var amORpm = countdown(new Date(2015, 2, 14, 9, 26, 53, 5897), null, countdown.HOURS|countdown.MINUTES|countdown.SECONDS|countdown.MILLISECONDS )
 
+var after_am = amORpm.hours<1 && amORpm.minutes<1 && amORpm.seconds<1;
+if(after_am){
+    $("#ampm-switch").hide();
+}
+
 var deadline = am;
 $("#ampm").change(function(){
-    if($(this).is(':checked') || (amORpm.hours<1 && amORpm.minutes<1 && amORpm.seconds<1) ){
+    if($(this).is(':checked') || after_am){
         deadline = pm;
         $("#hrs").text(timespan.hours);
         $("#mins").text(timespan.minutes);
