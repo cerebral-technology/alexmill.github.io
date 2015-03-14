@@ -109,9 +109,6 @@ r=" and ";t=", ";u="";v=function(a){return a}})();y&&y.exports?y.exports=e:"func
 
 var am = new Date(2015, 2, 14, 9, 26, 53, 5897)
 
-//var am = new Date();
-//am.setSeconds(am.getSeconds() + 6);
-
 
 var pm = new Date(2015, 2, 14, 21, 26, 53, 5897)
 var amORpm = countdown(new Date(2015, 2, 14, 9, 26, 53, 5897), null, countdown.HOURS|countdown.MINUTES|countdown.SECONDS|countdown.MILLISECONDS )
@@ -121,6 +118,7 @@ if(after_am){
 }
 
 var deadline = pm;
+
 /*$("#ampm").change(function(){
     if($(this).is(':checked') || after_am){
         deadline = pm;
@@ -140,7 +138,7 @@ var deadline = pm;
     }
 });*/
 
-var pi_vid = '<iframe width="560" height="315" src="https://www.youtube.com/embed/nQY1Y2ug6Gk?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>'
+var pi_vid = '<img src="https://38.media.tumblr.com/959f179b98ddcf26bb749b15a5adfc0a/tumblr_mqem4qTG9T1rqfhi2o1_400.gif" style="height:300px;"><br><iframe width="533" height="27" src="https://www.youtube.com/embed/nQY1Y2ug6Gk?rel=0&autoplay=1&start=13" frameborder="0" allowfullscreen></iframe>'
 
 var timespan = countdown(deadline, null, countdown.HOURS|countdown.MINUTES|countdown.SECONDS|countdown.MILLISECONDS );
 $("#hrs").text(timespan.hours);
