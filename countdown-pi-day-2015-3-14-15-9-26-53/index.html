@@ -67,8 +67,8 @@ r=" and ";t=", ";u="";v=function(a){return a}})();y&&y.exports?y.exports=e:"func
 
 var am = new Date(2015, 2, 14, 9, 26, 53, 5897)
 
-//var am = new Date();
-//am.setSeconds(am.getSeconds() + 20);
+var am = new Date();
+am.setSeconds(am.getSeconds() + 6);
 
 
 var pm = new Date(2015, 2, 14, 21, 26, 53, 5897)
@@ -106,7 +106,7 @@ $("#mins").text(timespan.minutes);
 $("#secs").text(timespan.seconds);
 $("#ms").text(timespan.milliseconds);
 
-setInterval(function() {
+var sec_interval = setInterval(function() {
      var timespan = countdown(deadline, null, countdown.HOURS|countdown.MINUTES|countdown.SECONDS|countdown.MILLISECONDS );
      $("#hrs").text(timespan.hours);
      $("#mins").text(timespan.minutes);
@@ -115,7 +115,17 @@ setInterval(function() {
 
 setInterval(function() {
      var timespan = countdown(deadline, null, countdown.HOURS|countdown.MINUTES|countdown.SECONDS|countdown.MILLISECONDS );
-     $("#ms").text(('000' + String(timespan.milliseconds)).substr(-3));
+     if(timespan.milliseconds < 0){
+         clearInterval(sec_interval);
+         $("#hrs").text("0");
+         $("#mins").text("0");
+         $("#secs").text("00");
+         $("#ms").text("000");
+         $("#pimg").replaceWith(pi_vid);
+     }
+     else{
+        $("#ms").text(('000' + String(timespan.milliseconds)).substr(-3
+     }
 }, 50);
 
 </script>
