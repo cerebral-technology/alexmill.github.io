@@ -28,17 +28,19 @@
         <h1>Countdown to Super Pi Day 2015</h1>
         <h2 style="font-size: 20px; line-height: 25px;">Second-by-second online countdown to the Pi Day of the Century: 3/14/15 9:26:53.5897<br><span style="font-size: 14px;">(in your local time zone!)</span></h2>
 
-        <div style="position: relative; bottom: 5px; text-align: center; width:100%">
-          <div id="wrapper" style="position: relative; display: inline-block;"></div>
+        <div id="animation">
+            <div style="position: relative; bottom: 5px; text-align: center; width:100%">
+                <div id="wrapper" style="position: relative; display: inline-block;"></div>
+            </div>
+            <img alt="Online countdown to Super Pi Day 2015" id="pimg" src="/img/Pi-symbol.svg.png" style="height: 121px; margin-top: 75px; margin-bottom: 33px;">
         </div>
-        <img alt="Online countdown to Super Pi Day 2015" id="pimg" src="/img/Pi-symbol.svg.png" style="height: 121px; margin-top: 75px; margin-bottom: 33px;">
 
         <div id="cd">
             <span id="hrs"></span> hours, <span id="mins"></span> minutes, <span id="secs"></span> seconds, and <span id="ms"></span> milliseconds
         </div>
         <h2>Until 3/14/15 9:26:53.5897</h2>
 
-        <div style="margin-top: 50px;">
+        <div style="margin-top: 150px;">
             <a href="https://twitter.com/intent/tweet?button_hashtag=PiDayCountdown&text=Happy%20Pi%20Day!%20Celebrate%20at%20exactly%203%2F14%2F15%209%3A26%3A53.5897%20with%20this%20countdown." class="twitter-hashtag-button" data-size="large" data-url="http://alex.miller.im/countdown-pi-day-2015-3-14-15-9-26-53/">Tweet #PiDayCountdown</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
@@ -146,7 +148,7 @@ var ms_interval = setInterval(function() {
          $("#mins").text("0");
          $("#secs").text("00");
          $("#ms").text("000");
-         $("#pimg").replaceWith(pi_vid);
+         $("#animation").replaceWith(pi_vid);
      }
      else{
         $("#ms").text(('000' + String(timespan.milliseconds)).substr(-3))
