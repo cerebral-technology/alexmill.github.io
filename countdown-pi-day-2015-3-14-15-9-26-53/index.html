@@ -73,9 +73,17 @@ var deadline = am;
 $("#ampm").change(function(){
     if($(this).is(':checked') || (amORpm.hours<1 && amORpm.minutes<1 && amORpm.seconds<1) ){
         deadline = pm;
+        $("#hrs").text(timespan.hours);
+        $("#mins").text(timespan.minutes);
+        $("#secs").text(timespan.seconds);
+        $("#ms").text(timespan.milliseconds);
     }
     else{
         deadline = am;
+        $("#hrs").text(timespan.hours);
+        $("#mins").text(timespan.minutes);
+        $("#secs").text(timespan.seconds);
+        $("#ms").text(timespan.milliseconds);
     }
 });
 
