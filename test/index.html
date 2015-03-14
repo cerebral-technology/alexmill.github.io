@@ -57,7 +57,7 @@
         <h2>Until 3/14/15 9:26:53.5897</h2>
 
         <div style="margin-top: 150px;">
-            <a href="https://twitter.com/intent/tweet?button_hashtag=PiDayCountdown&text=Happy%20Pi%20Day!%20Celebrate%20at%20exactly%203%2F14%2F15%209%3A26%3A53.5897%20with%20this%20countdown." class="twitter-hashtag-button" data-size="large" data-url="http://alex.miller.im/countdown-pi-day-2015-3-14-15-9-26-53/">Tweet #PiDayCountdown</a>
+            <a href="https://twitter.com/intent/tweet?button_hashtag=PiDayCountdown&text=Happy%20%23PiDay!%20Celebrate%20at%20exactly%203%2F14%2F15%209%3A26%3A53.5897%20with%20this%20countdown." class="twitter-hashtag-button" data-size="large" data-url="http://alex.miller.im/countdown-pi-day-2015-3-14-15-9-26-53/">Tweet #PiDayCountdown</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
             <div style="font-size: 15px; margin-top: 15px;">by <a href="https://twitter.com/alexpmil" target="_blank">@alexpmil</a></div>
@@ -109,9 +109,6 @@ r=" and ";t=", ";u="";v=function(a){return a}})();y&&y.exports?y.exports=e:"func
 
 var am = new Date(2015, 2, 14, 9, 26, 53, 5897)
 
-//var am = new Date();
-//am.setSeconds(am.getSeconds() + 6);
-
 
 var pm = new Date(2015, 2, 14, 21, 26, 53, 5897)
 var amORpm = countdown(new Date(2015, 2, 14, 9, 26, 53, 5897), null, countdown.HOURS|countdown.MINUTES|countdown.SECONDS|countdown.MILLISECONDS )
@@ -120,7 +117,11 @@ if(after_am){
     $("#ampm-switch").hide();
 }
 
+pm = new Date;
+pm.setSeconds(pm.getSeconds() + 6);
+
 var deadline = pm;
+
 /*$("#ampm").change(function(){
     if($(this).is(':checked') || after_am){
         deadline = pm;
@@ -140,7 +141,7 @@ var deadline = pm;
     }
 });*/
 
-var pi_vid = '<iframe width="560" height="315" src="https://www.youtube.com/embed/nQY1Y2ug6Gk?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>'
+var pi_vid = '<img src="https://38.media.tumblr.com/959f179b98ddcf26bb749b15a5adfc0a/tumblr_mqem4qTG9T1rqfhi2o1_400.gif" style="height:300px;"><br><iframe width="560" height="315" src="https://www.youtube.com/embed/nQY1Y2ug6Gk?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>'
 
 var timespan = countdown(deadline, null, countdown.HOURS|countdown.MINUTES|countdown.SECONDS|countdown.MILLISECONDS );
 $("#hrs").text(timespan.hours);
