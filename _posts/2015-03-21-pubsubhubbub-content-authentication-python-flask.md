@@ -76,7 +76,7 @@ The next step is to set up your endpoint where the hub will ping your server whe
 
 Thus the "public" key here is the request body, and the "private" key is the `hub.secret` you provided when you subscribed (`feed_secret_key` above).
 
-You may not have this issue if you don't use Python Flask, but I had trouble getting the raw request body data. Fortunately, [this answer](http://stackoverflow.com/a/11163649/2628402) on Stack Overflow gave me a solution that worked for me. Near where you define your `Flask(__name__)` variable, create the following class:
+You may not have this issue if you don't use Python Flask, but I had trouble getting the raw request body data. Fortunately, [this answer](http://stackoverflow.com/a/11163649/2628402) on Stack Overflow gave me a solution that worked for me. After I define my `app = Flask(__name__)` variable, I use the following code:
 
 ```python
 class WSGICopyBody(object):
@@ -106,8 +106,6 @@ class WSGICopyBody(object):
             start_response(status, headers, exc_info)
         return(callback)
 
-
-app = Flask(__name__)
 app.wsgi_app = WSGICopyBody(app.wsgi_app)
 ```
 
@@ -127,7 +125,7 @@ def feed_notify():
     # Validate push according to PubsubHubbub spec
     if "X-Hub-Signature" not in request.headers.keys():
         return(jsonify({"status":"AUTHORIZATION FAILURE: missing headers"}), 422)
-    superfeedr_signature =
+    superfeedr_signature = request.headers["X-Hub-Signature"]
 
     # I recalculate my hub.secret based on the feed_id
     feed_secret_key = hashlib.sha224((feed_id + hub_secret_salt).encode("utf-8")).hexdigest().encode("utf-8")
