@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Get Rid of Gmail's Download Button on Embedded Email Images"
-categories: blog
+categories: 
 author: "Alex Miller"
 description: "Gmail's feature for easily downloading embedded images may be great for emails between friends, but it's terrible for marketing. Here's how to fix it."
 thumbnail:
