@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "PubsubHubbub Content Authentication Using SHA1 Signature with Python"
+title: "PubsubHubbub Authentication with Python SHA1 Signature"
 categories: blog
 author: "Alex Miller"
 meta:
