@@ -26,7 +26,7 @@ layout: homepage
         <div class="row">
             <div class="col s12 m5">
                 <h5>Things I'm writing</h5>
-                {% for post in site.categories.blog limit:5  %}
+                {% for post in site.categories.blog limit:7  %}
 
                 {% if post.source == "default" %}
                 <a class="link-nocolor no-underline" href="{{ post.url }}">
@@ -52,8 +52,8 @@ layout: homepage
             </div>
             <div class="col s12 m4">
                 <h5>Articles I'm Sharing</h5>
-                {% for post in site.categories.articles limit:5  %}
-
+                <!--{% for post in site.categories.articles limit:5  %}{% endif %}-->
+                {% if post.categories contains "articles" or post.categories contains "podcasts" limit:8 %}
                 <a class="link-nocolor" href="{{ post.source }}">
                     <div class=" article card small">
                         <div class="card-image">
