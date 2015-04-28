@@ -8,4 +8,5 @@ provider_url: http://www.slate.com/thegist
 source: http://pca.st/c9bx
 provider_name: "Slate's The Gist"
 published: 2015-04-22T00:00:00
+favicon_url: "http://www.slate.com/favicon.ico"
 ---
