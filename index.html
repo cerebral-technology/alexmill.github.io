@@ -52,7 +52,7 @@ layout: homepage
             </div>
             <div class="col s12 m4">
                 <h5>Articles I'm Sharing</h5>
-                {% for post in site.posts limit:8  %}
+                {% for post in site.posts limit:7  %}
                 {% if post.categories contains "articles" or post.categories contains "podcasts" limit:8 %}
                 <a class="link-nocolor" href="{{ post.source }}">
                     <div class=" article card small">
