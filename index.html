@@ -60,7 +60,7 @@ layout: homepage
             
             <div class="col s6 m3">
                 {% for post in site.posts %}
-                {% if post.categories contains "articles" or post.categories contains "podcasts" limit:20 %}
+                {% if post.categories contains "articles" or post.categories contains "podcasts" limit:18 %}
                     {% assign loopindex = forloop.index | modulo: 2 %}
                     {% if loopindex == 1 %}
                     <a class="link-nocolor" href="{{ post.source }}">
@@ -86,7 +86,7 @@ layout: homepage
             
             <div class="col s6 m3">
                 {% for post in site.posts %}
-                {% if post.categories contains "articles" or post.categories contains "podcasts" limit:20 %}
+                {% if post.categories contains "articles" or post.categories contains "podcasts" limit:18 %}
                     {% assign loopindex = forloop.index | modulo: 2 %}
                     {% if loopindex == 0 %}
                     <a class="link-nocolor" href="{{ post.source }}">
