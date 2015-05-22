@@ -66,7 +66,7 @@ layout: homepage
                 {% if post.categories contains "articles" or post.categories contains "podcasts" %}
                     {% assign loopindex = forloop.index | modulo: 2 %}
                     {% if loopindex == 1 and incL < inclim %}
-                    {% increment incL %}
+                    {% assign incL = incL + 1 %}
                     <a class="link-nocolor" href="{{ post.source }}">
                         <div class=" article card small">
                             <div class="card-image">
@@ -93,7 +93,7 @@ layout: homepage
                 {% if post.categories contains "articles" or post.categories contains "podcasts" limit:18 %}
                     {% assign loopindex = forloop.index | modulo: 2 %}
                     {% if loopindex == 0 and incR < inclim %}
-                    {% increment incR %}
+                    {% assign incR = incR + 1 %}
                     <a class="link-nocolor" href="{{ post.source }}">
                         <div class=" article card small">
                             <div class="card-image">
