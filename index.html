@@ -92,7 +92,7 @@ layout: homepage
                 {% for post in site.posts %}
                 {% if post.categories contains "articles" or post.categories contains "podcasts" limit:18 %}
                     {% assign loopindex = forloop.index | modulo: 2 %}
-                    {% if loopindex == 0 and incR < inclim %}
+                    {% if loopindex == 0 and incR < (inclim + 1) %}
                     {% assign incR = incR | plus:1 %}
                     <a class="link-nocolor" href="{{ post.source }}">
                         <div class=" article card small">
