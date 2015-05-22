@@ -73,10 +73,10 @@ layout: homepage
                                 <img src="{{ post.thumbnail }}">
                             </div>
                             <div class="card-content">
-                                <p>{{ post.title }}</p>
+                                <p class="flow-text">{{ post.title }}</p>
                                 <div class="provider">
                                     <img class="provider-favicon" src="{{ post.favicon_url }}"/>
-                                    <span class="flow-text">{{ post.provider_display }}</span>
+                                    <span class="provider-text">{{ post.provider_display }}</span>
                                     <br>
                                     <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
                                 </div>
@@ -92,7 +92,7 @@ layout: homepage
                 {% for post in site.posts %}
                 {% if post.categories contains "articles" or post.categories contains "podcasts" limit:18 %}
                     {% assign loopindex = forloop.index | modulo: 2 %}
-                    {% if loopindex == 0 and incR < (inclim + 1) %}
+                    {% if loopindex == 0 and incR < inclim %}
                     {% assign incR = incR | plus:1 %}
                     <a class="link-nocolor" href="{{ post.source }}">
                         <div class=" article card small">
@@ -100,10 +100,10 @@ layout: homepage
                                 <img src="{{ post.thumbnail }}">
                             </div>
                             <div class="card-content">
-                                <p>{{ post.title }}</p>
+                                <p class="flow-text">{{ post.title }}</p>
                                 <div class="provider">
                                     <img class="provider-favicon" src="{{ post.favicon_url }}"/>
-                                    <span class="flow-text">{{ post.provider_display }}</span>
+                                    <span class="provider-text">{{ post.provider_display }}</span>
                                     <br>
                                     <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
                                 </div>
