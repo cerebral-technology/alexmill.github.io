@@ -50,7 +50,7 @@ layout: homepage
                         {% else %}
                         {% endif %}
                         <div class="card-content">
-                            <p>{{ post.title }}</p>
+                            <p class="flow-text">{{ post.title }}</p>
                             <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
                         </div>
                     </div>
@@ -74,12 +74,28 @@ layout: homepage
                             </div>
                             <div class="card-content">
                                 <p class="flow-text">{{ post.title | truncatewords:12 }}</p>
-                                <div class="provider">
+                                <table style="border: none;">
+                                    <tr>
+                                        <td width="15px">
+                                            <img class="provider-favicon" src="{{ post.favicon_url }}"/>
+                                        </td>
+                                        <td>
+                                            <span class="provider-text">{{ post.provider_display }}</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="15px"></td>
+                                        <td>
+                                            <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!--<div class="provider">
                                     <img class="provider-favicon" src="{{ post.favicon_url }}"/>
                                     <span class="provider-text">{{ post.provider_display }}</span>
                                     <br>
                                     <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </a>
