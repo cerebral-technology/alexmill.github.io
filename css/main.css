@@ -137,10 +137,11 @@ span.nav-icon svg {
 
 span.nav-icon.instagram svg {
     display: inline-block;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     position: relative;
-    top: 2px;
+    top: 1px;
+    opacity: 0.3;
 }
 
 
