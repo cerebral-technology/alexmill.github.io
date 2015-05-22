@@ -74,28 +74,14 @@ layout: homepage
                             </div>
                             <div class="card-content">
                                 <p class="flow-text">{{ post.title | truncatewords:12 }}</p>
-                                <table style="border: none;">
-                                    <tr>
-                                        <td width="15px" style="padding: 0;">
-                                            <img class="provider-favicon" src="{{ post.favicon_url }}"/>
-                                        </td>
-                                        <td style="padding: 0;">
-                                            <span class="provider-text">{{ post.provider_display }}</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td width="15px" style="padding: 0;"></td>
-                                        <td style="padding: 0;">
-                                            <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <!--<div class="provider">
+                                <div class="provider">
                                     <img class="provider-favicon" src="{{ post.favicon_url }}"/>
-                                    <span class="provider-text">{{ post.provider_display }}</span>
-                                    <br>
-                                    <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                                </div>-->
+                                    <!--<span class="provider-text">{{ post.provider_display }}</span>
+                                    <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>-->
+                                    <span style="float: left; font-size: 14px; color: rgba(0,0,0,.5);">
+                                        {{ post.date | date: "%-d %b %Y" }}
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -119,9 +105,11 @@ layout: homepage
                                 <p class="flow-text">{{ post.title | truncatewords:12 }}</p>
                                 <div class="provider">
                                     <img class="provider-favicon" src="{{ post.favicon_url }}"/>
-                                    <span class="provider-text">{{ post.provider_display }}</span>
-                                    <br>
-                                    <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                                    <!--<span class="provider-text">{{ post.provider_display }}</span>
+                                    <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>-->
+                                    <span style="float: left; font-size: 14px; color: rgba(0,0,0,.5);">
+                                        {{ post.date | date: "%-d %b %Y" }}
+                                    </span>
                                 </div>
                             </div>
                         </div>
