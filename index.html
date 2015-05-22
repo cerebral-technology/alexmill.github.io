@@ -24,7 +24,7 @@ layout: homepage
 <div class="full-container">
     <div class="section">
         <div class="row">
-            <div class="col s12 m5">
+            <div class="col s12 m6">
                 <h5>Things I'm writing</h5>
                 {% for post in site.categories.blog limit:7  %}
 
@@ -51,10 +51,11 @@ layout: homepage
                 {% endfor %}
             </div>
             <div class="col s12 m6">
-                <h5>Articles I'm Sharing</h5>
-                {% for post in site.posts limit:7  %}
+                <h5>Things I'm Sharing</h5>
+            </div>
+            <div class="col s6 m3">
+                {% for post in site.posts limit:12  %}
                 {% if post.categories contains "articles" or post.categories contains "podcasts" limit:8 %}
-                <div class="col s12 m6">
                 <a class="link-nocolor" href="{{ post.source }}">
                     <div class=" article card small">
                         <div class="card-image">
@@ -70,7 +71,57 @@ layout: homepage
                         </div>
                     </div>
                 </a>
-                </div>
+            </div>
+            
+            <div class="col s6 m3">
+                {% for post in site.posts limit:12  %}
+                {% if post.categories contains "articles" or post.categories contains "podcasts" limit:8 %}
+                    {% assign loopindex = forloop.index | modulo: 2 %}
+                    {% if loopindex == 0 %}
+                    <a class="link-nocolor" href="{{ post.source }}">
+                        <div class=" article card small">
+                            <div class="card-image">
+                                <img src="{{ post.thumbnail }}">
+                            </div>
+                            <div class="card-content">
+                                <p>{{ post.title }}</p>
+                                <div class="provider">
+                                    <img class="provider-favicon" src="{{ post.favicon_url }}"/>
+                                    <span class="provider-text">{{ post.provider_display }}</span>
+                                    <span class="post-date">&nbsp;|&nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    {% endif %}
+                {% endif %}
+                {% endfor %}
+            </div>
+            
+            <div class="col s6 m3">
+                {% for post in site.posts limit:12  %}
+                {% if post.categories contains "articles" or post.categories contains "podcasts" limit:8 %}
+                    {% assign loopindex = forloop.index | modulo: 2 %}
+                    {% if loopindex == 1 %}
+                    <a class="link-nocolor" href="{{ post.source }}">
+                        <div class=" article card small">
+                            <div class="card-image">
+                                <img src="{{ post.thumbnail }}">
+                            </div>
+                            <div class="card-content">
+                                <p>{{ post.title }}</p>
+                                <div class="provider">
+                                    <img class="provider-favicon" src="{{ post.favicon_url }}"/>
+                                    <span class="provider-text">{{ post.provider_display }}</span>
+                                    <span class="post-date">&nbsp;|&nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    {% endif %}
+                {% endif %}
+                {% endfor %}
+            </div>
 
                 <!--
                 {% if post.categories contains 'podcasts' %}
@@ -92,9 +143,8 @@ layout: homepage
                 </a>
                 {% endif %}
                 -->
-                {% endif %}
-                {% endfor %}
-            </div>
+                
+            
             <!--<div class="col s12 m3">
                 <h5>Photos I'm taking</h5>
                 {% for post in site.categories.photos limit:7  %}
