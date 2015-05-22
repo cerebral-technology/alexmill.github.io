@@ -127,13 +127,20 @@ a:hover   { color: #000; text-decoration: underline; }
     color: #828282;
 }
 
-.github-icon-svg,
-.twitter-icon-svg {
+span.nav-icon svg {
     display: inline-block;
     width: 16px;
     height: 16px;
     position: relative;
     top: 3px;
+}
+
+span.nav-icon.instagram svg {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 2px;
 }
 
 
