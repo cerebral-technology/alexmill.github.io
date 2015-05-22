@@ -57,7 +57,7 @@ layout: homepage
                 {% for post in site.posts limit:12  %}
                 {% if post.categories contains "articles" or post.categories contains "podcasts" limit:8 %}
                     {% assign loopindex = forloop.index | modulo: 2 %}
-                    {% if loopindex == 0 %}
+                    {% if loopindex == 1 %}
                     <a class="link-nocolor" href="{{ post.source }}">
                         <div class=" article card small">
                             <div class="card-image">
@@ -82,7 +82,7 @@ layout: homepage
                 {% for post in site.posts limit:12  %}
                 {% if post.categories contains "articles" or post.categories contains "podcasts" limit:8 %}
                     {% assign loopindex = forloop.index | modulo: 2 %}
-                    {% if loopindex == 1 %}
+                    {% if loopindex == 0 %}
                     <a class="link-nocolor" href="{{ post.source }}">
                         <div class=" article card small">
                             <div class="card-image">
