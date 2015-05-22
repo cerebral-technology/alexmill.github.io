@@ -73,7 +73,7 @@ layout: homepage
                                 <img src="{{ post.thumbnail }}">
                             </div>
                             <div class="card-content">
-                                <p class="flow-text">{{ post.title }}</p>
+                                <p class="flow-text">{{ post.title | truncatewords:12 }}</p>
                                 <div class="provider">
                                     <img class="provider-favicon" src="{{ post.favicon_url }}"/>
                                     <span class="provider-text">{{ post.provider_display }}</span>
@@ -100,7 +100,7 @@ layout: homepage
                                 <img src="{{ post.thumbnail }}">
                             </div>
                             <div class="card-content">
-                                <p class="flow-text">{{ post.title }}</p>
+                                <p class="flow-text">{{ post.title | truncatewords:12 }}</p>
                                 <div class="provider">
                                     <img class="provider-favicon" src="{{ post.favicon_url }}"/>
                                     <span class="provider-text">{{ post.provider_display }}</span>
