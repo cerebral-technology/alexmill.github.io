@@ -56,26 +56,6 @@ layout: homepage
             <div class="col s6 m3">
                 {% for post in site.posts limit:12  %}
                 {% if post.categories contains "articles" or post.categories contains "podcasts" limit:8 %}
-                <a class="link-nocolor" href="{{ post.source }}">
-                    <div class=" article card small">
-                        <div class="card-image">
-                            <img src="{{ post.thumbnail }}">
-                        </div>
-                        <div class="card-content">
-                            <p>{{ post.title }}</p>
-                            <div class="provider">
-                                <img class="provider-favicon" src="{{ post.favicon_url }}"/>
-                                <span class="provider-text">{{ post.provider_display }}</span>
-                                <span class="post-date">&nbsp;|&nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="col s6 m3">
-                {% for post in site.posts limit:12  %}
-                {% if post.categories contains "articles" or post.categories contains "podcasts" limit:8 %}
                     {% assign loopindex = forloop.index | modulo: 2 %}
                     {% if loopindex == 0 %}
                     <a class="link-nocolor" href="{{ post.source }}">
