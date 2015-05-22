@@ -76,16 +76,16 @@ layout: homepage
                                 <p class="flow-text">{{ post.title | truncatewords:12 }}</p>
                                 <table style="border: none;">
                                     <tr>
-                                        <td width="15px">
+                                        <td width="15px" style="padding: 0;">
                                             <img class="provider-favicon" src="{{ post.favicon_url }}"/>
                                         </td>
-                                        <td>
+                                        <td style="padding: 0;">
                                             <span class="provider-text">{{ post.provider_display }}</span>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td width="15px"></td>
-                                        <td>
+                                        <td width="15px" style="padding: 0;"></td>
+                                        <td style="padding: 0;">
                                             <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
                                         </td>
                                     </tr>
