@@ -238,21 +238,21 @@ footer.page-footer {
   margin: 0;
 }
 
-.connect-twitter-embed iframe {
+#connect-page .connect-twitter-embed iframe {
     margin: 0 auto !important;
 }
 
-.connect-icon {
+#connect-page .connect-icon {
     font-size: 130px;
     text-align: center;
 }
 
-.connect-icon a {
+#connect-page .connect-icon a {
     opacity: 0.6;
     color: #000000;
 }
 
-.connect-icon a:hover, .connect-icon a:active, .connect-icon a:visited {
+#connect-page .connect-icon a:hover, .connect-icon a:active, .connect-icon a:visited {
     text-transform: none;
     opacity: 0.9;
 }
