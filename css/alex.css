@@ -240,10 +240,18 @@ footer.page-footer {
 
 
 .connect-icon {
-    font-size: 100px;
+    font-size: 130px;
     text-align: center;
 }
 
+.connect-icon a {
+    opacity: 0.6;
+}
+
+.connect-icon a:hover, .connect-icon a:active {
+    text-transform: none;
+    opacity: 0.9;
+}
 
 @media only screen and (max-width : 992px) {
 
