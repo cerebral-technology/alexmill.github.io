@@ -253,7 +253,7 @@ footer.page-footer {
 }
 
 #connect-page .connect-icon a:hover, .connect-icon a:active, .connect-icon a:visited {
-    text-transform: none;
+    text-decoration: none;
     opacity: 0.9;
 }
 
