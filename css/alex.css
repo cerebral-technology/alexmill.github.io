@@ -1,3 +1,36 @@
+@font-face {
+    font-family: 'Mono Social Icons Font';
+    src: url('/css/fonts/MonoSocialIconsFont-1.10.eot');
+    src: url('/css/fonts/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+         url('/css/fonts/MonoSocialIconsFont-1.10.woff') format('woff'),
+         url('/css/fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+         url('/css/fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+    src: url('/css/fonts/MonoSocialIconsFont-1.10.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.symbol, a.symbol:before {
+    font-family: 'Mono Social Icons Font';
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+a.symbol:before {
+    content: attr(title);
+    margin-right: 0.3em;
+    font-size: 130%;
+}
+
+
 nav ul a,
 nav .brand-logo {
   color: rgba(0,0,0,.6);
@@ -203,6 +236,12 @@ a.button-collapse:hover {
 
 footer.page-footer {
   margin: 0;
+}
+
+
+.connect-icon {
+    font-size: 100px;
+    text-align: center;
 }
 
 
