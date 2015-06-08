@@ -19,4 +19,4 @@ You can access this data in your Google Analytics event tracking dashboard (Beha
 | ----------- | -------------- | ---------------------------- | ---------------------------------------------------------------------------------- |
 | Description | Cateogry title | URL of outbound link         | URL of page on which link was clicked                                              |
 | Code        | 'Outbound Link'| $(this).attr("href")         | 'From page: '.concat(document.URL)                                                 |
-| Example     | Outbound Link  | https://github.com/alexpmil  |  From page: http://alex.miller.im/post/google-analytics-event-track-outbound-links |
+| Example     | Outbound Link  | https://github.com/alexpmil  |  From page: http://alex.miller.im/posts/google-analytics-event-track-outbound-links |
