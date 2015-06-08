@@ -13,26 +13,6 @@ Below is a super easy-to-install script that will track clicks on outbound links
 
 <script src="https://gist.github.com/alexpmil/f4d668cb398ae83d78db.js"></script>
 
-<div style="height: 0; display: inline-block;">
-```javascript
-/* Track outbound links */
-/* Requires jQuery */
-/* Paste this immediately below your Google Analytics snippet */
-var outbounds = $("a").filter(function(index){
-    try{
-        var h = $(this).attr("href");
-        return h.indexOf("http") > -1 && h.indexOf(window.location.host) == -1;
-    } catch(err){
-        return false;
-    }
-});
-$(outbounds).click(function(){
-    ga('send', 'event', 'Outbound Link', $(this).attr("href"), 'From page: '.concat(document.URL) );
-    console.log($(this).attr("href"))
-});
-```
-</div>
-
 You can access this data in your Google Analytics event tracking dashboard (Behavior > Events). This script will send data to GA in the following format (though you can easily change it):
 
 | **GA Field**    | Category       | Action                       | Label                                                                              |
