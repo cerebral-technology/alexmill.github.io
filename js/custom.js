@@ -18,7 +18,7 @@ ga('send', 'pageview');
 var outbounds = $("a").filter(function(index){
     try{
         var h = $(this).attr("href");
-        return h.indexOf("http") > -1 && h.indexOf("smartypal.com") == -1;
+        return h.indexOf("http") > -1 && h.indexOf("miller.im") == -1;
     } catch(err){
         return false;
     }
