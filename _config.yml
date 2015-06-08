@@ -1,6 +1,7 @@
 name: "Alex Miller | Developer & Analyst in Philadelphia, PA"
 title: "Alex Miller's website"
-markdown: gfm
+markdown: redcarpet
+  extensions: ["smart", "tables", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
 pygments: true
 description: "I'm Alex Miller, a Philadelphia-based developer, mathematician, and student. Click to find out what I've been doing lately and connect with me online."
 url: http://alex.miller.im
