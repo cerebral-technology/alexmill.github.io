@@ -67,7 +67,7 @@ layout: homepage
                     {% assign loopindex = forloop.index | modulo: 2 %}
                     {% if loopindex == 1 and incL < inclim %}
                     {% assign incL = incL | plus:1 %}
-                    <a class="link-nocolor" href="{{ post.source }}">
+                    <a class="link-nocolor" href="{{ post.source }}" target="_blank">
                         <div class=" article card small">
                             <div class="card-image">
                                 <img src="{{ post.thumbnail }}">
@@ -96,7 +96,7 @@ layout: homepage
                     {% assign loopindex = forloop.index | modulo: 2 %}
                     {% if loopindex == 0 and incR < inclim %}
                     {% assign incR = incR | plus:1 %}
-                    <a class="link-nocolor" href="{{ post.source }}">
+                    <a class="link-nocolor" href="{{ post.source }}" target="_blank">
                         <div class=" article card small">
                             <div class="card-image">
                                 <img src="{{ post.thumbnail }}">
