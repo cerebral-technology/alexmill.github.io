@@ -68,4 +68,4 @@ def findfeed(site):
     return(result)
 ```
 
-Feel free to [fork this gist on GitHub](https://gist.github.com/alexpmil/9bc634240531d81c3abe) or [download the raw file](https://gist.githubusercontent.com/alexpmil/9bc634240531d81c3abe/raw/f247bf31265b7b19e7939549cafce34efacdd324/python3feedfinder).
+Feel free to [fork this gist on GitHub](https://gist.github.com/alexmill/9bc634240531d81c3abe) or [download the raw file](https://gist.githubusercontent.com/alexpmil/9bc634240531d81c3abe/raw/f247bf31265b7b19e7939549cafce34efacdd324/python3feedfinder).
