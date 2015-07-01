@@ -33,6 +33,7 @@ def bing_search(query):
     # The '$top' parameter limits the number of search results.
     url += "?$format=json&$top=10&Query=%27{}%27".format(quote_plus(query))
     
+    # You can get your primary account key at https://datamarket.azure.com/account
     r = requests.get(url, auth=("","YOUR_AZURE_API_PRIMARY_ACCOUNT_KEY"))
     resp = json.loads(r.text)
     return(resp)
