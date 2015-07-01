@@ -10,6 +10,7 @@ source: default
 Since Bing's documentation is essentially non-existent, I wanted to give my Python users an SEO-friendly, easily findable way of getting started with [Bing's Search API](https://datamarket.azure.com/dataset/bing/search).
 
 If you're on this page, you've probably seen this error about 10 times by now:
+
 ## "The authorization type you provided is not supported.  Only Basic and OAuth are supported"
 
 Below is a code snippet that should help (using Python 3.3):
