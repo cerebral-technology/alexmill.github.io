@@ -26,12 +26,12 @@ import requests
 
 def bing_search(query):
     # Your base API URL
-    url = "https://api.datamarket.azure.com/Bing/Search/v1/Web?"
+    url = "https://api.datamarket.azure.com/Bing/Search/v1/Web"
     
     # Query parameters. Don't try using urlencode here.
     # Don't ask why, but Bing needs the "$" in front of its parameters.
     # The '$top' parameter limits the number of search results.
-    url += $format=json&$top=10&Query=%27{}%27".format(quote_plus(query))
+    url += "?$format=json&$top=10&Query=%27{}%27".format(quote_plus(query))
     
     r = requests.get(url, auth=("","YOUR_AZURE_API_PRIMARY_ACCOUNT_KEY"))
     resp = json.loads(r.text)
