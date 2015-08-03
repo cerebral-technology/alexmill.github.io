@@ -1,5 +1,5 @@
 ---
-categories: all_articles articles podcast
+categories: all_articles articles podcasts
 provider_display: "thisamericanlife.org"
 provider_name: "This American Life"
 favicon_url: None
