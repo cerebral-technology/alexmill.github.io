@@ -53,8 +53,15 @@ a:hover   { color: #000; text-decoration: underline; }
     margin: 0 auto;
 }
 
-/* Simplifed Update */
-/*//*//*//*//*//*//*//*//*//*//*//*//*//*//*//*/
+.provider-favicon {
+    height: 16px;
+    width: 16px;
+    float: left;
+    margin-right: 6px;
+    margin-top: 3px;
+}
+
+
 #home-header {
     text-align: center;
     margin-top: 60px;
