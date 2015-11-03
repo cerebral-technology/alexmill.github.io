@@ -44,10 +44,11 @@ a:hover   { color: #000; text-decoration: underline; }
 
 #wharton-logo {
     padding-bottom: 50px;
+    text-align: center;
 }
 
 #wharton-logo img {
-    width: 600px;
+    width: 400px;
     margin: 0 auto;
 }
 
