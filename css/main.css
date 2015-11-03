@@ -1,6 +1,5 @@
 /* Imports */
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,500italic);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Gentium+Basic:400,700);
 
 
 /* Base */
@@ -15,7 +14,7 @@ html, body { height: 100%; }
 
 body {
     background-color: #f9f9f9;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Gentium Basic', Georgia, serif;
     font-size: 16px;
     line-height: 1.5;
     font-weight: 300;
@@ -38,6 +37,25 @@ a:hover   { color: #000; text-decoration: underline; }
     margin: 0 auto;
     zoom: 1;
 }
+
+
+/* Simplifed Update */
+/*//*//*//*//*//*//*//*//*//*//*//*//*//*//*//*/
+
+#wharton-logo {
+    padding-bottom: 50px;
+}
+
+#wharton-logo img {
+    width: 600px;
+    margin: 0 auto;
+}
+
+
+
+
+
+/*//*//*//*//*//*//*//*//*//*//*//*//*//*//*//*/
 
 
 /* Layout Styles */
