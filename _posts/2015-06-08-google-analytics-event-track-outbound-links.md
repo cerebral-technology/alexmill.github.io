@@ -11,7 +11,7 @@ source: default
 
 Below is a super easy-to-install script that will track clicks on outbound links from your website using Google Analytics event tracking.
 
-<script src="https://gist.github.com/alexpmil/f4d668cb398ae83d78db.js"></script>
+<script src="https://gist.github.com/alexmill/f4d668cb398ae83d78db.js"></script>
 
 You can access this data in your Google Analytics event tracking dashboard (Behavior > Events). This script will send data to GA in the following format (though you can easily change it):
 
