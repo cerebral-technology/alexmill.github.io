@@ -67,6 +67,11 @@ a:hover   { color: #000; text-decoration: underline; }
     color: rgba(0,0,0,.5);
 }
 
+.post-date {
+    font-size: .75em;
+    color: rgba(0,0,0,.5);
+}
+
 
 #home-header {
     text-align: center;
