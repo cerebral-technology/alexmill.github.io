@@ -33,8 +33,8 @@ layout: homepage
                 <a class="link-nocolor" href="{{ post.source }}">
                 {% endif %}
                     {{ post.title }}
-                    <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
                 </a>
+                <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
             </li>
             {% endfor %}
         </ul>
@@ -47,9 +47,9 @@ layout: homepage
                 <a class="link-nocolor" href="{{ post.source }}">
                     <img class="provider-favicon" src="{{ post.favicon_url }}"/>
                     {{ post.title }}
-                    <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                    <!-- <span class="provider-text">{{ post.provider_display }}</span> -->
                 </a>
+                <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <!-- <span class="provider-text">{{ post.provider_display }}</span> -->
             </li>
             {% endfor %}
         </ul>
@@ -63,9 +63,9 @@ layout: homepage
                 <a class="link-nocolor" href="{{ post.source }}">
                     <img class="provider-favicon" src="{{ post.favicon_url }}"/>
                     {{ post.title }}
-                    <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                    <!-- <span class="provider-text">{{ post.provider_display }}</span> -->
                 </a>
+                <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <!-- <span class="provider-text">{{ post.provider_display }}</span> -->
             </li>
             {% endfor %}
         </ul>
