@@ -1,0 +1,51 @@
+html, body { height: 100%; }
+
+body {
+    background-color: #f9f9f9;
+    font-family: 'Gentium Basic', Georgia, serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 400; }
+
+a         { color: #2a7ae2; text-decoration: none; }
+a:hover   { color: #000; text-decoration: underline; }
+.page-content a:visited { color: #205caa; }
+
+/* Utility */
+
+.wrap:before,
+.wrap:after { content:""; display:table; }
+.wrap:after { clear: both; }
+.wrap {
+    max-width: 800px;
+    padding: 0 30px;
+    margin: 0 auto;
+    zoom: 1;
+}
+
+
+.full-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 .5rem;
+    margin: 0 auto;
+}
+
+/* Simplifed Update */
+/*//*//*//*//*//*//*//*//*//*//*//*//*//*//*//*/
+#home-header {
+    text-align: center;
+}
+
+#wharton-logo {
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+#wharton-logo img {
+    width: 400px;
+    margin: 0 auto;
+}
