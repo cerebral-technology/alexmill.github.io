@@ -10,7 +10,7 @@ layout: homepage
     <p>alexmill@wharton.upenn.edu</p>
     
     <h3>Doctoral Candidate</h3>
-    <h3>Operations, Information, & Decisions Department
+    <h3>Operations, Information, &amp; Decisions Department
     <br>
     Wharton School, University of Pennsylvania
     </h3>
@@ -25,9 +25,9 @@ layout: homepage
             {% for post in site.categories.blog limit:10  %}
             <li>
                 {% if post.source == "default" %}
-                <a class="link-nocolor no-underline" href="{{ post.url }}">
+                <a class="link-nocolor" href="{{ post.url }}">
                 {% else %}
-                <a class="link-nocolor no-underline" href="{{ post.source }}">
+                <a class="link-nocolor" href="{{ post.source }}">
                 {% endif %}
                     {{ post.title }}
                     <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -41,7 +41,7 @@ layout: homepage
         <ul>
             {% for post in site.categories.podcasts limit:5  %}
             <li>
-                <a class="link-nocolor no-underline" href="{{ post.source }}">
+                <a class="link-nocolor" href="{{ post.source }}">
                     {{ post.title }}
                     <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
                     | <img class="provider-favicon" src="{{ post.favicon_url }}"/>
@@ -57,7 +57,7 @@ layout: homepage
         <ul>
             {% for post in site.categories.articles limit:10  %}
             <li>
-                <a class="link-nocolor no-underline" href="{{ post.source }}">
+                <a class="link-nocolor" href="{{ post.source }}">
                     {{ post.title }}
                     <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
                     | <img class="provider-favicon" src="{{ post.favicon_url }}"/>
