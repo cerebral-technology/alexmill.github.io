@@ -14,6 +14,18 @@ a         { color: #2a7ae2; text-decoration: none; }
 a:hover   { color: #000; text-decoration: underline; }
 .page-content a:visited { color: #205caa; }
 
+.no-underline:hover {
+    text-decoration: none;
+}
+
+.link-nocolor {
+    color: inherit;
+}
+
+.link-nocolor:hover {
+    color: inherit;
+}
+
 /* Utility */
 
 .wrap:before,
