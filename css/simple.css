@@ -8,6 +8,15 @@ body {
     font-weight: 300;
 }
 
+h1, h2, h3 {
+    font-weight: 400;
+    margin: 5px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
 a         { color: #2a7ae2; text-decoration: none; }
 a:hover   { color: #000; text-decoration: underline; }
 .page-content a:visited { color: #205caa; }
@@ -48,6 +57,7 @@ a:hover   { color: #000; text-decoration: underline; }
 /*//*//*//*//*//*//*//*//*//*//*//*//*//*//*//*/
 #home-header {
     text-align: center;
+    margin-top: 60px;
 }
 
 #wharton-logo {
