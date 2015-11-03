@@ -45,10 +45,10 @@ layout: homepage
             {% for post in site.categories.podcasts limit:5  %}
             <li>
                 <a class="link-nocolor" href="{{ post.source }}">
+                    <img class="provider-favicon" src="{{ post.favicon_url }}"/>
                     {{ post.title }}
                     <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                    | <img class="provider-favicon" src="{{ post.favicon_url }}"/>
-                    <span class="provider-text">{{ post.provider_display }}</span>
+                    <!-- <span class="provider-text">{{ post.provider_display }}</span> -->
                 </a>
             </li>
             {% endfor %}
@@ -61,10 +61,10 @@ layout: homepage
             {% for post in site.categories.articles limit:10  %}
             <li>
                 <a class="link-nocolor" href="{{ post.source }}">
+                    <img class="provider-favicon" src="{{ post.favicon_url }}"/>
                     {{ post.title }}
                     <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                    | <img class="provider-favicon" src="{{ post.favicon_url }}"/>
-                    <span class="provider-text">{{ post.provider_display }}</span>
+                    <!-- <span class="provider-text">{{ post.provider_display }}</span> -->
                 </a>
             </li>
             {% endfor %}
