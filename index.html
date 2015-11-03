@@ -39,8 +39,7 @@ layout: homepage
     <div class="section">
         <h3>Podcasts I'm Listening To</h3>
         <ul>
-            {% for post in site.categories.blog limit:5  %}
-            {% if post.categories contains "podcasts" %}
+            {% for post in site.categories.podcasts limit:5  %}
             <li>
                 <a class="link-nocolor no-underline" href="{{ post.source }}">
                     {{ post.title }}
@@ -56,8 +55,7 @@ layout: homepage
     <div class="section">
         <h3>Podcasts I'm Listening To</h3>
         <ul>
-            {% for post in site.categories.blog limit:10  %}
-            {% if post.categories contains "articles" %}
+            {% for post in site.categories.articles limit:10  %}
             <li>
                 <a class="link-nocolor no-underline" href="{{ post.source }}">
                     {{ post.title }}
