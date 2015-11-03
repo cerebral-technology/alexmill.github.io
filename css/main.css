@@ -41,6 +41,9 @@ a:hover   { color: #000; text-decoration: underline; }
 
 /* Simplifed Update */
 /*//*//*//*//*//*//*//*//*//*//*//*//*//*//*//*/
+#home-header {
+    text-align: center;
+}
 
 #wharton-logo {
     padding-bottom: 50px;
