@@ -20,6 +20,14 @@ h1 {
     font-size: 50px;
 }
 
+span.nav-icon svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 3px;
+}
+
 .section h3 {
     font-weight: 700;
 }
