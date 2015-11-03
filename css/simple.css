@@ -24,7 +24,7 @@ h1 {
     font-weight: 700;
 }
 
-.section ul {
+.section ul.no-bullets {
     list-style-type: none;
 }
 
