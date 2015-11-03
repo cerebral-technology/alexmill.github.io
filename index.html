@@ -17,7 +17,7 @@ layout: homepage
     </h3>
 </div>
 
-<div class="full-container">
+<div class="full-container" style="margin-bottom: 20px;">
     <hr>
 </div
 
@@ -25,7 +25,7 @@ layout: homepage
     <div class="section">
         <h3>Things I'm Writing</h3>
         <ul>
-            {% for post in site.categories.blog limit:10  %}
+            {% for post in site.categories.blog limit:5  %}
             <li>
                 {% if post.source == "default" %}
                 <a class="link-nocolor" href="{{ post.url }}">
@@ -56,9 +56,9 @@ layout: homepage
     </div>
     
     <div class="section">
-        <h3>Podcasts I'm Listening To</h3>
+        <h3>Things I'm Sharing</h3>
         <ul>
-            {% for post in site.categories.articles limit:10  %}
+            {% for post in site.categories.articles limit:5  %}
             <li>
                 <a class="link-nocolor" href="{{ post.source }}">
                     <img class="provider-favicon" src="{{ post.favicon_url }}"/>
