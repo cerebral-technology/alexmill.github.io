@@ -104,9 +104,11 @@ a:hover   { color: #000; text-decoration: underline; }
 #wharton-logo {
     padding-bottom: 50px;
     text-align: center;
+    max-width: 400px;
 }
 
 #wharton-logo img {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     margin: 0 auto;
 }
