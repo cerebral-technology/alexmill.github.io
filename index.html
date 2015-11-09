@@ -2,198 +2,74 @@
 layout: homepage
 ---
 
-<div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-        <!--<div class="container">
-        <br><br>
-        <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
-        <div class="row center">
-            <h5 class="header col s12 light">Philadelphia, PA</h5>
-        </div>
-        <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-        </div>
-        <br><br>
-
-        </div>-->
+<div class="full-container" id="home-header">
+    <div id="wharton-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Penn_Wharton.svg/1024px-Penn_Wharton.svg.png">
     </div>
-    <div class="parallax"><img src="/img/top-bg.jpg"></div>
+    <h1>Alex Miller</h1>
+    <span>alexmill@wharton.upenn.edu</span>
+    
+    <h3 style="margin: 0;">Doctoral Candidate</h3>
+    <br>
+    <h3>Operations, Information, &amp; Decisions Department
+    <br>
+    The Wharton School, University of Pennsylvania
+    </h3>
 </div>
 
+<div class="full-container" style="max-width: 800px; margin-bottom: 20px;">
+    <hr>
+</div>
 
-<div class="full-container">
+<div style="max-width: 700px; margin: 0 auto; padding-bottom: 75px;">
     <div class="section">
-        <div class="row" style="margin-bottom: 0;">
-            <div class="col s12 m6">
-                <h4>Things I'm Writing</h4>
-            </div>
-            <div class="col s12 m6">
-                <h4>Things I'm Sharing</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 m6" style="padding-right: 30px;">
-                {% for post in site.categories.blog limit:7  %}
-
+        <h3>Things I'm Writing</h3>
+        <ul>
+            {% for post in site.categories.blog limit:5  %}
+            <li>
                 {% if post.source == "default" %}
-                <a class="link-nocolor no-underline" href="{{ post.url }}">
+                <a class="link-nocolor" href="{{ post.url }}">
                 {% else %}
-                <a class="link-nocolor no-underline" href="{{ post.source }}">
-                {% endif %}
-                    <div class="card">
-                        {% if post.thumbnail and post.thumbnail != "custom_style"  %}
-                        <div class="card-image">
-                            <img src="{{ post.thumbnail }}">
-                        </div>
-                        {% else if post.thumbnail == "custom_style" %}
-                        <div class="card-image" style="{{ post.custom_style }}"></div>
-                        {% else %}
-                        {% endif %}
-                        <div class="card-content">
-                            <p class="flow-text">{{ post.title }}</p>
-                            <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                        </div>
-                    </div>
-                </a>
-                {% endfor %}
-            </div>
-            
-            {% assign inclim = 9 %}
-            {% assign incL = 0 %}
-            {% assign incR = 0 %}
-            <div class="col s6 m3">
-                {% for post in site.posts %}
-                {% if post.categories contains "articles" or post.categories contains "podcasts" %}
-                    {% assign loopindex = forloop.index | modulo: 2 %}
-                    {% if loopindex == 1 and incL < inclim %}
-                    {% assign incL = incL | plus:1 %}
-                    <a class="link-nocolor" href="{{ post.source }}" target="_blank">
-                        <div class=" article card small">
-                            <div class="card-image">
-                                <img src="{{ post.thumbnail }}">
-                            </div>
-                            <div class="card-content">
-                                <p class="flow-text">{{ post.title | truncatewords:12 }}</p>
-                                <div class="provider">
-                                    <img class="provider-favicon" src="{{ post.favicon_url }}"/>
-                                    <!--<span class="provider-text">{{ post.provider_display }}</span>
-                                    <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>-->
-                                    <span class="provider-text" style="font-size: 13px; position: relative; top: 2px; margin-left: 2px;">
-                                        {{ post.date | date: "%-d %b %Y" }}
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    {% endif %}
-                {% endif %}
-                {% endfor %}
-            </div>
-            
-            <div class="col s6 m3">
-                {% for post in site.posts %}
-                {% if post.categories contains "articles" or post.categories contains "podcasts" limit:18 %}
-                    {% assign loopindex = forloop.index | modulo: 2 %}
-                    {% if loopindex == 0 and incR < inclim %}
-                    {% assign incR = incR | plus:1 %}
-                    <a class="link-nocolor" href="{{ post.source }}" target="_blank">
-                        <div class=" article card small">
-                            <div class="card-image">
-                                <img src="{{ post.thumbnail }}">
-                            </div>
-                            <div class="card-content">
-                                <p class="flow-text">{{ post.title | truncatewords:12 }}</p>
-                                <div class="provider">
-                                    <img class="provider-favicon" src="{{ post.favicon_url }}"/>
-                                    <!--<span class="provider-text">{{ post.provider_display }}</span>
-                                    <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>-->
-                                    <span class="provider-text" style="font-size: 13px; position: relative; top: 2px; margin-left: 2px;">
-                                        {{ post.date | date: "%-d %b %Y" }}
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    {% endif %}
-                {% endif %}
-                {% endfor %}
-            </div>
-
-                <!--
-                {% if post.categories contains 'podcasts' %}
                 <a class="link-nocolor" href="{{ post.source }}">
-                    <div class="podcast card">
-                        <div class="row">
-                            <div class="podcast-thumbnail col md s12 m2">
-                                <img src="{{ post.thumbnail }}">
-                            </div>
-                            <div class="col md s12 m10">
-                                <p>{{ post.title }}</p>
-                                <div class="provider">
-                                    <span class="provider-text">{{ post.provider_name }} |&nbsp;</span>
-                                    <span class="post-date">{{ post.published | date: "%b %-d, %Y" }}</span>
-                                </div>
-                            </div>
-                        </div
-                    </div>
-                </a>
                 {% endif %}
-                -->
-                
-            
-            <!--<div class="col s12 m3">
-                <h5>Photos I'm taking</h5>
-                {% for post in site.categories.photos limit:7  %}
-                <a class="link-nocolor" href="{{ post.source }}">
-                    <div class="insta-card">
-                        <img src="{{ post.thumbnail }}" {% if post.orientation %}class="{{post.orientation}}"{% endif %}>
-                        <div class="insta-text">
-                            <p class="caption">{{ post.title }}</p>
-                            <p class="post-date">{{ post.date | date: "%b %-d, %Y" }}</p>
-                        </div>
-                    </div>
+                    {{ post.title }}
                 </a>
-                {% endfor %}
-            </div>-->
-        </div>
+                <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="section">
+        <h3>Podcasts I'm Listening To</h3>
+        <ul class="no-bullets">
+            {% for post in site.categories.podcasts limit:5  %}
+            <li>
+                <a class="link-nocolor" href="{{ post.source }}">
+                    <img class="provider-favicon" src="{{ post.favicon_url }}"/>
+                    {{ post.title | truncatewords:12 }}
+                </a>
+                <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <!-- <span class="provider-text">{{ post.provider_display }}</span> -->
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h3>Things I'm Sharing</h3>
+        <ul class="no-bullets">
+            {% for post in site.categories.articles limit:5  %}
+            <li>
+                <a class="link-nocolor" href="{{ post.source }}">
+                    <img class="provider-favicon" src="{{ post.favicon_url }}"/>
+                    {{ post.title | truncatewords:12 }}
+                </a>
+                <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <!-- <span class="provider-text">{{ post.provider_display }}</span> -->
+            </li>
+            {% endfor %}
+        </ul>
     </div>
 </div>
 
-
-<!--
-<footer class="page-footer teal">
-<div class="container">
-  <div class="row">
-    <div class="col l6 s12">
-      <h5 class="white-text">Company Bio</h5>
-      <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
-    </div>
-    <div class="col l3 s12">
-      <h5 class="white-text">Settings</h5>
-      <ul>
-        <li><a class="white-text" href="#!">Link 1</a></li>
-        <li><a class="white-text" href="#!">Link 2</a></li>
-        <li><a class="white-text" href="#!">Link 3</a></li>
-        <li><a class="white-text" href="#!">Link 4</a></li>
-      </ul>
-    </div>
-    <div class="col l3 s12">
-      <h5 class="white-text">Connect</h5>
-      <ul>
-        <li><a class="white-text" href="#!">Link 1</a></li>
-        <li><a class="white-text" href="#!">Link 2</a></li>
-        <li><a class="white-text" href="#!">Link 3</a></li>
-        <li><a class="white-text" href="#!">Link 4</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-<div class="footer-copyright">
-  <div class="container">
-  Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-  </div>
-</div>
-</footer>-->
 
