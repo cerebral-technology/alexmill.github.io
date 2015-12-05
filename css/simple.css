@@ -104,6 +104,7 @@ body {
     letter-spacing: -0.02rem;
     line-height: 1.5;
     margin: 0;
+    color: #333333;
 }
 
 a         { color: #004684; text-decoration: none; }
