@@ -175,10 +175,6 @@ span.nav-icon svg {
     top: 3px;
 }
 
-body.home .home-links span {
-    float: left;
-    margin-left: 15px;
-}
 
 body.home .home-links a {
     color: black;
