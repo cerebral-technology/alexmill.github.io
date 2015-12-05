@@ -127,9 +127,13 @@ nav > div {
     margin-right: 10px;
 }
 
-nav > div a, nav > div a span.nav-icon {
+nav > div a {
     color: black;
     opacity: .5;
+}
+
+nav > div a span.nav-icon {
+    color: black;
 }
 
 nav > div a:hover, nav > div a:hover span.nav-icon {
