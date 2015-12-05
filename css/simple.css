@@ -261,3 +261,11 @@ pre {
     font-size: 85%;
     line-height: 1.2;
 }
+
+
+/* Responsive */
+@media (max-width: 700px) {
+    .page-content h1 {
+        font-size: 200%;
+    }
+}
