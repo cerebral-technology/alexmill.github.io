@@ -111,6 +111,15 @@ nav > div {
     margin-right: 10px;
 }
 
+nav > div a {
+    color: black;
+    opacity: .5;
+}
+
+nav > div a:hover {
+    opacity: 1;
+}
+
 h1, h2, h3 {
     font-family: "Computer Modern Serif", Georgia, serif;
     padding: 0;
