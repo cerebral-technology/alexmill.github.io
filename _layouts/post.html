@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     {% include head.html %}
-    {% if page.syntax == %}{% include syntax-highlight.html %}{% endif %}
+    {% if page.syntax == true %}{% include syntax-highlight.html %}{% endif %}
     <body>
         {% include header.html %}
         {% if page.hero_image %}
