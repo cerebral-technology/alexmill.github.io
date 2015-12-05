@@ -175,6 +175,20 @@ span.nav-icon svg {
     top: 3px;
 }
 
+body.home .home-links span {
+    float: left;
+    margin-left: 15px;
+}
+
+body.home .home-links a {
+    color: black;
+    opacity: .5;
+}
+
+body.home .home-links a:hover {
+    opacity: 1;
+}
+
 .section h3 {
     font-weight: 700;
 }
