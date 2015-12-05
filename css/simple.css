@@ -122,21 +122,16 @@ a:hover   { color: #000; text-decoration: underline; }
     color: inherit;
 }
 
-nav > div {
-    float: left;
-    margin-right: 10px;
-}
-
-nav > div a {
+nav a {
     color: black;
     opacity: .5;
 }
 
-nav > div a span.nav-icon {
+nav a span.nav-icon {
     color: black;
 }
 
-nav > div a:hover, nav > div a:hover span.nav-icon {
+nav a:hover, nav a:hover span.nav-icon {
     opacity: 1;
 }
 
