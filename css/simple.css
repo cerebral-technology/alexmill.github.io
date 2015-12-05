@@ -106,17 +106,33 @@ body {
     margin: 0;
 }
 
+a         { color: #004684; text-decoration: none; }
+a:hover   { color: #000; text-decoration: underline; }
+.page-content a:visited { color: #205caa; }
+
+.no-underline:hover {
+    text-decoration: none;
+}
+
+.link-nocolor {
+    color: inherit;
+}
+
+.link-nocolor:hover {
+    color: inherit;
+}
+
 nav > div {
     float: left;
     margin-right: 10px;
 }
 
-nav > div a {
+nav > div a, nav > div a span.nav-icon {
     color: black;
     opacity: .5;
 }
 
-nav > div a:hover {
+nav > div a:hover, nav > div a:hover span.nav-icon {
     opacity: 1;
 }
 
@@ -163,21 +179,6 @@ span.nav-icon svg {
     list-style-type: none;
 }
 
-a         { color: #2a7ae2; text-decoration: none; }
-a:hover   { color: #000; text-decoration: underline; }
-.page-content a:visited { color: #205caa; }
-
-.no-underline:hover {
-    text-decoration: none;
-}
-
-.link-nocolor {
-    color: inherit;
-}
-
-.link-nocolor:hover {
-    color: inherit;
-}
 
 /* Utility */
 
