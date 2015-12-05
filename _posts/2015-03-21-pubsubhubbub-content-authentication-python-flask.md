@@ -8,6 +8,7 @@ description: "Tips for how to authenticate your PubsubHubbub content using Pytho
 tags: template
 thumbnail: /img/pubsub.jpg
 source: default
+syntax: true
 ---
 
 This post will describe my solution for authenticating content according to the [PubsubHubub spec](https://superfeedr-misc.s3.amazonaws.com/pubsubhubbub-core-0.4.html). I use Python Flask and [Superfeedr](https://superfeedr.com) as my PubsubHubbub RSS feed hub, but this should be useful even if you use another web app framework or a different hub.
