@@ -44,52 +44,30 @@
     font-weight: bold;
     font-style: normal;
 }
+
 @font-face {
-    font-family: 'Computer Modern Typewriter';
-    src: url('/css/fonts/computer-modern/cmuntt.eot');
-    src: url('/css/fonts/computer-modern/cmuntt.eot?#iefix') format('embedded-opentype'),
-         url('/css/fonts/computer-modern/cmuntt.woff') format('woff'),
-         url('/css/fonts/computer-modern/cmuntt.ttf') format('truetype'),
-         url('/css/fonts/computer-modern/cmuntt.svg#cmuntt') format('svg');
+    font-family: 'Computer Modern Typewriter Variable';
+    src: url('/css/fonts/computer-modern/cmunvt.eot');
+    src: url('/css/fonts/computer-modern/cmunvt.eot?#iefix') format('embedded-opentype'),
+         url('/css/fonts/computer-modern/cmunvt.woff') format('woff'),
+         url('/css/fonts/computer-modern/cmunvt.ttf') format('truetype'),
+         url('/css/fonts/computer-modern/cmunvt.svg#cmuntt') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 
 @font-face {
-    font-family: 'Computer Modern Typewriter';
-    src: url('/css/fonts/computer-modern/cmuntb.eot');
-    src: url('/css/fonts/computer-modern/cmuntb.eot?#iefix') format('embedded-opentype'),
-         url('/css/fonts/computer-modern/cmuntb.woff') format('woff'),
-         url('/css/fonts/computer-modern/cmuntb.ttf') format('truetype'),
-         url('/css/fonts/computer-modern/cmuntb.svg#cmuntb') format('svg');
-    font-weight: bold;
-    font-style: normal;
-}
-
-
-@font-face {
-    font-family: 'Computer Modern Typewriter';
-    src: url('/css/fonts/computer-modern/cmunit.eot');
-    src: url('/css/fonts/computer-modern/cmunit.eot?#iefix') format('embedded-opentype'),
-         url('/css/fonts/computer-modern/cmunit.woff') format('woff'),
-         url('/css/fonts/computer-modern/cmunit.ttf') format('truetype'),
-         url('/css/fonts/computer-modern/cmunit.svg#cmunit') format('svg');
+    font-family: 'Computer Modern Typewriter Variable';
+    src: url('/css/fonts/computer-modern/cmunvi.eot');
+    src: url('/css/fonts/computer-modern/cmunvi.eot?#iefix') format('embedded-opentype'),
+         url('/css/fonts/computer-modern/cmunvi.woff') format('woff'),
+         url('/css/fonts/computer-modern/cmunvi.ttf') format('truetype'),
+         url('/css/fonts/computer-modern/cmunvi.svg#cmunvi') format('svg');
     font-weight: normal;
     font-style: italic;
 }
 
-
-@font-face {
-    font-family: 'Computer Modern Typewriter';
-    src: url('/css/fonts/computer-modern/cmuntx.eot');
-    src: url('/css/fonts/computer-modern/cmuntx.eot?#iefix') format('embedded-opentype'),
-         url('/css/fonts/computer-modern/cmuntx.woff') format('woff'),
-         url('/css/fonts/computer-modern/cmuntx.ttf') format('truetype'),
-         url('/css/fonts/computer-modern/cmuntx.svg#cmuntx') format('svg');
-    font-weight: bold;
-    font-style: italic;
-}
 
 
 
@@ -264,13 +242,13 @@ article.post-content {
 }
 
 pre {
-    font-family: 'Computer Modern Typewriter', Courier, monospace;
+    font-family: 'Computer Modern Typewriter Variable', Courier, monospace;
     font-size: 85%;
     line-height: 1.2;
 }
 
 code {
-    font-family: 'Computer Modern Typewriter', Courier, monospace;
+    font-family: 'Computer Modern Typewriter Variable', Courier, monospace;
     font-size: inherit;
     background: #F0F0F0;
     line-height: inherit;
