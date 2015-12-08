@@ -189,6 +189,10 @@ body.home .home-links a:hover {
     list-style-type: none;
 }
 
+.section ul.no-bullets li {
+    position: relative;
+}
+
 
 /* Utility */
 
@@ -216,9 +220,11 @@ body.home .home-links a:hover {
 .provider-favicon {
     height: 16px;
     width: 16px;
-    float: left;
     margin-right: 6px;
     margin-top: 3px;
+    position: absolute;
+    left: -21px;
+    top: 3px;
 }
 
 .provider-text {
