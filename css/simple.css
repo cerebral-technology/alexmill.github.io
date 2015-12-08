@@ -263,7 +263,7 @@ article.post-content {
     text-align: justify;
 }
 
-pre {
+pre, code {
     font-family: 'Computer Modern Typewriter', Courier, monospace;
     font-size: 85%;
     line-height: 1.2;
