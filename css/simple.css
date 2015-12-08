@@ -263,12 +263,18 @@ article.post-content {
     text-align: justify;
 }
 
-pre, code {
+pre {
     font-family: 'Computer Modern Typewriter', Courier, monospace;
     font-size: 85%;
     line-height: 1.2;
 }
 
+code {
+    font-family: 'Computer Modern Typewriter', Courier, monospace;
+    font-size: 85%;
+    background: #F0F0F0;
+    line-height: inherit;
+}
 
 /* Responsive */
 @media (max-width: 800px) {
