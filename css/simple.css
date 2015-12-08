@@ -271,7 +271,7 @@ pre {
 
 code {
     font-family: 'Computer Modern Typewriter', Courier, monospace;
-    font-size: 85%;
+    font-size: inherit;
     background: #F0F0F0;
     line-height: inherit;
 }
