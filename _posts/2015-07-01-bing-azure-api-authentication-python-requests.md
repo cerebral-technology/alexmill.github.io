@@ -8,7 +8,7 @@ source: default
 syntax: true
 ---
 
-Since Bing's documentation is essentially non-existent, I wanted to give my Python users an SEO-friendly, easily findable way of getting started with [Bing's Search API](https://datamarket.azure.com/dataset/bing/search).
+Since Bing's Azure API documentation is essentially non-existent (and its error handling is entirely useless), I wanted to give my fellow Python users an SEO-friendly, easily findable way of getting started with [Bing's Search API](https://datamarket.azure.com/dataset/bing/search).
 
 If you're on this page, you've probably seen this error about 10 times by now:
 
