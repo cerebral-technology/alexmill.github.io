@@ -1,5 +1,5 @@
 ---
-categories: 'all_articles' 'cities' 'post to website' 'articles'
+categories: ['all_articles', 'cities', 'post to website', 'articles']
 provider_display: "www.citylab.com"
 provider_name: "www.citylab.com"
 favicon_url: http://cdn.citylab.com/static/b/citylab/img/icons/favicon.ico
