@@ -6,5 +6,5 @@ favicon_url: https://stratechery.com/wp-content/themes/stratechery/images/IE/fav
 title: "Venture Capital and the Internet's Impact - Stratechery by Ben Thompson"
 published: 2015-10-14T07:36:24
 source: https://stratechery.com/2015/venture-capital-and-the-internets-impact/
-thumbnail: '"data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="'
+thumbnail: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
 ---
