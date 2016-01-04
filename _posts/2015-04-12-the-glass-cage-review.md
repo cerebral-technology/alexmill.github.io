@@ -1,7 +1,7 @@
 ---
 layout: post
 meta:
-template: tags
+tags: template
 title: "Review of The Glass Cage by Nicholas Carr"
 categories: blog, books
 author: "Alex Miller"
