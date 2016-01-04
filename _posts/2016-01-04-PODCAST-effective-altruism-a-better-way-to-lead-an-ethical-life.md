@@ -1,5 +1,5 @@
 ---
-categories: ['philosophy', 'podcasts', 'all_articles']
+categories: ['podcasts', 'philosophy', 'all_articles']
 provider_display: "www.intelligencesquared.com"
 provider_name: "www.intelligencesquared.com"
 favicon_url: http://www.intelligencesquared.com/wp-content/uploads/2013/02/favicon.png
