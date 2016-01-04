@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Review of The New Geography of Jobs by Enrico Moretti"
-categories: blog, books
+categories: [blog, books]
 author: "Alex Miller"
 meta:
 tags: template
