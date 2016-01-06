@@ -2,7 +2,7 @@
 <html>
     {% include head.html %}
 
-    <body>
+    <body class="category">
 
     	{% include header.html %}
 
@@ -11,7 +11,7 @@
 		        <h1 style="font-size: 200%; text-align: center;">{{ page.header }}</h1>
 		        <ul class="no-bullets" style="padding: 0 20px;">
 		            {% for post in site.categories[page.category] %}
-		            <li>
+		            <li class="post-li">
 		            	<hr>
 		                {% if post.source == "default" %}
 		                <a class="link-nocolor" href="{{ post.url }}">
@@ -20,7 +20,7 @@
 		                {% endif %}
 		                	{% if post.thumbnail %}
 		                		<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
-		                			<img src="{{ post.thumbnail }}" style="width: 100%;">
+		                			<img src="{{ post.thumbnail }}">
 		                		</div>
 		                	{% else %}
 		                	{% endif %}
