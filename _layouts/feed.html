@@ -5,6 +5,17 @@
   <description>{% if page.description %} {{ page.description }} {% else %}Feed of Alex Miller's Website.{% endif %}</description>
   <link>{{ site.url }}</link>
   <atom:link href="{{ site.url }}/feeds/{{page.category_directory}}/index.xml" rel="self" type="application/rss+xml" />
+  {% if page.category == none %}
+  {% for post in site.posts limit:20 %} 
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <description>{{ post.content | xml_escape }}</description>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
+      <link>{% if post.source == "default" %} {{ site.url }}/{{ post.url }} {% else %} {{post.source}} {% endif %}</link>
+      <guid isPermaLink="true">{% if post.source == "default" %} {{ site.url }}/{{ post.url }} {% else %} {{post.source}} {% endif %}</guid>
+    </item>
+  {% endfor %}
+  {% else %}
   {% for post in site.categories[page.category] limit:20 %} 
     <item>
       <title>{{ post.title | xml_escape }}</title>
@@ -14,5 +25,6 @@
       <guid isPermaLink="true">{% if post.source == "default" %} {{ site.url }}/{{ post.url }} {% else %} {{post.source}} {% endif %}</guid>
     </item>
   {% endfor %}
+  {% endif %}
 </channel>
 </rss>
