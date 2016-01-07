@@ -1,6 +1,27 @@
----
-layout: category_feed
-title: "What Alex is Reading"
-category: tweet
-category_directory: tweet
----
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Tweets from Alex's Website</title>
+  <description>What Alex is Tweeting</description>
+  <link>{{ site.url }}</link>
+  <atom:link href="{{ site.url }}/feeds/tweet/" rel="self" type="application/rss+xml" />
+  {% for post in site.categories.tweet limit:20 %} 
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <author>{{ post.provider_name }}</author>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
+      <link>{% if post.source == "default" %}{{ site.url }}/{{ post.url }}{% else %}{{post.source | xml_escape }}{% endif %}</link>
+      <guid isPermaLink="true">{% if post.source == "default" %}{{ site.url }}/{{ post.url }}{% else %}{{post.source | xml_escape }}{% endif %}</guid>
+      {% if post.thumbnail %}
+      <content type="html">
+        <![CDATA[
+          <a href="{{ post.thumbnail }}">
+            <img alt="test_pic" src="{{ post.thumbnail }}" />
+          </a>
+        ]]>
+      </content>
+      {% endif %}
+    </item>
+  {% endfor %}
+</channel>
+</rss>
