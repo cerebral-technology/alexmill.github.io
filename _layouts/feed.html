@@ -10,7 +10,7 @@
     <item>
       <title>{{ post.title | xml_escape }}</title>
       <description>{{ post.content | xml_escape }}</description>
-      <pubDate>{{ post.date | date: "%a, %d %b %Y" }}</pubDate>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
       <link>{% if post.source == "default" %} {{ site.url }}/{{ post.url }} {% else %} {{post.source}} {% endif %}</link>
       <guid isPermaLink="true">{% if post.source == "default" %} {{ site.url }}/{{ post.url }} {% else %} {{post.source}} {% endif %}</guid>
     </item>
@@ -20,7 +20,7 @@
     <item>
       <title>{{ post.title | xml_escape }}</title>
       <description>{{ post.content | xml_escape }}</description>
-      <pubDate>{{ post.date | date: "%a, %d %b %Y" }}</pubDate>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
       <link>{% if post.source == "default" %} {{ site.url }}/{{ post.url }} {% else %} {{post.source}} {% endif %}</link>
       <guid isPermaLink="true">{% if post.source == "default" %} {{ site.url }}/{{ post.url }} {% else %} {{post.source}} {% endif %}</guid>
     </item>
