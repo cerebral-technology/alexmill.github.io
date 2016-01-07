@@ -1,6 +1,6 @@
 ---
-layout: feed.xml
-title: Alex's Favorite Podcasts
+layout: feed
+title: "Alex's Favorite Podcasts"
 category: podcasts
 category_directory: podcasts
 ---
