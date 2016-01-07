@@ -10,8 +10,8 @@
       <title>{{ post.title | xml_escape }}</title>
       <description>{% if post.content %}{{ post.content | xml_escape }}{% else if post.provider_display %}{{ post.provider_display }}{% endif %}</description>
       <pubDate>{{ post.date | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
-      <link>{% if post.source == "default" %} {{ site.url }}/{{ post.url }} {% else %} {{post.source}} {% endif %}</link>
-      <guid isPermaLink="true">{% if post.source == "default" %} {{ site.url }}/{{ post.url }} {% else %} {{post.source}} {% endif %}</guid>
+      <link>{% if post.source == "default" %}{{ site.url }}/{{ post.url }}{% else %}{{ post.source | xml_escape }}{% endif %}</link>
+      <guid isPermaLink="true">{% if post.source == "default" %}{{ site.url }}/{{ post.url }}{% else %}{{ post.source | xml_escape }}{% endif %}</guid>
     </item>
   {% endfor %}
 </channel>
