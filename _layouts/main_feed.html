@@ -8,10 +8,19 @@
   {% for post in site.posts limit:20 %} 
     <item>
       <title>{{ post.title | xml_escape }}</title>
-      <description>{% if post.provider_display %}{{ post.provider_display }}{% else if post.content %}{{ post.content | xml_escape }}{% else {% endif %}</description>
+      <description>{% if post.provider_display %}{{ post.provider_display }}{% else if post.content %}{{ post.content | xml_escape }}{% endif %}</description>
       <pubDate>{{ post.date | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
       <link>{% if post.source == "default" %}{{ site.url }}/{{ post.url }}{% else %}{{ post.source | xml_escape }}{% endif %}</link>
       <guid isPermaLink="true">{% if post.source == "default" %}{{ site.url }}/{{ post.url }}{% else %}{{ post.source | xml_escape }}{% endif %}</guid>
+      {% if post.thumbnail %}
+      <content type="html">
+        <![CDATA[
+          <a href="{{ post.thumbnail }}">
+            <img alt="test_pic" src="{{ post.thumbnail }}" />
+          </a>
+        ]]>
+      </content>
+      {% endif %}
     </item>
   {% endfor %}
 </channel>
