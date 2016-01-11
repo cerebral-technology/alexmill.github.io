@@ -29,17 +29,6 @@
         <itunes:summary>A personal feed that allows you to subscribe to Alex's favorite podcast episodes.</itunes:summary>
         <itunes:subtitle>A personal feed that allows you to subscribe to Alex's favorite podcast episodes.</itunes:subtitle>
         <lastBuildDate>Thu, 02 Feb 2012 00:00:00 EST</lastBuildDate>
-        <item>
-            <title>Verbose title of the episode</title>
-            <description>Verbose description of the episode.</description>
-            <itunes:summary>Duplicate of above verbose description.</itunes:summary>
-            <itunes:subtitle>Short description of the episode - 255 character max.</itunes:subtitle>
-            <itunesu:category itunesu:code="112" />
-            <enclosure url="http://www.YourSite.com/FILE.EXT" type="audio/mpeg" length="1" />
-            <guid>http://www.YourSite.com/FILE.EXT</guid>
-            <itunes:duration>H:MM:SS</itunes:duration>
-            <pubDate>Thu, 02 Feb 2012 00:00:00 EST</pubDate>
-        </item>
         {% for post in site.categories[page.category] limit:20 %} 
         {% if post.raw_source %}
           <item>
@@ -48,9 +37,9 @@
             <itunes:summary>A podcast from {{ post.provider_name }} shared by Alex.</itunes:summary>
             <itunes:subtitle>{{ post.provider_name }}</itunes:subtitle>
             <pubDate>{{ post.date | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
-            <enclosure url="{{post.raw_source | xml_escape }" type="audio/mpeg" length="1" />
-            <link>{{post.raw_source | xml_escape }</link>
-            <guid isPermaLink="true">{{post.raw_source | xml_escape }</guid>
+            <enclosure url="{{post.raw_source | xml_escape }}" type="audio/mpeg" length="1" />
+            <link>{{post.raw_source | xml_escape }}</link>
+            <guid isPermaLink="true">{{post.raw_source | xml_escape }}</guid>
             {% if post.thumbnail %}
             <content type="html">
               <![CDATA[
