@@ -21,8 +21,8 @@
         <itunes:keywords>personal, podcast, feed, automation</itunes:keywords>
         <itunes:explicit>no</itunes:explicit>
         <itunes:image href="http://alex.miller.im/img/mdIconsThumbnail.jpg" />
-        <atom:link href="http:/alex.miller.im/feeds/podcast/index.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Sun, 01 Jan 2016 00:00:00 EST</pubDate>
+        <atom:link href="/feeds/podcast/index.xml" rel="self" type="application/rss+xml" />
+        <pubDate>Mon, 11 Jan 2016 00:00:00 EST</pubDate>
         <title>Alex Miller's Favorite Podcast Episodes</title>
         <itunes:author>Alex Miller</itunes:author>
         <description>A personal feed that allows you to subscribe to Alex's favorite podcast episodes.</description>
@@ -41,11 +41,6 @@
             <link>{{post.raw_source | xml_escape }}</link>
             <guid isPermaLink="true">{{post.raw_source | xml_escape }}</guid>
             {% if post.thumbnail %}
-            <content type="html">
-              <![CDATA[
-                  <img src="{{ post.thumbnail }}" />
-              ]]>
-            </content>
           {% endif %}
           </item>
         {% endif %}
