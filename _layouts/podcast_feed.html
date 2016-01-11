@@ -41,6 +41,7 @@
             <pubDate>Thu, 02 Feb 2012 00:00:00 EST</pubDate>
         </item>
         {% for post in site.categories[page.category] limit:20 %} 
+        {% if post.raw_source %}
           <item>
             <title>{{ post.title | xml_escape }}</title>
             <description>A podcast from {{ post.provider_name }} shared by Alex.</description>
@@ -58,6 +59,7 @@
             </content>
           {% endif %}
           </item>
+        {% endif %}
         {% endfor %}
     </channel>
 </rss>
