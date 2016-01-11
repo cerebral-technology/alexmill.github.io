@@ -1,59 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-<channel>
-  <title>{% if page.title %}{{ page.title }}{% else %}Alex Miller's Website {% endif %}</title>
-  <description>{% if page.description %} {{ page.description }} {% else %}Feed of Alex Miller's Website.{% endif %}</description>
-  <link>{{ site.url }}</link>
-  <atom:link href="{{ site.url }}/feeds/{{page.category_directory}}/index.xml" rel="self" type="application/rss+xml" />
-  {% for post in site.categories[page.category] limit:20 %} 
-    <item>
-      <title>{{ post.title | xml_escape }}</title>
-      <description>{{ post.provider_name }}</description>
-      <pubDate>{{ post.date | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
-      <link>{% if post.source == "default" %}{{ site.url }}/{{ post.url }}{% else %}{{post.source | xml_escape }}{% endif %}</link>
-      <guid isPermaLink="true">{% if post.source == "default" %}{{ site.url }}/{{ post.url }}{% else %}{{post.source | xml_escape }}{% endif %}</guid>
-      {% if post.thumbnail %}
-      <content type="html">
-        <![CDATA[
-            <img src="{{ post.thumbnail }}" />
-        ]]>
-      </content>
-    {% endif %}
-    </item>
-  {% endfor %}
-</channel>
-</rss>
-
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:itunesu="http://www.itunesu.com/feed" version="2.0">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
     <channel>
-        <link>http://www.YourSite.com</link>
+        <link>http://alex.miller.im</link>
         <language>en-us</language>
         <copyright>&#xA9;2013</copyright>
-        <webMaster>your@email.com (Your Name)</webMaster>
-        <managingEditor>your@email.com (Your Name)</managingEditor>
+        <webMaster>alex@miler.im (Alex Miller)</webMaster>
+        <managingEditor>alex@miler.im (Alex Miller)</managingEditor>
         <image>
             <url>http://www.YourSite.com/ImageSize300X300.jpg</url>
             <title>Title or description of your logo</title>
             <link>http://www.YourSite.com</link>
         </image>
         <itunes:owner>
-            <itunes:name>Your Name</itunes:name>
-            <itunes:email>your@email.com</itunes:email>
+            <itunes:name>Alex Miller</itunes:name>
+            <itunes:email>alex@miller.im</itunes:email>
         </itunes:owner>
-        <itunes:category text="Education">
-            <itunes:category text="Higher Education" />
+        <itunes:category text="Technology">
+            <itunes:category text="Podcasting" />
         </itunes:category>
-        <itunes:keywords>separate, by, comma, and, space</itunes:keywords>
+        <itunes:keywords>personal, podcast, feed, automation</itunes:keywords>
         <itunes:explicit>no</itunes:explicit>
-        <itunes:image href="http://www.YourSite.com/ImageSize300X300.jpg" />
-        <atom:link href="http://www.YourSite.com/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Sun, 01 Jan 2012 00:00:00 EST</pubDate>
-        <title>Verbose title of the podcast</title>
-        <itunes:author>College, school, or department owning the podcast</itunes:author>
-        <description>Verbose description of the podcast.</description>
-        <itunes:summary>Duplicate of above verbose description.</itunes:summary>
-        <itunes:subtitle>Short description of the podcast - 255 character max.</itunes:subtitle>
+        <itunes:image href="http://alex.miller.im/img/mdIconsThumbnail.jpg" />
+        <atom:link href="http:/alex.miller.im/feeds/podcast/index.xml" rel="self" type="application/rss+xml" />
+        <pubDate>Sun, 01 Jan 2016 00:00:00 EST</pubDate>
+        <title>Alex Miller's Favorite Podcast Episodes</title>
+        <itunes:author>Alex Miller</itunes:author>
+        <description>A personal feed that allows you to subscribe to Alex's favorite podcast episodes.</description>
+        <itunes:summary>A personal feed that allows you to subscribe to Alex's favorite podcast episodes.</itunes:summary>
+        <itunes:subtitle>A personal feed that allows you to subscribe to Alex's favorite podcast episodes.</itunes:subtitle>
         <lastBuildDate>Thu, 02 Feb 2012 00:00:00 EST</lastBuildDate>
         <item>
             <title>Verbose title of the episode</title>
@@ -66,5 +40,24 @@
             <itunes:duration>H:MM:SS</itunes:duration>
             <pubDate>Thu, 02 Feb 2012 00:00:00 EST</pubDate>
         </item>
+        {% for post in site.categories[page.category] limit:20 %} 
+          <item>
+            <title>{{ post.title | xml_escape }}</title>
+            <description>A podcast from {{ post.provider_name }} shared by Alex.</description>
+            <itunes:summary>A podcast from {{ post.provider_name }} shared by Alex.</itunes:summary>
+            <itunes:subtitle>{{ post.provider_name }}</itunes:subtitle>
+            <pubDate>{{ post.date | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
+            <enclosure url="{{post.raw_source | xml_escape }" type="audio/mpeg" length="1" />
+            <link>{{post.raw_source | xml_escape }</link>
+            <guid isPermaLink="true">{{post.raw_source | xml_escape }</guid>
+            {% if post.thumbnail %}
+            <content type="html">
+              <![CDATA[
+                  <img src="{{ post.thumbnail }}" />
+              ]]>
+            </content>
+          {% endif %}
+          </item>
+        {% endfor %}
     </channel>
 </rss>
