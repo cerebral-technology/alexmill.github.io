@@ -1,6 +1,3 @@
 ---
-layout: category_feed
-title: "Alex's Favorite Podcasts"
-category: podcasts
-category_directory: podcasts
+layout: podcast_feed
 ---
