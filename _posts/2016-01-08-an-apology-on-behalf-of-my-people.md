@@ -1,5 +1,5 @@
 ---
-categories: ['blog', 'politics']
+categories: ['politics']
 provider_display: medium.com
 provider_name: medium.com
 favicon_url: https://cdn-static-1.medium.com/_/fp/icons/favicon-new.TAS6uQ-Y7kcKgi0xjcYHXw.ico
