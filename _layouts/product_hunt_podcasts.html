@@ -19,25 +19,25 @@
         <itunes:keywords>product,hunt,podcast,feed,top,posts,submission</itunes:keywords>
         <itunes:explicit>no</itunes:explicit>
         <itunes:image href="http://alex.miller.im/img/mdIconsThumbnail.jpg" />
-        <atom:link href="/podcast-rss-atom-itunes-feed/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/podcast-rss-atom-itunes-feed/top{{ page.daily_limit }}.xml" rel="self" type="application/rss+xml" />
         <pubDate>Mon, 11 Jan 2016 00:00:00 EST</pubDate>
         <title>Product Hunt Daily Top {{ page.daily_limit }}</title>
         <itunes:author>Product Hunt</itunes:author>
-        <description>A personal feed that allows you to subscribe to Alex's favorite podcast episodes.</description>
-        <itunes:summary>A personal feed that allows you to subscribe to Alex's favorite podcast episodes.</itunes:summary>
-        <itunes:subtitle>A personal feed that allows you to subscribe to Alex's favorite podcast episodes.</itunes:subtitle>
+        <description>desc</description>
+        <itunes:summary>desc</itunes:summary>
+        <itunes:subtitle>desc</itunes:subtitle>
         <lastBuildDate>Thu, 02 Feb 2012 00:00:00 EST</lastBuildDate>
         {% for post in site.categories.producthunt limit:100 %} 
-            {% for episode in post.episodes limit:page.daily_limit %} 
+            {% for episode in post.episodes limit:5 %} 
         <item>
-            <title>{{ post.date | date: "%d-%b" }} &#35; episode.index (&#x25B2; {{ episode.votes_count }}) | {{ episode.name | xml_escape truncatewords:10}}</title>
+            <title>{{ post.date | date: "%d-%b" }} &#35; {{ episode.index }} (&#x25B2; {{ episode.votes_count }}) | {{ episode.name | xml_escape }}</title>
             <description>{{ episode.tagline }}</description>
             <itunes:summary>{{ episode.tagline }}<br>Discussion: {{ episode.comments_count}} comments (<a href="{{ episode.discussion_shortlink }}">LINK</a>)</itunes:summary>
             <itunes:subtitle>{{ episode.tagline }}</itunes:subtitle>
             <pubDate>{{ post.date | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
-            <enclosure url="{{episode.mp3_shortlink | xml_escape }}" type="audio/mpeg" length="1" />
-            <link>{{episode.mp3_shortlink | xml_escape }}</link>
-            <guid isPermaLink="true">{{episode.mp3_shortlink | xml_escape }}</guid>
+            <enclosure url="{{ episode.mp3_shortlink | xml_escape }}" type="audio/mpeg" length="1" />
+            <link>{{ episode.mp3_shortlink | xml_escape }}</link>
+            <guid isPermaLink="true">{{ episode.mp3_shortlink | xml_escape }}</guid>
         </item>
             {% endfor %}
         {% endfor %}
