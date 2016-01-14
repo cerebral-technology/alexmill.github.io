@@ -33,7 +33,8 @@
             <title>{{ post.date | date: "%-m-%-d" }} &#35;{{ episode.index }} (&#x25B2; {{ episode.votes_count }}) | {{ episode.name | xml_escape }}</title>
             <description>{{ episode.tagline | xml_escape }}</description>
             <itunes:summary>
-                <![CDATA[{{ episode.tagline | xml_escape }} <br/> Discussion: {{ episode.comments_count}} comments (<a href="{{ episode.discussion_shortlink }}">LINK </a>)]]>
+                <![CDATA[{{ episode.tagline | xml_escape }} <br/>
+                Discussion: {{ episode.comments_count}} comments (<a href="{{ episode.discussion_shortlink }}">LINK</a>)]]>
             </itunes:summary>
             <itunes:subtitle>{{ episode.tagline | xml_escape }}</itunes:subtitle>
             <pubDate>{{ post.date | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
