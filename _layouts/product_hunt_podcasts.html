@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+    <channel>
+        <link>http://alex.miller.im</link>
+        <language>en-us</language>
+        <copyright>&#xA9;2013</copyright>
+        <webMaster>alex@miler.im (Alex Miller)</webMaster>
+        <managingEditor>alex@miler.im (Alex Miller)</managingEditor>
+        <image>
+            <url>http://alex.miller.im/img/mdIconsThumbnail.jpg</url>
+            <title>Alex Miller</title>
+            <link>http://alex.miller.im</link>
+        </image>
+        <itunes:owner>
+            <itunes:name>Alex Miller</itunes:name>
+            <itunes:email>alex@miller.im</itunes:email>
+        </itunes:owner>
+        <itunes:category text="Technology">
+            <itunes:category text="Podcasting" />
+        </itunes:category>
+        <itunes:keywords>personal, podcast, feed, automation</itunes:keywords>
+        <itunes:explicit>no</itunes:explicit>
+        <itunes:image href="http://alex.miller.im/img/mdIconsThumbnail.jpg" />
+        <atom:link href="/feeds/podcast/index.xml" rel="self" type="application/rss+xml" />
+        <pubDate>Mon, 11 Jan 2016 00:00:00 EST</pubDate>
+        <title>Alex Miller's Favorite Podcast Episodes</title>
+        <itunes:author>Alex Miller</itunes:author>
+        <description>A personal feed that allows you to subscribe to Alex's favorite podcast episodes.</description>
+        <itunes:summary>A personal feed that allows you to subscribe to Alex's favorite podcast episodes.</itunes:summary>
+        <itunes:subtitle>A personal feed that allows you to subscribe to Alex's favorite podcast episodes.</itunes:subtitle>
+        <lastBuildDate>Thu, 02 Feb 2012 00:00:00 EST</lastBuildDate>
+        {% for post in site.categories.podcasts limit:20 %} 
+        {% if post.raw_source %}
+          <item>
+            <title>{{ post.title | xml_escape }}</title>
+            <description>A podcast from {{ post.provider_name }} shared by Alex.</description>
+            <itunes:summary>A podcast from {{ post.provider_name }} shared by Alex.</itunes:summary>
+            <itunes:subtitle>{{ post.provider_name }}</itunes:subtitle>
+            <pubDate>{{ post.date | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
+            <enclosure url="{{post.raw_source | xml_escape }}" type="audio/mpeg" length="1" />
+            <link>{{post.raw_source | xml_escape }}</link>
+            <guid isPermaLink="true">{{post.raw_source | xml_escape }}</guid>
+            {% if post.thumbnail %}
+          {% endif %}
+          </item>
+        {% endif %}
+        {% endfor %}
+    </channel>
+</rss>
