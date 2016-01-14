@@ -32,7 +32,7 @@
         <item>
             <title>{{ post.date | date: "%d-%b" }} &#35; {{ episode.index }} (&#x25B2; {{ episode.votes_count }}) | {{ episode.name | xml_escape }}</title>
             <description>{{ episode.tagline }}</description>
-            <itunes:summary>{{ episode.tagline }}<br>Discussion: {{ episode.comments_count}} comments (ATAG href="{{ episode.discussion_shortlink }}">LINK ATAG)</itunes:summary>
+            <itunes:summary>{{ episode.tagline }} LINEBREAK Discussion: {{ episode.comments_count}} comments (ATAG href="{{ episode.discussion_shortlink }}">LINK ATAG)</itunes:summary>
             <itunes:subtitle>{{ episode.tagline }}</itunes:subtitle>
             <pubDate>{{ post.date | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
             <enclosure url="{{ episode.mp3_shortlink | xml_escape }}" type="audio/mpeg" length="1" />
