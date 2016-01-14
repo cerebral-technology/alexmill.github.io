@@ -30,7 +30,7 @@
         {% for post in site.categories.producthunt limit:100 %} 
             {% for episode in post.episodes limit:5 %} 
         <item>
-            <title>{{ post.date | date: "%m-%d" }} &#35; {{ episode.index }} (&#x25B2; {{ episode.votes_count }}) | {{ episode.name | xml_escape }}</title>
+            <title>{{ post.date | date: "%m-%d" }} &#35;{{ episode.index }} (&#x25B2; {{ episode.votes_count }}) | {{ episode.name | xml_escape }}</title>
             <description>{{ episode.tagline | xml_escape }}</description>
             <itunes:summary>{{ episode.tagline | xml_escape }} LINEBREAK Discussion: {{ episode.comments_count}} comments (ATAG href="{{ episode.discussion_shortlink }}">LINK ATAG)</itunes:summary>
             <itunes:subtitle>{{ episode.tagline | xml_escape }}</itunes:subtitle>
