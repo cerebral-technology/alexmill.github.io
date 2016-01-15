@@ -23,8 +23,8 @@
         <pubDate>{{ site.time | date_to_rfc822" }}</pubDate>
         <title>Product Hunt Daily Top {{ page.daily_limit }}</title>
         <itunes:author>Product Hunt</itunes:author>
-        <description>The top {{ page.daily_limit }} podcast episodes upvoted on Product Hunt. Every day. Have the most upvoted podcasts submitted on Product Hunt sent right to your podcatcher. Feeds for the top 1, 3, 5, and 10 podcasts submitted daily. (Not officially affiliated with Product Hunt.)</description>
-        <itunes:summary>The top {{ page.daily_limit }} podcast episodes upvoted on Product Hunt. Every day. Have the most upvoted podcasts submitted on Product Hunt sent right to your podcatcher. Feeds for the top 1, 3, 5, and 10 podcasts submitted daily. (Not officially affiliated with Product Hunt.)</itunes:summary>
+        <description>The top {{ page.daily_limit }} podcast episodes upvoted on Product Hunt. Every day. Have the most upvoted podcasts submitted on Product Hunt sent right to your podcatcher. Feeds for the top 1, 3, 5, and 10 podcasts submitted daily can be found at http://alxm.im/ph-feeds. (Not officially affiliated with Product Hunt.)</description>
+        <itunes:summary>The top {{ page.daily_limit }} podcast episodes upvoted on Product Hunt. Every day. Have the most upvoted podcasts submitted on Product Hunt sent right to your podcatcher. Feeds for the top 1, 3, 5, and 10 podcasts submitted daily can be found at http://alxm.im/ph-feeds. (Not officially affiliated with Product Hunt.)</itunes:summary>
         <itunes:subtitle>The top {{ page.daily_limit }} podcast episodes upvoted on Product Hunt. Every day.</itunes:subtitle>
         <lastBuildDate>{{ site.time | date_to_rfc822" }}</lastBuildDate>
         {% for post in site.categories.producthunt limit:100 %} 
