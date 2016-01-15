@@ -37,7 +37,7 @@
                 Discussion: {{ episode.comments_count}} comments (<a href="{{ episode.discussion_shortlink }}">LINK</a>)]]>
             </itunes:summary>
             <itunes:subtitle>{{ episode.tagline | xml_escape }}</itunes:subtitle>
-            <pubDate>{{ post.date + 1 days | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
+            <pubDate>{{ post.date + 1 day | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
             <enclosure url="{{ episode.mp3_shortlink | xml_escape }}" type="audio/mpeg" length="1" />
             <link>{{ episode.mp3_shortlink | xml_escape }}</link>
             <guid isPermaLink="true">{{ episode.mp3_shortlink | xml_escape }}</guid>
