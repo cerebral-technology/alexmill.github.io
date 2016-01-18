@@ -34,13 +34,13 @@
             <description>{{ episode.tagline | xml_escape }}</description>
             <itunes:summary>
                 <![CDATA[{{ episode.tagline | xml_escape }} <br/>
-                Discussion: {{ episode.comments_count}} comments (<a href="{{ episode.discussion_shortlink }}">LINK</a>)]]>
+                Discussion: {{ episode.comments_count}} comments (<a href="{{ episode.discussion_url }}">LINK</a>)]]>
             </itunes:summary>
             <itunes:subtitle>{{ episode.tagline | xml_escape }}</itunes:subtitle>
             <pubDate>{{ post.pub_date }}</pubDate>
-            <enclosure url="{{ episode.mp3_shortlink | xml_escape }}" type="audio/mpeg" length="1" />
-            <link>{{ episode.mp3_shortlink | xml_escape }}</link>
-            <guid isPermaLink="true">{{ episode.mp3_shortlink | xml_escape }}</guid>
+            <enclosure url="{{ episode.mp3 | xml_escape }}" type="audio/mpeg" length="1" />
+            <link>{{ episode.mp3 | xml_escape }}</link>
+            <guid isPermaLink="true">{{ episode.mp3 | xml_escape }}</guid>
         </item>
             {% endfor %}
         {% endfor %}
