@@ -2,7 +2,7 @@
 categories: ['podcasts', 'economics', 'all_articles']
 provider_display: "knowledge.wharton.upenn.edu"
 provider_name: "Knowledge@Wharton"
-favicon_url: "http://pca.st/assets/favicon-196-764eabc609dde7fb5e746b11ba934c5e3f21115e2fad01477f038b21d66b023b.png"
+favicon_url: "http://knowledge.wharton.upenn.edu/wp-content/themes/knowledge/inc/img/favicon.ico"
 title: "‘Misbehaving’: When Psychology Meets Economics"
 published: "2016-01-19"
 source: http://knowledge.wharton.upenn.edu/article/misbehaving-psychology-meets-economics/
