@@ -2,7 +2,7 @@
 categories: ['podcasts', 'politics', 'all_articles']
 provider_display: "www.bbc.co.uk"
 provider_name: "The Inquiry"
-favicon_url: "http://ichef.bbci.co.uk/images/ic/128x128/p03d8b16.jpg"
+favicon_url: "http://www.bbc.co.uk/favicon.ico"
 title: "How Much Inequality Is Too Much?"
 published: "2016-01-05T00:00:00"
 source: http://www.bbc.co.uk/programmes/p03d52kp
