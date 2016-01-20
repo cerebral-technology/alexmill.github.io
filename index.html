@@ -1,5 +1,6 @@
 ---
 layout: homepage
+script: "<script>if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()) || window.matchMedia('only screen and (max-width: 760px)').matches) { $('a.pcl').each(function(e){ n = $(this).attr('href').replace('http','itpc'); ; $(this).attr('href', n);  }) }</script>"
 ---
 
 <div class="full-container" id="home-header">
@@ -52,7 +53,7 @@ layout: homepage
     </div>
     <div class="section">
         
-        <h3><a class="link-nocolor" href="/podcasts/">Podcasts I'm Listening To</a> (<a class="link-nocolor" href="http://alex.miller.im/feeds/podcasts/index.xml">Subscribe <img src="/img/rss512.png" style="display: inline; width: 18px; height: 18px;"></a>)</h3>
+        <h3><a class="link-nocolor" href="/podcasts/">Podcasts I'm Listening To</a> (<a class="pcl link-nocolor" href="http://alex.miller.im/feeds/podcasts/index.xml">Subscribe <img src="/img/rss512.png" style="display: inline; width: 18px; height: 18px;"></a>)</h3>
         
         <ul class="no-bullets">
             {% for post in site.categories.podcasts limit:5  %}
