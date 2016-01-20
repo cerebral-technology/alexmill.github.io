@@ -5,7 +5,7 @@ date: 2016-01-18
 author: "Alex Miller"
 meta: Top user-submitted podcasts by vote count, every day.
 description: Top user-submitted podcasts by vote count, every day. Get feed links for the top 1, 3, 5, or 10 episodes.
-script: if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { $("a.pcl").each(function(e){ n = $(this).attr("href").replace("http","itpc"); ; $(this).attr("href", n);  }) }
+script: <script>if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { $("a.pcl").each(function(e){ n = $(this).attr("href").replace("http","itpc"); ; $(this).attr("href", n);  }) }</script>
 ---
 
 <div style="font-size: 2rem; width: 100%; margin: 20px 0 5px 0; display: inline-block;">
