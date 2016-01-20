@@ -4,5 +4,8 @@
     <body class="home">
         {{ content }}
         {% include footer.html %}
+        {% if page.script %}
+        {{ page.script }}
+        {% endif %}
     </body>
 </html>
