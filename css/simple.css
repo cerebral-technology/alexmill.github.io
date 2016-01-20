@@ -120,7 +120,7 @@
 html, body { height: 100%; }
 
 body {
-    font-family: "Computer Modern Serif", Georgia, serif;
+    font-family: "Computer Modern", Georgia, serif;
     background-color: #f9f9f9;
     font-weight: 300;
     font-size: 18px;
