@@ -5,23 +5,24 @@ date: 2016-01-18
 author: "Alex Miller"
 meta: Top user-submitted podcasts by vote count, every day.
 description: Top user-submitted podcasts by vote count, every day. Get feed links for the top 1, 3, 5, or 10 episodes.
+script: if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { $("a.pcl").each(function(e){ n = $(this).attr("href").replace("http","itpc"); ; $(this).attr("href", n);  }) }
 ---
 
 <div style="font-size: 2rem; width: 100%; margin: 20px 0 5px 0; display: inline-block;">
   <div style="width: 100%; text-align: center; margin-bottom: 20px; display: inline-block;">
     <div style="width: 47%; float: left; margin-right: 3%; background-color: #DE5239; color: #fff; border-radius: 3px;">
-      <a style="color: #fff;" href="http://alex.miller.im/product-hunt/podcast-rss-atom-itunes-feed/top1.xml">Top 1 episode</a>
+      <a class="pcl" style="color: #fff;" href="http://alex.miller.im/product-hunt/podcast-rss-atom-itunes-feed/top1.xml">Top 1 episode</a>
     </div>
     <div style="width: 47%; float: left; margin-left: 3%; background-color: #DE5239; color: #fff; border-radius: 3px;">
-      <a style="color: #fff;" href="http://alex.miller.im/product-hunt/podcast-rss-atom-itunes-feed/top3.xml">Top 3 episodes</a>
+      <a class="pcl" style="color: #fff;" href="http://alex.miller.im/product-hunt/podcast-rss-atom-itunes-feed/top3.xml">Top 3 episodes</a>
     </div>
   </div>
   <div style="width: 100%; text-align: center; display: inline-block;">
     <div style="width: 47%; float: left; margin-right: 3%; background-color: #DE5239; color: #fff; border-radius: 3px;">
-      <a style="color: #fff;" href="http://alex.miller.im/product-hunt/podcast-rss-atom-itunes-feed/top5.xml">Top 5 episodes</a>
+      <a class="pcl" style="color: #fff;" href="http://alex.miller.im/product-hunt/podcast-rss-atom-itunes-feed/top5.xml">Top 5 episodes</a>
     </div>
     <div style="width: 47%; float: left; margin-left: 3%; background-color: #DE5239; color: #fff; border-radius: 3px;">
-      <a style="color: #fff;" href="http://alex.miller.im/product-hunt/podcast-rss-atom-itunes-feed/top10.xml">Top 10 episodes</a>
+      <a class="pcl" style="color: #fff;" href="http://alex.miller.im/product-hunt/podcast-rss-atom-itunes-feed/top10.xml">Top 10 episodes</a>
     </div>
   </div>
 </div>
@@ -44,4 +45,3 @@ You can find me at <a href="https://twitter.com/alexpmil">@alexpmil</a> on Twitt
 <div style="width: 100%; text-align: center; margin: 15px 0;">
   <img src="http://alex.miller.im/product-hunt/podcast-rss-atom-itunes-feed/header-img.png" style="width: 100%; max-width: 400px;">
 </div>
-
