@@ -14,7 +14,7 @@
         var marker0 = new google.maps.Marker({
             position: {lat: 39.965362315682, lng: -75.17257690429688},
             map: map,
-            title: ''the belgian cafe''
+            title: 'the belgian cafe'
         });
         marker0.addListener('click', function() {
             infowindow0.open(map, marker0);
@@ -27,7 +27,7 @@
         var marker1 = new google.maps.Marker({
             position: {lat: 39.951321, lng: -75.173942},
             map: map,
-            title: ''Home Sweet Homebrew''
+            title: 'Home Sweet Homebrew'
         });
         marker1.addListener('click', function() {
             infowindow1.open(map, marker1);
@@ -40,7 +40,7 @@
         var marker2 = new google.maps.Marker({
             position: {lat: 40.02260283470359, lng: -75.21710157394408},
             map: map,
-            title: ''Merge Dance Studio''
+            title: 'Merge Dance Studio'
         });
         marker2.addListener('click', function() {
             infowindow2.open(map, marker2);
@@ -53,7 +53,7 @@
         var marker3 = new google.maps.Marker({
             position: {lat: 39.94883997790703, lng: -75.16290323312215},
             map: map,
-            title: ''Sweet Box''
+            title: 'Sweet Box'
         });
         marker3.addListener('click', function() {
             infowindow3.open(map, marker3);
@@ -66,7 +66,7 @@
         var marker4 = new google.maps.Marker({
             position: {lat: 39.95017920084754, lng: -75.14752924259453},
             map: map,
-            title: ''PHL Business Journal''
+            title: 'PHL Business Journal'
         });
         marker4.addListener('click', function() {
             infowindow4.open(map, marker4);
@@ -79,7 +79,7 @@
         var marker5 = new google.maps.Marker({
             position: {lat: 39.96231257915497, lng: -75.14110386371613},
             map: map,
-            title: ''Trophy Bikes''
+            title: 'Trophy Bikes'
         });
         marker5.addListener('click', function() {
             infowindow5.open(map, marker5);
@@ -92,7 +92,7 @@
         var marker6 = new google.maps.Marker({
             position: {lat: 39.95006594974687, lng: -75.14227867126465},
             map: map,
-            title: ''Panorama''
+            title: 'Panorama'
         });
         marker6.addListener('click', function() {
             infowindow6.open(map, marker6);
@@ -105,7 +105,7 @@
         var marker7 = new google.maps.Marker({
             position: {lat: 39.957115481871945, lng: -75.17117142611824},
             map: map,
-            title: ''AcademyofNatSciences''
+            title: 'AcademyofNatSciences'
         });
         marker7.addListener('click', function() {
             infowindow7.open(map, marker7);
@@ -118,7 +118,7 @@
         var marker8 = new google.maps.Marker({
             position: {lat: 39.949071962194076, lng: -75.16441375917606},
             map: map,
-            title: ''Bellevue Salon & Spa''
+            title: 'Bellevue Salon & Spa'
         });
         marker8.addListener('click', function() {
             infowindow8.open(map, marker8);
@@ -131,7 +131,7 @@
         var marker9 = new google.maps.Marker({
             position: {lat: 39.9477629747096, lng: -75.16807079315186},
             map: map,
-            title: '"Monk's Cafe"'
+            title: "Monk's Cafe"
         });
         marker9.addListener('click', function() {
             infowindow9.open(map, marker9);
@@ -144,7 +144,7 @@
         var marker10 = new google.maps.Marker({
             position: {lat: 39.950497, lng: -75.166676},
             map: map,
-            title: ''Oyster House''
+            title: 'Oyster House'
         });
         marker10.addListener('click', function() {
             infowindow10.open(map, marker10);
@@ -157,7 +157,7 @@
         var marker11 = new google.maps.Marker({
             position: {lat: 39.9490511, lng: -75.1464632},
             map: map,
-            title: ''chemheritage''
+            title: 'chemheritage'
         });
         marker11.addListener('click', function() {
             infowindow11.open(map, marker11);
@@ -170,7 +170,7 @@
         var marker12 = new google.maps.Marker({
             position: {lat: 39.942187740763075, lng: -75.15227213923758},
             map: map,
-            title: ''Tattooed Mom''
+            title: 'Tattooed Mom'
         });
         marker12.addListener('click', function() {
             infowindow12.open(map, marker12);
@@ -183,7 +183,7 @@
         var marker13 = new google.maps.Marker({
             position: {lat: 39.92125329950192, lng: -75.14697627539474},
             map: map,
-            title: '"Uncle Oogie's"'
+            title: "Uncle Oogie's"
         });
         marker13.addListener('click', function() {
             infowindow13.open(map, marker13);
@@ -196,7 +196,7 @@
         var marker14 = new google.maps.Marker({
             position: {lat: 39.95557237154348, lng: -75.16476716317528},
             map: map,
-            title: ''Friends Center Phila''
+            title: 'Friends Center Phila'
         });
         marker14.addListener('click', function() {
             infowindow14.open(map, marker14);
@@ -209,7 +209,7 @@
         var marker15 = new google.maps.Marker({
             position: {lat: 40.077202, lng: -75.208787},
             map: map,
-            title: '"McNally's Tavern"'
+            title: "McNally's Tavern"
         });
         marker15.addListener('click', function() {
             infowindow15.open(map, marker15);
