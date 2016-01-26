@@ -37,7 +37,7 @@
                 Discussion: {{ episode.comments_count}} comments (<a href="{{ episode.discussion_url }}">LINK</a>)]]>
             </itunes:summary>
             <itunes:subtitle>{{ episode.tagline | xml_escape }}</itunes:subtitle>
-            <pubDate>{{ post.pub_date }}</pubDate>
+            <pubDate>{% if episode.pub_date %}{{ episdoe.pub_date }}{% else %}{{ post.pub_date }}{% endif %}</pubDate>
             <enclosure url="{{ episode.mp3 | xml_escape }}" type="audio/mpeg" length="1" />
             <link>{{ episode.mp3 | xml_escape }}</link>
             <guid isPermaLink="true">{{ episode.mp3 | xml_escape }}</guid>
