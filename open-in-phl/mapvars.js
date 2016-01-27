@@ -20,10 +20,11 @@ function initMap() {
         marker[i] = new google.maps.Marker({
             position: {lat: tweets[i]["lat"], lng: tweets[i]["lng"]},
             map: map,
-            title: tweets[i]["name"]
+            title: tweets[i]["name"],
+            tweet_index: i
         });
         marker[i].addListener('click', function() {
-            infowindow[i].open(map, marker[i]);
+            infowindow[this.tweet_index].open(map, marker[this.tweet_index]);
         });
     }
 }
