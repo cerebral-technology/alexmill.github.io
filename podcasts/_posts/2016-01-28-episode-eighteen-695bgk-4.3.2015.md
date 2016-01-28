@@ -2,7 +2,7 @@
 categories: ['podcasts', 'all_articles']
 provider_display: "thisiscriminal.com"
 provider_name: "Criminal"
-favicon_url: "http://thisiscriminal.com/favicon.ico"
+favicon_url: "http://thisiscriminal.com/wp-content/uploads/fbrfg/favicon.ico"
 title: "Episode 18: 695BGK"
 published: "2016-01-28"
 source: http://thisiscriminal.com/episode-18-695bgk/
