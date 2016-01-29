@@ -169,6 +169,10 @@ body.category .post-li a div img {
     margin: 0 auto;
 }
 
+.hero-image {
+    width: 100%;
+}
+
 article.post-content {
     font-size: 20px;
     letter-spacing: -0.01rem;
