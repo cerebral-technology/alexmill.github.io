@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>{% if page.title %}{{ page.title }}{% else %}Alex Miller's Website {% endif %}</title>
-  <description>{% if page.description %}{{ page.description }}{% endif %}</description>
+  <title>{% if page.title %}{{ page.title | xml_escape }}{% endif %}</title>
+  <description>{% if page.description %}{{ page.description  | xml_escape}}{% endif %}</description>
   <link>{{ site.url }}</link>
   <atom:link href="{{ site.url }}/feeds/{{page.category_directory}}/index.xml" rel="self" type="application/rss+xml" />
   {% for post in site.categories[page.category] limit:20 %} 
     <item>
       <title>{{ post.title | xml_escape }}</title>
-     {% if page.description %}<description>{{ page.description }}</description>{% endif %}
+     {% if page.description %}<description>{{ page.description  | xml_escape}}</description>{% endif %}
       <pubDate>{{ post.date | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
       <link>{% if post.source == "default" %}{{ site.url }}/{{ post.url }}{% else %}{{ post.source | xml_escape }}{% endif %}</link>
       <guid isPermaLink="true">{% if post.source == "default" %}{{ site.url }}/{{ post.url }}{% else %}{{ post.source | xml_escape }}{% endif %}</guid>
