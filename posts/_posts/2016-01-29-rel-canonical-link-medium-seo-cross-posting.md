@@ -25,9 +25,7 @@ I recently came across [this post by Saul Carlin](https://medium.com/@saul/creat
 I had never heard of a way to set a canonical URL on Medium posts, so this naturally piqued my interest. After testing out the process (Blog → RSS → IFTTT → Medium), I was pleasantly surprised by the results. The post you're reading right now was originally posted on my blog and syndicated to Medium via IFTTT. If you'll look at the source code of the post on Medium, you'll see a canonical link tag pointing to my personal domain. 
 
 <div style="width: 100%; text-align: center;">
-
-![rel="canonical" tags on Medium for SEO](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "rel="canonical" tags on Medium for SEO")
-
+<img title="rel='canonical' tags on Medium for SEO" alt="rel='canonical' tags on Medium for SEO" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png">
 </div>
 
 ## Cross-Posting Syndication and SEO Can Work Together
