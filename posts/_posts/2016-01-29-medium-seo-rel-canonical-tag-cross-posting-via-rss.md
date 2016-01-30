@@ -22,7 +22,7 @@ For a while, I was under the impression that you can't use `rel="canonical"` tag
 
 I recently came across [this post by Saul Carlin](https://medium.com/@saul/creating-medium-stories-via-rss-c2ac93d08288#.x7n4uvdd2) of Medium, in which he describes the process of automatically syndicating content from your blog via [IFTTT](https://ifttt.com/) and RSS. At the very bottom of the post are two sentences that mention how to configure the canonical URL for your syndicated posts. 
 
-I had never heard of a way to set a canonical URL on Medium posts, so this naturally piqued my interest. After testing out the process (Blog → RSS → IFTTT → Medium), I was pleasantly surprised by the results. The post you're reading right now was originally posted on my blog and syndicated to Medium via IFTTT. If you'll look at the source code of the post on Medium, you'll see a canonical link tag pointing to my personal domain. 
+I had never heard of a way to set a canonical URL on Medium posts, so this naturally piqued my interest. After testing out the process (Blog → RSS → IFTTT → Medium), I was pleasantly surprised by the results. The post you're reading right now was [originally posted on my blog](http://alex.miller.im/posts/medium-seo-rel-canonical-tag-cross-posting-via-rss/) and syndicated to Medium via IFTTT. If you'll look at the source code of [this post on Medium](https://medium.com/@alexpmiller/using-rel-canonical-tag-on-medium-for-seo-69435e227f18, you'll see a canonical link tag pointing to my personal domain. 
 
 <figure>
 <img title="rel='canonical' tags on Medium for SEO" alt="rel='canonical' tags on Medium for SEO" src="http://alex.miller.im/img/medium-canonical.PNG">
