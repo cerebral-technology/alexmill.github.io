@@ -1,19 +1,20 @@
 ---
 layout: post
-title: "Using rel='canonical' Tag on Medium for SEO"
+title: Using rel="canonical" Tag on Medium for SEO"
 categories: ["blog"]
 author: "Alex Miller"
-meta: "Should you cross-post your blog content to Medium? YES! But do it the right way using rel='canonical' to maximize your content's SEO value."
+meta: Should you cross-post your blog content to Medium? YES! But do it the right way using rel="canonical" to maximize your content's SEO value."
+description: Should you cross-post your blog content to Medium? YES! But do it the right way using rel="canonical" to maximize your content's SEO value."
 source: default
 syntax: true
 hero_image: /img/medium-seo.jpg
 ---
 
-While [Medium](https://medium.com) is a fantastic platform for readers, the jury is still out on whether it's good for writers and publishers &mdash; especially as it relates to SEO and marketing. This topic has been covered at (both [long](https://moz.com/blog/use-hosted-blog-platforms-seo-content-distribution) and [short](https://twitter.com/randfish/status/668674305065025536)) length by the Wizard of Moz, Rand Fishkin, and he makes some important points. The main ones being:
+While [Medium](https://medium.com) is a fantastic platform for readers, the jury is still out on whether it's good for writers and publishers &mdash; especially as it relates to SEO and marketing. This topic has been covered at length (both [long](https://moz.com/blog/use-hosted-blog-platforms-seo-content-distribution) and [short](https://twitter.com/randfish/status/668674305065025536)) by the Wizard of Moz, Rand Fishkin, and he makes some important points. The most important things you give up by cross-posting to Medium are:
 
 - Don't underestimate the value of building brand affinity through content on your own website
-- You can't retarget ads, capture emails, or build custom calls-to-action on syndication platforms
-- You can't get any SEO value from the links to Medium posts
+- The possibility of retargeting ads, capturing emails, or building custom calls-to-action on syndication platforms
+- The ability to get any SEO value from the links to Medium posts
 
 ## ... Or can you?
 
@@ -30,5 +31,5 @@ Inline-style:
 So what's the takeaway from this? If you're building a brand and are considering cross-posting your content on Medium, make sure you do all your research and consider all the pros and cons of this strategy. On the other hand, if you're a lone blogger who wants to take advantage of Medium's great audience and discovery engine but don't want to sacrifice the SEO benefits of posting on your own domain &mdash; fear no longer! For people who just want to grow their potential audience without the need for any sophisticated tracking and advertising tools, the canonical link solution is exactly what you need. 
 
 ```html
-<link rel="canonical">
+<link rel="canonical"/>
 ```
