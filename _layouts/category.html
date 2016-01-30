@@ -22,7 +22,10 @@
 		                		<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
 		                			<img src="{{ post.thumbnail }}">
 		                		</div>
-		                	{% else %}
+		                	{% else if post.hero_image %}
+		                		<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
+		                			<img src="{{ post.hero_image }}">
+		                		</div>
 		                	{% endif %}
 		                    <h2>{{ post.title }}</h2>
 		                </a>
