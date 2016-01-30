@@ -179,6 +179,11 @@ article.post-content {
     line-height: 1.5;
 }
 
+figure {
+    width: 100%;
+    text-align: center;
+}
+
 pre {
     font-family: 'Computer Modern Typewriter Variable', Courier, monospace;
     font-size: 85%;
