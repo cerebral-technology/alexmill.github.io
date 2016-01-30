@@ -14,13 +14,14 @@
       <guid isPermaLink="true">{% if post.source == "default" %}{{ site.url }}{{ post.url }}/{% else %}{{ post.source | xml_escape }}{% endif %}</guid>
       
       <content type="html">
+        <![CDATA[
             {% if post.hero_image %}
             <figure>
               <img src="{{ post.hero_image }}" />
             </figure>
             {% endif %}
-           
             {{ post.content }}
+        ]]>
       </content>
       
     </item>
