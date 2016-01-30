@@ -31,7 +31,7 @@ I had never heard of a way to set a canonical URL on Medium posts, so this natur
 I did have some hangups getting Medium to accept my content into it's system. If you really want to automate this process, you have to be careful to use only HTML or Markdown that acceptable according to [Medium's API spec](https://medium.com/developers/accepted-markup-for-medium-s-publishing-api-a4367010924e#.6fvj8vz2i). However, the other way around this is to just have IFTTT send your post to the drafts folder in your Medium account. After the post gets sent to your drafts folder, you can edit it in any way you like and format it specifically for Medium's platform. Just make sure that your canonical URL can be properly read from your RSS feed (usually from the __guID__ or __link__ tags). While you can edit the text and images of your post, you can't edit the canonical URL once it's read in by IFTTT.
 
 <figure>
-<img title="rel='canonical' tags on Medium for SEO" alt="rel='canonical' tags on Medium for SEO" src="http://alex.miller.im/img/medium-ifttt.png">
+<img title="rel='canonical' tags on Medium for SEO" alt="rel='canonical' tags on Medium for SEO" src="http://alex.miller.im/img/medium-ifttt.PNG">
 </figure>
 
 ## Cross-Posting Syndication and SEO Can Work Together
