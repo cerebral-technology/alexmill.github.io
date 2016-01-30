@@ -16,7 +16,7 @@
       <content type="html">
         <![CDATA[
             {% if post.hero_image %}
-            <img src="{{ post.thumbnail }}" />
+            <img src="{{ post.hero_image }}" />
             {% endif %}
             {{ post.content }}
         ]]>
