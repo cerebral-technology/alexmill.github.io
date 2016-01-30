@@ -18,9 +18,9 @@
             {% if post.hero_image %}
             <img src="{{ post.hero_image }}" />
             {% endif %}
-            <div markdown="0">
+           
             {{ post.content }}
-            </div>
+            
         ]]>
       </content>
       
