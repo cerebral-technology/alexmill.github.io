@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using rel="canonical" Tag on Medium for SEO
-categories: ["blog"]
+categories: ["blog", "medium"]
 author: "Alex Miller"
 meta: Should you cross-post your blog content to Medium? YES! But do it the right way using rel="canonical" to maximize your content's SEO value.
 description: Should you cross-post your blog content to Medium? YES! But do it the right way using rel="canonical" to maximize your content's SEO value.
