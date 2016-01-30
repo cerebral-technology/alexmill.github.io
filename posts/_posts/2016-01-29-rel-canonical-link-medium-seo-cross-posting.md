@@ -24,12 +24,11 @@ I recently came across [this post by Saul Carlin](https://medium.com/@saul/creat
 
 I had never heard of a way to set a canonical URL on Medium posts, so this naturally piqued my interest. After testing out the process (Blog → RSS → IFTTT → Medium), I was pleasantly surprised by the results. The post you're reading right now was originally posted on my blog and syndicated to Medium via IFTTT. If you'll look at the source code of the post on Medium, you'll see a canonical link tag pointing to my personal domain. 
 
-Inline-style: 
+<div style="width: 100%; text-align: center;">
+
 ![rel="canonical" tags on Medium for SEO](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "rel="canonical" tags on Medium for SEO")
 
+</div>
 
-So what's the takeaway from this? If you're building a brand and are considering cross-posting your content on Medium, make sure you do all your research and consider all the pros and cons of this strategy. On the other hand, if you're a lone blogger who wants to take advantage of Medium's great audience and discovery engine but don't want to sacrifice the SEO benefits of posting on your own domain &mdash; fear no longer! For people who just want to grow their potential audience without the need for any sophisticated tracking and advertising tools, the canonical link solution is exactly what you need. 
-
-```html
-<link rel="canonical"/>
-```
+## Cross-Posting Syndication and SEO Can Work Together
+So what's the takeaway from this? If you're building a brand and are considering cross-posting your content on Medium, make sure you do your research and consider *all* the pros and cons of this strategy. On the other hand, if you're a lone blogger who wants to take advantage of Medium's great audience and discovery engine but don't want to sacrifice the SEO benefits of posting on your own domain &mdash; fear no longer! For people who just want to grow their potential audience without the need for any sophisticated tracking and advertising tools, the canonical link solution is exactly what you need. T
