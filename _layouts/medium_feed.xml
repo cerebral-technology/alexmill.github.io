@@ -15,7 +15,9 @@
       
       <content type="html">
             {% if post.hero_image %}
-            <img src="{{ post.hero_image }}" />
+            <figure>
+              <img src="{{ post.hero_image }}" />
+            </figure>
             {% endif %}
            
             {{ post.content }}
