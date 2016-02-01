@@ -35,4 +35,6 @@ I did have some hangups getting Medium to accept my content into its system. If 
 </figure>
 
 ## Cross-Posting Syndication and SEO Can Work Together
-So what's the takeaway from this? If you're building a brand and are considering cross-posting your content on Medium, make sure you do your research and consider *all* the pros and cons of this strategy. On the other hand, if you're a lone blogger who wants to take advantage of Medium's great audience and discovery engine but don't want to sacrifice the SEO benefits of posting on your own domain &mdash; fear no longer! For people who just want to grow their potential audience, the canonical link solution is exactly what you need.
+So what's the takeaway from this? If you're building a brand and are considering cross-posting your content on Medium, make sure you do your research and consider *all* the pros and cons of this strategy. On the other hand, if you're a lone blogger who wants to take advantage of Medium's great audience and discovery engine but don't want to sacrifice the SEO benefits of posting on your own domain &mdash; fear no longer! 
+
+While a rel="canonical" tag likely doesn’t pass all the link equity from the syndicated page, it will help you retain a large chunk of the value of your content on its original domain. For people whose primary goal is to grow their potential audience (potentially at a small SEO cost), the canonical link solution is exactly what you need.
