@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+
+    <body class="category">
+
+    	{% include header.html %}
+
+    	<div style="max-width: 700px; margin: 0 auto; padding-bottom: 75px;">
+		    <div class="section">
+		        <h1 style="font-size: 200%; text-align: center;">{{ page.header }}</h1>
+		        <ul class="no-bullets" style="padding: 0 20px;">
+		            {% for post in site %}
+		            <li class="post-li">
+		            	<hr>
+		                {% if post.source == "default" %}
+		                <a class="link-nocolor" href="{{ post.url }}">
+		                {% else %}
+		                <a class="link-nocolor" href="{{ post.source }}">
+		                {% endif %}
+		                	{% if post.thumbnail %}
+		                		<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
+		                			<img src="{{ post.thumbnail }}">
+		                		</div>
+		                	{% else if post.hero_image %}
+		                		<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
+		                			<img src="{{ post.hero_image }}">
+		                		</div>
+		                	{% endif %}
+		                    <h2>{{ post.title }}</h2>
+		                </a>
+		                <span class="post-date" style="font-size: 1rem; margin-left: 5px;">{{ post.date | date: "%b %-d, %Y" }}</span>
+		                <p>{{post.content}}</p>
+		            </li>
+		            {% endfor %}
+		        </ul>
+		        <hr>
+		    </div>
+		</div>
+        {% include footer.html %}
+    </body>
+</html>
