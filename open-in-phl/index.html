@@ -4,6 +4,8 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>#OpenInPHL: Real-time map of Philly businesses tweeting their status</title>
+    <link rel="stylesheet" href="/plugins/remodal/remodal.css">
+    <link rel="stylesheet" href="/plugins/remodal/remodal-default-theme.css">
     <link rel="stylesheet" href="/css/computer-modern.css">
     <style>
       html, body {
@@ -19,11 +21,25 @@
       }
     </style>
   </head>
-  <body>
+  <body class="remodal-bg">
     <div style="width: 100%; height: 70px; text-align: center;">
       <h1>#OpenInPHL</h1>
+      <a href="#modal">Call the modal with data-remodal-id="modal"</a>
     </div>
     <div id="map"></div>
+    
+    <div class="remodal" data-remodal-id="modal">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <h1>Remodal</h1>
+      <p>
+        Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+      </p>
+      <br>
+      <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+      <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+    </div>
+      
+    <script src="/plugins/remodal/remodal.min.js"></script>
     <script src="/open-in-phl/mapvars.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4QPboQ5xJEcr9oEXkvWAwzlvq5fj_rqk&signed_in=true&callback=initMap"></script>
   </body>
