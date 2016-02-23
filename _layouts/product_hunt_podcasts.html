@@ -37,7 +37,7 @@
             </itunes:summary>
             <itunes:subtitle>{{ episode.tagline | xml_escape }}</itunes:subtitle>
             <pubDate>{% if episode.pub_date %}{{ episode.pub_date }}{% else %}{{ post.pub_date }}{% endif %}</pubDate>
-            <enclosure url="{{ episode.mp3 | xml_escape }}" type="audio/mpeg" length="{% if episode.content_length %}{{ episode.content_length}}{% else %}1{% endif %}" />
+            <enclosure url="{{ episode.mp3 | xml_escape, replace:'https://','http://' }}" type="audio/mpeg" length="{% if episode.content_length %}{{ episode.content_length}}{% else %}1{% endif %}" />
             <link>{{ episode.mp3 | xml_escape }}</link>
             <guid isPermaLink="true">{{ episode.mp3 | xml_escape }}</guid>
         </item>
