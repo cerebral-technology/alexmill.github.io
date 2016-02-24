@@ -44,7 +44,7 @@ script: "<script>if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera m
                 {% else %}
                 <a class="link-nocolor" href="{{ post.source }}">
                 {% endif %}
-                    {{ post.title }}
+                    {% if post.short_title %}{{ post.short_title }}{% else %}{{ post.title }}{% endif %}
                 </a>
                 <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
             </li>
