@@ -1,5 +1,6 @@
 ---
 layout: post
+short_title: "Technology, Efficiency, & Inequality"
 title: "Technology, Efficiency, & Inequality: Why Old Politics Aren’t Suited for the New World"
 categories: ["blog", "medium"]
 author: "Alex Miller"
