@@ -190,6 +190,10 @@ figure {
     padding: 20px 0;
 }
 
+figure img {
+    max-width: 100%;
+}
+
 pre {
     font-family: 'Computer Modern Typewriter Variable', Courier, monospace;
     font-size: 85%;
