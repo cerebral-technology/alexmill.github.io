@@ -15,7 +15,7 @@ The world of the *technorati* was set ablaze earlier this year by [Paul Graham�
 In early 2015, Apple became the [most valuable company in history](http://fortune.com/2015/02/10/apple-the-first-700-billion-company/) by reaching a market cap of more than $700 billion. It seemed that Uber was in the news every week last year — but almost always for the same two reasons which, when juxtaposed, draw a stark contrast: investors dumping astronomically large amounts of money into Uber’s bank accounts and users (both customers and drivers) kvetching about the variable and exorbitant prices and fees charged by the service. And the incessant coverage of “unicorns” last year meant that we seldom went a day without seeing the words “1 billion dollars” and “tech startup” in the same sentence.
 
 <figure>
-<img src="http://alex.miller.im/img/three-commas.jpeg">
+<img src="http://alex.miller.im/img/three-comma.jpeg">
 </figure>
 
 Startups, Silicon Valley, and technology as a whole have great potential for creating wealth and adding real value to our economy. Economic activity (in general) does not have to be a zero-sum game, in which some people get rich at the expense of others. When the sewing machine was invented, workers went from producing one dress per day to 10 dresses per day. These technological increases in productivity are real and significant drivers of economic growth. It would simply be unproductive to limit the value-adding potential of technology companies.
