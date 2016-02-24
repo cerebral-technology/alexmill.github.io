@@ -43,7 +43,7 @@ nav a:hover, nav a:hover span.nav-icon {
 h1, h2, h3 {
     font-family: "Computer Modern Serif", Georgia, serif;
     padding: 0;
-    margin: 5px;
+    margin: 5px 0;
 }
 
 h1 {
@@ -201,8 +201,13 @@ code {
 
 /* Responsive */
 @media (max-width: 800px) {
+    body {
+        padding: 10px;
+    }
+
     .page-content h1 {
         font-size: 200%;
         line-height: 1.2;
     }
+
 }
