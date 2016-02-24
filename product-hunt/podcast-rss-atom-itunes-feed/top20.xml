@@ -1,4 +1,5 @@
 ---
 layout: product_hunt_podcasts
 daily_limit: 20
+default_image: true
 ---
