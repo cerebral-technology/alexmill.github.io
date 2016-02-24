@@ -11,6 +11,10 @@ body {
     color: #333333;
 }
 
+hr {
+    margin: 40px 0 30px 0;
+}
+
 a         { color: #004684; text-decoration: none; }
 a:hover   { color: #000; text-decoration: underline; }
 .page-content a:visited { color: #205caa; }
