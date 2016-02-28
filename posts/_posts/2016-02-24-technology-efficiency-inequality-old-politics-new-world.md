@@ -13,7 +13,7 @@ hero_image: http://alex.miller.im/img/tech-inequality.png
 
 The world of the *technorati* was set ablaze earlier this year by [Paul Graham’s blog post on economic inequality](http://paulgraham.com/ineq.html). Graham’s piece came at a time of heightened public awareness about inequality.  Ever since the Occupy movement of 2011, the problem of “inequality” has been a mainstay in the public discourse — especially as it relates to financial practices. But the recent successes of many darling tech companies has perceptibly shifted the locus of discussion from Wall Street to Silicon Valley.
 
-In early 2015, Apple became the [most valuable company in history](http://fortune.com/2015/02/10/apple-the-first-700-billion-company/) by reaching a market cap of more than $700 billion. It seemed that Uber was in the news every week last year — but almost always for the same two reasons which, when juxtaposed, draw a stark contrast: investors dumping astronomically large amounts of money into Uber’s bank accounts and users (both customers and drivers) kvetching about the variable and exorbitant prices and fees charged by the service. And the incessant coverage of “unicorns” last year meant that we seldom went a day without seeing the words “1 billion dollars” and “tech startup” in the same sentence.
+In early 2015, Apple became the [most valuable company in history](http://fortune.com/2015/02/10/apple-the-first-700-billion-company/) by reaching a market cap of more than $700 billion. It seemed that Uber was in the news every week last year — but almost always for the same two reasons which, when juxtaposed, draw a stark contrast: investors dumping astronomically large amounts of money into Uber’s bank accounts and users (both customers and drivers) kvetching about the unpredictable and exorbitant fees charged by the service. And the incessant media coverage of “unicorns” last year meant that we seldom went a day without seeing the words “1 billion dollars” and “tech startup” in the same sentence.
 
 <figure>
 <img src="http://alex.miller.im/img/three-comma.jpeg">
@@ -35,7 +35,7 @@ It is very hard to characterize this story as one of technological progress. Sud
 
 ## How Exactly Does Technology Lead to Inequality? 
 
-In the 1930s, the influential economist John Maynard Keynes [predicted that we would all be working 15 hours a week](http://www.npr.org/2015/08/13/432122637/keynes-predicted-we-would-be-working-15-hour-weeks-why-was-he-so-wrong), empowered by technological productivity. In the 1960s, a Senate subcommittee heard testimony about the coming crisis of leisure time, brought on by a new economy in which people would only be working 20 hours a week. It’s easy to laugh this off as the mania du jour of bygone eras, but understanding why bona fide experts were so wrong about this is central to understanding our modern economy — and how we should respond to it.
+In the 1930s, the influential economist John Maynard Keynes [predicted that we would all be working 15 hours a week](http://www.npr.org/2015/08/13/432122637/keynes-predicted-we-would-be-working-15-hour-weeks-why-was-he-so-wrong), empowered by technological productivity. In the 1960s, a Senate subcommittee heard testimony about the coming crisis of leisure time, brought on by a new economy in which people would only be working 20 hours a week. It’s easy to laugh this off as the mania *du jour* of bygone eras, but understanding why bona fide experts were so wrong about this is central to understanding our modern economy — and how we should respond to it.
 
 A simplistic explanation for the lack diminishing workloads is that people are greedy. Why only make $50,000 working 20 hours a week when I could make $100,000 working 40 hours a week? This may have something to do with it, but it cannot be the whole story. Indeed, economists were right to predict that technology reduces the amount of menial work that humans do on a regular basis. Any task that requires repetitive, mechanical, or algorithmic work is something that has been automated. But what they didn’t predict is the complexity required to manage and develop all this new technology. 
 
@@ -50,7 +50,7 @@ Take farming as a concrete example. Rather than training, equipping, and coordin
 </figure>
 
 
-Don’t get me wrong, I’m all for efficiency. But the economic forces described above guarantee that **efficient policies increasingly and inevitably lead and more unequal societies**. Although it may be unintuitive, *average* salaries can go up (increased efficiency) while the *median* salary goes down (increased inequality). As with almost all things quantitative, the devil is in the distribution.
+Don’t get me wrong, I’m all for efficiency. But the economic forces described above guarantee that **efficient policies increasingly and inevitably lead to more unequal societies**. Although it may be unintuitive, *average* salaries can go up (increased efficiency) while the *median* salary goes down (increased inequality). As with almost all things quantitative, the devil is in the distribution.
 
 <figure>
 	<a href="http://www.ft.com/intl/cms/s/98ce14ee-99a6-11e5-95c7-d47aa298f769,Authorised=false.html?siteedition=uk&_i_location=http%3A%2F%2Fwww.ft.com%2Fcms%2Fs%2F0%2F98ce14ee-99a6-11e5-95c7-d47aa298f769.html%3Fsiteedition%3Duk&_i_referer=http%3A%2F%2Ffee.org%2Ff078fb030247f6d94942b35dd6e6993e&classification=conditional_standard&iab=barrier-app#axzz3uFSaiEnG">
@@ -62,7 +62,7 @@ Don’t get me wrong, I’m all for efficiency. But the economic forces describe
 
 Unfortunately, the current political climate makes it difficult to integrate the imperatives of efficiency and equality. The libertarianism of Silicon Valley is great at maximizing efficiency, but it offers no solutions to the problem of increasing structural unemployment caused by technological progress. This is why Paul Graham’s appeals to “attack poverty” ring hollow. It is laudable that libertarians emphasize the importance of giving everyone equal opportunity. But as the distribution of wealth becomes more extreme, giving everyone an equal opportunity is like giving everyone a Powerball ticket. Sure, the lottery is a “fair” process, but it does nothing to address the fact it is simply built into the system that the majority of people walk away with nothing.
 
-Liberals and progressives often swing the pendulum too far in the other direction. By emphasizing equality above all else, they often advocate for regressive policies that fight the inevitable tide of economic progress. Bemoaning the fact that there are fewer middle-class jobs with job security and good benefits ignores the ways in which technology (and globalization) has changed the means of production. Too often left-wing policies aim to reduce efficiency in the name of increasing equality.
+Liberals and progressives often swing the pendulum too far in the other direction. By emphasizing equality above all else, they often advocate for regressive protectionist policies that fight the inevitable tide of economic progress. Bemoaning the fact that there are fewer middle-class jobs with job security and good benefits ignores the ways in which technology (and globalization) has changed the means of production. Too often left-wing policies aim to reduce efficiency in the name of increasing equality.
 
 ## The Solution Must Be Political, Not Technological.
 
@@ -74,4 +74,4 @@ I won’t be so glib as to [suggest our politics just needs to co-opt Silicon Va
 
 ---
 
-This post is cross-posted on [Medium](https://medium.com/@alexpmiller/technology-efficiency-inequality-why-old-politics-arent-suited-for-the-new-world-f5b2925e034e).
+This essay is cross-posted on [Medium](https://medium.com/@alexpmiller/technology-efficiency-inequality-why-old-politics-arent-suited-for-the-new-world-f5b2925e034e).
