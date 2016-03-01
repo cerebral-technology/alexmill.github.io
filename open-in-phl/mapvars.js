@@ -6,7 +6,7 @@ function initMap() {
     center: philly
     });
     
-    var tweets = [{'lat': 39.961288, 'lng': -75.158798, 'name': 'Savery Gallery', 'content': '<div id="content"> <h1>Savery Gallery</h1> <div id="bodyContent"> <hr> <p><a target="_blank" href="https://twitter.com/SaveryGallery">@SaveryGallery</a>: It\'s the last #Caturday at SAVERY! See #WIDEEYED : Nicole Dyer and Dave Eassa in its last day in the gallery! #bmoretophilly #openinphl</p> <p style="font-size: 10px;">Sat Feb 27 16:19 | <a target="_blank" href="https://twitter.com/statuses/703615372742803456">Read on Twitter</a></p> <hr> <p> Phone: (visit website)<br/> Directions: <a href="https://maps.google.com?daddr=Philadelphia%2C+PA" target="_blank">Philadelphia, PA</a><br/> Website: <a target="_blank" href="http://www.saverygallery.com/">http://www.saverygallery.com/</a> </p> </div> </div>'}];    
+    var tweets = [{'name': 'Savery Gallery', 'lat': 39.961288, 'content': '<div id="content"> <h1>Savery Gallery</h1> <div id="bodyContent"> <hr> <p><a target="_blank" href="https://twitter.com/SaveryGallery">@SaveryGallery</a>: It\'s the last #Caturday at SAVERY! See #WIDEEYED : Nicole Dyer and Dave Eassa in its last day in the gallery! #bmoretophilly #openinphl</p> <p style="font-size: 10px;">Sat Feb 27 16:19 | <a target="_blank" href="https://twitter.com/statuses/703615372742803456">Read on Twitter</a></p> <hr> <p> Phone: (visit website)<br/> Directions: <a href="https://maps.google.com?daddr=Philadelphia%2C+PA" target="_blank">Philadelphia, PA</a><br/> Website: <a target="_blank" href="http://www.saverygallery.com/">http://www.saverygallery.com/</a> </p> </div> </div>', 'lng': -75.158798}];    
  
     var contentStrings = [];
     var infowindow = [];
