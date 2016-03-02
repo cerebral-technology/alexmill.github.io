@@ -89,6 +89,11 @@ body.home .home-links a:hover {
     opacity: 1;
 }
 
+body.home .section {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .section h3 {
     font-weight: 700;
 }
@@ -210,7 +215,7 @@ code {
 /* Responsive */
 @media (max-width: 800px) {
     .full-container {
-        padding: 0 10px;
+        padding: 0 15px;
     }
     .page-content h1 {
         font-size: 200%;
