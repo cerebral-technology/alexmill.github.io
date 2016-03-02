@@ -214,6 +214,10 @@ code {
 
 /* Responsive */
 @media (max-width: 800px) {
+    #wharton-logo img {
+        width: 92%;
+    }
+    
     .full-container {
         padding: 0 15px;
     }
