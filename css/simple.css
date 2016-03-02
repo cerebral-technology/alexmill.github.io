@@ -209,10 +209,9 @@ code {
 
 /* Responsive */
 @media (max-width: 800px) {
-    body {
-        padding: 10px;
+    .full-container {
+        padding: 0 10px;
     }
-
     .page-content h1 {
         font-size: 200%;
         line-height: 1.2;
