@@ -28,15 +28,15 @@ date: 2016-01-29
 
 <p>I had never heard of a way to set a canonical URL on Medium posts, so this naturally piqued my interest. After testing out the process (Blog → RSS → IFTTT → Medium), I was pleasantly surprised by the results. The post you're reading right now was <a href="http://alex.miller.im/posts/medium-seo-rel-canonical-tag-cross-posting-via-rss/">originally posted on my blog</a> and syndicated to Medium via IFTTT. If you'll look at the source code of <a href="https://medium.com/@alexpmiller/using-rel-canonical-tag-on-medium-for-seo-69435e227f18">this post on Medium</a>, you'll see a canonical link tag pointing to my personal domain. </p>
 
-<p><figure>
+<figure>
 <img title="rel='canonical' tags on Medium for SEO" alt="rel='canonical' tags on Medium for SEO" src="http://alex.miller.im/img/medium-canonical.PNG">
-</figure></p>
+</figure>
 
 <p>I did have some hangups getting Medium to accept my content into its system. If you really want to automate this process, you have to be careful to use only HTML or Markdown that is acceptable according to <a href="https://medium.com/developers/accepted-markup-for-medium-s-publishing-api-a4367010924e#.6fvj8vz2i">Medium's API spec</a>. However, the other way around this is to just have IFTTT send your post to the drafts folder in your Medium account. After the post gets sent to your drafts folder, you can edit it in any way you like and format it specifically for Medium's platform. Just make sure that your canonical URL can be properly read from your RSS feed (usually from the <code>&lt;link&gt;</code> tag). While you can edit the text and images of your post, you can't edit the canonical URL once it's read in by IFTTT.</p>
 
-<p><figure>
+<figure>
 <img title="rel='canonical' tags on Medium for SEO" alt="rel='canonical' tags on Medium for SEO" src="http://alex.miller.im/img/medium-ifttt.PNG">
-</figure></p>
+</figure>
 
 <h2>Cross-Posting Syndication and SEO Can Work Together</h2>
 
