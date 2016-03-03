@@ -225,5 +225,9 @@ code {
         font-size: 200%;
         line-height: 1.2;
     }
+    
+    .wrap {
+        padding: 0 18px;
+    }
 
 }
