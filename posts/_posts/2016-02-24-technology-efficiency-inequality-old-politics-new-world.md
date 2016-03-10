@@ -74,4 +74,4 @@ I won’t be so glib as to [suggest our politics just needs to co-opt Silicon Va
 
 ---
 
-This essay is cross-posted on [Medium](https://medium.com/@alexpmiller/technology-efficiency-inequality-why-old-politics-arent-suited-for-the-new-world-f5b2925e034e).
+This essay is [cross-posted on Medium](http://alex.miller.im/posts/medium-seo-rel-canonical-tag-cross-posting-via-rss/) [here](https://medium.com/@alexpmiller/technology-efficiency-inequality-why-old-politics-arent-suited-for-the-new-world-f5b2925e034e).
