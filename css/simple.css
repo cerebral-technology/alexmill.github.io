@@ -228,11 +228,13 @@ code {
     }
     
     .wrap {
+        width: 100%;
         padding: 0 1rem;
     }
     
     /* Allows imgs in padded div to be full-width */
     figure img {
+        display: block;
         margin: 0 -1rem;
     }
 
