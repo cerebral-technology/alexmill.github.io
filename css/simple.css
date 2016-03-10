@@ -234,6 +234,7 @@ code {
     
     /* Allows imgs in padded div to be full-width */
     figure {
+        width: auto;
         margin: 0 -1rem;
     }
     
