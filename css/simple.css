@@ -233,9 +233,13 @@ code {
     }
     
     /* Allows imgs in padded div to be full-width */
+    figure {
+        margin: 0 -1rem;
+    }
+    
     figure img {
         display: block;
-        margin: 0 -1rem;
+        max-width: 100%;
     }
 
 }
