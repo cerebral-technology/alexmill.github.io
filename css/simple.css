@@ -215,7 +215,7 @@ code {
     }
     
     .full-container {
-        padding: 0 15px;
+        padding: 0 1rem;
     }
     .page-content h1 {
         font-size: 200%;
@@ -233,17 +233,7 @@ code {
     
     /* Allows imgs in padded div to be full-width */
     figure img {
-        display: block;
-        background-size: cover;
-        background-position: center;
-        background-repeat:  no-repeat;
-        width: auto;      /* fallback */
-        max-width: 100%;  /* fallback */
-        width: calc(100% + 2em); /* modern browsers */
-        max-width: 100vw;        /* assumes content is full viewport width */
-        position: relative;
-        left:  -1em;
-        right: -1em;
+        margin: 0 -1rem;
     }
 
 }
