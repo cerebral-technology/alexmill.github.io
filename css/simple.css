@@ -228,7 +228,7 @@ code {
     }
     
     .wrap {
-        padding: 0 18px;
+        padding: 0 1rem;
     }
     
     /* Allows imgs in padded div to be full-width */
