@@ -62,7 +62,7 @@ script: "<script>if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera m
                     {% if post.favicon_url contains "https://" or post.favicon_url contains "/img/bullet.gif" %}
                     <img class="provider-favicon" src="{{ post.favicon_url }}"/>
                     {% else %}
-                    <img class="provider-favicon" src="https://res.cloudinary.com/kollate/image/fetch/{{ post.favicon_url | cgi_escape }}"/>
+                    <img class="provider-favicon" src="https://res.cloudinary.com/kollate/image/fetch/{{ post.favicon_url }}"/>
                     {% endif %}
                     {{ post.title | truncatewords:12 }}
                 </a>
@@ -81,7 +81,11 @@ script: "<script>if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera m
             {% for post in site.categories.articles limit:5  %}
             <li>
                 <a class="link-nocolor" href="{{ post.source }}">
+                    {% if post.favicon_url contains "https://" or post.favicon_url contains "/img/bullet.gif" %}
                     <img class="provider-favicon" src="{{ post.favicon_url }}"/>
+                    {% else %}
+                    <img class="provider-favicon" src="https://res.cloudinary.com/kollate/image/fetch/{{ post.favicon_url }}"/>
+                    {% endif %}
                     {{ post.title | truncatewords:12 }}
                 </a>
                 <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
