@@ -20,11 +20,19 @@
 		                {% endif %}
 		                	{% if post.thumbnail %}
 		                		<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
-		                			<img src="{{ post.thumbnail }}">
+		                			{% if post.thumbnail contains "https://" %}
+							<img src="{{ post.thumbnail }}">
+							{% else %}
+							<img src="https://res.cloudinary.com/kollate/image/fetch/{{ post.thumbnail }}">
+							{% endif %}
 		                		</div>
 		                	{% else if post.hero_image %}
 		                		<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
-		                			<img src="{{ post.hero_image }}">
+		                			{% if post.hero_image contains "https://" %}
+							<img src="{{ post.hero_image }}">
+							{% else %}
+							<img src="https://res.cloudinary.com/kollate/image/fetch/{{ post.hero_image }}">
+							{% endif %}
 		                		</div>
 		                	{% endif %}
 		                    <h2>{{ post.title }}</h2>
