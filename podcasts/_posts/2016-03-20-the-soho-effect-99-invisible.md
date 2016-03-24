@@ -2,7 +2,7 @@
 categories: ['podcasts', 'all_articles']
 provider_display: "99percentinvisible.org"
 provider_name: "99% Invisible"
-favicon_url: "http://99percentinvisible.org/favicon.ico"
+favicon_url: "//99percentinvisible.org/favicon.ico"
 title: "204- The SoHo Effect"
 published: "2016-03-16T02:05:49"
 source: http://99percentinvisible.org/episode/the-soho-effect/
