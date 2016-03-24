@@ -2,7 +2,7 @@
 categories: ['podcasts', 'all_articles']
 provider_display: "www.econtalk.org"
 provider_name: "EconTalk"
-favicon_url: "http://www.econtalk.org/res/img/favicon.ico"
+favicon_url: "//www.econtalk.org/res/img/favicon.ico"
 title: "Marina Krakovsky on the Middleman Economy"
 published: "2016-03-21T00:00:00"
 source: http://www.econtalk.org/archives/2016/03/marina_krakovsk.html
