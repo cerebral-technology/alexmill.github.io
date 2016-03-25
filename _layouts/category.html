@@ -18,7 +18,7 @@
 		                {% else %}
 		                <a class="link-nocolor" href="{{ post.source }}">
 		                {% endif %}
-		                	{% if post.thumbnail != undefined %}
+		                	{% if post.thumbnail != blank %}
 		                		<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
 		                			{% if post.thumbnail contains "https://" %}
 							<img src="{{ post.thumbnail }}">
@@ -26,7 +26,7 @@
 							<img src="https://res.cloudinary.com/kollate/image/fetch/{{ post.thumbnail }}">
 							{% endif %}
 		                		</div>
-		                	{% else if post.hero_image != undefined %}
+		                	{% else if post.hero_image != blank %}
 		                		<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
 		                			{% if post.hero_image contains "https://" %}
 							<img src="{{ post.hero_image }}">
