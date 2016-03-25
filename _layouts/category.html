@@ -27,6 +27,12 @@
 	                		{% assign img_key = "hero_image" %}
 	                	{% endunless  %}
 
+				{% if post.hero_image.strip.empty? or post.hero_image.nil? %}
+					<!-- hero_image is empty! -->
+				{% else %}
+					<!-- hero_image is NOT empty! -->
+				{% endif %
+
 	                	{% if img_key %}
 	                		<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
 	                			<!-- post[{{ img_key }}] = {{ post[img_key] }} -->
