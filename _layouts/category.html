@@ -26,7 +26,7 @@
 	                			{% if post[img_key] contains "https://" or post[img_key] contains "data:image" or post[img_key] contains "miller.im" %}
 						<img src="{{ post[img_key] }}"> 
 						{% elsif post[img_key] contains "http://" %}
-						<img src="https://res.cloudinary.com/kollate/image/fetch/{{ post[img_key] }}">
+						<img src="https://res.cloudinary.com/kollate/image/fetch/{{ post[img_key] | cgi_escape }}">
 						{% else %}
 						<img src="{{ post[img_key] }}">
 						{% endif %}
@@ -38,7 +38,7 @@
 	                			{% if post[img_key] contains "https://" or post[img_key] contains "data:image" or post[img_key] contains "miller.im" %}
 						<img src="{{ post[img_key] }}"> 
 						{% elsif post[img_key] contains "http://" %}
-						<img src="https://res.cloudinary.com/kollate/image/fetch/{{ post[img_key] }}">
+						<img src="https://res.cloudinary.com/kollate/image/fetch/{{ post[img_key] | cgi_escape }}">
 						{% else %}
 						<img src="{{ post[img_key] }}">
 						{% endif %}
