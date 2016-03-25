@@ -18,9 +18,9 @@
 		                {% else %}
 		                <a class="link-nocolor" href="{{ post.source }}">
 		                {% endif %}
-	                	{% if post.thumbnail != nil %}
+	                	{% if post.thumbnail != nil and post.thumbnail != "" %}
 	                		{% assign img_key = "thumbnail" %}
-	                	{% else if post.hero_image != nil %}
+	                	{% else if post.hero_image != nil and post.hero_image != "" %}
 	                		{% assign img_key = "hero_image" %}
 	                	{% else %}
 	                		{% assign img_key = nil %}
@@ -28,7 +28,7 @@
 	                	{% if img_key != nil %}
 	                		<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
 	                			<!-- post[{{ img_key }}] = {{ post[img_key] }} -->
-	                			{% if post[img_key] contains "https://"%}
+	                			{% if post[img_key] contains "https://" or post[img_key] contains "data:image" or post[img_key] contains "miller.im" %}
 						<img src="{{ post[img_key] }}"> 
 						{% else if post[img_key] contains "//" %}
 						<img src="https://res.cloudinary.com/kollate/image/fetch/{{ post[img_key] }}">
