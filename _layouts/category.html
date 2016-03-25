@@ -23,9 +23,9 @@
 	                	{% else if post.hero_image != nil and post.hero_image != "" %}
 	                		{% assign img_key = "hero_image" %}
 	                	{% else %}
-	                		{% assign img_key = nil %}
+	                		{% assign img_key = false %}
 	                	{% endif %}
-	                	{% if img_key != nil %}
+	                	{% if img_key %}
 	                		<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
 	                			<!-- post[{{ img_key }}] = {{ post[img_key] }} -->
 	                			{% if post[img_key] contains "https://" or post[img_key] contains "data:image" or post[img_key] contains "miller.im" %}
