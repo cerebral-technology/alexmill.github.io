@@ -18,14 +18,6 @@
 		                {% else %}
 		                <a class="link-nocolor" href="{{ post.source }}">
 		                {% endif %}
-		                
-		                {% assign img_key = false %}
-	                	{% unless post.thumbnail.nil? or post.thumbnail.strip.empty? %}
-	                		{% assign img_key = "thumbnail" %}
-	                	{% endunless  %}
-	                	{% unless post.hero_image.nil? or post.hero_image.strip.empty? %}
-	                		{% assign img_key = "hero_image" %}
-	                	{% endunless  %}
 
 				{% if post.thumbnail %}
 					{% assign img_key = "thumbnail" %}
@@ -40,7 +32,7 @@
 						<img src="{{ post[img_key] }}">
 						{% endif %}
 	                		</div>
-				{% else if post.hero_image %}
+				{% elsif post.hero_image %}
 					{% assign img_key = "hero_image" %}
 					<!-- hero_image is NOT empty! -->
 					<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
