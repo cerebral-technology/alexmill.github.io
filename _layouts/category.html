@@ -18,23 +18,24 @@
 		                {% else %}
 		                <a class="link-nocolor" href="{{ post.source }}">
 		                {% endif %}
-		                	{% if post.thumbnail != nil %}
-		                		<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
-		                			{% if post.thumbnail contains "https://" %}
-							<img src="{{ post.thumbnail }}">
-							{% else %}
-							<img src="https://res.cloudinary.com/kollate/image/fetch/{{ post.thumbnail }}">
-							{% endif %}
-		                		</div>
-		                	{% else if post.hero_image != nil %}
-		                		<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
-		                			{% if post.hero_image contains "https://" %}
-							<img src="{{ post.hero_image }}">
-							{% else %}
-							<img src="https://res.cloudinary.com/kollate/image/fetch/{{ post.hero_image }}">
-							{% endif %}
-		                		</div>
-		                	{% endif %}
+	                	{% if post.thumbnail != nil %}
+	                		{% assign img_key = "thumbnail" %}
+	                	{% else if post.hero_image != nil %}
+	                		{% assign img_key = "hero_image" %}
+	                	{% else %}
+	                		{% assign img_key = nil %}
+	                	{% endif %}
+	                	{% if img_key != nil %}
+	                		<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
+	                			{% if post[img_key] contains "https://"%}
+						<img src="{{ post[img_key] }}">
+						{% else if post[img_key] contains "//" %}
+						<img src="https://res.cloudinary.com/kollate/image/fetch/{{ post[img_key] }}">
+						{% else %}
+						<img src="{{ post[img_key] }}">
+						{% endif %}
+	                		</div>
+         			{% endif %}
 		                    <h2>{{ post.title }}</h2>
 		                </a>
 		                <span class="post-date" style="font-size: 1rem; margin-left: 5px;">{{ post.date | date: "%b %-d, %Y" }}</span>
