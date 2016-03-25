@@ -21,12 +21,11 @@
 
 				{% if post.thumbnail %}
 					{% assign img_key = "thumbnail" %}
-					<!-- thumbnail is NOT empty! -->
 					<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
 	                			<!-- post[{{ img_key }}] = {{ post[img_key] }} -->
 	                			{% if post[img_key] contains "https://" or post[img_key] contains "data:image" or post[img_key] contains "miller.im" %}
 						<img src="{{ post[img_key] }}"> 
-						{% else if post[img_key] contains "http://" %}
+						{% elsif post[img_key] contains "http://" %}
 						<img src="https://res.cloudinary.com/kollate/image/fetch/{{ post[img_key] }}">
 						{% else %}
 						<img src="{{ post[img_key] }}">
@@ -34,19 +33,18 @@
 	                		</div>
 				{% elsif post.hero_image %}
 					{% assign img_key = "hero_image" %}
-					<!-- hero_image is NOT empty! -->
 					<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
 	                			<!-- post[{{ img_key }}] = {{ post[img_key] }} -->
 	                			{% if post[img_key] contains "https://" or post[img_key] contains "data:image" or post[img_key] contains "miller.im" %}
 						<img src="{{ post[img_key] }}"> 
-						{% else if post[img_key] contains "http://" %}
+						{% elsif post[img_key] contains "http://" %}
 						<img src="https://res.cloudinary.com/kollate/image/fetch/{{ post[img_key] }}">
 						{% else %}
 						<img src="{{ post[img_key] }}">
 						{% endif %}
 	                		</div>
 				{% else %}
-					<!-- both image keys are empty! -->
+					<!-- both image keys are empty -->
 				{% endif %}
 
 		                    <h2>{{ post.title }}</h2>
