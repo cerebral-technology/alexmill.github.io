@@ -27,10 +27,17 @@
 	                		{% assign img_key = "hero_image" %}
 	                	{% endunless  %}
 
-				{% if post.hero_image.strip.empty? or post.hero_image.nil? %}
-					<!-- hero_image is empty! -->
+				{% if post.thumbnail %}
+					<!-- thumbnail is NOT empty! -->
 				{% else %}
+					<!-- thumbnail is empty! -->
+				{% endif %}
+				
+				
+				{% if post.hero_image %}
 					<!-- hero_image is NOT empty! -->
+				{% else %}
+					<!-- hero_image is empty! -->
 				{% endif %}
 
 	                	{% if img_key %}
