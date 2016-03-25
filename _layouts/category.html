@@ -18,13 +18,15 @@
 		                {% else %}
 		                <a class="link-nocolor" href="{{ post.source }}">
 		                {% endif %}
-	                	{% if post.thumbnail != nil and post.thumbnail != "" %}
+		                
+		                {% assign img_key = false %}
+	                	{% unless post.thumbnail.nil? or post.thumbnail.strip.empty? %}
 	                		{% assign img_key = "thumbnail" %}
-	                	{% else if post.hero_image != nil and post.hero_image != "" %}
+	                	{% endunless  %}
+	                	{% unless post.hero_image.nil? or post.hero_image.strip.empty? %}
 	                		{% assign img_key = "hero_image" %}
-	                	{% else %}
-	                		{% assign img_key = false %}
-	                	{% endif %}
+	                	{% endunless  %}
+
 	                	{% if img_key %}
 	                		<div style="float: left; width: 100%; margin: 0 auto; padding: 20px 0;">
 	                			<!-- post[{{ img_key }}] = {{ post[img_key] }} -->
