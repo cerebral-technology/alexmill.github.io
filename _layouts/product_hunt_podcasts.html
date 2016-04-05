@@ -26,7 +26,7 @@
         <itunes:summary>The top {{ page.daily_limit }} podcast episodes upvoted on Product Hunt, every day. This feed delivers the most upvoted podcasts from producthunt.com/podcasts right to your podcatcher. Feeds for the daily top 1 to 20 podcasts can be found at http://alxm.im/ph-feeds. Built using the Product Hunt Developers API by Alex Miller (@alexpmil on Twitter).</itunes:summary>
         <itunes:subtitle>The top {{ page.daily_limit }} podcast episodes upvoted on Product Hunt, every day.</itunes:subtitle>
         <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-        {% for post in site.categories.producthunt limit:100 %} 
+        {% for post in site.categories.producthunt limit:20 %} 
             {% for episode in post.episodes limit:page.daily_limit %} 
         <item>
             <title>({{ post.date | date: "%-m/%-d" }}) &#x25B2; {{ episode.votes_count }} | {{ episode.name | xml_escape }}</title>
