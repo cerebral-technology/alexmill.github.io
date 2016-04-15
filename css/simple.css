@@ -223,7 +223,8 @@ code {
 
 .footer .bottom-logo {
     float: right;
-    width: 50px;
+    width: 55px;
+    padding-top: 18px;
 }
 
 /* Responsive */
