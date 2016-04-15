@@ -221,6 +221,11 @@ code {
     background-color: #004785;
 }
 
+.footer .bottom-logo {
+    float: right;
+    width: 50px;
+}
+
 /* Responsive */
 @media (max-width: 800px) {
     #wharton-logo img {
