@@ -11,7 +11,7 @@
     <item>
       <title>{{ post.title | xml_escape }}</title>
       <description>{% if post.provider_display %}{{ post.provider_display }}{% else if post.content %}{{ post.content | xml_escape }}{% endif %}</description>
-      <pubDate>{{ site.time | date_to_rfc822" }}</pubDate>
+      <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
       <link>{% if post.source == "default" %}{{ site.url }}{{ post.url }}/{% else %}{{ post.source | xml_escape }}{% endif %}</link>
       <guid isPermaLink="true">{% if post.source == "default" %}{{ site.url }}{{ post.url }}/{% else %}{{ post.source | xml_escape }}{% endif %}</guid>
       {% if post.thumbnail %}
