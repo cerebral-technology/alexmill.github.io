@@ -9,7 +9,7 @@
     <item>
       <title>{{ post.title | xml_escape }}</title>
       <description>{{ post.provider_name }}</description>
-      <pubDate>{{ post.date | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y" }} {{ site.time | date: "%H:%M:%S }} GMT</pubDate>
       <link>{% if post.source == "default" %}{{ site.url }}/{{ post.url }}{% else %}{{post.source | xml_escape }}{% endif %}</link>
       <guid isPermaLink="true">{% if post.source == "default" %}{{ site.url }}/{{ post.url }}{% else %}{{post.source | xml_escape }}{% endif %}</guid>
       {% if post.thumbnail %}
