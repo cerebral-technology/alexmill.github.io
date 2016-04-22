@@ -6,6 +6,8 @@
   <link>{{ site.url }}</link>
   <atom:link href="{{ site.url }}/feeds/{{page.category_directory}}/index.xml" rel="self" type="application/rss+xml" />
   {% for post in site.posts limit:20 %} 
+    {% if "producthunt" in post.categories %}
+    {% else %}
     <item>
       <title>{{ post.title | xml_escape }}</title>
       <description>{% if post.provider_display %}{{ post.provider_display }}{% else if post.content %}{{ post.content | xml_escape }}{% endif %}</description>
@@ -20,6 +22,7 @@
       </content>
       {% endif %}
     </item>
+    {% endif %}
   {% endfor %}
 </channel>
 </rss>
