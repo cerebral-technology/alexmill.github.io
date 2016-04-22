@@ -1,5 +1,5 @@
 ---
-categories: ['podcasts', 'all_articles']
+categories: []
 provider_display: "www.vox.com"
 provider_name: "The Ezra Klein Show"
 favicon_url: "https://cdn0.vox-cdn.com/community_logos/52517/voxv.png"
