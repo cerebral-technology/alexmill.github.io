@@ -5,7 +5,7 @@
   <description>{% if page.description %} {{ page.description }} {% else %}Feed of Alex Miller's Website.{% endif %}</description>
   <link>{{ site.url }}</link>
   <atom:link href="{{ site.url }}/feeds/{{page.category_directory}}/index.xml" rel="self" type="application/rss+xml" />
-  {% for post in site.posts limit:20 %} 
+  {% for post in site.posts limit:50 %} 
     {% if "producthunt" in post.categories %}
     {% else %}
     <item>
