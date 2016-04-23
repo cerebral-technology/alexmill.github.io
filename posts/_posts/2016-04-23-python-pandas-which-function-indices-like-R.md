@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "An R-like 'which' function for Python Pandas"
+title: "An R-like 'which' Function for Python Pandas"
 categories: []
 author: "Alex Miller"
 meta: ""
