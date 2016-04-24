@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "An R-like 'which' Function for Python Pandas"
-categories: []
+categories: ["noshow"]
 author: "Alex Miller"
 meta: ""
 source: default
