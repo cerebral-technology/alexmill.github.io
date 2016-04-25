@@ -3,7 +3,7 @@ title: "Alex Miller's website"
 markdown: kramdown
 kramdown:
   input: GFM
-pygments: true
+highlighter: pygments
 description: "I'm Alex Miller, a doctoral candidate at the Wharton School's department of Operations, Information, &amp; Decisions. Click to connect with me online."
 url: http://alex.miller.im
 permalink: /posts/:title/
