@@ -6,6 +6,7 @@ author: "Alex Miller"
 meta: "A data scientist’s take on ProPublica’s research on bias in crime prediction algorithms."
 description: "A data scientist’s take on ProPublica’s research on bias in crime prediction algorithms."
 source: default
+hero_image: "http://alex.miller.im/img/boogeyman.png"
 ---
 
 Earlier this week, ProPublica published a [damning article on the use of algorithms in the criminal justice system](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing). In the article, titled "Machine Bias", they studied how a widely used algorithm differs in how accurately it predicts the recidivism of white and black criminals. And their findings are troubling: the algorithm systematically under-predicts the recidivism of white criminals and over-predicts the recidivism of black criminals. This has important consequences, since recidivism — a criminal’s propensity to commit a future crime — is a large factor in determining sentencing and rehabilitation requirements.
