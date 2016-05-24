@@ -10,8 +10,4 @@ hero_image: http://alex.miller.im/img/boogeyman.png
 ---
 
 
-
-
----
-
-This essay is [cross-posted on Medium](http://alex.miller.im/posts/medium-seo-rel-canonical-tag-cross-posting-via-rss/) [here](#).
+Earlier this week, ProPublica published a  damning article on the use of algorithms in the criminal justice system. They studied how a widely used algorithm differs in how accurately it predicts the recidivism of white and black criminals. 
