@@ -6,7 +6,6 @@ author: "Alex Miller"
 meta: "A data scientist’s take on ProPublica’s research on bias in crime prediction algorithms."
 description: "A data scientist’s take on ProPublica’s research on bias in crime prediction algorithms."
 source: default
-hero_image: http://alex.miller.im/img/boogeyman.png
 ---
 
 
