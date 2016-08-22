@@ -81,7 +81,7 @@ script: "<script>if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera m
             {% for post in site.categories.articles limit:5  %}
             <li>
                 <a class="link-nocolor" href="{{ post.source }}">
-                    {% if post.favicon_url contains "https://" or post.favicon_url contains "/img/bullet.gif" %}
+                    {% if post.favicon_url contains "data:" or post.favicon_url contains "/img/bullet.gif" %}
                     <img class="provider-favicon" src="{{ post.favicon_url }}"/>
                     {% else %}
                     <img class="provider-favicon" src="https://res.cloudinary.com/kollate/image/fetch/{{ post.favicon_url }}"/>
