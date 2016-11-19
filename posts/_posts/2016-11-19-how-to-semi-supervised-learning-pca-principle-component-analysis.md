@@ -16,6 +16,8 @@ By itself, principal component analysis (PCA) is an _unsupervised_ learning meth
 
 Most people intuitively understand this and nod their heads when they hear "PCA". But the real power of PCA comes from using it in some supervised prediction task. However, it's not immediately obvious how to go from the task of reducing the dimensions of $$X$$ to making predictions about $$Y$$. This post is a quick explainer on how to use PCA in supervised learning.
 
+---
+
 ## 1. PCA your training data
 The goal of PCA is to represent your data $$X$$ in an orthonormal basis $$W$$; the coordinates of your data in this new basis will be represented as $$Z$$:
 
@@ -30,7 +32,7 @@ Now to reduce dimensionality, let's pick some number of components $$k < p$$. As
 
 $$X_{n\times p}(W_{p \times k}) = \hat{Z}_{n \times k}$$
 
-### 2. Train a classifier on your transformed training data
+## 2. Train a classifier on your transformed training data
 
 Now we have a $$k$$ dimensional representation of our training data $$X$$. You can now some classifier on the _transformed_ features in $$Z$$. 
 
