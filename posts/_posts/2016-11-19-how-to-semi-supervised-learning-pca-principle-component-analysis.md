@@ -6,7 +6,7 @@ author: "Alex Miller"
 meta: "A short explainer on how to make the connection between unsupervised and supervised machine learninng methods using PCA."
 description: "A short explainer on how to make the connection between unsupervised and supervised machine learninng methods using PCA."
 source: default
-hero_image: "http://alex.miller.im/img/boogeyman.png"
+hero_image: "http://alex.miller.im/img/pca_fig.png"
 script: '<script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default">
 </script>'
