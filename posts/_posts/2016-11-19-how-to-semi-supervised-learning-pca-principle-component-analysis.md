@@ -42,7 +42,7 @@ The purpose of going through all this trouble is when $$p$$ is very large. If yo
 
 ## 3. Project your test data into the same $$k$$-dimensional subspace
 
-Where do you go once you've perfomed PCA on your training data and built a classifier on your transformed data $$\hat{Z}$$? The key is to realize that $$W$$ is in some sense a canonical transformation from our space of $$p$$ features down to a space of $$k$$ features (or at least the best transformation we could find using our training data). Thus, we can hit our _test_ data with the same $$W$$ transformation, resulting in a $$k$$-dimensional set of test features:
+Where do you go once you've perfomed PCA on your training data and built a classifier on your transformed data $$\hat{Z}$$? The key is to realize that $$W$$ is in some sense a canonical transformation from our space of $$p$$ features down to a space of $$k$$ features (or at least the best transformation we could find using our training data). Thus, we can hit our _test_ data with the same $$W$$ transformation, resulting in a $$k$$-dimensional representation of our test features:
 
 $$X^{\text{test}}_{n\times p}(W_{p \times k}) = \hat{Z}^{\text{test}}_{n \times k}$$
 
