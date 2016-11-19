@@ -37,7 +37,7 @@ $$\hat{Y} = f(\hat{Z}_{n \times k})$$
 The purpose of going through all this trouble is when $$p$$ is very large. If you have 100,000 features, running your favorite classifier (SVM, kNN, logistic regression, etc.) may take a very long time. However, if you can pick a much smaller number of principle components (i.e., $$k=1000$$) which accurately capture the covariance structure of your data, you can dramatically improve the efficiency of your classifier. This can also be thought of as a form of regularization, since it's unlikely that all 100,000 features of your dataset have a meaningful effect on your outcome variable. 
 
 ## Now what?
-Where do you go once you've perfomed PCA on your training data and build a classifier on your transformed data $$\hat{Z}$$? The key is to realize that $$W$$ is in some sense a canonical transformation from our space of p features down to a space of $$k$$ features (or at least the best transformation we could find using our training data). Thus, we can hit our _test_ data with the same $$W$$ transformation, resulting in a $$k$$-dimensional set of test features:
+Where do you go once you've perfomed PCA on your training data and build a classifier on your transformed data $$\hat{Z}$$? The key is to realize that $$W$$ is in some sense a canonical transformation from our space of $$p$$ features down to a space of $$k$$ features (or at least the best transformation we could find using our training data). Thus, we can hit our _test_ data with the same $$W$$ transformation, resulting in a $$k$$-dimensional set of test features:
 
 $$X^{\text{test}}_{n\times p}(W_{p \times k}) = \hat{Z}^{\text{test}}_{n \times k}$$
 
