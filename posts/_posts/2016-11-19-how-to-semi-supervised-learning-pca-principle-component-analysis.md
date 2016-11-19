@@ -3,7 +3,7 @@ layout: post
 title: "How to do (semi) supervised learning with principal component analysis (PCA)"
 categories: ["blog"]
 author: "Alex Miller"
-meta: "A short explainer on how to make the connection between unsupervised and supervised machin learninng methods using PCA."
+meta: "A short explainer on how to make the connection between unsupervised and supervised machine learninng methods using PCA."
 description: "A short explainer on how to make the connection between unsupervised and supervised machine learninng methods using PCA."
 source: default
 hero_image: "http://alex.miller.im/img/boogeyman.png"
