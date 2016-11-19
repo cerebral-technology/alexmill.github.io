@@ -3,8 +3,8 @@ layout: post
 title: "How to do (semi) supervised learning with principal component analysis (PCA)"
 categories: ["blog"]
 author: "Alex Miller"
-meta: "A short explainer on how to make the connection between unsupervised and supervised machine learninng methods using PCA."
-description: "A short explainer on how to make the connection between unsupervised and supervised machine learninng methods using PCA."
+meta: "A short explainer on how to make the connection between unsupervised and supervised machine learning methods using PCA."
+description: "A short explainer on how to make the connection between unsupervised and supervised machine learning methods using PCA."
 source: default
 hero_image: "http://alex.miller.im/img/pca_fig.png"
 script: '<script type="text/javascript" async
@@ -34,7 +34,7 @@ $$X_{n\times p}(W_{p \times k}) = \hat{Z}_{n \times k}$$
 
 ## 2. Train a classifier on your transformed training data
 
-Now we have a $$k$$ dimensional representation of our training data $$X$$. You can now some classifier on the _transformed_ features in $$Z$$. 
+Now we have a $$k$$-dimensional representation of our training data $$X$$. You can now some classifier on the _transformed_ features in $$Z$$. 
 
 $$\hat{Y} = f(\hat{Z}_{n \times k})$$
 
