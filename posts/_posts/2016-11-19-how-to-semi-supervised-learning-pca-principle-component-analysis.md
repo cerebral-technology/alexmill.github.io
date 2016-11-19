@@ -52,6 +52,6 @@ We can now use the classifier trained on the $$k$$-dimensional representation of
 
 $$\hat{Y}^{\text{test}} = f(\hat{Z}^{\text{test}}_{n \times k})$$
 
-And that's how you use PCA to make predictions on test data. Again, the key is to think of $$W$$ as a rotating transformation, which _projects_ your raw features into a $$k$$-dimensional subspace. This projection works on both training data and test data, allowing you to build a classifier on your new $$k$$ features and use that same classifier to make predictions on your test data.
+And that's how you use PCA to make predictions on test data. Again, the key is to think of $$W$$ as a rotating transformation, which _projects_ your raw features into a $$k$$-dimensional subspace. The entire goal of PCA is essentially to learn this projection operator. This projection works on both training data and test data, allowing you to build a classifier on your new $$k$$ features and use that same classifier to make predictions on your test data.
 
 
