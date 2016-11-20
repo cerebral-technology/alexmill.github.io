@@ -3,7 +3,7 @@ layout: post
 title: "Track Outbound Links with Google Analytics Event Tracking"
 categories: blog
 author: "Alex Miller"
-meta:
+meta: "A super easy-to-install copy-paste script that will track all outbound links on your website as a Google Analytics event."
 description: "A super easy-to-install copy-paste script that will track all outbound links on your website as a Google Analytics event. Click to read more >>"
 tags: template
 source: default
