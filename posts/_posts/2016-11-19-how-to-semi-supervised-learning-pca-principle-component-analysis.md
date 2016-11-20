@@ -28,7 +28,7 @@ Because of $$W$$ is orthonormal, we can invert $$W$$ simply by taking its transp
 $$X_{n\times p}(W_{p \times p}) = Z_{n \times p}$$
 
 
-To reduce dimensionality, let's pick some number of components $$k < p$$. Assuming our basis vectors in W are ordered from largest to smallest (i.e., eigenvector corresponding to the largest eigenvalue is first, etc.), this amounts to simply keeping the first $$k$$ columns of $$W$$. This results in an "approxmiated" version of $$Z$$, which I'll call $$\hat{Z}$$:
+To reduce dimensionality, let's pick some number of components $$k < p$$. Assuming our basis vectors in $$W$$ are ordered from largest to smallest (i.e., eigenvector corresponding to the largest eigenvalue is first, etc.), this amounts to simply keeping the first $$k$$ columns of $$W$$. This results in an "approxmiated" version of $$Z$$, which I'll call $$\hat{Z}$$:
 
 $$X_{n\times p}(W_{p \times k}) = \hat{Z}_{n \times k}$$
 
