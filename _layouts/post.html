@@ -9,7 +9,7 @@
             <div class="wrap">
                 <header class="post-header">
                     <h1>{% if page.h1 %}{{ page.h1 }}{% else %}{{ page.title }}{% endif %}</h1>
-                    <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% else %}{{ page.description }}{% endif %}</p>
+                    <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% else %} • {{ page.description }}{% endif %}</p>
                     {% if page.hero_image %}<figure>
                         <img class="hero-image" src="{{ page.hero_image }}">
                     </figure>{% endif %}
