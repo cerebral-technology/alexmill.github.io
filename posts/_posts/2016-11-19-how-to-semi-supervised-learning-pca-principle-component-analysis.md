@@ -34,9 +34,9 @@ $$X_{n\times p}(W_{p \times k}) = \hat{Z}_{n \times k}$$
 
 ## 2. Train a classifier on your transformed training data
 
-Now we have a $$k$$-dimensional representation of our training data $$X$$. You can now some classifier on the _transformed_ features in $$Z$$. 
+Now we have a $$k$$-dimensional representation of our training data $$X$$. You can now train some classifier on the _transformed_ features in $$Z$$. This amounts to finding some classifier weights, denoted here by $$\theta$$.
 
-$$\hat{Y} = f(\hat{Z}_{n \times k})$$
+$$ \hat{\theta} = \arg\min_\theta  |Y - f(\hat{Z}_{n \times k}; \theta)|^2$$
 
 The purpose of going through all this trouble is when $$p$$ is very large. If you have 100,000 features, running your favorite classifier (SVM, kNN, logistic regression, etc.) may take a very long time. However, if you can pick a much smaller number of principle components (i.e., $$k=1000$$) which accurately capture the covariance structure of your data, you can dramatically improve the efficiency of your classifier. This can also be thought of as a form of regularization, since it's unlikely that all 100,000 features of your dataset have a meaningful effect on your outcome variable. 
 
@@ -48,9 +48,9 @@ $$X^{\text{test}}_{n\times p}(W_{p \times k}) = \hat{Z}^{\text{test}}_{n \times 
 
 ## 4. Run your classifier on your transformed test data
 
-We can now use the classifier trained on the $$k$$-dimensional representation of our training data to make predictions on the $$k$$-dimensional representation of our test data:
+We can now use the classifier trained on the $$k$$-dimensional representation of our training data (with the corresponding weights $$\hat{\theta}$$) to make predictions on the $$k$$-dimensional representation of our test data:
 
-$$\hat{Y}^{\text{test}} = f(\hat{Z}^{\text{test}}_{n \times k})$$
+$$\hat{Y}^{\text{test}} = f(\hat{Z}^{\text{test}}_{n \times k}; \hat{\theta})$$
 
 And that's how you use PCA to make predictions on test data. Again, the key is to think of $$W$$ as a rotating transformation, which _projects_ your raw features into a $$k$$-dimensional subspace. The entire goal of PCA is essentially to learn this projection operator. This projection works on both training data and test data, allowing you to build a classifier on your new $$k$$ features and use that same classifier to make predictions on your test data.
 
