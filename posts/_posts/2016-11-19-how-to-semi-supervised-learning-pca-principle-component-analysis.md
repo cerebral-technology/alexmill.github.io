@@ -23,22 +23,22 @@ The goal of PCA is to represent your data $$X$$ in an orthonormal basis $$W$$; t
 
 $$X_{n\times p} = Z_{n \times p}(W_{p \times p})^\top$$
 
-Because of $$W$$ is orthonormal, we can invert W simply by taking its transpose: $$(W^\top)^{-1} = W$$. This allows us to transform our raw data $$X$$ into the orthnormal basis simply by multiplying by $$W$$:
+Because of $$W$$ is orthonormal, we can invert $$W$$ simply by taking its transpose: $$(W^\top)^{-1} = W$$. This allows us to transform our raw data $$X$$ into the orthonormal basis simply by multiplying by $$W$$:
 
 $$X_{n\times p}(W_{p \times p}) = Z_{n \times p}$$
 
 
-Now to reduce dimensionality, let's pick some number of components $$k < p$$. Assuming our basis vectors in W are ordered from largest to smallest (i.e., eigenvector corresponding to the largest eigenvalue is first, etc.), this amounts to simply keeping the first $$k$$ columns of $$W$$. This results in a "approxmiated" version of $$Z$$, which I'll call $$\hat{Z}$$:
+To reduce dimensionality, let's pick some number of components $$k < p$$. Assuming our basis vectors in W are ordered from largest to smallest (i.e., eigenvector corresponding to the largest eigenvalue is first, etc.), this amounts to simply keeping the first $$k$$ columns of $$W$$. This results in an "approxmiated" version of $$Z$$, which I'll call $$\hat{Z}$$:
 
 $$X_{n\times p}(W_{p \times k}) = \hat{Z}_{n \times k}$$
 
 ## 2. Train a classifier on your transformed training data
 
-Now we have a $$k$$-dimensional representation of our training data $$X$$. You can now train some classifier on the _transformed_ features in $$Z$$. This amounts to finding some classifier weights, denoted here by $$\theta$$.
+Now that we have a $$k$$-dimensional representation of our training data $$X$$, you can train your favorite classifier (SVM, kNN, logistic regression, etc.) on the _transformed_ features in $$Z$$. This amounts to finding the "best" fit for some model $$f( \dot; \theta)$$. Denoted the best-fit parameters of this model by $$\hat{\theta}$$. For example, if your goal was to minimize the squared error between the data and your model prediction, $$\hat{\theta}$$ would simply be:
 
 $$ \hat{\theta} = \arg\min_\theta  |Y - f(\hat{Z}_{n \times k}; \theta)|^2$$
 
-The purpose of going through all this trouble is when $$p$$ is very large. If you have 100,000 features, running your favorite classifier (SVM, kNN, logistic regression, etc.) may take a very long time. However, if you can pick a much smaller number of principle components (i.e., $$k=1000$$) which accurately capture the covariance structure of your data, you can dramatically improve the efficiency of your classifier. This can also be thought of as a form of regularization, since it's unlikely that all 100,000 features of your dataset have a meaningful effect on your outcome variable. 
+The purpose of going through all this trouble is when $$p$$ is very large. If you have 100,000 features, running your favorite classifier  may take a very long time. However, if you can pick a much smaller number of principle components (i.e., $$k=1000$$) which accurately capture the covariance structure of your data, you can dramatically improve the efficiency of your classifier. This can also be thought of as a form of regularization, since it's unlikely that all 100,000 features of your dataset have a meaningful effect on your outcome variable.
 
 ## 3. Project your test data into the same $$k$$-dimensional subspace
 
