@@ -4,13 +4,10 @@ title: "How to do (semi) supervised learning with PCA"
 h1: "How to do (semi) supervised learning with principal component analysis (PCA)"
 categories: ["blog"]
 author: "Alex Miller"
-meta: "A short explainer on how to make the connection between unsupervised and supervised machine learning methods using PCA."
 description: "A short explainer on how to make the connection between unsupervised and supervised machine learning methods using PCA."
 source: default
 hero_image: "http://alex.miller.im/img/pca_fig.png"
-script: '<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default">
-</script>'
+mathjax: true
 ---
 
 By itself, principal component analysis (PCA) is an _unsupervised_ learning method, meaning that does not take into account any labels or prediction variables of your data. PCA is simply a common method for dimensionality reduction of your $$X$$'s, without worrying about the $$Y$$'s.
