@@ -34,7 +34,7 @@ $$X_{n\times p}(W_{p \times k}) = \hat{Z}_{n \times k}$$
 
 ## 2. Train a classifier on your transformed training data
 
-Now that we have a $$k$$-dimensional representation of our training data $$X$$, you can train your favorite classifier (SVM, kNN, logistic regression, etc.) on the _transformed_ features in $$Z$$. This amounts to finding the "best" fit for some model $$f(X ; \theta)$$. Denoted the best-fit parameters of this model by $$\hat{\theta}$$. For example, if your goal was to minimize the squared error between the data and your model prediction, $$\hat{\theta}$$ would simply be:
+Now that we have a $$k$$-dimensional representation of our training data $$X$$, you can train your favorite classifier (SVM, kNN, logistic regression, etc.) on the _transformed_ features in $$Z$$. This amounts to finding the "best" fit for some model $$f(X ; \theta)$$. For example, if your goal was to minimize the squared error between the data and your model prediction, your estimated parameters $$\hat{\theta}$$ would simply be:
 
 $$ \hat{\theta} = \arg\min_\theta  |Y - f(\hat{Z}_{n \times k}; \theta)|^2$$
 
