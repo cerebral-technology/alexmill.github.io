@@ -14,7 +14,7 @@ If you're coming from R to Python Pandas, you might have some habits that are ha
 
 The second reason I like using `which` is simply to figure out precisely where in my dataframe the rows I'm interested in are located. Especially when working with big data(frames), it's hard to understand where the data you're looking for is located. You can count how many rows match your condition, but maybe you're missing out on a useful insight (that they all come from consecutive rows, or that it's more common later in the dataframe rather than earlier, etc.). These are situations where it'd be nice to use an R-like `which` function.
 
-That's why I've come up with the following little Python function, that behaves just like the `which` you're used to in R, except now you can apply to Python Pandas dataframes:
+That's why I've come up with the following little Python function, that behaves just like the `which` you're used to in R, except now you can apply to Python Pandas logical Series objects:
 
 ```python
 import pandas as pd
