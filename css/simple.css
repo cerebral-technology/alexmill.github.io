@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 html, body { height: 100%; }
 
 body {
@@ -208,13 +209,13 @@ figure img {
 }
 
 pre {
-    font-family: 'Computer Modern Typewriter', Courier, monospace;
+    font-family: 'Roboto Mono', Courier, monospace;
     font-size: 85%;
     line-height: 1.2;
 }
 
 code {
-    font-family: 'Computer Modern Typewriter', Courier, monospace;
+    font-family: 'Roboto Mono', Courier, monospace;
     font-size: inherit;
     background: #F0F0F0;
     line-height: inherit;
