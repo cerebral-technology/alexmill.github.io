@@ -6,6 +6,7 @@ author: "Alex Miller"
 meta: ""
 source: default
 syntax: true
+css: ".prompt { display: none; }"
 ---
 
 ```python
