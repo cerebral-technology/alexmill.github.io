@@ -220,7 +220,7 @@ code {
     line-height: inherit;
 }
 
-code pre {
+pre code {
     font-size: .85rem;
 }
 
