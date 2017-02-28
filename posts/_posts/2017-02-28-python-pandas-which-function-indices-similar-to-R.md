@@ -90,4 +90,5 @@ df.loc[which(df.B < 100), ['A']]
     2  4.7
 
 
+Hopefully this function can ease some of the pains of switching between R and Pandas.
 
