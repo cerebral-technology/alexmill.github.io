@@ -6,8 +6,9 @@ author: "Alex Miller"
 meta: ""
 source: default
 syntax: true
-css: ".prompt { display: none; }"
+css: ""
 ---
+
 
 ```python
 def which(self):
@@ -194,9 +195,109 @@ pd.Series.which = which
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
 
-<div class="output_html rendered_html output_subarea output_execute_result">
+
+```python
+import pandas as pd
+
+def which(self):
+    try:
+        self = list(iter(self))
+    except Exception as e:
+        raise Exception("'which' method can only be applied to iterables.\n{}".format(str(e))) 
+    indices = [i for i, x in enumerate(self) if bool(x) == True]
+    return(indices)
+
+# If you want to apply it as a class method to 
+pd.Series.which = which
+```
+
+
+```python
+from io import StringIO
+
+toy_data = StringIO(
+    """A;B
+    4.4;99
+    4.5;200
+    4.7;65
+    3.2;140
+""")
+df = pd.read_csv(toy_data, sep=";")
+df
+```
+
+
+
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>4.4</td>
+      <td>99</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.5</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.7</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3.2</td>
+      <td>140</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+which(df.A > 4)
+```
+
+
+
+
+    [0, 1, 2]
+
+
+
+
+```python
+(df.B == 200).which()
+```
+
+
+
+
+    [1]
+
+
+
+
+```python
+df.loc[which(df.B < 100), ['A']]
+```
+
+
+
+
 <div>
 <table border="1" class="dataframe">
   <thead>
@@ -217,33 +318,17 @@ pd.Series.which = which
   </tbody>
 </table>
 </div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">B</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
 
-<div class="output_html rendered_html output_subarea output_execute_result">
+
+```python
+df.loc[df.B < 100, ['A']]
+```
+
+
+
+
 <div>
 <table border="1" class="dataframe">
   <thead>
@@ -264,26 +349,28 @@ pd.Series.which = which
   </tbody>
 </table>
 </div>
-</div>
 
-</div>
 
-</div>
-</div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
 
-</div>
-</div>
-</div>
+```python
+%load_ext rpy2.ipython
+```
 
-</div>
-    </div>
-  </div>
+
+```python
+%%R
+Sys.Date()
+if(2 %in% c(1,2,3)) print('hi')
+```
+
+
+    [1] "hi"
+
+
+
+
+```python
+
+```
+
