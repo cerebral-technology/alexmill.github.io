@@ -210,13 +210,13 @@ figure img {
 
 pre {
     font-family: 'Roboto Mono', Courier, monospace;
-    font-size: 85%;
+    font-size: .9rem;
     line-height: 1.2;
 }
 
 code {
     font-family: 'Roboto Mono', Courier, monospace;
-    font-size: inherit;
+    font-size: .97rem;
     background: #F0F0F0;
     line-height: inherit;
 }
