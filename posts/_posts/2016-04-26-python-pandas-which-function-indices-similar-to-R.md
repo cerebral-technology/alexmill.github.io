@@ -13,7 +13,7 @@ def which(self):
     try:
         self = list(iter(self))
     except Exception as e:
-        raise Exception("'which' method can only be to iterables.\n{}".format(str(e))) 
+        raise Exception("'which' method can only be applied to iterables.\n{}".format(str(e))) 
     indices = [i for i, x in enumerate(self) if bool(x) == True]
     return(indices)
     
