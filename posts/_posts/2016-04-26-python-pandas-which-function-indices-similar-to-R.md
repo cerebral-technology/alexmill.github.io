@@ -22,20 +22,21 @@ import pandas as pd
 def which(self):
     try:
         self = list(iter(self))
-    except Exception as e:
-        raise Exception("'which' method can only be applied to iterables.\n{}".format(str(e))) 
+    except TypeError as e:
+        raise Exception("""'which' method can only be applied to iterables.
+        {}""".format(str(e)))
     indices = [i for i, x in enumerate(self) if bool(x) == True]
     return(indices)
 
-# If you want to apply it as a class method to 
+# If you want to apply it as a class method to Pandas Series objects
 pd.Series.which = which
 ```
 
+Just to give you a feel for how it works, I'll load some toy data:
 
 ```python
 from io import StringIO
-toy_data = StringIO(
-    """A;B
+toy_data = StringIO("""A;B
     4.4;99
     4.5;200
     4.7;65
@@ -47,7 +48,6 @@ df
 
 
 
-
          A    B
     0  4.4   99
     1  4.5  200
@@ -56,6 +56,7 @@ df
 
 
 
+With our toy dataframe, we can apply which to the columns as an outer function:
 
 ```python
 which(df.A > 4)
@@ -66,7 +67,7 @@ which(df.A > 4)
 
     [0, 1, 2]
 
-
+Or, if you've defined the class method, you can call `.which()` like any other Pandas method:
 
 
 ```python
@@ -74,61 +75,19 @@ which(df.A > 4)
 ```
 
 
-
-
     [1]
 
 
-
+Just like in R, it works perfectly well for indexing:
 
 ```python
 df.loc[which(df.B < 100), ['A']]
 ```
 
 
-
-
          A
     0  4.4
     2  4.7
-
-
-
-
-```python
-df.loc[df.B < 100, ['A']]
-```
-
-
-
-
-         A
-    0  4.4
-    2  4.7
-
-
-
-
-```python
-%load_ext rpy2.ipython
-```
-
-
-```python
-%%R
-Sys.Date()
-if(2 %in% c(1,2,3)) print('hi')
-```
-
-
-    [1] "hi"
-
-
-
-
-```python
-
-```
 
 
 
