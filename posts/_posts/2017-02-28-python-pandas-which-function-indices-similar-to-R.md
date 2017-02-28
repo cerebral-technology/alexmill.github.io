@@ -3,7 +3,6 @@ layout: post
 title: "An R-like 'which' Function for Python Pandas"
 categories: ["blog"]
 author: "Alex Miller"
-meta: ""
 source: default
 syntax: true
 css: ""
