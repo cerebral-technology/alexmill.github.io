@@ -22,7 +22,7 @@ pd.Series.which = which
 ```
 
 
-iv tabindex="-1" id="notebook" class="border-box-sizing">
+<div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing code_cell rendered">
