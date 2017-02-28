@@ -210,7 +210,6 @@ figure img {
 
 pre {
     font-family: 'Roboto Mono', Courier, monospace;
-    font-size: .9rem;
     line-height: 1.2;
 }
 
@@ -219,6 +218,10 @@ code {
     font-size: .97rem;
     background: #F0F0F0;
     line-height: inherit;
+}
+
+code pre {
+    font-size: .85rem;
 }
 
 .footer-accent {
