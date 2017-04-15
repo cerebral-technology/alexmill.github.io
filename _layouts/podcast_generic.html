@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+    <channel>
+        <link>http://alex.miller.im</link>
+        <language>en-us</language>
+        <webMaster>alex@miler.im (Alex Miller)</webMaster>
+        <managingEditor>alex@miler.im (Alex Miller)</managingEditor>
+        <image>
+            <url>{{ page.image }}</url>
+            <title>{{ page.feed_title }}</title>
+            <link>{{ page.website_link }}</link>
+        </image>
+        <itunes:owner>
+            <itunes:name>Alex Miller</itunes:name>
+            <itunes:email>alex@miller.im</itunes:email>
+        </itunes:owner>
+        <itunes:category text="Technology">
+            <itunes:category text="Podcasting" />
+        </itunes:category>
+        <itunes:keywords>{{ page.keywords }}</itunes:keywords>
+        <itunes:explicit>no</itunes:explicit>
+        <itunes:image href="{{ page.image }}" />
+        <atom:link href="{{ page.feed_link }}" rel="self" type="application/rss+xml" />
+        <pubDate>Mon, 11 Jan 2016 00:00:00 EST</pubDate>
+        <title>{{ page.feed_title }}</title>
+        <itunes:author>{{ page.author }}</itunes:author>
+        <description>{{ page.description }}</description>
+        <itunes:summary>{{ page.summary }}</itunes:summary>
+        <itunes:subtitle>{{ page.subtitle }}</itunes:subtitle>
+        <lastBuildDate>Thu, 02 Feb 2012 00:00:00 EST</lastBuildDate>
+        {% for post in site.categories[page.category] limit:20 %} 
+        {% if post.raw_source %}
+          <item>
+            <title>{{ post.title | xml_escape }}</title>
+            <description>A podcast from {{ post.provider_name }} shared by Alex.</description>
+            <itunes:summary>A podcast from {{ post.provider_name }} shared by Alex.</itunes:summary>
+            <itunes:subtitle>{{ post.provider_name }}</itunes:subtitle>
+            <pubDate>{{ post.date | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
+            <enclosure url="{{post.raw_source | xml_escape }}" type="audio/mpeg" length="1" />
+            <link>{{post.raw_source | xml_escape }}</link>
+            <guid isPermaLink="true">{{post.raw_source | xml_escape }}</guid>
+            {% if post.thumbnail %}
+          {% endif %}
+          </item>
+        {% endif %}
+        {% endfor %}
+    </channel>
+</rss>
