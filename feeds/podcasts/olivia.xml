@@ -3,8 +3,8 @@ layout: podcast_generic
 category: olivia_podcast
 feed_title: Olivia's Special Podcasts
 image: http://alex.miller.im/img/ging.jpg
-website_link: http://alex.miller.im/feeds/podcasts/
-feed_link: http://alex.miller.im/podcasts/
+website_link: http://alex.miller.im/podcasts/
+feed_link: http://alex.miller.im/feeds/podcasts/olivia.xml
 keywords: 
 author: Alex Miller
 description: A special feed made just for Olivia. From Alex.
