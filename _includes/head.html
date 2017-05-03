@@ -27,7 +27,16 @@
         <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'/index.html','/' }}" />
         <link rel="stylesheet" href="/css/fonts/computer-modern/stylesheet.css">
         <link rel="stylesheet" href="/css/simple.css">
-        {% if page.mathjax %}<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>{% endif %}
+        {% if page.mathjax %}
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [["$$","$$"],["\\(","\\)"]]
+            }
+            });
+        </script>
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        {% endif %}
 
         {% if page.head %} {{ page.head }} {% endif %}
 
