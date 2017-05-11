@@ -17,7 +17,7 @@ Actions:
   <input id="instanceRange_slider" type="range" min="0" max="6" value="1" step="1" onchange="showInstanceValue(this.value)"/>
   <p>
     Change instance type from 
-    <span class="instance_type" id="current_instance_type"></span>
+    <span class="instance_type" id="currentInstance"></span>
     to 
     <span class="instance_type" id="instanceRange">0</span>
   </p>
@@ -38,7 +38,8 @@ window.onload = function () {
       json = data;
       $("#state").text(json["state"]);
       $("#state").addClass(json["state"]);
-      $("#instanceRange_slider").attr({"value": json["instance_type_index"]});      
+      $("#instanceRange_slider").attr({"value": json["instance_type_index"]});  
+      $("#currentInstance").text(json["instance_type_name"]);  
     })
     .fail(function( jqxhr, textStatus, error ) {
       var err = textStatus + ", " + error;
