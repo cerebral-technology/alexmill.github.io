@@ -3,7 +3,7 @@ layout: page
 css: "#state.running { background-color: green; font-color: #ffffff; border-radius: 3px; padding: 4px; }"
 ---
 
-<script>
+<script defer>
 $.getJSON("http://api.alex.miller.im/ec2/status")
   .done(function( json ) {
     $("#state").text(json["state"]);
