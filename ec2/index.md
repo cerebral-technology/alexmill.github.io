@@ -30,26 +30,27 @@ Actions:
 </div>
 
 <script>
+var json = new Object;
+
 window.onload = function () {
   $.getJSON("http://api.alex.miller.im/ec2/status")
-    .done(function( json ) {
+    .done(function( data ) {
+      json = data;
       $("#state").text(json["state"]);
       $("#state").addClass(json["state"]);
-      $("#instanceRange_slider").attr({"value": json["instance_type_index"]});
-      
-      function showInstanceValue(newValue) {
-        document.getElementById("instanceRange").innerHTML = json["instance_info"][newValue][0];
-      }
-
-      function showStorageValue(newValue) {
-        document.getElementById("storageRange").innerHTML=newValue;
-      }
-      
+      $("#instanceRange_slider").attr({"value": json["instance_type_index"]});      
     })
     .fail(function( jqxhr, textStatus, error ) {
       var err = textStatus + ", " + error;
       console.log( "Request Failed: " + err );
   });
+  
+  function showInstanceValue(newValue) {
+    document.getElementById("instanceRange").innerHTML = json["instance_info"][newValue][0];
+  }
+  function showStorageValue(newValue) {
+    document.getElementById("storageRange").innerHTML=newValue;
+  }
  
 }
 </script>
