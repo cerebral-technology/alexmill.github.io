@@ -14,18 +14,18 @@ Actions:
 </div>
 
 <div>
-  <select>
-    <option value="volvo">2GB</option>
-    <option value="saab">Saab</option>
-    <option value="mercedes">Mercedes</option>
-    <option value="audi">Audi</option>
-  </select> 
-  <button>Change Memory</button>
+  <input id="instanceRange_slider" type="range" min="0" max="6" value="1" step="1" onchange="showInstanceValue(this.value)"/>
+  <p>
+    Change instance type from 
+    <span class="instance_type" id="current_instance_type"></span>
+    to 
+    <span class="instance_type" id="instanceRange">0</span>
+  </p>
 </div>
   
 <div>
-  <input type="range" min="32" max="128" value="32" step="1" onchange="showValue(this.value)"/>
-  <span id="range">0</span>
+  <input type="range" min="32" max="128" value="32" step="1" onchange="showStorageValue(this.value)"/>
+  <span id="storageRange">0</span>
   <button>Change Storage</button>
 </div>
 
@@ -35,15 +35,21 @@ window.onload = function () {
     .done(function( json ) {
       $("#state").text(json["state"]);
       $("#state").addClass(json["state"]);
+      $("#instanceRange_slider").attr({"value", json["instance_type_index"]});
+      
+      function showInstanceValue(newValue) {
+        document.getElementById("instanceRange").innerHTML = json["instance_info"][newValue][0];
+      }
+
+      function showStorageValue(newValue) {
+        document.getElementById("storageRange").innerHTML=newValue;
+      }
+      
     })
     .fail(function( jqxhr, textStatus, error ) {
       var err = textStatus + ", " + error;
       console.log( "Request Failed: " + err );
   });
-  
-  function showValue(newValue)
-  {
-    document.getElementById("range").innerHTML=newValue;
-  }
+ 
 }
 </script>
