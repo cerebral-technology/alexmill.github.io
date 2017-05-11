@@ -1,7 +1,18 @@
 ---
 layout: page
-css: "#state.running { background-color: green; font-color: #ffffff; border-radius: 3px; padding: 4px; }"
+css: "#state {color: #ffffff; border-radius: 5px; padding: 2px 10px;} #state.running { background-color: green;}"
 ---
+
+
+Your server is: <span id="state"></span>
+
+Actions:
+
+<div>
+<button>Stop</button>
+<button>Change Memory</button>
+<button>Change Storage</button>
+</div>
 
 <script>
 window.onload = function () {
@@ -16,5 +27,3 @@ window.onload = function () {
   });
 }
 </script>
-
-Your server is: <span id="state"></span>
