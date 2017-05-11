@@ -43,14 +43,13 @@ window.onload = function () {
     .fail(function( jqxhr, textStatus, error ) {
       var err = textStatus + ", " + error;
       console.log( "Request Failed: " + err );
-  });
-  
-  function showInstanceValue(newValue) {
-    document.getElementById("instanceRange").innerHTML = json["instance_info"][newValue][0];
-  }
-  function showStorageValue(newValue) {
-    document.getElementById("storageRange").innerHTML=newValue;
-  }
- 
+  }); 
+}
+
+function showInstanceValue(newValue) {
+  document.getElementById("instanceRange").innerHTML = json["instance_info"][newValue][0];
+}
+function showStorageValue(newValue) {
+  document.getElementById("storageRange").innerHTML=newValue;
 }
 </script>
