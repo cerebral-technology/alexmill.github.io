@@ -11,17 +11,21 @@ Actions:
 <div>
   <button>Start</button>
   <button>Stop</button>
+</div>
+
+<div>
   <select>
     <option value="volvo">2GB</option>
     <option value="saab">Saab</option>
     <option value="mercedes">Mercedes</option>
     <option value="audi">Audi</option>
-  </select>
-  
-  <input type="range" min="32" max="128" value="32" step="1" onchange="showValue(this.value)"/>
+  </select> 
   <button>Change Memory</button>
+</div>
   
-  
+<div>
+  <input type="range" min="32" max="128" value="32" step="1" onchange="showValue(this.value)"/>
+  <span id="range">0</span>
   <button>Change Storage</button>
 </div>
 
