@@ -35,7 +35,7 @@ window.onload = function () {
     .done(function( json ) {
       $("#state").text(json["state"]);
       $("#state").addClass(json["state"]);
-      $("#instanceRange_slider").attr({"value", json["instance_type_index"]});
+      $("#instanceRange_slider").attr({"value": json["instance_type_index"]});
       
       function showInstanceValue(newValue) {
         document.getElementById("instanceRange").innerHTML = json["instance_info"][newValue][0];
