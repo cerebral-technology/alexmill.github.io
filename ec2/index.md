@@ -4,15 +4,10 @@ css: "#state{color:#fff;border-radius:5px;padding:2px 10px}#state.running{backgr
 ---
 
 
-Your server is: <span id="state"></span>
+Your server is: <span id="state"></span> <button id="startBtn">Start</button> <button id="stopBtn">Stop</button>
 
-Actions:
-
-<div>
-  <button>Start</button>
-  <button>Stop</button>
-</div>
-
+Resize your instance:
+<hr>
 <div>
   <input id="instanceRange_slider" type="range" min="0" max="6" value="1" step="1" onchange="showInstanceValue(this.value)"/>
   <p>
@@ -40,6 +35,7 @@ window.onload = function () {
       $("#state").addClass(json["state"]);
       $("#instanceRange_slider").attr({"value": json["instance_type_index"]});  
       $("#currentInstance").text(json["instance_type_name"]);  
+      $("#storageRange").text(String(json["size"])+" GB")
     })
     .fail(function( jqxhr, textStatus, error ) {
       var err = textStatus + ", " + error;
@@ -51,6 +47,6 @@ function showInstanceValue(newValue) {
   document.getElementById("instanceRange").innerHTML = json["instance_info"][newValue][0];
 }
 function showStorageValue(newValue) {
-  document.getElementById("storageRange").innerHTML=newValue;
+  $("#storageRange").text(String(newValue)+" GB")
 }
 </script>
