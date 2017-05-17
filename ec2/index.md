@@ -17,7 +17,7 @@ css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 
   Key:
   <input type="password" id="key"/>
   <button id="startBtn" disabled="disabled" onclick="startServer()">Start Server</button>
-  <button id="stopBtn">Stop Server</button>
+  <button id="stopBtn" onclick="stopServer()">Stop Server</button>
 </div>
   
 <!--
