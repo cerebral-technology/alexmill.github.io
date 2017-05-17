@@ -69,16 +69,15 @@ function startServer() {
     "instance_type": $("#instanceType").val()
   }
   console.log(payload);
-  
-  $.post( "http://api.alex.miller.im/ec2/start_instance", payload)
-  .done(function(data) {
-    console.log("sup")
-  })
-  .fail(function( data ) {
-    alert("Error");
-  })
-  .always(function( data ) {
-    console.log(data);
+  jQuery.ajax ({
+    url: "http://api.alex.miller.im/ec2/start_instance",
+    type: "POST",
+    data: JSON.stringify(payload),
+    dataType: "json",
+    contentType: "application/json; charset=utf-8",
+    success: console.log("success"),
+    fail: alert("Error"),
+    always:  console.log(data)
   });
 }
 
