@@ -27,7 +27,7 @@ css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 
 </div>
 -->
 
-<button id="commitBtn" disabled="disabled">Start Server</button>
+<button id="commitBtn" disabled="disabled" onclick="startServer()">Start Server</button>
 
 <script>
 var json = new Object;
