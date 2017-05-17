@@ -1,34 +1,27 @@
 ---
 layout: page
-css: "#state{color:#fff;border-radius:5px;padding:2px 10px}#state.running{background-color:green}#state.stopped{background-color:red}input[type=range]{-webkit-appearance:none;margin:10px 0;width:100%}input[type=range]:focus{outline:0}input[type=range]::-webkit-slider-runnable-track{width:100%;height:11px;cursor:pointer;animate:.2s;box-shadow:0 0 0 #000;background:#2497e3;border-radius:1px;border:0 solid #000}input[type=range]::-webkit-slider-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer;-webkit-appearance:none;margin-top:-19px}input[type=range]:focus::-webkit-slider-runnable-track{background:#2497e3}input[type=range]::-moz-range-track{width:100%;height:11px;cursor:pointer;animate:.2s;box-shadow:0 0 0 #000;background:#2497e3;border-radius:1px;border:0 solid #000}input[type=range]::-moz-range-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer}input[type=range]::-ms-track{width:100%;height:11px;cursor:pointer;animate:.2s;background:transparent;border-color:transparent;color:transparent}input[type=range]::-ms-fill-lower{background:#2497e3;border:0 solid #000;border-radius:2px;box-shadow:0 0 0 #000}input[type=range]::-ms-fill-upper{background:#2497e3;border:0 solid #000;border-radius:2px;box-shadow:0 0 0 #000}input[type=range]::-ms-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer}input[type=range]:focus::-ms-fill-lower{background:#2497e3}input[type=range]:focus::-ms-fill-upper{background:#2497e3}"
+title: EC2 Manager
+css: "#state{color:#fff;border-radius:5px;padding:2px 10px}.running #state{background-color:green}.stopped #state{background-color:red}.running #startBtn{display:none}.stopped #stopBtn{display:none}input[type=range]{-webkit-appearance:none;margin:10px 0;width:100%}input[type=range]:focus{outline:0}input[type=range]::-webkit-slider-runnable-track{width:100%;height:11px;cursor:pointer;animate:.2s;box-shadow:0 0 0 #000;background:#2497e3;border-radius:1px;border:0 solid #000}input[type=range]::-webkit-slider-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer;-webkit-appearance:none;margin-top:-19px}input[type=range]:focus::-webkit-slider-runnable-track{background:#2497e3}input[type=range]::-moz-range-track{width:100%;height:11px;cursor:pointer;animate:.2s;box-shadow:0 0 0 #000;background:#2497e3;border-radius:1px;border:0 solid #000}input[type=range]::-moz-range-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer}input[type=range]::-ms-track{width:100%;height:11px;cursor:pointer;animate:.2s;background:transparent;border-color:transparent;color:transparent}input[type=range]::-ms-fill-lower{background:#2497e3;border:0 solid #000;border-radius:2px;box-shadow:0 0 0 #000}input[type=range]::-ms-fill-upper{background:#2497e3;border:0 solid #000;border-radius:2px;box-shadow:0 0 0 #000}input[type=range]::-ms-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer}input[type=range]:focus::-ms-fill-lower{background:#2497e3}input[type=range]:focus::-ms-fill-upper{background:#2497e3}"
 ---
 
-
-Your server is: <span id="state"></span> <button id="startBtn">Start</button> <button id="stopBtn">Stop</button>
-
-Resize your instance:
-<hr>
-
 <div>
-  <select id="instanceType">
-  
-  </select>
+  Your server is: <span id="state"></span>
+  <button class="stateBtn" id="startBtn">Start</button>
+  <button class="stateBtn" id="stopBtn">Stop</button>
 </div>
+
 <div>
-  <input id="instanceRange_slider" type="range" min="0" max="6" value="1" step="1" onchange="showInstanceValue(this.value)"/>
-  <p>
-    Change instance type from 
-    <span class="instance_type" id="currentInstance"></span>
-    to 
-    <span class="instance_type" id="instanceRange">0</span>
-  </p>
+  Instance Type:
+  <select id="instanceType"></select>
 </div>
   
 <div>
+  Storage: 
   <input type="range" min="32" max="128" value="32" step="1" onchange="showStorageValue(this.value)"/>
   <span id="storageRange">0</span>
-  <button>Change Storage</button>
 </div>
+
+<button id="commitBtn">Commit Changes</button>
 
 <script>
 var json = new Object;
@@ -38,7 +31,7 @@ window.onload = function () {
     .done(function( data ) {
       json = data;
       $("#state").text(json["state"]);
-      $("#state").addClass(json["state"]);
+      $(".post-content").addClass(json["state"]);
       for(i = 0; i < json["instance_info"].length; i++){
         opt_tag = '<option value="' + json["instance_info"][i][0] + '"'
         
@@ -59,9 +52,6 @@ window.onload = function () {
   }); 
 }
 
-function showInstanceValue(newValue) {
-  document.getElementById("instanceRange").innerHTML = json["instance_info"][newValue][0];
-}
 function showStorageValue(newValue) {
   $("#storageRange").text(String(newValue)+" GB")
 }
