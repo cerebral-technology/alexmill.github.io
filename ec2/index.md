@@ -1,6 +1,6 @@
 ---
 layout: page
-css: "#state{color:#fff;border-radius:5px;padding:2px 10px}#state.running{background-color:green}input[type=range]{-webkit-appearance:none;margin:10px 0;width:100%}input[type=range]:focus{outline:0}input[type=range]::-webkit-slider-runnable-track{width:100%;height:11px;cursor:pointer;animate:.2s;box-shadow:0 0 0 #000;background:#2497e3;border-radius:1px;border:0 solid #000}input[type=range]::-webkit-slider-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer;-webkit-appearance:none;margin-top:-19px}input[type=range]:focus::-webkit-slider-runnable-track{background:#2497e3}input[type=range]::-moz-range-track{width:100%;height:11px;cursor:pointer;animate:.2s;box-shadow:0 0 0 #000;background:#2497e3;border-radius:1px;border:0 solid #000}input[type=range]::-moz-range-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer}input[type=range]::-ms-track{width:100%;height:11px;cursor:pointer;animate:.2s;background:transparent;border-color:transparent;color:transparent}input[type=range]::-ms-fill-lower{background:#2497e3;border:0 solid #000;border-radius:2px;box-shadow:0 0 0 #000}input[type=range]::-ms-fill-upper{background:#2497e3;border:0 solid #000;border-radius:2px;box-shadow:0 0 0 #000}input[type=range]::-ms-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer}input[type=range]:focus::-ms-fill-lower{background:#2497e3}input[type=range]:focus::-ms-fill-upper{background:#2497e3}"
+css: "#state{color:#fff;border-radius:5px;padding:2px 10px}#state.running{background-color:green}#state.stopped{background-color:red}input[type=range]{-webkit-appearance:none;margin:10px 0;width:100%}input[type=range]:focus{outline:0}input[type=range]::-webkit-slider-runnable-track{width:100%;height:11px;cursor:pointer;animate:.2s;box-shadow:0 0 0 #000;background:#2497e3;border-radius:1px;border:0 solid #000}input[type=range]::-webkit-slider-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer;-webkit-appearance:none;margin-top:-19px}input[type=range]:focus::-webkit-slider-runnable-track{background:#2497e3}input[type=range]::-moz-range-track{width:100%;height:11px;cursor:pointer;animate:.2s;box-shadow:0 0 0 #000;background:#2497e3;border-radius:1px;border:0 solid #000}input[type=range]::-moz-range-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer}input[type=range]::-ms-track{width:100%;height:11px;cursor:pointer;animate:.2s;background:transparent;border-color:transparent;color:transparent}input[type=range]::-ms-fill-lower{background:#2497e3;border:0 solid #000;border-radius:2px;box-shadow:0 0 0 #000}input[type=range]::-ms-fill-upper{background:#2497e3;border:0 solid #000;border-radius:2px;box-shadow:0 0 0 #000}input[type=range]::-ms-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer}input[type=range]:focus::-ms-fill-lower{background:#2497e3}input[type=range]:focus::-ms-fill-upper{background:#2497e3}"
 ---
 
 
@@ -8,6 +8,12 @@ Your server is: <span id="state"></span> <button id="startBtn">Start</button> <b
 
 Resize your instance:
 <hr>
+
+<div>
+  <select id="instanceType">
+  
+  </select>
+</div>
 <div>
   <input id="instanceRange_slider" type="range" min="0" max="6" value="1" step="1" onchange="showInstanceValue(this.value)"/>
   <p>
@@ -33,10 +39,20 @@ window.onload = function () {
       json = data;
       $("#state").text(json["state"]);
       $("#state").addClass(json["state"]);
-      $("#instanceRange_slider").attr({"value": json["instance_type_index"]});  
+      for(i = 0; i < json["instance_info"].length; i++){
+        opt_tag = '<option value="' + json["instance_info"][i][0] + '"'
+        
+        if(i==json["instance_type_index"]){
+          opt_tag = opt_tag + ' selected="selected" '
+        }
+        opt_tag = opt_tag +'>' + json["instance_info"][i][0] + '</option>'
+        $("#instanceType").append(opt_tag)
+      }
+      /* $("#instanceRange_slider").attr({"value": json["instance_type_index"]});  
       $("#currentInstance").text(json["instance_type_name"]);  
-      $("#storageRange").text(String(json["size"])+" GB")
+      $("#storageRange").text(String(json["size"])+" GB") */
     })
+    
     .fail(function( jqxhr, textStatus, error ) {
       var err = textStatus + ", " + error;
       console.log( "Request Failed: " + err );
