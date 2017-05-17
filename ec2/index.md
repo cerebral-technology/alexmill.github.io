@@ -68,6 +68,7 @@ function startServer() {
     "key": $("#key").val(),
     "instance_type": $("#instanceType").val()
   }
+  console.log(payload);
   
   $.post( "http://api.alex.miller.im/ec2/start_instance", payload)
   .done(function(data) {
