@@ -13,6 +13,11 @@ css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 
   Instance Type:
   <select id="instanceType"></select>
 </div>
+
+<div>
+  Key:
+  <input type="password" id="key"/>
+</div>
   
 <!--
 <div style="margin-top: 12px">
@@ -57,4 +62,23 @@ window.onload = function () {
 function showStorageValue(newValue) {
   $("#storageRange").text(String(newValue)+" GB")
 }
+
+function startServer() {
+  payload = {
+    "key": $("#key").val(),
+    "instance_type": $("#instanceType").val()
+  }
+  
+  $.post( "http://api.alex.miller.im/ec2/start_instance", payload)
+  .done(function(data) {
+    console.log("sup")
+  })
+  .fail(function( data ) {
+    alert(String(data));
+  })
+  .always(function( data ) {
+    console.log(data);
+  });
+}
+
 </script>
