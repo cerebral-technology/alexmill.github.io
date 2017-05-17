@@ -76,7 +76,7 @@ function startServer() {
       data: JSON.stringify(payload),
       dataType: "json",
       contentType: "application/json; charset=utf-8",
-      done: console.log("POST"),
+      done: function(data){ if(data.statusCode==200){location.reload();}},
       fail: console.log("Error"),
       always:  function(data){ console.log(data) }
     }); 
@@ -88,6 +88,16 @@ function stopServer() {
       "key": $("#key").val()
     }
     console.log("stopping server");
+    jQuery.ajax ({
+      url: "http://api.alex.miller.im/ec2/start_instance",
+      type: "POST",
+      data: JSON.stringify(payload),
+      dataType: "json",
+      contentType: "application/json; charset=utf-8",
+      done: function(data){ if(data.statusCode==200){location.reload();}},
+      fail: console.log("Error"),
+      always:  function(data){ console.log(data) }
+    });
 }
 
 </script>
