@@ -89,7 +89,7 @@ function stopServer() {
     }
     console.log("stopping server");
     jQuery.ajax ({
-      url: "http://api.alex.miller.im/ec2/start_instance",
+      url: "http://api.alex.miller.im/ec2/stop_instance",
       type: "POST",
       data: JSON.stringify(payload),
       dataType: "json",
