@@ -11,12 +11,13 @@ css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 
 
 <div>
   Instance Type:
-  <select id="instanceType"></select>
+  <select id="instanceType" disabled="disabled"></select>
 </div>
 
 <div>
   Key:
   <input type="password" id="key"/>
+  <button id="commitBtn" disabled="disabled" onclick="server()">Start Server</button>
 </div>
   
 <!--
@@ -27,7 +28,7 @@ css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 
 </div>
 -->
 
-<button id="commitBtn" disabled="disabled" onclick="startServer()">Start Server</button>
+
 
 <script>
 var json = new Object;
@@ -48,11 +49,14 @@ window.onload = function () {
         $("#instanceType").append(opt_tag)
       }
       if(json["state"]=="stopped"){
+        $("#instanceType").removeAttr("disabled");
         $("#commitBtn").removeAttr("disabled");
+      } else {
+        $("#commitBtn").text("Stop Server")
       }
       // $("#storageRange").text(String(json["size"])+" GB")
+      
     })
-    
     .fail(function( jqxhr, textStatus, error ) {
       var err = textStatus + ", " + error;
       console.log( "Request Failed: " + err );
@@ -63,22 +67,28 @@ function showStorageValue(newValue) {
   $("#storageRange").text(String(newValue)+" GB")
 }
 
-function startServer() {
-  payload = {
-    "key": $("#key").val(),
-    "instance_type": $("#instanceType").val()
-  }
-  console.log(payload);
-  jQuery.ajax ({
-    url: "http://api.alex.miller.im/ec2/start_instance",
-    type: "POST",
-    data: JSON.stringify(payload),
-    dataType: "json",
-    contentType: "application/json; charset=utf-8",
-    done: console.log("POST"),
-    fail: console.log("Error"),
-    always:  function(data){ console.log(data) }
-  });
+function server() {
+  if(json["state"] == "stopped"){
+    payload = {
+      "key": $("#key").val(),
+      "instance_type": $("#instanceType").val()
+    }
+    console.log(payload);
+    jQuery.ajax ({
+      url: "http://api.alex.miller.im/ec2/start_instance",
+      type: "POST",
+      data: JSON.stringify(payload),
+      dataType: "json",
+      contentType: "application/json; charset=utf-8",
+      done: console.log("POST"),
+      fail: console.log("Error"),
+      always:  function(data){ console.log(data) }
+    });
+   }
+   else if(json["state"] == "running"){
+      console.log("Stopping server.")
+   }
+   
 }
 
 </script>
