@@ -37,12 +37,13 @@ window.onload = function () {
         if(i==json["instance_type_index"]){
           opt_tag = opt_tag + ' selected="selected" '
         }
-        opt_tag = opt_tag +'>' + json["instance_info"][i][0] + '</option>'
+        opt_tag = opt_tag +'>' + json["instance_info"][i][0] + ' (RAM: ' + json["instance_info"][i][2] + ' GB, Cores: ' + json["instance_info"][i][1] + ')</option>'
         $("#instanceType").append(opt_tag)
       }
       if(json["state"]=="running"){
         $("#commitBtn").text("Commit and Restart Server");
       }
+      $("#storageRange").text(String(json["size"])+" GB")
     })
     
     .fail(function( jqxhr, textStatus, error ) {
