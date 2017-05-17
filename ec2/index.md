@@ -1,12 +1,11 @@
 ---
 layout: page
 title: EC2 Manager
-css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 10px}.running #state{background-color:green}.stopped #state{background-color:red}.stopped #stopBtn{display:none}input[type=range]{-webkit-appearance:none;margin:10px 0;width:40%}input[type=range]:focus{outline:0}input[type=range]::-webkit-slider-runnable-track{width:100%;height:11px;cursor:pointer;animate:.2s;box-shadow:0 0 0 #000;background:#2497e3;border-radius:1px;border:0 solid #000}input[type=range]::-webkit-slider-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer;-webkit-appearance:none;margin-top:-19px}input[type=range]:focus::-webkit-slider-runnable-track{background:#2497e3}input[type=range]::-moz-range-track{width:100%;height:11px;cursor:pointer;animate:.2s;box-shadow:0 0 0 #000;background:#2497e3;border-radius:1px;border:0 solid #000}input[type=range]::-moz-range-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer}input[type=range]::-ms-track{width:100%;height:11px;cursor:pointer;animate:.2s;background:transparent;border-color:transparent;color:transparent}input[type=range]::-ms-fill-lower{background:#2497e3;border:0 solid #000;border-radius:2px;box-shadow:0 0 0 #000}input[type=range]::-ms-fill-upper{background:#2497e3;border:0 solid #000;border-radius:2px;box-shadow:0 0 0 #000}input[type=range]::-ms-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer}input[type=range]:focus::-ms-fill-lower{background:#2497e3}input[type=range]:focus::-ms-fill-upper{background:#2497e3}"
+css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 10px}.running #state{background-color:green}.stopped #state{background-color:red}.stopped #stopBtn{display:none}.running #startBtn{display:none}input[type=range]{-webkit-appearance:none;margin:10px 0;width:40%}input[type=range]:focus{outline:0}input[type=range]::-webkit-slider-runnable-track{width:100%;height:11px;cursor:pointer;animate:.2s;box-shadow:0 0 0 #000;background:#2497e3;border-radius:1px;border:0 solid #000}input[type=range]::-webkit-slider-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer;-webkit-appearance:none;margin-top:-19px}input[type=range]:focus::-webkit-slider-runnable-track{background:#2497e3}input[type=range]::-moz-range-track{width:100%;height:11px;cursor:pointer;animate:.2s;box-shadow:0 0 0 #000;background:#2497e3;border-radius:1px;border:0 solid #000}input[type=range]::-moz-range-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer}input[type=range]::-ms-track{width:100%;height:11px;cursor:pointer;animate:.2s;background:transparent;border-color:transparent;color:transparent}input[type=range]::-ms-fill-lower{background:#2497e3;border:0 solid #000;border-radius:2px;box-shadow:0 0 0 #000}input[type=range]::-ms-fill-upper{background:#2497e3;border:0 solid #000;border-radius:2px;box-shadow:0 0 0 #000}input[type=range]::-ms-thumb{box-shadow:0 0 0 #000;border:1px solid #2497e3;height:42px;width:17px;border-radius:11px;background:#a1d0ff;cursor:pointer}input[type=range]:focus::-ms-fill-lower{background:#2497e3}input[type=range]:focus::-ms-fill-upper{background:#2497e3}"
 ---
 
 <div>
   Your server is: <span id="state"></span>
-  <button class="stateBtn" id="stopBtn">Stop</button>
 </div>
 
 <div>
@@ -17,7 +16,8 @@ css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 
 <div>
   Key:
   <input type="password" id="key"/>
-  <button id="commitBtn" disabled="disabled" onclick="server()">Start Server</button>
+  <button id="startBtn" disabled="disabled" onclick="startServer()">Start Server</button>
+  <button id="stopBtn">Stop Server</button>
 </div>
   
 <!--
@@ -67,8 +67,7 @@ function showStorageValue(newValue) {
   $("#storageRange").text(String(newValue)+" GB")
 }
 
-function server() {
-  if(json["state"] == "stopped"){
+function startServer() {
     payload = {
       "key": $("#key").val(),
       "instance_type": $("#instanceType").val()
@@ -84,11 +83,15 @@ function server() {
       fail: console.log("Error"),
       always:  function(data){ console.log(data) }
     });
-   }
-   else if(json["state"] == "running"){
-      console.log("Stopping server.")
-   }
-   
+   }   
+}
+
+
+function stopServer() {
+    payload = {
+      "key": $("#key").val()
+    }
+    console.log("stopping server");
 }
 
 </script>
