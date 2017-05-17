@@ -75,9 +75,9 @@ function startServer() {
     data: JSON.stringify(payload),
     dataType: "json",
     contentType: "application/json; charset=utf-8",
-    success: console.log("success"),
-    fail: alert("Error"),
-    always:  console.log(data)
+    done: console.log("POST success."),
+    fail: console.log("POST error."),
+    always:  function(data){ console.log(data) }
   });
 }
 
