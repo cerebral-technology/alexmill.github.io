@@ -74,7 +74,7 @@ function startServer() {
     console.log("sup")
   })
   .fail(function( data ) {
-    alert(String(data));
+    alert("Error");
   })
   .always(function( data ) {
     console.log(data);
