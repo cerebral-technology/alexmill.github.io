@@ -50,9 +50,6 @@ window.onload = function () {
       }
       if(json["state"]=="stopped"){
         $("#instanceType").removeAttr("disabled");
-        $("#commitBtn").removeAttr("disabled");
-      } else {
-        $("#commitBtn").text("Stop Server")
       }
       // $("#storageRange").text(String(json["size"])+" GB")
       
@@ -82,8 +79,7 @@ function startServer() {
       done: console.log("POST"),
       fail: console.log("Error"),
       always:  function(data){ console.log(data) }
-    });
-   }   
+    }); 
 }
 
 
