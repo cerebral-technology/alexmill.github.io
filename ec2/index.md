@@ -14,13 +14,15 @@ css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 
   <select id="instanceType"></select>
 </div>
   
+<!--
 <div style="margin-top: 12px">
   Storage: 
   <input type="range" min="32" max="128" value="32" step="1" onchange="showStorageValue(this.value)"/>
   <span id="storageRange">0</span>
 </div>
+-->
 
-<button id="commitBtn">Start Server</button>
+<button id="commitBtn" disabled="disabled">Start Server</button>
 
 <script>
 var json = new Object;
@@ -40,10 +42,10 @@ window.onload = function () {
         opt_tag = opt_tag +'>' + json["instance_info"][i][0] + ' (RAM: ' + json["instance_info"][i][2] + ' GB, Cores: ' + json["instance_info"][i][1] + ')</option>'
         $("#instanceType").append(opt_tag)
       }
-      if(json["state"]=="running"){
-        $("#commitBtn").text("Commit and Restart Server");
+      if(json["state"]=="stopped"){
+        $("#commitBtn").removeAttr("disabled");
       }
-      $("#storageRange").text(String(json["size"])+" GB")
+      // $("#storageRange").text(String(json["size"])+" GB")
     })
     
     .fail(function( jqxhr, textStatus, error ) {
