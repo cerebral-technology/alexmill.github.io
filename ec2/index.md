@@ -152,8 +152,8 @@ function startServer() {
       data: JSON.stringify(payload),
       dataType: "json",
       contentType: "application/json; charset=utf-8",
-      success: function(data){$("#btnLoader").hide(); console.log(data); if(data.statusCode==200){location.reload();}},
-      error: function(data){ $("#btnLoader").hide(); console.log(data); console.log("Error"); }
+      success: function(data){$("#btnLoader").hide(); console.log(data.reponseJSON); if(data.statusCode==200){location.reload();}},
+      error: function(data){ $("#btnLoader").hide(); console.log(data.reponseJSON); console.log("Error"); }
     }); 
 }
 
@@ -171,8 +171,8 @@ function stopServer() {
       data: JSON.stringify(payload),
       dataType: "json",
       contentType: "application/json; charset=utf-8",
-      success: function(data){ $("#btnLoader").hide(); console.log(data); if(data.statusCode==200){location.reload();}},
-      error: function(data){ $("#btnLoader").hide(); console.log(data); console.log("Error"); }
+      success: function(data){ $("#btnLoader").hide(); console.log(data.reponseJSON); if(data.statusCode==200){location.reload();}},
+      error: function(data){ $("#btnLoader").hide(); console.log(data.reponseJSON); console.log("Error"); }
     });
 }
 
