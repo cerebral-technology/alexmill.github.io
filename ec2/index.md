@@ -1,7 +1,9 @@
 ---
 layout: page
 title: EC2 Manager
-css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 10px}.running #state{background-color:green}.stopped #state{background-color:red}#stopBtn, #startBtn{display:none}.running #stopBtn, .stopped #startBtn{display:block}
+css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 10px}.running #state{background-color:green}.stopped #state{background-color:red}#stopBtn, #startBtn{display:none}.running #stopBtn, .stopped 
+#commitDiv > div { float: left; }
+#startBtn{display:block}
 #formContain {display: none;}
 #btnLoader {display: none;}
 .loader,
@@ -28,7 +30,7 @@ css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 
   animation-delay: -0.16s;
 }
 .loader.small { 
-  font-size: 7;
+  font-size: 7px;
   margin: 0 5px;
   display: inline-block;
 }
@@ -80,11 +82,12 @@ css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 
   <select id="instanceType" disabled="disabled"></select>
 </div>
 
-<div>
-  Key:
-  <input type="password" id="key"/>
-  <button id="startBtn" onclick="startServer()">Start Server</button>
-  <button id="stopBtn" onclick="stopServer()">Stop Server</button>
+<div id="commitDiv">
+  <div>Key: <input type="password" id="key"/></div>
+  <div>
+    <button id="startBtn" onclick="startServer()">Start Server</button>
+    <button id="stopBtn" onclick="stopServer()">Stop Server</button>
+  </div>
   <div class="loader small" id="btnLoader"></div>
 </div>
   
