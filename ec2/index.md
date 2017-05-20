@@ -153,7 +153,7 @@ function startServer() {
       dataType: "json",
       contentType: "application/json; charset=utf-8",
       success: function(data){$("#btnLoader").hide(); console.log(data); if(data.statusCode==200){location.reload();}},
-      fail: function(data){ $("#btnLoader").hide(); console.log(data); console.log("Error"); }
+      error: function(data){ $("#btnLoader").hide(); console.log(data); console.log("Error"); }
     }); 
 }
 
@@ -172,7 +172,7 @@ function stopServer() {
       dataType: "json",
       contentType: "application/json; charset=utf-8",
       success: function(data){ $("#btnLoader").hide(); console.log(data); if(data.statusCode==200){location.reload();}},
-      fail: function(data){ $("#btnLoader").hide(); console.log(data); console.log("Error"); }
+      error: function(data){ $("#btnLoader").hide(); console.log(data); console.log("Error"); }
     });
 }
 
