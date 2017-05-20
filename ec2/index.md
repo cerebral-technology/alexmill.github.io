@@ -141,6 +141,7 @@ function showStorageValue(newValue) {
 
 function startServer() {
     $("#btnLoader").show();
+    $("#commitDiv button").attr("disabled","disabled");
     payload = {
       "key": $("#key").val(),
       "instance_type": $("#instanceType").val()
@@ -152,14 +153,15 @@ function startServer() {
       data: JSON.stringify(payload),
       dataType: "json",
       contentType: "application/json; charset=utf-8",
-      success: function(data){$("#btnLoader").hide(); console.log(data.reponseJSON); if(data.statusCode==200){location.reload();}},
-      error: function(data){ $("#btnLoader").hide(); console.log(data.reponseJSON); console.log("Error"); }
+      success: function(data){$("#btnLoader").hide(); $("#commitDiv button").removeAttr("disabled"); console.log(data.reponseJSON); if(data.status==200){location.reload();}},
+      error: function(data){ $("#btnLoader").hide(); $("#commitDiv button").removeAttr("disabled"); console.log(data.reponseJSON); console.log("Error"); }
     }); 
 }
 
 
 function stopServer() {
     $("#btnLoader").show();
+    $("#commitDiv button").attr("disabled","disabled");
     payload = {
       "key": $("#key").val()
     }
@@ -171,8 +173,8 @@ function stopServer() {
       data: JSON.stringify(payload),
       dataType: "json",
       contentType: "application/json; charset=utf-8",
-      success: function(data){ $("#btnLoader").hide(); console.log(data.reponseJSON); if(data.statusCode==200){location.reload();}},
-      error: function(data){ $("#btnLoader").hide(); console.log(data.reponseJSON); console.log("Error"); }
+      success: function(data){ $("#btnLoader").hide(); $("#commitDiv button").removeAttr("disabled");  console.log(data.reponseJSON); if(data.status==200){location.reload();}},
+      error: function(data){ $("#btnLoader").hide(); $("#commitDiv button").removeAttr("disabled");  console.log(data.reponseJSON); console.log("Error"); }
     });
 }
 
