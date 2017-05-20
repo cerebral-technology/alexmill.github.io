@@ -69,16 +69,14 @@ function startServer() {
       "key": $("#key").val(),
       "instance_type": $("#instanceType").val()
     }
-    console.log(payload);
-    jQuery.ajax ({
+    $.ajax ({
       url: "http://api.alex.miller.im/ec2/start_instance",
       type: "POST",
       data: JSON.stringify(payload),
       dataType: "json",
       contentType: "application/json; charset=utf-8",
-      done: function(data){ if(data.statusCode==200){location.reload();}},
-      fail: console.log("Error"),
-      always:  function(data){ console.log(data) }
+      done: function(data){console.log(data); if(data.statusCode==200){location.reload();}},
+      fail: function(data){ console.log("Error"); }
     }); 
 }
 
@@ -88,15 +86,14 @@ function stopServer() {
       "key": $("#key").val()
     }
     console.log("stopping server");
-    jQuery.ajax ({
+    $.ajax ({
       url: "http://api.alex.miller.im/ec2/stop_instance",
       type: "POST",
       data: JSON.stringify(payload),
       dataType: "json",
       contentType: "application/json; charset=utf-8",
-      done: function(data){ if(data.statusCode==200){location.reload();}},
-      fail: console.log("Error"),
-      always:  function(data){ console.log(data) }
+      done: function(data){console.log(data); if(data.statusCode==200){location.reload();}},
+      fail: function(data){ console.log("Error"); }
     });
 }
 
