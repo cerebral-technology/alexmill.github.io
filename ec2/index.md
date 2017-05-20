@@ -1,9 +1,10 @@
 ---
 layout: page
 title: EC2 Manager
-css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 10px}.running #state{background-color:green}.stopped #state{background-color:red}#stopBtn, #startBtn{display:none}.running #stopBtn, .stopped 
+css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 10px}.running #state{background-color:green}.stopped #state{background-color:red}
+#stopBtn, #startBtn{display:none}
+.running #stopBtn, .stopped #startBtn{display:block}
 #commitDiv > div { float: left; }
-#startBtn{display:block}
 #formContain {display: none;}
 #btnLoader {display: none;}
 .loader,
