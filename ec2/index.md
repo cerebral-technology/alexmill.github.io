@@ -30,8 +30,8 @@ css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 
   animation-delay: -0.16s;
 }
 .loader.small { 
-  font-size: 7px;
-  margin: 0 5px;
+  font-size: 4px;
+  margin: 0px 0 0 25px;
   display: inline-block;
 }
 .loader:before,
@@ -84,7 +84,7 @@ css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 
 
 <div id="commitDiv">
   <div>Key: <input type="password" id="key"/></div>
-  <div>
+  <div style="margin: 4px;">
     <button id="startBtn" onclick="startServer()">Start Server</button>
     <button id="stopBtn" onclick="stopServer()">Stop Server</button>
   </div>
@@ -151,7 +151,7 @@ function startServer() {
       data: JSON.stringify(payload),
       dataType: "json",
       contentType: "application/json; charset=utf-8",
-      done: function(data){$("#btnLoader").hide(); console.log(data); if(data.statusCode==200){location.reload();}},
+      success: function(data){$("#btnLoader").hide(); console.log(data); if(data.statusCode==200){location.reload();}},
       fail: function(data){ console.log("Error"); }
     }); 
 }
@@ -169,7 +169,7 @@ function stopServer() {
       data: JSON.stringify(payload),
       dataType: "json",
       contentType: "application/json; charset=utf-8",
-      done: function(data){ $("#btnLoader").hide(); console.log(data); if(data.statusCode==200){location.reload();}},
+      success: function(data){ $("#btnLoader").hide(); console.log(data); if(data.statusCode==200){location.reload();}},
       fail: function(data){ console.log("Error"); }
     });
 }
