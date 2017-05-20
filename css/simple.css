@@ -10,6 +10,9 @@ body {
     line-height: 1.5;
     margin: 0;
     color: #333333;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .header {
@@ -130,6 +133,10 @@ body.category .post-li a div img {
 }
 
 /* Utility */
+
+.page-content {
+    flex: 1;
+}
 
 .wrap:before,
 .wrap:after { content:""; display:table; }
