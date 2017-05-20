@@ -146,6 +146,7 @@ function startServer() {
       "instance_type": $("#instanceType").val()
     }
     $.ajax ({
+      crossOrigin: true,
       url: "http://api.alex.miller.im/ec2/start_instance",
       type: "POST",
       data: JSON.stringify(payload),
@@ -164,6 +165,7 @@ function stopServer() {
     }
     console.log("stopping server");
     $.ajax ({
+      crossOrigin: true,
       url: "http://api.alex.miller.im/ec2/stop_instance",
       type: "POST",
       data: JSON.stringify(payload),
