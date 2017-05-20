@@ -2,6 +2,8 @@
 layout: page
 title: EC2 Manager
 css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 10px}.running #state{background-color:green}.stopped #state{background-color:red}#stopBtn, #startBtn{display:none}.running #stopBtn, .stopped #startBtn{display:block}
+#formContain {display: none;}
+#btnLoader {display: none;}
 .loader,
 .loader:before,
 .loader:after {
@@ -15,8 +17,8 @@ css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 
 }
 .loader {
   color: #7a7a7a;
-  font-size: 10px;
-  margin: 80px auto;
+  font-size: 12px;
+  margin: 10px auto;
   position: relative;
   text-indent: -9999em;
   -webkit-transform: translateZ(0);
@@ -24,6 +26,11 @@ css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 
   transform: translateZ(0);
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
+}
+.loader.small { 
+  font-size: 7;
+  margin: 0 5px;
+  display: inline-block;
 }
 .loader:before,
 .loader:after {
@@ -61,7 +68,7 @@ css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 
 }"
 ---
 
-<div class="loader"></div>
+<div class="loader" id="mainLoader"></div>
 
 <div id="formContain">
 <div>
@@ -78,6 +85,7 @@ css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 
   <input type="password" id="key"/>
   <button id="startBtn" onclick="startServer()">Start Server</button>
   <button id="stopBtn" onclick="stopServer()">Stop Server</button>
+  <div class="loader small" id="btnLoader"></div>
 </div>
   
 <!--
@@ -114,6 +122,8 @@ window.onload = function () {
         $("#instanceType").removeAttr("disabled");
       }
       // $("#storageRange").text(String(json["size"])+" GB")
+      $("#mainLoader").hide();
+      $("#formContain").show();
       
     })
     .fail(function( jqxhr, textStatus, error ) {
@@ -127,6 +137,7 @@ function showStorageValue(newValue) {
 }
 
 function startServer() {
+    $("#btnLoader").show();
     payload = {
       "key": $("#key").val(),
       "instance_type": $("#instanceType").val()
@@ -137,13 +148,14 @@ function startServer() {
       data: JSON.stringify(payload),
       dataType: "json",
       contentType: "application/json; charset=utf-8",
-      done: function(data){console.log(data); if(data.statusCode==200){location.reload();}},
+      done: function(data){$("#btnLoader").hide(); console.log(data); if(data.statusCode==200){location.reload();}},
       fail: function(data){ console.log("Error"); }
     }); 
 }
 
 
 function stopServer() {
+    $("#btnLoader").show();
     payload = {
       "key": $("#key").val()
     }
@@ -154,7 +166,7 @@ function stopServer() {
       data: JSON.stringify(payload),
       dataType: "json",
       contentType: "application/json; charset=utf-8",
-      done: function(data){console.log(data); if(data.statusCode==200){location.reload();}},
+      done: function(data){ $("#btnLoader").hide(); console.log(data); if(data.statusCode==200){location.reload();}},
       fail: function(data){ console.log("Error"); }
     });
 }
