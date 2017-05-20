@@ -1,7 +1,12 @@
 ---
 layout: page
 title: EC2 Manager
-css: "header h1{font-size: 2em;}#state{color:#fff;border-radius:5px;padding:2px 10px}.running #state{background-color:green}.stopped #state{background-color:red}
+css: "
+header h1{font-size: 2em;}
+#state{color:#fff;border-radius:5px;padding:2px 10px}
+.running #state{background-color:green}
+.stopped #state{background-color:red}
+.running.between #state, .stopped.between #state{background-color: orange;}
 #stopBtn, #startBtn{display:none}
 .running #stopBtn, .stopped #startBtn{display:block}
 #commitDiv > div { float: left; }
@@ -143,6 +148,9 @@ function showStorageValue(newValue) {
 function startServer() {
     $("#btnLoader").show();
     $("#commitDiv button").attr("disabled","disabled");
+    $("#state").text("starting");
+    $(".post-content").addClass("between");
+   
     payload = {
       "key": $("#key").val(),
       "instance_type": $("#instanceType").val()
@@ -163,6 +171,9 @@ function startServer() {
 function stopServer() {
     $("#btnLoader").show();
     $("#commitDiv button").attr("disabled","disabled");
+    $("#state").text("stopping");
+    $(".post-content").addClass("between");
+    
     payload = {
       "key": $("#key").val()
     }
