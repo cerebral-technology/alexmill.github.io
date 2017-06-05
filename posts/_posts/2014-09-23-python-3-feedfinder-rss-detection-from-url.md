@@ -8,6 +8,7 @@ description: "Alternative to Aaron Swartz great feedfinder.py script for finding
 tags: template
 thumbnail: /img/feedfinder-thumb.png
 source: default
+syntax: true
 ---
 
 I recently built an RSS feed reader that plugs into [Yo](http://justyo.co) called [YOFEED](http://www.yofeed.rocks). After monitoring my usage logs, I noticed several people tried to submit links of plain websites (rather than specifying a valid RSS feed). Instead of losing my potential customers, I decided to write a script to detect RSS feeds given a plain web URL.
