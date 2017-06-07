@@ -247,7 +247,7 @@ pre code {
 .footer .bottom-logo {
     float: right;
     width: 55px;
-    padding-top: 18px;
+    margin: 15px 0;
 }
 
 /* Responsive */
