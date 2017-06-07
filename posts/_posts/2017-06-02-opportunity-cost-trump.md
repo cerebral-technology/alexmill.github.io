@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Opportunity of Cost of Trump
+title: The Opportunity Cost of Trump
 categories: ["blog", "medium"]
 author: "Alex Miller"
 meta: In the modern economy, prosperity depends on friendliness towards foreigners and high-levels of immigration.
