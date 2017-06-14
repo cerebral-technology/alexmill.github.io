@@ -9,6 +9,11 @@ header h1{font-size: 2em;}
 .running.between #state, .stopped.between #state{background-color: orange;}
 #stopBtn, #startBtn{display:none}
 .running #stopBtn, .stopped #startBtn{display:block}
+#instanceType {
+    width: 70%;
+    height: 25px;
+    font-size: 0.85em;
+}
 #commitDiv > div { float: left; }
 #formContain {display: none;}
 #btnLoader {display: none;}
@@ -124,7 +129,12 @@ window.onload = function () {
         if(i==json["instance_type_index"]){
           opt_tag = opt_tag + ' selected="selected" '
         }
-        opt_tag = opt_tag +'>' + json["instance_info"][i][0] + ' (RAM: ' + json["instance_info"][i][2] + ' GB, Cores: ' + json["instance_info"][i][1] + ')</option>'
+        opt_tag = opt_tag +'>' +
+        json["instance_info"][i][0] +
+          ' (RAM: ' + json["instance_info"][i][2] + ' GB,' +
+          ' Cores: ' + json["instance_info"][i][1] + 
+          ' Cost: ' + json["instance_info"][i][-1] + ' hourly,' +
+          ')</option>'
         $("#instanceType").append(opt_tag)
       }
       if(json["state"]=="stopped"){
