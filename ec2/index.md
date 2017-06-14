@@ -132,7 +132,7 @@ window.onload = function () {
         opt_tag = opt_tag +'>' +
         json["instance_info"][i][0] +
           ' (RAM: ' + json["instance_info"][i][2] + ' GB,' +
-          ' Cores: ' + json["instance_info"][i][1] + 
+          ' Cores: ' + json["instance_info"][i][1] + ',' +
           ' Cost: ' + json["instance_info"][i][json["instance_info"][i].length - 2] + ' hourly' +
           ')</option>'
         $("#instanceType").append(opt_tag)
