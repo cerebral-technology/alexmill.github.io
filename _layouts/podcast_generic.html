@@ -7,7 +7,7 @@
         <managingEditor>alex@miler.im (Alex Miller)</managingEditor>
         <image>
             <url>{{ page.image }}</url>
-            <title>{{ page.feed_title }}</title>
+            <title>{{ page.feed_title | xml_escape  }}</title>
             <link>{{ page.website_link }}</link>
         </image>
         <itunes:owner>
@@ -22,19 +22,19 @@
         <itunes:image href="{{ page.image }}" />
         <atom:link href="{{ page.feed_link }}" rel="self" type="application/rss+xml" />
         <pubDate>Mon, 11 Jan 2016 00:00:00 EST</pubDate>
-        <title>{{ page.feed_title }}</title>
-        <itunes:author>{{ page.author }}</itunes:author>
-        <description>{{ page.description }}</description>
-        <itunes:summary>{{ page.summary }}</itunes:summary>
-        <itunes:subtitle>{{ page.subtitle }}</itunes:subtitle>
+        <title>{{ page.feed_title | xml_escape  }}</title>
+        <itunes:author>{{ page.author | xml_escape  }}</itunes:author>
+        <description>{{ page.description | xml_escape  }}</description>
+        <itunes:summary>{{ page.summary | xml_escape  }}</itunes:summary>
+        <itunes:subtitle>{{ page.subtitle | xml_escape  }}</itunes:subtitle>
         <lastBuildDate>Thu, 02 Feb 2012 00:00:00 EST</lastBuildDate>
         {% for post in site.categories[page.category] limit:20 %} 
         {% if post.raw_source %}
           <item>
             <title>{{ post.title | xml_escape }}</title>
-            <description>A podcast from {{ post.provider_name }} shared by Alex.</description>
-            <itunes:summary>A podcast from {{ post.provider_name }} shared by Alex.</itunes:summary>
-            <itunes:subtitle>{{ post.provider_name }}</itunes:subtitle>
+            <description>A podcast from {{ post.provider_name | xml_escape  }} shared by Alex.</description>
+            <itunes:summary>A podcast from {{ post.provider_name | xml_escape  }} shared by Alex.</itunes:summary>
+            <itunes:subtitle>{{ post.provider_name | xml_escape  }}</itunes:subtitle>
             <pubDate>{{ post.date | date: "%a, %d %b %Y" }} 05:00:00 GMT</pubDate>
             <enclosure url="{{post.raw_source | xml_escape }}" type="audio/mpeg" length="1" />
             <link>{{post.raw_source | xml_escape }}</link>
