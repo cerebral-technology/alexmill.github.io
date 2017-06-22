@@ -10,10 +10,10 @@
     {% else %}
     <item>
       <title>{{ post.title | xml_escape }}</title>
-      <description>{% if post.provider_display %}{{ post.provider_display }}{% else if post.content %}{{ post.content | xml_escape }}{% endif %}</description>
+      <description>{% if post.provider_display %}{{ post.provider_display | xml_escape   }}{% else if post.content %}{{ post.content | xml_escape }}{% endif %}</description>
       <pubDate>{{ post.date | date: "%a, %d %b %Y" }}</pubDate>
       <link>{% if post.source == "default" %}{{ site.url }}{{ post.url }}/{% else %}{{ post.source | xml_escape }}{% endif %}</link>
-      <guid isPermaLink="true">{% if post.source == "default" %}{{ site.url }}{{ post.url }}/{% else %}{{ post.source | xml_escape }}{% endif %}</guid>
+      <guid isPermaLink="true">{% if post.source == "default" %}{{ site.url | xml_escape  }}{{ post.url | xml_escape  }}/{% else %}{{ post.source | xml_escape }}{% endif %}</guid>
       {% if post.thumbnail %}
       <content type="html">
         <![CDATA[
