@@ -10,18 +10,18 @@ hero_image: "http://alex.miller.im/img/pca_fig.png"
 mathjax: true
 ---
 
-By itself, principal component analysis (PCA) is an _unsupervised_ learning method, meaning that does not take into account any labels or prediction variables of your data. PCA is simply a common method for dimensionality reduction of your $$X$$'s, without worrying about the $$Y$$'s.
+By itself, principal component analysis (PCA) is an _unsupervised_ learning method, meaning it does not take into account any labels or prediction variables of your data. PCA is simply a common method for dimensionality reduction of your $$X$$'s, without worrying about the $$Y$$'s.
 
 Most people intuitively understand this and nod their heads when they hear "PCA". But the real power of PCA comes from using it in some supervised prediction task. However, it's not immediately obvious how to go from the task of reducing the dimensions of $$X$$ to making predictions about $$Y$$. This post is a quick explainer on how to use PCA in supervised learning.
 
 ---
 
 ## 1. PCA your training data
-The goal of PCA is to represent your data $$X$$ in an orthonormal basis $$W$$; the coordinates of your data in this new basis will be represented as $$Z$$:
+The goal of PCA is to represent your data $$X$$ in an orthonormal basis $$W$$. The orthogonality of this basis is what allows us to identify the "principal" components (which are sometimes interpreted to be inherent latent factors of your data's structure). The coordinates of your data in this new basis will be represented as $$Z$$. i.e.:
 
 $$X_{n\times p} = Z_{n \times p}(W_{p \times p})^\top$$
 
-Because of $$W$$ is orthonormal, we can invert $$W$$ simply by taking its transpose: $$(W^\top)^{-1} = W$$. This allows us to transform our raw data $$X$$ into the orthonormal basis simply by multiplying by $$W$$:
+Because $$W$$ is orthonormal, we can invert it simply by taking its transpose: $$(W^\top)^{-1} = W$$. This allows us to transform our raw data $$X$$ into the orthonormal basis simply by multiplying by $$W$$:
 
 $$X_{n\times p}(W_{p \times p}) = Z_{n \times p}$$
 
