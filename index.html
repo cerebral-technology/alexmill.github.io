@@ -33,6 +33,25 @@ script: "<script>if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera m
 
 <div class="full-container" style="">
     <div class="section">
+        
+        <h3>Research</h3>
+        <!--<h3>Podcasts I'm Listening To</a> (<a class="pcl link-nocolor" href="http://alex.miller.im/feeds/podcasts/index.xml">Subscribe <img src="/img/rss512.png" style="display: inline; width: 18px; height: 18px;"></a>)</h3>-->
+
+        Working Papers:
+        <ul>
+            <li>Improving Recommender Diversity with Probabilistic Item Selection</li>
+            <li>An Empirical Analysis of E-commerce A/B Testing Practices</li>
+        </ul>
+        
+        Conference Presentations
+        <ul>
+         <li>Does Data Kill Creativity? A Model of Innovation and Analytics in New Product
+            Development. Wharton-INSEAD Doctoral Consortium. December 2016. Singapore.</li>
+        </ul>
+        
+    </div>
+    
+    <div class="section">
         <a class="link-nocolor" href="/posts/">
             <h3>Things I'm Writing</h3>
         </a>
@@ -51,33 +70,14 @@ script: "<script>if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera m
             {% endfor %}
         </ul>
     </div>
-    <div class="section">
-        
-        <h3><a class="link-nocolor" href="/podcasts/">Podcasts I'm Listening To</a> (<a class="pcl link-nocolor" href="http://alex.miller.im/feeds/podcasts/index.xml">Subscribe <img src="/img/rss512.png" style="display: inline; width: 18px; height: 18px;"></a>)</h3>
-        
-        <ul class="no-bullets">
-            {% for post in site.categories.podcasts limit:5  %}
-            <li>
-                <a class="link-nocolor" href="{{ post.source }}">
-                    {% if post.favicon_url contains "https://" or post.favicon_url contains "/img/bullet.gif" %}
-                    <img class="provider-favicon" src="{{ post.favicon_url }}"/>
-                    {% else %}
-                    <img class="provider-favicon" src="https://res.cloudinary.com/kollate/image/fetch/{{ post.favicon_url }}"/>
-                    {% endif %}
-                    {{ post.title | truncatewords:12 }}
-                </a>
-                <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                <!-- <span class="provider-text">{{ post.provider_display }}</span> -->
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
     
     <div class="section">
         <a class="link-nocolor" href="/articles/">
             <h3>Things I'm Sharing</h3>
         </a>
         <ul class="no-bullets">
+            {% for post in site.posts %}
+                {% if post.categories contains "articles" or post.categories contains "podcasts" %}
             {% for post in site.categories.articles limit:5  %}
             <li>
                 <a class="link-nocolor" href="{{ post.source }}">
