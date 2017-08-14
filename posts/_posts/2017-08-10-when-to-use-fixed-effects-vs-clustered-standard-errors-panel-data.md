@@ -12,12 +12,12 @@ date: 2017-08-10
 
 I found myself writing a long-winded answer to [this question](https://stats.stackexchange.com/q/185378/89253) on StatsExchange, so I wanted to repost here for future reference.
 
-### Fixed effects are for removing unobserved heterogeneity BETWEEN different groups in your data.
+**Fixed effects are for removing unobserved heterogeneity BETWEEN different groups in your data.**
 
 If your dependent variable is affected by unobservable variables that systematically vary across groups in your panel, then the coefficient on any variable that is correlated with this variation will be biased. Unless your X variables have been randomly assigned (which will always be the case with observation data), it is usually fairly easy to make the argument for omitted variables bias. In these cases, it is usually a good idea to use a fixed-effects model. 
 
 
-### Clustered standard errors are for accounting for situations where observations WITHIN each group are not i.i.d. (independently and identically distributed).
+**Clustered standard errors are for accounting for situations where observations WITHIN each group are not i.i.d. (independently and identically distributed).**
 
 A classic example is if you have many observations for a panel of firms across time. You can account for firm-level fixed effects, but there still may be some unexplained variation in your dependent variable that is correlated across time. In general, when working with time-series data, it is usually safe to assume temporal serial correlation in the error terms within your groups. These situations are the most obvious use-cases for clustered SEs.
 
