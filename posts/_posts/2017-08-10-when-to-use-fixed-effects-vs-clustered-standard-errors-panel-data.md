@@ -4,7 +4,6 @@ short_title: When to use fixed effects vs. clustered standard errors?
 title: When to use fixed effects vs. clustered standard errors for linear regression on panel data?
 categories: ["blog", "medium"]
 author: "Alex Miller"
-meta: A short note on fixed effects and clustered SEs, and some examples of when they might be appropriate.
 source: default
 syntax: false
 date: 2017-08-10
