@@ -61,6 +61,18 @@ nav a:hover, nav a:hover span.nav-icon {
     opacity: 1;
 }
 
+.home div.section ul li a {
+   border-bottom: 1px rgba(0,0,0,0.5) dotted;
+}
+
+.home div.section ul li a:hover {
+   border-bottom: 1px rgba(0,0,0,0.75) dotted;
+}
+
+.home div.section ul li a:visited {
+   border-bottom: inherit;
+}
+
 h1, h2, h3 {
     font-family: "Computer Modern Serif", Georgia, serif;
     padding: 0;
