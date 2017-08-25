@@ -4,22 +4,20 @@ title: "Python 3 Feedfinder: Detecting RSS Feeds on Websites"
 categories: blog
 author: "Alex Miller"
 meta:
-description: "Alternative to Aaron Swartz great feedfinder.py script for finding RSS/Atom feeds on websites given a plain URL—updated for a Python 3 world."
+description: "Alternative to Aaron Swartz's great feedfinder.py script for finding RSS/Atom feeds on websites given a plain URL—updated for a Python 3 world."
 tags: template
 thumbnail: /img/feedfinder-thumb.png
 source: default
 syntax: true
 ---
 
-I recently built an RSS feed reader that plugs into [Yo](http://justyo.co) called [YOFEED](http://www.yofeed.rocks). After monitoring my usage logs, I noticed several people tried to submit links of plain websites (rather than specifying a valid RSS feed). Instead of losing my potential customers, I decided to write a script to detect RSS feeds given a plain web URL.
-
-### The Problem: feedfinder.py was not written for Python 3
+## The Problem: feedfinder.py was not written for Python 3
 
 It turns out I wasn't the first person to come across this problem. Aaron Swartz (RIP) wrote his own script called [feedfinder.py](http://www.aaronsw.com/2002/feedfinder/) which does this exact same thing. Problem is: this was written for Python 2.
 
 After fighting a losing battle trying to deal with Python's 2to3 conversion tool, I realized I'd already wasted more time trying to port this old script than it would take me to write a new one.
 
-### The Solution: Write my own script!
+## The Solution: Write my own script!
 
 I wanted my script to be accruate and thorough, which (for me) means:
 
