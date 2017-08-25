@@ -4,7 +4,7 @@ markdown: kramdown
 kramdown:
   input: GFM
 highlighter: rouge
-description: "I'm Alex Miller, a doctoral candidate at the Wharton School's department of Operations, Information, &amp; Decisions. Click to connect with me online."
+description: "Alex Miller is a doctoral candidate in Information Systems at the Wharton School's department of Operations, Information, &amp; Decisions."
 url: http://alex.miller.im
 permalink: /posts/:title/
 github_username: alexmill
