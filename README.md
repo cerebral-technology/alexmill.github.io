@@ -1,4 +1,4 @@
 README
 =============
 
-[Link](https://docs.google.com/presentation/d/1K1oiTYcgxJnpdTKoQ1ie0tJ1M-CA5Lc826RNY68Zbow/edit#slide=id.p4)
+[https://docs.google.com/presentation/d/1IaC96xm_eZNV8tBAT09eVFx7Cef1u-voQxHx5iUxs4M/edit?usp=sharing](https://docs.google.com/presentation/d/1IaC96xm_eZNV8tBAT09eVFx7Cef1u-voQxHx5iUxs4M/edit?usp=sharing)
