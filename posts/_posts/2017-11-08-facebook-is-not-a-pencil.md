@@ -1,7 +1,7 @@
 ---
 layout: post
-short_title: When to use fixed effects vs. clustered standard errors?
 title: When to use fixed effects vs. clustered standard errors for linear regression on panel data?
+meta: "Defenders of tech companies often rely on simplistic arguments — and so do their critics."
 categories: ["blog", "medium"]
 author: "Alex Miller"
 source: default
@@ -10,11 +10,11 @@ date: 2017-08-10
 ---
 
 
-Defenders of tech companies often rely on simplistic arguments — and so do their critics. But its Facebook themselves that has the biggest responsibility for the impact of their technology.
+Defenders of tech companies often rely on simplistic arguments -- and so do their critics. But its Facebook themselves that has the biggest responsibility for the impact of their technology.
 
 ---
 
-acebook and other tech giants have been in the hot seat this month for the role their platforms may have played in aiding foreign attempts to disrupt our elections and stoke partisan animosity. Representatives from Google, Twitter, and Facebook were summoned by the bipartisan Senate and House Intelligence committees this week to account for the potential role their platforms served in aiding Russian interference in our elections. An important question to consider in this context is how much responsibility these platforms have for the actions of their users.
+Facebook and other tech giants have been in the hot seat this month for the role their platforms may have played in aiding foreign attempts to disrupt our elections and stoke partisan animosity. Representatives from Google, Twitter, and Facebook were summoned by the bipartisan Senate and House Intelligence committees this week to account for the potential role their platforms served in aiding Russian interference in our elections. An important question to consider in this context is how much responsibility these platforms have for the actions of their users.
 One common defense of Facebook when faced with this question is that they are simply a tool that can be used for both good and evil. Similar to how a pencil can be used to write both love letters and death threats, Facebook’s defenders say, social media is merely a technology with no inherent moral valence. I’ve also heard people comparing Facebook to the telephone: We don’t get mad at the telephone for enabling criminals to communicate as they plot nefarious deeds; we accept that as a communication technology, the telephone is merely a medium which can be used for almost anything. So why do we hold Facebook to a different standard?
 The first thing to consider is the multi-faceted nature of Facebook’s role in modern society. In some sense, they are like the telephone, in that Facebook is a communication platform that allows friends to post and reach each other’s content. But they are also much more than this. They are an increasingly important source of news for the majority of Americans — news which gets filtered and selectively shown to users based on algorithmic sorting. And Facebook is also a massive advertising platform, which has propelled the company into the top 5 most valuable publicly-traded companies in the United States (which ranks them higher than Walmart, Exxon Mobile, and JPMorgan Chase).
 It’s important to keep these separate roles top-of-mind as Facebook comes under scrutiny in the coming months. For example, the current debate in congress around “regulating Facebook” has nothing to do with controlling what people post or how their algorithm works, but, rather, is common sense regulation around labeling political advertisements online. At the same time, the current moment is an important one to take a step back and ask what role the whole of Facebook plays in our society and — more importantly — what responsibility the platform has to manage the impact of its technology.
