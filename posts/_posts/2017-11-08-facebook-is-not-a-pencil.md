@@ -1,6 +1,6 @@
 ---
 layout: post
-title: When to use fixed effects vs. clustered standard errors for linear regression on panel data?
+title: Facebook is not a pencil
 meta: "Defenders of tech companies often rely on simplistic arguments — and so do their critics."
 categories: ["blog", "medium"]
 author: "Alex Miller"
