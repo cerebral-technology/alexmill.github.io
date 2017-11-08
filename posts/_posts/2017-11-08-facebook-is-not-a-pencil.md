@@ -6,7 +6,7 @@ categories: ["blog", "medium"]
 author: "Alex Miller"
 source: default
 syntax: false
-date: 2017-08-10
+date: 2017-11-08
 ---
 
 
