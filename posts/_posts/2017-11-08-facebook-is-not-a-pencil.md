@@ -4,7 +4,7 @@ title: Facebook is not a pencil
 meta: "Defenders of tech companies often rely on simplistic arguments — and so do their critics."
 categories: ["blog", "medium"]
 author: "Alex Miller"
-source: default
+source: https://medium.com/p/facebook-is-not-a-pencil-f10b19a4dc45
 syntax: false
 date: 2017-11-08
 ---
