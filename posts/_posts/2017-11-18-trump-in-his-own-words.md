@@ -5,7 +5,7 @@ meta: "A data-driven look at Trump’s changing priorities over the course of hi
 hero: https://cdn-images-1.medium.com/max/1100/1*knlHwv0Vxg5SDZaQyurp-Q.jpeg
 categories: ["blog", "medium"]
 author: "Alex Miller"
-source: default
+source: https://towardsdatascience.com/trump-in-his-own-words-62af05ad76d4
 syntax: false
 date: 2017-11-17
 ---
