@@ -9,6 +9,7 @@ author: "Alex Miller"
 source: default
 mathjax: true
 syntax: false
+css: ".twitter-tweet{ margin: 20px auto; }"
 date: 2018-03-08
 ---
 
@@ -29,10 +30,10 @@ the image with a series of animated, concatenated circles.
 
 I could not track the source of the image down, but&mdash;with the 3Blue1Brown video fresh in my mind&mdash;
 I was thoroughly determined to understand the math behind this visualization. I took Fourier Analysis as a 
-sophomore in college, but it has been quite a while since I really grokked the math behind it all. 
+sophomore in college, but it has been quite a while since I really grokked it. 
 
 This led me on down the foolhardy path of recreating this visualization myself. It turns out, the math
-behind it all isn't completely incomprehensible. The animation/visualization, on the other hand, is an
+behind this visualization isn't completely incomprehensible. The animation/visualization, on the other hand, is an
 entirely different story (to be revisted shortly). As opposed to taking an engineer's approach to the 
 problem (which may be more intuitive), I like to motivate Fourier analysis using linear algebra (which,
 as would be expected from a math major, is more elegant). 
@@ -104,8 +105,8 @@ At this point, we need to calculate the Fourier approximations of these two path
 
 My version of the visualization is made with pure Python and I've done my best to provide comments throughout the notebook. After spending more time than I am willing to admit (10% of which was related to all the preceding math and 90% of which was spent wrangling my matplotlib animations!), I was able to recreate a pretty good replica of the original visualization that inspired all of this.
 
-<div style="margin: 0 auto;">
-  <video>
+<div style="text-align: center;">
+  <video controls preload>
     <source src="https://github.com/alexmill/alexmill.github.io/blob/master/img/fourier-spinning-circles-visualization.mp4?raw=true"/>
   </video>
 </div>
