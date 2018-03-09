@@ -92,7 +92,7 @@ The image below demonstrates how a simple sum of complex numbers in terms of pha
 
 ## Pretty Circles to Animated Drawing
 
-With all the abstract mathematical pieces in place, it's not too much more work to arrive at a full animated visualization. If you have a line drawing in 2-dimensional (x-y) space, you can describe this path mathematically as a parametric function, which is essentially just two separate single variable functions:
+With all the abstract mathematical pieces in place, it's not too much more work to arrive at a fully animated visualization. If you have a line drawing in 2-dimensional (x-y) space, you can describe this path mathematically as a parametric function, which is essentially just two separate single variable functions, both in terms of an auxiliary variable ($$t$$ in this case):
 
 $$ f(t) = ( x(t), y(t) ) $$
 
