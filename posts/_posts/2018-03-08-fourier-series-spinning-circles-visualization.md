@@ -13,7 +13,7 @@ css: ".twitter-tweet{ margin: 20px auto; }"
 date: 2018-03-08
 ---
 
-I have [a colleague](http://austinrochford.com/) who describes himself as a recovering pure mathematician. As as someone who majored in math in college but has since gravitated toward more applied, number-crunching pursuits, I've always liked this description. And, despite my best intentions to stave off my cravings, this post will be a major relapse back to my old mathematical habits.
+I have [a colleague](http://austinrochford.com/) who describes himself as a recovering pure mathematician. As as someone who majored in math in college but has since gravitated toward more applied, number-crunching pursuits, I've always liked this description. And, despite my best intentions to stave off my cravings, this post is going to be a major relapse.
 
 The venerable [3Blue1Brown YouTube channel](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw) came out with a [fantastic video on Fourier transforms](https://www.youtube.com/watch?v=spUNpyF58BY) 
 a few weeks ago. Not long after, I came across this very cool gif of Vermeer's "Girl with
@@ -28,8 +28,8 @@ the image with a series of animated, concatenated circles.
   </div>
 </div>
 
-I could not track the source of the image down, but&mdash;with the 3Blue1Brown video fresh in my mind&mdash;
-I was thoroughly determined to understand the math behind this visualization. I took Fourier Analysis as a 
+I could not track the source of the image down, but&mdash;with the 3Blue1Brown video fresh in my mind&mdash;I
+was thoroughly determined to understand the math behind this visualization. I took Fourier Analysis as a 
 sophomore in college, but it has been quite a while since I really grokked it. 
 
 This led me on down the foolhardy path of recreating this visualization myself. It turns out, the math
@@ -55,7 +55,7 @@ for how this might work. The key to understanding a vector space is to identify 
 essentially what linear algebra is all about). So what would a basis for the infinite-dimensional vector space of functions look like? If you've ever seen Taylor series expansions, then you've essentially already solved this problem. 
 
 Note how the Taylor series of a function allows us to represent any function as an infinite sum of some set of coefficients
-$$a_n$$ times the monomials $$x^n$$
+$$a_n$$ times the monomials $$t^n$$
 
 $$f(t) = \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!} t^n$$
 
@@ -91,7 +91,7 @@ The image below demonstrates how a simple sum of complex numbers in terms of pha
 
 ## Pretty Circles to Animated Drawing
 
-With all the abstract mathematical pieces in place, it's not too more work to arrive at a full animated visualization. If you have a line drawing in 2-dimensional (x-y) space, you can describe this path mathematically as a parametric function, which is essentially just two separate single variable functions:
+With all the abstract mathematical pieces in place, it's not too much more work to arrive at a full animated visualization. If you have a line drawing in 2-dimensional (x-y) space, you can describe this path mathematically as a parametric function, which is essentially just two separate single variable functions:
 
 $$ f(t) = ( x(t), y(t) ) $$
 
@@ -101,9 +101,7 @@ Below, I've taken a simple line drawing of a horse, found a (crudely-derived) pa
   <img src="/img/parametric-plot.png"/>
 </figure>
 
-At this point, we need to calculate the Fourier approximations of these two paths, and use coefficients from this approximation to determine the phase and amplitudes of the circles needed for the final visualization. For any more of the specific implementation details on how to derive this visualization, I am agoing defer to the corresponding Jupyter notebook for this post. You can find the [static (browsable and downloadable) notebook here on GitHub](). I've also configured that repository to work on the new [Binder platform](https://mybinder.org), that allows you one-click (free!) access to interactive notebooks posted in public repositories. ([Direct link to launch the notebook here.](https://mybinder.org/v2/gh/alexmill/website_notebooks/master?filepath=fourier-spinning-circles.ipynb))
-
-My version of the visualization is made with pure Python and I've done my best to provide comments throughout the notebook. After spending more time than I am willing to admit (10% of which was related to all the preceding math and 90% of which was spent wrangling my matplotlib animations!), I was able to recreate a pretty good replica of the original visualization that inspired all of this.
+At this point, we need to calculate the Fourier approximations of these two paths, and use coefficients from this approximation to determine the phase and amplitudes of the circles needed for the final visualization. This post is mainly meant to be a light introduction to the underlying concepts behind this visualization, so for any more of the specific implementation details on how to create the animation, I am going to defer to the corresponding Jupyter notebook for this post. You can find the [static (browsable and downloadable) notebook here on GitHub](). The code is pure Python and I've done my best to provide useful comments throughout the notebook. After spending more time than I am willing to admit (10% of which was related to all the preceding math and 90% of which was spent wrangling my matplotlib animations!), I was able to recreate a pretty good replica of the original visualization that inspired all of this.
 
 <div style="text-align: center;">
   <video controls autoplay loop>
@@ -111,4 +109,4 @@ My version of the visualization is made with pure Python and I've done my best t
   </video>
 </div>
 
-There are obviously a lot of steps I left out in this derivation, but hopefully I've provided some intuition (and some free source code) on how to generate the cool spinning circles visualization. If you play around with the notebook, you can try creating animations of your own images. I will warn you, however, that I did not spend any time on speeding up the rendering process (so creating an animation can take around 10 minutes of compute time). 
+There are obviously a lot of steps I left out in this derivation, but hopefully I've provided some intuition (and some free source code) on how to generate the spinning circles visualization. If you play around with the notebook, you can try creating animations of your own images. I did configure my notebook repository to work on the new [Binder platform](https://mybinder.org), which will allow you one-click (free!) access to an interactive version of the code. ([Direct link to launch the notebook here.](https://mybinder.org/v2/gh/alexmill/website_notebooks/master?filepath=fourier-spinning-circles.ipynb)). It appears everything works except the final animation process, which you'll have to do on your own machine. (I will warn you, however, that I did not spend any time on speeding up the rendering process; so creating an animation can take up to 10 minutes of compute time.) 
