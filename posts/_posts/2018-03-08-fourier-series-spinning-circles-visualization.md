@@ -32,14 +32,16 @@ I could not track the source of the image down, but&mdash;with the 3Blue1Brown v
 was thoroughly determined to understand the math behind this visualization. I took Fourier Analysis as a 
 sophomore in college, but it has been quite a while since I really grokked it. 
 
-This led me on down the foolhardy path of recreating this visualization myself. It turns out, the math
-behind this visualization isn't completely incomprehensible. The animation/visualization, on the other hand, is an
-entirely different story (to be revisted shortly). As opposed to taking an engineer's approach to the 
-problem (which may be more intuitive), I like to motivate Fourier analysis using linear algebra (which,
-as would be expected from a math major, is more elegant). 
+This led me on down the foolhardy path of recreating this visualization myself. It turns out the math
+behind this visualization isn't completely incomprehensible. (The animation/visualization, on the other hand, is an
+entirely different story.) Rather than going over all the details of the math/code behind the visualization, I will instead
+use the post as an opportunity to provide some intuition as to how something this cool is even possible. We'll be taking some pretty big leaps through a good deal of math, but hopefully this will leave you with some intuition for how you might be able to get from a basic understanding of linear algebra and calculus to the math behind the visualization. 
 
 ## A Crash Course in Fourier Analysis 
-Starting with a simplistic example, note how vectors in 3-dimensional euclidean space can be represented as the sum of
+
+As opposed to taking an engineer's approach to the problem (which may have more practical value), I like to motivate Fourier analysis using linear algebra (which, as would be expected from a math major, is more elegant). 
+
+Let's start by revisiting vector spaces. Note how vectors in 3-dimensional euclidean space can be represented as the sum of
 three basis vectors: the point $$ (3,7,1) $$ can be written as $$ 3e_1 + 7e_2 + 1e_3 $$, where $$ e_k $$ represent the
 "canonical" basis vectors of $$\mathbb{R}^3$$: 
 
@@ -50,23 +52,20 @@ $$e_2 = (0,1,0)$$
 $$e_3 = (0,0,1)$$
 
 The key idea behind Fourier approximations is to think of *functions themselves as vectors* in some infinite-dimensional
-vector space. This seems weird at first, but if you've taken a college calculus course, you may already have some intuition
-for how this might work. The key to understanding a vector space is to identify a basis of that space (this is 
-essentially what linear algebra is all about). So what would a basis for the infinite-dimensional vector space of functions look like? If you've ever seen Taylor series expansions, then you've essentially already solved this problem. 
+vector space. This seems weird at first, but it's not as far out as it may seem. The key to understanding a vector space is to identify a basis of that space (this is essentially what linear algebra is all about). So what would a basis for the infinite-dimensional vector space of functions look like? If you've taken a college calculus course, then you've likely already found at least one solution to this problem in the form of Taylor series expansions.
 
-Note how the Taylor series of a function allows us to represent any function as an infinite sum of some set of coefficients
-$$a_n$$ times the monomials $$t^n$$
+Note how the Taylor series of a function allows us to represent any function as an infinite sum of some set of coefficients times the monomials $$t^n$$:
 
 $$f(t) = \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!} t^n$$
 
 In terms of linear algebra, this means that the set of monomial powers $$\{ t^n : n \in \mathbb{N} \}$$ forms a basis over the
 infinite-dimensional space of continuous single-variable functions. 
 
-This brings us to one of the main ideas behind Fourier series: **the set of functions $$\sin(nt)$$ and $$\cos(nt)$$ (for $$n \in \mathbb{N}$$) forms an orthonormal basis for periodic functions** (with respect to the inner-product defined by integration over $$[-\pi, \pi]$$). I won't get too far afield by discussing inner-product spaces and orthogonal functions ([this seems to be a decent overview](http://ms.mcmaster.ca/courses/20102011/term4/math2zz3/Lecture1.pdf)), but I just want to point out the fundamental similarities between thinking of functions as linear expansions over the monomial basis and the Fourier basis. 
+This brings us to one of the main ideas behind Fourier series: **the set of functions $$\sin(nt)$$ and $$\cos(nt)$$ (for $$n \in \mathbb{N}$$) forms an orthonormal basis for periodic functions** (to be pedantic, I must add "with respect to the inner-product defined by integration over $$[-\pi, \pi]$$"). I won't get too far afield by discussing inner-product spaces and orthogonal functions ([this seems to be a decent overview](http://ms.mcmaster.ca/courses/20102011/term4/math2zz3/Lecture1.pdf)), but I just want to point out the fundamental similarities between thinking of functions as linear expansions over the monomial basis and the Fourier basis. 
 
-The unintuitive and surprising aspect of Fourier series is that the set of sine and cosine functions with integer frequencies actually can span the whole space of arbitrary single-variable functions, but&mdash;if we can take this for granted&mdash;the fact that we can express an arbitrary function as an infinite sum in some basis for this space actually isn't that far out. In terms of math, this can be restated by saying there exists a set of coefficients $$a_n$$ and $$b_n$$ for which the following equation resolves:
+The unintuitive and surprising aspect of Fourier series is that the set of sine and cosine functions with integer frequencies actually can span the whole space of arbitrary single-variable functions. But&mdash;if we can take this for granted&mdash;the fact that we can express an arbitrary function as an infinite sum in some basis for this space actually isn't that crazy. In terms of math, this can be restated by saying there exists a set of coefficients $$a_n$$ and $$b_n$$ for which the following equation holds for all $$t$$ in a given interval $$[-T, T]$$:
 
-$$ f(t) = \sum_{n=0}^\infty a_n \cos(nt) + b_n \sin(nt) $$
+$$ f(t) = \sum_{n=0}^\infty a_n \cos(2\pi nt/T) + b_n \sin(2\pi nt/T) $$
 
 
 
@@ -78,13 +77,15 @@ $$ f(t)=\sum_{n=-\infty}^\infty c_n\, e^{2\pi i\left(\frac{n}{T}\right) t} $$
 
 $$ = \sum_{n=-\infty}^\infty  \left( a_n - i b_n \right) \left( \cos(2\pi nt/T) + i \sin(2\pi nt/T) \right) $$
 
-$$ = \sum_{n=-\infty}^\infty  {\Large[} a_n \cos( \frac{2\pi nt}{T} ) + b_n \sin( \frac{2\pi nt}{T} ) {\Large]} + i {\Large[} a_n \sin( \frac{2\pi nt}{T} ) - b_n \cos( \frac{2\pi nt}{T} ) {\Large]}  $$
+$$ = \sum_{n=-\infty}^\infty  {\Large[} a_n \cos( \cos(2\pi nt/T ) + b_n \sin( \cos(2\pi nt/T ) {\Large]} $$
+
+$$ + i {\Large[} a_n \sin( \cos(2\pi nt/T ) - b_n \cos( \cos(2\pi nt/T ) {\Large]}  $$
 
 In this last formula, you can see the similarity between the real component of the function and the Fourier series expansion mentioned above. If you click through to the [Wikipedia article](https://en.wikipedia.org/wiki/Fourier_transform#Introduction), you'll see that the $$c_n$$ coefficients are directly computable from the Fourier transform of the given function $$f$$. 
 
-Once we have these pieces in place, it's not too much of a jump to generate the spinning circles visualization. Euler's formula is the real star here, which allows us to think of point in the complex plane as being represented by an angle (the argument to the exponential function) and an amplitude (the $$c_n$$ coefficients). If you think about how to visualize the sum of many points in the language of angles/amplitudes for long enough, you'll find a direct connection to imagining each term in the infinite series above as representing a point on a circle with radius $$c_n$$, offset by $$2\pi nt/T$$ radians. 
+Once we have these pieces in place, it's not too much of a jump to generate the spinning circles visualization. Euler's formula is the real star here, which allows us to cleanly decompose each point in the complex plane into an angle (the argument to the exponential function) and an amplitude (the $$c_n$$ coefficients). If you think about how to visualize the sum of many points in the language of angles/amplitudes for long enough, you'll find a direct connection to imagining each term in the infinite series above as representing a point on a circle with radius $$c_n$$, offset by $$2\pi nt/T$$ radians. 
 
-The image below demonstrates how a simple sum of complex numbers in terms of phases/amplitudes can be nicely visualized as a set of concatenated circles in the complex plane.
+The image below demonstrates how a simple sum of complex numbers in terms of phases/amplitudes can be nicely visualized as a set of concatenated circles in the complex plane. Each red line is a vector representing the a term in the sequence of summands: $$c_n e^{2\pi i\left(\frac{n}{T}\right) t} $$. Adding the summands corresponds to simply concatenating each of these red vectors in complex space:
 <figure>
 <img src="/img/phase-amplitude.png"/>
 </figure>
