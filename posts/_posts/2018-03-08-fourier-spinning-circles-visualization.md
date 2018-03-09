@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "A Tale of Math &amp; Art: Creating the Fourier Series Spinning Circles Visualization"
+short_title: "Creating the Fourier Series Spinning Circles Visualization"
 meta: "I decided to take a stab at recreating a popular Fourier visualization in Python/Matplotlib."
 hero: /img/fourier-hero.png
 categories: ["blog"]
@@ -10,6 +11,8 @@ mathjax: true
 syntax: false
 date: 2018-03-08
 ---
+
+I have [a colleague](http://austinrochford.com/) who describes himself as a recovering pure mathematician. As as someone who majored in math in college but has since gravitated toward more applied, number-crunching pursuits, I've always liked this description. And, despite my best intentions to stave off my cravings, this post will be a major relapse back to my old mathematical habits.
 
 The venerable [3Blue1Brown YouTube channel](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw) came out with a [fantastic video on Fourier transforms](https://www.youtube.com/watch?v=spUNpyF58BY) 
 a few weeks ago. Not long after, I came across this very cool gif of Vermeer's "Girl with
@@ -101,10 +104,10 @@ At this point, we need to calculate the Fourier approximations of these two path
 
 My version of the visualization is made with pure Python and I've done my best to provide comments throughout the notebook. After spending more time than I am willing to admit (10% of which was related to all the preceding math and 90% of which was spent wrangling my matplotlib animations!), I was able to recreate a pretty good replica of the original visualization that inspired all of this.
 
-<figure>
+<div style="margin: 0 auto;">
   <video>
     <source src="https://github.com/alexmill/alexmill.github.io/blob/master/img/fourier-spinning-circles-visualization.mp4?raw=true"/>
   </video>
-</figure>
+</div>
 
 There are obviously a lot of steps I left out in this derivation, but hopefully I've provided some intuition (and some free source code) on how to generate the cool spinning circles visualization. If you play around with the notebook, you can try creating animations of your own images. I will warn you, however, that I did not spend any time on speeding up the rendering process (so creating an animation can take around 10 minutes of compute time). 
