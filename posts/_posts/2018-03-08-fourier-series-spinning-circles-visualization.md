@@ -106,7 +106,7 @@ At this point, we need to calculate the Fourier approximations of these two path
 My version of the visualization is made with pure Python and I've done my best to provide comments throughout the notebook. After spending more time than I am willing to admit (10% of which was related to all the preceding math and 90% of which was spent wrangling my matplotlib animations!), I was able to recreate a pretty good replica of the original visualization that inspired all of this.
 
 <div style="text-align: center;">
-  <video controls preload>
+  <video controls autoplay loop>
     <source src="https://github.com/alexmill/alexmill.github.io/blob/master/img/fourier-spinning-circles-visualization.mp4?raw=true"/>
   </video>
 </div>
