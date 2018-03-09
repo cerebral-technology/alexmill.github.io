@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Fourier Series, Python, &amp; Matplotlib &mdash; oh my!"
-meta: "I decided to take a stab at recreating a popular Fourier series spinning circles visualization."
+title: "A Tale of Math &amp; Art: Creating the Fourier Series Spinning Circles Visualization"
+meta: "I decided to take a stab at recreating a popular Fourier visualization in Python/Matplotlib."
 hero: /img/fourier-hero.png
 categories: []
 author: "Alex Miller"
@@ -17,9 +17,11 @@ the Pearl Earring", which uses a clever visualization of Fourier approximations 
 the image with a series of animated, concatenated circles. 
 
 <div style="margin: 0 auto;">
+  <div style="margin: 0;">
 <blockquote class="twitter-tweet" data-lang="en">
 <p lang="en" dir="ltr">Generative Art. <a href="https://t.co/5dW7uvDqHR">pic.twitter.com/5dW7uvDqHR</a></p>&mdash; じゃがりきん (@jagarikin) <a href="https://twitter.com/jagarikin/status/962449509782495232?ref_src=twsrc%5Etfw">February 10, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
 </div>
 
 I could not track the source of the image down, but&mdash;with the 3Blue1Brown video fresh in my mind&mdash;
@@ -95,11 +97,13 @@ Below, I've taken a simple line drawing of a horse, found a (crudely-derived) pa
   <img src="/img/parametric-plot.png"/>
 </figure>
 
-At this point, we need to calculate the Fourier approximations of these two paths, and use coefficients from this approximation to determine the phase and amplitudes of the circles needed for the final visualization. For any more of the specific implementation details on how to derive this visualization, I am agoing defer to the corresponding [Jupyter notebook]() for this post. My version of the visualization is made with pure Python and I've done my best to provide comments throughout the notebook. After spending more time than I am willing to admit (10% of which was related to all the preceding math and 90% of which was spent wrangling my matplotlib animations!), I was able to recreate a pretty good replica of the original visualization that inspired all of this.
+At this point, we need to calculate the Fourier approximations of these two paths, and use coefficients from this approximation to determine the phase and amplitudes of the circles needed for the final visualization. For any more of the specific implementation details on how to derive this visualization, I am agoing defer to the corresponding Jupyter notebook for this post. You can find the [static (browsable and downloadable) notebook here on GitHub](). I've also configured that repository to work on the new [Binder platform](https://mybinder.org), that allows you one-click (free!) access to interactive notebooks posted in public repositories. ([Direct link to launch the notebook here.](https://mybinder.org/v2/gh/alexmill/website_notebooks/master?filepath=fourier-spinning-circles.ipynb))
+
+My version of the visualization is made with pure Python and I've done my best to provide comments throughout the notebook. After spending more time than I am willing to admit (10% of which was related to all the preceding math and 90% of which was spent wrangling my matplotlib animations!), I was able to recreate a pretty good replica of the original visualization that inspired all of this.
 
 <figure>
   <video>
-    <source src="/img/fourier-spinning-circles-visualization.mp4"/>
+    <source src="https://github.com/alexmill/alexmill.github.io/blob/master/img/fourier-spinning-circles-visualization.mp4?raw=true"/>
   </video>
 </figure>
 
