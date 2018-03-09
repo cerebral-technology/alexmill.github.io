@@ -16,7 +16,7 @@ The world of the *technorati* was set ablaze earlier this year by [Paul Graham�
 In early 2015, Apple became the [most valuable company in history](http://fortune.com/2015/02/10/apple-the-first-700-billion-company/) by reaching a market cap of more than $700 billion. It seemed that Uber was in the news every week last year — but almost always for the same two reasons which, when juxtaposed, draw a stark contrast: investors dumping astronomically large amounts of money into Uber’s bank accounts and users (both customers and drivers) kvetching about the unpredictable and exorbitant fees charged by the service. And the incessant media coverage of “unicorns” last year meant that we seldom went a day without seeing the words “1 billion dollars” and “tech startup” in the same sentence.
 
 <figure>
-<img src="http://alex.miller.im/img/three-comma.jpeg">
+<img src="/img/three-comma.jpeg">
 </figure>
 
 Startups, Silicon Valley, and technology as a whole have great potential for creating wealth and adding real value to our economy. Economic activity (in general) does not have to be a zero-sum game, in which some people get rich at the expense of others. When the sewing machine was invented, workers went from producing one dress per day to 10 dresses per day. These technological increases in productivity are real and significant drivers of economic growth. It would simply be unproductive to limit the value-adding potential of technology companies.
@@ -45,7 +45,7 @@ Take farming as a concrete example. Rather than training, equipping, and coordin
 
 <figure>
 	<a href="http://www.vox.com/2014/10/29/7083837/daylight-saving-time-year-round">
-		<img src="http://alex.miller.im/img/agriculture-decline.png">
+		<img src="/img/agriculture-decline.png">
 	</a>
 </figure>
 
@@ -54,7 +54,7 @@ Don’t get me wrong, I’m all for efficiency. But the economic forces describe
 
 <figure>
 	<a href="http://www.ft.com/intl/cms/s/98ce14ee-99a6-11e5-95c7-d47aa298f769,Authorised=false.html?siteedition=uk&_i_location=http%3A%2F%2Fwww.ft.com%2Fcms%2Fs%2F0%2F98ce14ee-99a6-11e5-95c7-d47aa298f769.html%3Fsiteedition%3Duk&_i_referer=http%3A%2F%2Ffee.org%2Ff078fb030247f6d94942b35dd6e6993e&classification=conditional_standard&iab=barrier-app#axzz3uFSaiEnG">
-		<img src="http://alex.miller.im/img/ineq.gif">
+		<img src="/img/ineq.gif">
 	</a>
 </figure>
 
@@ -74,4 +74,4 @@ I won’t be so glib as to [suggest our politics just needs to co-opt Silicon Va
 
 ---
 
-This essay is [cross-posted on Medium](http://alex.miller.im/posts/medium-seo-rel-canonical-tag-cross-posting-via-rss/) [here](https://medium.com/@alexpmiller/technology-efficiency-inequality-why-old-politics-arent-suited-for-the-new-world-f5b2925e034e).
+This essay is [cross-posted on Medium](https://alex.miller.im/posts/medium-seo-rel-canonical-tag-cross-posting-via-rss/) [here](https://medium.com/@alexpmiller/technology-efficiency-inequality-why-old-politics-arent-suited-for-the-new-world-f5b2925e034e).
