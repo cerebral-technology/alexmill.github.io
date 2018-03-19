@@ -30,8 +30,14 @@
         {% if page.mathjax %}
         <script type="text/x-mathjax-config">
             MathJax.Hub.Config({
-            tex2jax: {
+            "tex2jax": {
               inlineMath: [["$$","$$"],["\\(","\\)"]]
+            },
+            "HTML-CSS": {
+                preferredFont: "Neo-Euler"
+            },
+            "SVG": {
+                font: "Neo-Euler"
             }
             });
         </script>
