@@ -13,7 +13,7 @@ css: ".twitter-tweet{ margin: 20px auto; }"
 date: 2018-03-08
 ---
 
-I have [a colleague](http://austinrochford.com/) who describes himself as a recovering pure mathematician. As as someone who majored in math in college but has since gravitated toward more applied, number-crunching pursuits, I've always liked this description. And, despite my best intentions to stave off my cravings, this post is going to be a major relapse.
+I have a colleague who describes himself as a recovering pure mathematician. As someone who majored in math in college but has since gravitated toward more applied, number-crunching pursuits, I've always liked this description. Despite my best intentions to stave off my cravings, this post is going to be a major relapse.
 
 The venerable [3Blue1Brown YouTube channel](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw) came out with a [fantastic video on Fourier transforms](https://www.youtube.com/watch?v=spUNpyF58BY) 
 a few weeks ago. Not long after, I came across this very cool gif of Vermeer's "Girl with
@@ -112,4 +112,4 @@ After spending more time than I am willing to admit (10% of which was related to
   </video>
 </div>
 
-There are obviously a lot of steps I left out in this derivation, but hopefully I've provided some intuition (and some free source code) on how to generate the spinning circles visualization. If you play around with the notebook, you can try creating animations of your own images. I did configure my notebook repository to work on the new [Binder platform](https://mybinder.org), which will allow you one-click (free!) access to an interactive version of the code. ([Direct link to launch the notebook here.](https://mybinder.org/v2/gh/alexmill/website_notebooks/master?filepath=fourier-spinning-circles.ipynb)). It appears everything works except the final animation process, which you'll have to do on your own machine. (I will warn you, however, that I did not spend any time on speeding up the rendering process; so creating an animation can take up to 10 minutes of wall time.) 
+There are obviously a lot of steps I left out in this derivation, but hopefully I've provided some intuition (and some free source code) on how to generate the spinning circles visualization. If you play around with the notebook, you can try creating animations of your own images. I did configure my notebook repository to work on the new [Binder platform](https://mybinder.org), which will allow you one-click (free!) access to an interactive version of the code. ([Direct link to launch the notebook here.](https://mybinder.org/v2/gh/alexmill/website_notebooks/master?filepath=fourier-spinning-circles.ipynb)). (I will warn you that I did not spend any time on speeding up the rendering process; so creating an animation can take up to 10 minutes of wall time.) 
