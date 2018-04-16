@@ -153,6 +153,13 @@ body.home .section {
     position: relative;
 }
 
+.section ul.no-bullets li:before {
+    display: auto;
+    height: auto;
+    width: auto;
+    background-image: none;
+}
+
 body.category .post-li a div {
     text-align: center;
 }
