@@ -92,7 +92,7 @@ script: "<script>if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera m
                     {{ post.title | truncatewords:12 }}
                 </a>
                 <!--<span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>-->
-                <span class="provider-text">{{ post.provider_display }}</span>
+                <span class="provider-text">{{ post.provider_display | replace:'www.','' }}</span>
             </li>
                 {% endif %}
             {% endfor %}
