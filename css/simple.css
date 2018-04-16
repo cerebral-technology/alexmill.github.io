@@ -78,7 +78,8 @@ ul li {
 }
 
 h1, h2, h3 {
-    font-family: "CMUUprightItalic", Georgia, serif;
+    font-family: "CMUSerifUprightItalicUprightItalic", Georgia, serif;
+    letter-spacing: -1px;
     padding: 0;
     margin: 5px 0;
 }
