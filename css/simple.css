@@ -75,6 +75,7 @@ nav a:hover, nav a:hover span.nav-icon {
 
 ul li {
     margin-bottom: 0.5em;
+    list-style-image: url(/img/doc-icon.svg);
 }
 
 h1, h2, h3 {
