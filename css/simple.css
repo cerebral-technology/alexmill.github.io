@@ -86,9 +86,26 @@ h1 {
 }
 
 h2 {
+    position:relative;
+    display:inline-block;
     font-size: 150%;
     font-weight: 300;
+    margin: 10px 0 -15px 0;
+    text-decoration: underline;
+    text-decoration-style: dotted;
 }
+
+h2:after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+  margin:auto;
+  background:#000;
+  height:1px;
+}
+
 
 h3 {
     font-size: 120%;
