@@ -2,7 +2,7 @@
 html, body { height: 100%; }
 
 body {
-    font-family: "Computer Modern", Georgia, serif;
+    font-family: "CMUSerifRoman", Georgia, serif;
     background-color: #f9f9f9;
     font-weight: 300;
     font-size: 18px;
@@ -33,7 +33,7 @@ hr {
 
 a         { color: #A80532; text-decoration: none; border-bottom: 1px #A80532 dotted; }
 a:hover   { border-bottom: 1px solid; }
-.page-content a:visited { color: #004785; border-bottom: 1px #004785 dotted;  }
+.page-content a { color: #004785; border-bottom: 1px #004785 dotted;  }
 
 .no-underline, .no-underline:hover {
     text-decoration: none;
@@ -74,7 +74,7 @@ nav a:hover, nav a:hover span.nav-icon {
 }
 
 h1, h2, h3 {
-    font-family: "Computer Modern Serif", Georgia, serif;
+    font-family: "CMUUprightItalic", Georgia, serif;
     padding: 0;
     margin: 5px 0;
 }
