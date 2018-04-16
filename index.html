@@ -84,20 +84,15 @@ script: "<script>if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera m
             <h3>Things I'm Sharing</h3>
         </a>
         
-        <ul class="no-bullets">
+        <ul class="doc-bullets">
             {% for post in site.posts limit:8  %}
                 {% if post.categories contains "articles" or post.categories contains "podcasts" %}
             <li>
                 <a class="link-nocolor" href="{{ post.source }}">
-                    {% if post.favicon_url contains "data:" or post.favicon_url contains "/img/bullet.gif" %}
-                    <img class="provider-favicon" src="{{ post.favicon_url }}"/>
-                    {% else %}
-                    <img class="provider-favicon" src="https://res.cloudinary.com/kollate/image/fetch/{{ post.favicon_url }}"/>
-                    {% endif %}
                     {{ post.title | truncatewords:12 }}
                 </a>
-                <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                <!-- <span class="provider-text">{{ post.provider_display }}</span> -->
+                <!--<span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>-->
+                <span class="provider-text">{{ post.provider_display }}</span>
             </li>
                 {% endif %}
             {% endfor %}
