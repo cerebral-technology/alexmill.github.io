@@ -63,7 +63,7 @@ script: "<script>if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera m
         <a class="link-nocolor" href="/posts/">
             <h3>Things I'm Writing</h3>
         </a>
-        <ul>
+        <ul class="doc-bullets">
             {% for post in site.categories.blog limit:5  %}
             <li>
                 {% if post.source == "default" %}
