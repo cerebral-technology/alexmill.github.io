@@ -73,6 +73,10 @@ nav a:hover, nav a:hover span.nav-icon {
    border-bottom: inherit;
 }
 
+ul li {
+    margin-bottom: 0.5em;
+}
+
 h1, h2, h3 {
     font-family: "CMUUprightItalic", Georgia, serif;
     padding: 0;
