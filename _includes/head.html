@@ -25,7 +25,8 @@
         <meta name="description" content="{% if page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description }}{% endif %}" />
         <link rel="shortcut icon" href="/img/favicon.ico">
         <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'/index.html','/' }}" />
-        <link rel="stylesheet" href="/css/fonts/computer-modern/stylesheet.css">
+        <!--<link rel="stylesheet" href="/css/fonts/computer-modern/stylesheet.css">-->
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/cmu-serif" type="text/css"/>
         <link rel="stylesheet" href="/css/simple.css">
         {% if page.mathjax or page.latex %}
         <script type="text/x-mathjax-config">
