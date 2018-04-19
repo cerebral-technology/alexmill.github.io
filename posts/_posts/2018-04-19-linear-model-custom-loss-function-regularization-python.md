@@ -10,12 +10,6 @@ mathjax: true
 css: ""
 ---
 
-
-
-# Fitting Linear Models with Custom Loss Functions and Regularization in Python
-
-### by [Alex P. Miller](https://alex.miller.im/) ([@alexpmil](https://twitter.com/alexpmil))
-
 As part of a predictive model competition I participated in earlier this month, I found myself trying to accomplish a peculiar task. The challenge organizers were going to use "mean absolute percentage error" as their criterion for model evaluation. Since this is not a standard loss function built into most software, I ended up having to write my own code to train a model that would use the MAPE as is its error value. 
 
 I started my project by searching through the SciKit-Learn documentation on [linear models](http://scikit-learn.org/stable/modules/classes.html#module-sklearn.linear_model) to see if the model I needed has already been developed somewhere. I thought that the `sklearn.linear_model.RidgeCV` class would accomplish what I wanted (MAPE minimization with L2 regularization), but I could not get the `scoring` argument (which supposedly lets you pass a custom loss function to the model class) to behave as I expected it to. While I highly recommend searching through existing packages to see if the model you want already exists, you should (in theory) be able to use this notebook as a template for a building linear models with an arbitrary loss function and regularization scheme.
