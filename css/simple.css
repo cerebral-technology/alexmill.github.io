@@ -101,11 +101,11 @@ ul.doc-bullets li:before{
 header.post-header {
     margin: 0 auto;
     max-width: 860px;
-    padding: 0 15px;
+    padding: 0 18px;
 }
 
 header.post-header .header-wrap {
-    padding: 0 15px;
+    padding: 0 18px;
 }
 
 h1, h2, h3 {
@@ -321,6 +321,10 @@ pre code {
     
     .page-content h2 {
         font-weight: 600;
+    }
+    
+    header.post-header {
+        padding: 0;
     }
     
     .wrap {
