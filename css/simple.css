@@ -99,6 +99,7 @@ ul.doc-bullets li:before{
 }
 
 header.post-header {
+    margin: 0 auto;
     max-width: 860px;
     padding: 0 15px;
 }
