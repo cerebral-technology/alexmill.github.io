@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fitting Linear Models with Custom Loss Functions and Regularization in Python"
-short_title: "Fitting Linear Models with Custom Loss Functions"
+short_title: "Fitting Linear Models with Custom Loss Functions in Python"
 categories: ["blog"]
 author: "Alex Miller"
 source: default
