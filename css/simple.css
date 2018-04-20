@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Quattrocento|Lora');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Eczar|Lato');
 html, body { height: 100%; }
 
 /* FONTS */
 body {
-    font-family: "Lora", Georgia, serif;
+    font-family: "Lato", Georgia, serif;
 }
 h1, h2, h3 {
-    font-family: "Quattrocento", Georgia, serif;
+    font-family: "Eczar", Georgia, serif;
 }
 
 
@@ -107,7 +107,7 @@ h1, h2, h3 {
 h1 {
     font-size: 300%;
     line-height: 50px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 h2 {
