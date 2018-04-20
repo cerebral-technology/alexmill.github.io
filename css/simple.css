@@ -3,10 +3,10 @@ html, body { height: 100%; }
 
 /* FONTS */
 body {
-    font-family: "Computer Modern", Georgia, serif;
+    font-family: "Computer Modern", Arial, sans-serif;
 }
 h1, h2, h3 {
-    font-family: "Computer Modern Serif", Verdana, sans-serif;
+    font-family: "Computer Modern Serif", Georgia, serif;
 }
 
 
