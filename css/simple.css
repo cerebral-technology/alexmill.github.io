@@ -121,14 +121,13 @@ h1 {
 }
 
 h2 {
-    font-size: 150%;
+    font-size: 166%;
     font-weight: 300;
-    margin: 35px 0 -15px 0;
+    margin: 40px 0 -15px 0;
 }
 
-
 h3 {
-    font-size: 120%;
+    font-size: 116%;
     font-weight: 300;
 }
 
@@ -316,13 +315,12 @@ pre code {
         padding: 0 1rem;
     }
     .page-content h1 {
-        font-size: 200%;
+        font-size: 250%;
         line-height: 1.2;
     }
     
     .page-content h2 {
         font-weight: 600;
-        margin: 15px 0 3px 0;
     }
     
     .wrap {
