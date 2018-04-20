@@ -263,13 +263,13 @@ pre {
 
 code {
     font-family: 'Roboto Mono', Courier, monospace;
-    font-size: .97rem;
+    font-size: .9rem;
     background: #F0F0F0;
     line-height: inherit;
 }
 
 pre code {
-    font-size: .85rem;
+    font-size: .75rem;
 }
 
 .footer-accent {
