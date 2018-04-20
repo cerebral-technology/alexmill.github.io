@@ -1,8 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Quattrocento|Lora');
 html, body { height: 100%; }
 
+/* FONTS */
 body {
-    font-family: "CMUSerifRoman", Georgia, serif;
+    font-family: "Lora", Georgia, serif;
+}
+h1, h2, h3 {
+    font-family: "Quattrocento", Georgia, serif;
+}
+
+
+body {
     background-color: #f9f9f9;
     font-weight: 300;
     font-size: 18px;
@@ -91,7 +99,6 @@ ul.doc-bullets li:before{
 }
 
 h1, h2, h3 {
-    font-family: "CMUSerifUprightItalicUprightItalic", Georgia, serif;
     letter-spacing: -1px;
     padding: 0;
     margin: 5px 0;
@@ -104,12 +111,10 @@ h1 {
 }
 
 h2 {
-    font-family: 'CMUSerifUprightItalicUprightItalic', Georgia, serif;
     font-size: 150%;
     font-weight: 300;
     margin: 10px 0 -15px 0;
 }
-
 
 
 h3 {
