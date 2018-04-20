@@ -5,8 +5,10 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     color: @rendered_html_border_color;
-    font-size: 12px;
+    font-size: 0.85rem;
     table-layout: fixed;
+    font-family: 'Roboto Mono', Courier, monospace;
+    background: white;
 }
 thead {
     border-bottom: 1px solid @rendered_html_border_color;
@@ -18,14 +20,15 @@ tr, th, td {
     padding: 0.5em 0.5em;
     line-height: 1.0;
     white-space: nowrap;
-    max-width: 100px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    border: none;
+    max-width: 150px;
+    overflow: visible;
+    /*text-overflow: ellipsis;
+    border: none;*/
 }
 th {
     font-weight: bold;
+    color: auto;
 }
 tbody tr:nth-child(odd) {
-    background: #f5f5f5;
+    background: #f1f1f1;
 }
