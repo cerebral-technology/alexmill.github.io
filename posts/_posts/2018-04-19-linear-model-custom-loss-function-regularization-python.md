@@ -5,8 +5,7 @@ short_title: "Fitting Linear Models with Custom Loss Functions"
 categories: ["blog"]
 author: "Alex Miller"
 source: default
-syntax: true
-mathjax: true
+jupyter: true
 css: ""
 ---
 
