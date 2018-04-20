@@ -98,6 +98,15 @@ ul.doc-bullets li:before{
    background-size: cover;
 }
 
+header.post-header {
+    max-width: 860px;
+    padding: 0 15px;
+}
+
+header.post-header .header-wrap {
+    padding: 0 15px;
+}
+
 h1, h2, h3 {
     letter-spacing: -1px;
     padding: 0;
