@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu|Open+Sans|Cormorant+Garamond');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Ubuntu|Open+Sans');
 html, body { height: 100%; }
 
 /* FONTS */
@@ -113,7 +113,7 @@ h1 {
 h2 {
     font-size: 150%;
     font-weight: 300;
-    margin: 10px 0 -15px 0;
+    margin: 35px 0 -15px 0;
 }
 
 
@@ -262,12 +262,12 @@ figure img {
 }
 
 pre {
-    font-family: 'Ubuntu Mono', Courier, monospace;
+    font-family: 'Roboto Mono', Courier, monospace;
     line-height: 1.2;
 }
 
 code {
-    font-family: 'Ubuntu Mono', Courier, monospace;
+    font-family: 'Roboto Mono', Courier, monospace;
     font-size: .85rem;
     background: #F0F0F0;
     line-height: inherit;
