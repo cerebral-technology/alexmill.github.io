@@ -41,13 +41,7 @@
         </script>
         <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
         {% endif %}
-        
-        {% if page.syntax or page.jupyter  %}
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/github-gist.min.css">
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-        {% endif %}
-
+        {% if page.syntax or page.jupyter  %}{% include syntax-highlight.html %}{% endif %}
         {% if page.head %} {{ page.head }} {% endif %}
 
         {% if page.css %}<style>
