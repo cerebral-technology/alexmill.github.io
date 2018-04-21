@@ -341,7 +341,7 @@ This allowed me to simply take the predictions from my *daily* model and allocat
 
 ## Putting it all together
 
-After getting all these pieces in place, the last step was to train my final models and make my test predictions. As mentioned above, I used sample weights in my loss function. I also incorporated L2 regularization on my model coefficients, to help prevent overfitting . This required me to do some cross-validation to find the optimal regularization penalty (again, see my companion post for technical details). In the end, my final model parameters were trained by taking the $\lambda$ values found from 10-fold cross-validation and minimizing the following objective function: 
+After getting all these pieces in place, the last step was to train my final models and make my test predictions. As mentioned above, I used sample weights in my loss function. I also incorporated L2 regularization on my model coefficients to help prevent overfitting. (This step probably didn't make a huge difference in the challenge; my guess is I would have won without any regularization.) This required me to do some cross-validation to find the optimal regularization penalty (again, see my [companion post for technical details](https://alex.miller.im/posts/linear-model-custom-loss-function-regularization-python/)). In the end, my final model parameters were trained by taking the $\lambda$ values found from 10-fold cross-validation and minimizing the following objective function: 
 
 $$ y_i = X_i\beta $$
 
