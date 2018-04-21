@@ -75,7 +75,7 @@ This left me with the rest of the internet to scour for variables that would hel
 
 ## Model Exploration
 
-Since we only had around 350 total days of training data, my first inclination was to use a simple linear model. While fancy methods like neural networks have received a lot of attention lately, I knew from experience and a talk by Andrew Ng that deep learning models really only show their true value when trained on massive amounts of data.
+Since we only had around 350 total days of training data, my first inclination was to use a simple linear model. While fancy methods like neural networks have received a lot of attention lately, I knew from experience that deep learning models really only show their true value when trained on massive amounts of data. Andrew Ng gave a talk on this subject, with a slide that summarizes an important point:
 
 
 
