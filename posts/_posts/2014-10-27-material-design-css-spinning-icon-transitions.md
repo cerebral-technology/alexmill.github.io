@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "Material Design CSS Animations: Spinning Icon Transitions"
-categories: blog
+categories: ["blog", "technical"]
 author: "Alex Miller"
-meta:
+meta: "Pure HTML5/CSS3 example of Google's fancy material design spinning icon effect. No Javascript required!"
 thumbnail: /img/mdIconsThumbnail.jpg
-description: "Pure HTML5/CSS3 example of Google's fancy material design spinning icon effect. No Javascript required!"
 tags: template
 source: default
 css: "#gfy-embed {margin-bottom: -17px;margin-left: 13px;} .md-preview .button{background-color:#db4437;height:56px;width:56px;border:none;border-radius:50%;box-shadow:0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);box-sizing:content-box;cursor:default;outline:0;padding:0;position:relative;-webkit-transform:scale(1) rotate(360deg);transform:scale(1) rotate(360deg);-webkit-transition:-webkit-transform 150ms cubic-bezier(.4,0,1,1);transition:transform 150ms cubic-bezier(.4,0,1,1)}.md-preview .button.hover{}.md-preview .md-icon{background-size:24px;display:block;height:24px;margin:auto;width:24px}.md-preview .first-icon,.md-preview .second-icon{left:0;margin-left:16px;margin-top:16px;position:absolute;top:0;-webkit-transition:all .2s cubic-bezier(.4,0,.2,1);transition:all .2s cubic-bezier(.4,0,.2,1)}.md-preview .button.hover .first-icon,.md-preview .second-icon{opacity:0;-webkit-transform:rotate(225deg);transform:rotate(225deg)}.md-preview .button.hover .second-icon{opacity:1;visibility:visible;-webkit-transform:rotate(360deg);transform:rotate(360deg)}.slomo .button{background-color:#db4437;height:56px;width:56px;border:none;border-radius:50%;box-shadow:0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);box-sizing:content-box;cursor:default;outline:0;padding:0;position:relative;-webkit-transform:scale(1) rotate(360deg);transform:scale(1) rotate(360deg);-webkit-transition:-webkit-transform 1.5s cubic-bezier(.4,0,1,1);transition:transform 1.5s cubic-bezier(.4,0,1,1)}.slomo .button.hover{}.slomo .md-icon{background-size:24px;display:block;height:24px;margin:auto;width:24px}.slomo .first-icon,.slomo .second-icon{left:0;margin-left:16px;margin-top:16px;position:absolute;top:0;-webkit-transition:all 2s cubic-bezier(.4,0,.2,1);transition:all 2s cubic-bezier(.4,0,.2,1)}.slomo .button.hover .first-icon,.slomo .second-icon{opacity:0;-webkit-transform:rotate(225deg);transform:rotate(225deg)}.slomo .button.hover .second-icon{opacity:1;visibility:visible;-webkit-transform:rotate(360deg);transform:rotate(360deg)}.interprev{text-align: center;}.interprev .button{background-color:#db4437;height:56px;width:56px;border:none;border-radius:50%;box-shadow:0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);box-sizing:content-box;cursor:pointer;outline:0;padding:0;position:relative;-webkit-transform:scale(1) rotate(360deg);transform:scale(1) rotate(360deg);-webkit-transition:-webkit-transform 150ms cubic-bezier(.4,0,1,1);transition:transform 150ms cubic-bezier(.4,0,1,1)}.interprev .button:hover{box-shadow:0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);-webkit-transition:box-shadow 150ms cubic-bezier(0,0,.2,1);transition:box-shadow 150ms cubic-bezier(0,0,.2,1)}.interprev .md-icon{background-size:24px;display:block;height:24px;margin:auto;width:24px}.interprev .first-icon,.interprev .second-icon{left:0;margin-left:16px;margin-top:16px;position:absolute;top:0;-webkit-transition:all .2s cubic-bezier(.4,0,.2,1);transition:all .2s cubic-bezier(.4,0,.2,1)}.interprev .button:hover .first-icon,.interprev .second-icon{opacity:0;-webkit-transform:rotate(225deg);transform:rotate(225deg)}.interprev .button:hover .second-icon{opacity:1;visibility:visible;-webkit-transform:rotate(360deg);transform:rotate(360deg)}"
@@ -16,7 +15,7 @@ Google has done an excellent job documenting and sharing their [Material Design]
 Several of Google's best icon transitions have been meticulously designed:
 
 <div style="text-align:center;">
-    <iframe id="gfy-embed" src="http://gfycat.com/ifr/OddballScalyGuppy" frameborder="0" scrolling="no" width="150" height="150" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
+    <div style='position:relative;padding-bottom:54%'><iframe src='https://gfycat.com/ifr/OddballScalyGuppy' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0' allowfullscreen></iframe></div>
     <br/>
     <a href="http://www.google.com/design/spec/animation/delightful-details.html" style="text-decoration: none; color: rgba(0,0,0,.5);">source</a>
 </div>
@@ -126,7 +125,7 @@ This transition isn't as fancy as Google's custom transitions, but it is still a
 </div>
 -->
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/alexpmil/9Lwtw9vy/1/embedded/html,css,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<script async src="//jsfiddle.net/alexpmil/9Lwtw9vy/1/embed/html,css,result/dark/"></script>
 
 
 
