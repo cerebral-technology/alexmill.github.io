@@ -287,6 +287,10 @@ pre code {
     font-size: .85rem;
 }
 
+.MJXc-display {
+    overflow-x: scroll !important;
+}
+
 .footer-accent {
     background-color: #A80532;
     width: 100%;
