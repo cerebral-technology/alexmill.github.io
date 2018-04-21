@@ -23,17 +23,15 @@
         <title>{% if page.title_tag %}{{ page.title_tag }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
         <meta name="viewport" content="width=device-width,minimum-scale=1">
         <meta name="description" content="{% if page.meta %}{{ page.meta | xml_escape }}{% elsif page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description }}{% endif %}" />
+        <meta property="og:description" content="{% if page.meta %}{{ page.meta | xml_escape }}{% elsif page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description }}{% endif %}" />
         
         {% if page.short_title %}
         <meta property="og:title" content="{{ page.short_title | xml_escape }}" />
         {% else %}
         <meta property="og:title" content="{{ page.title | xml_escape }}" />
         {% endif %}
-        
-        <meta name="og:description" content="{% if page.meta %}{{ page.meta | xml_escape }}{% elsif page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description }}{% endif %}" />
-        
         {% if page.hero_image %}
-        <meta property="og:image" content="{{ page.hero_image }}">
+        <meta property="og:image" content="{{ page.hero_image }}" />
         {% endif %}
         
         <link rel="shortcut icon" href="/img/favicon.ico">
