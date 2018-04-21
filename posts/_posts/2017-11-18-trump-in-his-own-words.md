@@ -2,7 +2,7 @@
 layout: post
 title: "Trump, in his own words"
 meta: "A data-driven look at Trump’s changing priorities over the course of his 2016 presidential campaign"
-hero: https://cdn-images-1.medium.com/max/1100/1*knlHwv0Vxg5SDZaQyurp-Q.jpeg
+hero_image: https://cdn-images-1.medium.com/max/1100/1*knlHwv0Vxg5SDZaQyurp-Q.jpeg
 categories: ["blog", "medium"]
 author: "Alex Miller"
 source: https://towardsdatascience.com/trump-in-his-own-words-62af05ad76d4
