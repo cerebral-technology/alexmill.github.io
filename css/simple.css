@@ -353,5 +353,9 @@ blockquote p {
         display: block;
         max-width: 100%;
     }
+    
+    blockquote {
+        margin: 0 0 0 -20px;
+    }
 
 }
