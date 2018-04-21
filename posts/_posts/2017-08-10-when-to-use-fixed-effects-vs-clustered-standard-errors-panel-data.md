@@ -5,7 +5,6 @@ title: When to use fixed effects vs. clustered standard errors for linear regres
 categories: ["blog", "medium"]
 author: "Alex Miller"
 source: default
-syntax: false
 date: 2017-08-10
 ---
 
@@ -24,6 +23,6 @@ A classic example is if you have many observations for a panel of firms across t
 
 **Some illustrative examples:**
 
-- If you have experimental data where you assign treatments randomly, but make repeated observations for each individual/group over time, you would be justified in omitting fixed effects, but would want to cluster your SEs.
+- If you have experimental data where you assign treatments randomly, but make repeated observations for each individual/group over time, you would be justified in omitting fixed effects (because randomization should have eliminated any correlations with inherent characteristics of your individuals/groups), but would want to cluster your SEs (because one person's data at time *t* is probably influenced by their data at time *t-1*).
 
 - Alternatively, if you have many observations per group for non-experimental data, but each within-group observation can be considered as an i.i.d. draw from their larger group (e.g., you have observations from many schools, but each group is a randomly drawn subset of students from their school), you would want to include fixed effects but would not need clustered SEs.
