@@ -2,7 +2,8 @@
 layout: post
 title: "Fitting Linear Models with Custom Loss Functions and Regularization in Python"
 short_title: "Fitting Linear Models with Custom Loss Functions in Python"
-categories: ["blog"]
+meta: "When SciKit-Learn doesn't have the model you want, you may have to improvise."
+categories: ["blog", "technical"]
 author: "Alex Miller"
 source: default
 jupyter: true
@@ -18,7 +19,7 @@ While I highly recommend searching through existing packages to see if the model
 
 ## Python Code
 
-I'll be using a Jupyter Notebook (running Python 3) to build my model. If you're reading this on my website, you can find the raw .ipynb file linked here; you can also run a fully-exectuable version of the notebook the the Binder platform by clicking here.
+I'll be using a Jupyter Notebook (running Python 3) to build my model. If you're reading this on my website, you can find [the raw .ipynb file linked here](https://github.com/alexmill/website_notebooks/blob/master/custom-loss-function-regularization-python.ipynb); you can also run a fully-exectuable version of the notebook the the Binder platform by [clicking here](https://mybinder.org/v2/gh/alexmill/website_notebooks/master?filepath=custom-loss-function-regularization-python.ipynb)
 
 We'll start with some basic imports:
 
@@ -262,7 +263,7 @@ loss_function(np.matmul(X,beta_hat), Y)
 
 ## Incorporating Regularization into Model Fitting
 
-The process described above fits a simple linear model to the data provided by directly minimizing the a custom loss function (MAPE, in this case). However, in many machine learning problems, you will want to [regularize](https://en.wikipedia.org/wiki/Regularization_(mathematics) your model parameters to prevent overfitting. In this notebook, I'm going to walk through the process of incorporating L2 regularization, which amounts to penalizing your model's parameters by the square of their magnitude. 
+The process described above fits a simple linear model to the data provided by directly minimizing the a custom loss function (MAPE, in this case). However, in many machine learning problems, you will want to [regularize](https://en.wikipedia.org/wiki/Regularization_(mathematics)) your model parameters to prevent overfitting. In this notebook, I'm going to walk through the process of incorporating L2 regularization, which amounts to penalizing your model's parameters by the square of their magnitude. 
 
 In precise terms, rather than minimizing our loss function directly, we will augment our loss function by adding a squared penalty term on our model's coefficients. With L2 regularization, our new loss function becomes:
 
@@ -463,13 +464,6 @@ Just to make sure things are in the realm of common sense, it's never a bad idea
 # Predicted Y vs. observed Y
 plt.scatter(l2_mape_model.predict(X), Y)
 ```
-
-
-
-
-    <matplotlib.collections.PathCollection at 0x2af61fcd89e8>
-
-
 
 
 <figure>
