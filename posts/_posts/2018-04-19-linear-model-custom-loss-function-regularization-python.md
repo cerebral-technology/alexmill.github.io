@@ -7,11 +7,10 @@ categories: ["blog", "technical"]
 author: "Alex Miller"
 source: default
 jupyter: true
-css: ""
 ---
 
 
-As part of a predictive model competition I participated in earlier this month, I found myself trying to accomplish a peculiar task. The challenge organizers were going to use "mean absolute percentage error" (MAPE) as their criterion for model evaluation. Since this is not a standard loss function built into most software, I decided to write my own code to train a model that would use the MAPE in its objective function. 
+As part of a [predictive model competition I participated in earlier this month](https://alex.miller.im/posts/applied-machine-learning-conference-best-predictive-model/), I found myself trying to accomplish a peculiar task. The challenge organizers were going to use "mean absolute percentage error" (MAPE) as their criterion for model evaluation. Since this is not a standard loss function built into most software, I decided to write my own code to train a model that would use the MAPE in its objective function. 
 
 I started by searching through the SciKit-Learn documentation on [linear models](http://scikit-learn.org/stable/modules/classes.html#module-sklearn.linear_model) to see if the model I needed has already been developed somewhere. I thought that the `sklearn.linear_model.RidgeCV` class would accomplish what I wanted (MAPE minimization with L2 regularization), but I could not get the `scoring` argument (which supposedly lets you pass a custom loss function to the model class) to behave as I expected it to.
 
@@ -19,7 +18,7 @@ While I highly recommend searching through existing packages to see if the model
 
 ## Python Code
 
-I'll be using a Jupyter Notebook (running Python 3) to build my model. If you're reading this on my website, you can find [the raw .ipynb file linked here](https://github.com/alexmill/website_notebooks/blob/master/custom-loss-function-regularization-python.ipynb); you can also run a fully-exectuable version of the notebook the the Binder platform by [clicking here](https://mybinder.org/v2/gh/alexmill/website_notebooks/master?filepath=custom-loss-function-regularization-python.ipynb)
+I'll be using a Jupyter Notebook (running Python 3) to build my model. If you're reading this on my website, you can find [the raw .ipynb file linked here](https://github.com/alexmill/website_notebooks/blob/master/custom-loss-function-regularization-python.ipynb); you can also run a fully-exectuable version of the notebook on Binder by [clicking here](https://mybinder.org/v2/gh/alexmill/website_notebooks/master?filepath=custom-loss-function-regularization-python.ipynb)
 
 We'll start with some basic imports:
 
