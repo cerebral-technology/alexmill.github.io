@@ -13,6 +13,17 @@
         <title>{% if page.title_tag %}{{ page.title_tag }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
         <meta name="viewport" content="width=device-width,minimum-scale=1">
         
+        {% if page.hero_image %}
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="og:image" content="{{ page.hero_image }}" />
+        <meta name="twitter:image" content="{{ page.hero_image }}" />
+        {% else %}
+        <meta name="twitter:card" content="summary" />
+        {% endif %}
+        
+        <meta name="twitter:site" content="@alexpmil">
+        <meta name="twitter:creator" content="@alexpmil">
+        
         {% if page.short_title %}
         <meta property="og:title" content="{{ page.short_title | xml_escape }}" />
         <meta name="twitter:title" content="{{ page.short_title | xml_escape }}" />
@@ -35,10 +46,6 @@
         <meta name="twitter:description" content="{{ site.description | xml_escape }}" />
         {% endif %}
         
-        {% if page.hero_image %}
-        <meta property="og:image" content="{{ page.hero_image }}" />
-        <meta name="twitter:image" content="{{ page.hero_image }}" />
-        {% endif %}
         
         <link rel="shortcut icon" href="/img/favicon.ico">
         <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'/index.html','/' }}" />
