@@ -227,6 +227,7 @@ body.category .post-li a div img {
 }
 
 .provider-text {
+    font-size: .75rem;
     color: rgba(0,0,0,.5);
 }
 
