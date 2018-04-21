@@ -4,6 +4,6 @@ markdown: kramdown
 kramdown:
   input: GFM
 description: "Alex Miller is a doctoral candidate in Information Systems at the Wharton School's department of Operations, Information, &amp; Decisions."
-url: http://alex.miller.im
+url: https://alex.miller.im
 permalink: /posts/:title/
 github_username: alexmill
