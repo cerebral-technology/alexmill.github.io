@@ -36,7 +36,7 @@ from sklearn.preprocessing import StandardScaler
 
 For the purposes of this walkthrough, I'll need to generate some raw data. Presumably, if you've found yourself here, you will want to substitute this step with one where you load your own data. 
 
-I am simulating a scenario where I have 100 observations on 10 features (9 features and an intercept). The "true" function will simply be a linear function of these features: $y=X\beta$. However, we want to simulate observing these data with noise. Because I'm mostly going to be focusing on the "mean absolute percentage error" loss function, I want my noise to be on an exponential scale, which is why I am taking exponents/logs below:
+I am simulating a scenario where I have 100 observations on 10 features (9 features and an intercept). The "true" function will simply be a linear function of these features: $y=X\beta$. However, we want to simulate observing these data with noise. Because I'm mostly going to be focusing on the MAPE loss function, I want my noise to be on an exponential scale, which is why I am taking exponents/logs below:
 
 $$y = e^{log(X\beta) + \varepsilon}, \; \varepsilon \sim \mathcal{N}(0, 0.2)$$
 
