@@ -3,8 +3,7 @@ layout: post
 title: "How I Won the Best Predictive Model Challenge at the Applied Machine Learning Conference"
 short_title: "How I Won the AMLC's Best Predictive Model Challenge"
 title_tag: "How I Won the AMLC's Best Predictive Model Challenge"
-meta: "A breakdown of the model and strategies I used to win Charlottesvill
-e's 2018 Open Data Challenge"
+meta: "A breakdown of the model and strategies I used to win Charlottesville's 2018 Open Data Challenge"
 categories: ["blog", "technical"]
 hero_image: "https://alex.miller.im/img/open-data-check.jpg"
 author: "Alex Miller"
