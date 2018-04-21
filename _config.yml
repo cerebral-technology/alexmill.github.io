@@ -3,7 +3,6 @@ title: "Alex Miller's website"
 markdown: kramdown
 kramdown:
   input: GFM
-highlighter: rouge
 description: "Alex Miller is a doctoral candidate in Information Systems at the Wharton School's department of Operations, Information, &amp; Decisions."
 url: http://alex.miller.im
 permalink: /posts/:title/
