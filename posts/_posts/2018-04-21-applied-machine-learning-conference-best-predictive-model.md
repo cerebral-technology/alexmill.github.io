@@ -4,6 +4,7 @@ title: "How I Won the Best Predictive Model Challenge at the Applied Machine Lea
 short_title: "How I Won the AMLC's Best Predictive Model Challenge"
 meta: "A breakdown of the model and strategies I used to win Charlottesville's 2018 Open Data Challenge"
 categories: ["blog", "technical"]
+hero: "https:/alex.miller.im/img/open-data-check.jpg"
 author: "Alex Miller"
 source: default
 jupyter: true
@@ -14,9 +15,6 @@ A few weeks ago, I saw [a tweet from Data Science Renee](https://twitter.com/Bec
 
 While I was terribly wrong about the first of these judgments, the second one turned out to be true. Last week, I made a quick trip down to the AMLC in Charlottesville, where I accepted a pretty cool prize for submitting the best predictive model (giant checks FTW)  and gave a 3 minute overview of my modeling methodology ([slides for that presentation here](https://github.com/alexmill/alexmill.github.io/blob/master/files/AlexMiller_BestModelSlides.pdf)). Since 3 minutes was barely enough time to sneeze, I wanted to write a post with some more detail about the model I used to win the challenge. If you want to look my code directly, I posted [my files on GitHub here](https://github.com/alexmill/amlcville-open-data-challenge); I also made a [Jupyter notebook walkthrough](https://github.com/alexmill/amlcville-open-data-challenge/blob/master/NotebookWalkthrough.ipynb) that provides a little more hands-on description of the material covered in this blog post.
 
-<figure>
-    <img src="https://alex.miller.im/img/open-data-check.jpg">
-</figure>
 
 ## Context and Problem Setup
 
