@@ -20,7 +20,7 @@
         </script>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+        <title>{% if page.title_tag %}{{ page.title_tag }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
         <meta name="viewport" content="width=device-width,minimum-scale=1">
         <meta name="description" content="{% if page.meta %}{{ page.meta | xml_escape }}{% elsif page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description }}{% endif %}" />
         
