@@ -78,9 +78,7 @@ Since we only had around 350 total days of training data, my first inclination w
 
 That being said, given how easy it is to train fancy models with modern software, I wanted to at least try a model with lots of flexibility. I ended up trying a random regression forest, since I've had success training random forests in the past. During my model exploration phase, I randomly split my training data 50-50. After spending some time optimizing both the random forest model and my simple linear model on half the data, I evaluated their out-of-sample prediction error on the holdout data. While it wasn't a big signal to go on, my linear model ended up out beating the random forest by 1 percentage point. Ultimately, I fell back on my intuition about leaning on my "prior" when training on such a small dataset, and decided to move forward with the linear model.
 
-In the end, I trained a linear model on the predictors described above. I also included a few interaction terms between the fourth quarter indicator and the weather variables and lag variable. I did this mainly because I could tell from eye-balling the time series (shown above) that there was less volatility in the last quarter, which suggested that the weather and lag variables might have a differential impact on predictions toward the end of the year. 
-
-The functional form of my model ended up being nothing more complicated that the classic your typical linear regression function:
+In the end, I trained a linear model on the predictors described above. I also included a few interaction terms between the fourth quarter indicator and the weather variables and lag variable. I did this mainly because I could tell from eye-balling the time series (shown above) that there was less volatility in the last quarter, which suggested that the weather and lag variables might have a differential impact on predictions toward the end of the year. The functional form of my model ended up being nothing more complicated than your typical linear regression function:
 
 $$ y_i = X_i\beta $$
 
