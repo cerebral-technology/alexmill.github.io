@@ -9,7 +9,7 @@ syntax: false
 date: 2017-08-10
 ---
 
-I found myself writing a long-winded answer to [a question on StatsExchange](https://stats.stackexchange.com/q/185378/89253) about the difference between using *fixed effects* and *clustered* errors when running linear regressions on panel-data. I'll describe the high-level distinction between the two strategies by first explaining what it is they seek to accomplish. Then I'll use an explicit example to provide some context of when you might use one vs. the other. 
+I found myself writing a long-winded answer to [a question on StatsExchange](https://stats.stackexchange.com/q/185378/89253) about the difference between using *fixed effects* and *clustered* errors when running linear regressions on panel data. I'll describe the high-level distinction between the two strategies by first explaining what it is they seek to accomplish. Then I'll use an explicit example to provide some context of when you might use one vs. the other. 
 
 It's important to realize that these methods are neither mutually exclusive nor mutually reinforcing. It is perfectly acceptable to use fixed effects and clustered errors at the same time or independently from each other. Which approach you use should be dictated by the structure of your data and how they were gathered.
 
