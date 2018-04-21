@@ -125,7 +125,6 @@ This transition isn't as fancy as Google's custom transitions, but it is still a
 </div>
 -->
 
-<script async src="//jsfiddle.net/alexpmil/9Lwtw9vy/1/embed/html,css,result/dark/"></script>
-
+<iframe width="100%" height="300" src="//jsfiddle.net/alexpmil/9Lwtw9vy/1/embedded/html,css,result/dark/" allowpaymentrequest allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
