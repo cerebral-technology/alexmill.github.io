@@ -26,8 +26,8 @@
         
         {% if page.short_title %}
         <meta property="og:title" content="{{ page.short_title | xml_escape }}" />
-        { % else %}
-        <meta property="og:title" content="{{ page.title }}" />
+        {% else %}
+        <meta property="og:title" content="{{ page.title | xml_escape }}" />
         {% endif %}
         
         <meta name="og:description" content="{% if page.meta %}{{ page.meta | xml_escape }}{% elsif page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description }}{% endif %}" />
