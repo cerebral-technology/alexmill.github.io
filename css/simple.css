@@ -290,10 +290,6 @@ pre code {
     font-size: .85rem;
 }
 
-.MJXc-display {
-    overflow-x: scroll !important;
-    padding: 3px 0 !important;
-}
 
 .footer-accent {
     background-color: #A80532;
@@ -310,6 +306,10 @@ blockquote {
 
 blockquote p {
     margin: 0;
+}
+
+li blockquote {
+    margin: 0 0 0 -20px;
 }
 
 .footer {
@@ -362,8 +362,9 @@ blockquote p {
         max-width: 100%;
     }
     
-    blockquote {
-        margin: 0 0 0 -20px;
-    }
+    .MJXc-display {
+    overflow-x: scroll !important;
+    padding: 3px 0 !important;
+}
 
 }
