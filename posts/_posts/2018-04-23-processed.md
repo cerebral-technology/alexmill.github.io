@@ -1,12 +1,12 @@
 ---
-author: ['"Alex Miller"']
-categories: ['["blog", "technical"]']
-jupyter: ['true']
-layout: [post]
-meta: ['"When SciKit-Learn doesn''t have the model you want, you may have to improvise."']
-short_title: ['"Fitting Linear Models with Custom Loss Functions in Python"']
-source: [default]
-title: ['"Fitting Linear Models with Custom Loss Functions and Regularization in Python"']
+author: "Alex Miller"
+categories: ["blog", "technical"]
+jupyter: 'true'
+layout: post
+meta: "When SciKit-Learn doesn''t have the model you want, you may have to improvise."
+short_title: "Fitting Linear Models with Custom Loss Functions in Python"
+source: default
+title: "Fitting Linear Models with Custom Loss Functions and Regularization in Python"
 ---
 
 
