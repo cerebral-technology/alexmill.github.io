@@ -1,6 +1,6 @@
 ---
 author: "Alex Miller"
-categories: ["blog", "technical"]
+categories:
 jupyter: 'true'
 layout: post
 meta: "When SciKit-Learn doesn''t have the model you want, you may have to improvise."
