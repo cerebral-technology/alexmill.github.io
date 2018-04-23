@@ -30,26 +30,29 @@ from sklearn.preprocessing import StandardScaler
 <img alt="LaTeX Equation: $y = e^{log(X\beta) + \varepsilon}, \; \varepsilon \sim \mathcal{N}(0, 0.2)$" src="http://latex.codecogs.com/png.latex?\large&amp;space;y&amp;space;=&amp;space;e^{log(X\beta)&amp;space;+&amp;space;\varepsilon},&amp;space;\;&amp;space;\varepsilon&amp;space;\sim&amp;space;\mathcal{N}(0,&amp;space;0.2)"/>
 </figure>
 </p>
-<pre><code class="python"># Generate predictors
+
+<pre><code><em># Generate predictors</em>
 X_raw = np.random.random(100*9)
 X_raw = np.reshape(X_raw, (100, 9))
 
-# Standardize the predictors
+<em># Standardize the predictors</em>
 scaler = StandardScaler().fit(X_raw)
 X = scaler.transform(X_raw)
 
-# Add an intercept column to the model.
+<em># Add an intercept column to the model.</em>
 X = np.abs(np.concatenate((np.ones((X.shape[0],1)), X), axis=1))
 
-# Define my "true" beta coefficients
+<em># Define my "true" beta coefficients</em>
 beta = np.array([2,6,7,3,5,7,1,2,2,8])
 
-# Y = Xb
+<em># Y = Xb</em>
 Y_true = np.matmul(X,beta)
 
-# Observed data with noise
+<em># Observed data with noise</em>
 Y = Y_true*np.exp(np.random.normal(loc=0.0, scale=0.2, size=100))
 </code></pre>
+
+
 <h2>Define your custom loss function</h2>
 <p>I am mainly going to focus on the MAPE loss function in this notebook, but this is where you would substitute in your own loss function (if applicable). MAPE is defined as follows:</p>
 <h3>Mean Absolute Percentage Error (MAPE)</h3>
