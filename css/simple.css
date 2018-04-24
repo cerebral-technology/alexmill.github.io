@@ -274,6 +274,10 @@ figure img {
     max-width: 100%;
 }
 
+div.post > div {
+    overflow-x: scroll;
+}
+
 pre {
     font-family: 'Roboto Mono', Courier, monospace;
     line-height: 1.2;
