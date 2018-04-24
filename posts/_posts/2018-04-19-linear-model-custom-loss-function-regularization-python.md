@@ -476,7 +476,6 @@ plt.scatter(l2_mape_model.predict(X), Y)
 <br/>
 
 > In most applications, your features will be measured on many different scales; however you'll notice in the loss function described above, each $\beta_k$ parameter is being penalized by the same amount ($\lambda$). Best practice when using L2 regularization is to **standardize your feature matrix** (subtract the mean off of each column and divide the result by the column standard deviation). This will ensure that all features are on approximately the same scale and that the regularization parameter has an equal impact on all $\beta_k$ coefficients.
-
 > I standardized my data at the very beginning of this notebook, but typically you will need to work standardization into your data pipeline. Use `sklearn.preprocessing.StandardScaler` and keep track of your intercept when going through this process!
 
 ## Cross Validation to Identify Optimal Regularization Parameter
