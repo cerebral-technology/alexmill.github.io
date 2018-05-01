@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "A Tale of Math &amp; Art: Creating the Fourier Series Spinning Circles Visualization"
-short_title: "Creating the Fourier Series Spinning Circles Visualization"
+title: "A Tale of Math &amp; Art: Creating the Fourier Series Harmonic Circles Visualization"
+short_title: "Creating the Fourier Series Harmonic Circles Visualization"
 meta: "I decided to take a stab at recreating a popular Fourier visualization in Python/Matplotlib."
 hero: /img/fourier-hero.png
 categories: ["blog"]
