@@ -11,22 +11,20 @@ source: default
 syntax: true
 ---
 
-## The Problem: feedfinder.py was not written for Python 3
+I have been working on a project where I need to extract RSS feeds from various blogs and news websites. Essentially, I want to pass a URL to my API and have it return the RSS feed associated with that domain. 
 
-It turns out I wasn't the first person to come across this problem. Aaron Swartz (RIP) wrote his own script called [feedfinder.py](http://www.aaronsw.com/2002/feedfinder/) which does this exact same thing. Problem is: this was written for Python 2.
+As with most things, I wasn't the first person to come across this problem. Aaron Swartz (RIP) wrote his own script called [feedfinder.py](http://www.aaronsw.com/2002/feedfinder/) which does this exact same thing. However, a major shortcoming of this script is that it's fairly dated and written for Python 2. After fighting a losing battle trying to deal with Python's 2to3 conversion tool, I realized I'd already wasted more time trying to port this old script than it would take me to write a new one.
 
-After fighting a losing battle trying to deal with Python's 2to3 conversion tool, I realized I'd already wasted more time trying to port this old script than it would take me to write a new one.
+## My Solution: Python 3 function for extracting RSS feeds from URLs
 
-## The Solution: Write my own script!
-
-I wanted my script to be accruate and thorough, which (for me) means:
+I wanted my function to be *accruate* and *thorough*, which (for me) means:
 
 1. I wouldn't miss any legitimate feeds that were on a website and
 2. I wouldn't include any links that were not valid RSS feeds.
 
 This script does have some non-standard dependencies, both of which you are probably already using if you're doing anything related to web scraping or feed reading: [feedparser](https://pypi.python.org/pypi/feedparser) and [beautifulsoup4](https://pypi.python.org/pypi/beautifulsoup4).
 
-Here's the solution I came up with:
+I've copied my solution below, which you should be able to interpret fairly easily. I start by looking for `<link>` tags pointing to RSS feeds, then parse the page looking for any `a href`s pointing to links with "xml", "rss", or "feed" in the URL. Finally, I use `feedparser` to go through the list of possible RSS feeds and validate them to ensure that the links point to valid feeds.
 
 ```python
 #!/usr/local/bin/python3.3
