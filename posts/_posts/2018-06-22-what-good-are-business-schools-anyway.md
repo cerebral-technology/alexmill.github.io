@@ -4,7 +4,7 @@ title: What good are business schools anyway?
 meta: "Rather than bulldozing these chapels of capitalism, we should be taking a page out of their books by learning how to replicate their best features and improving their worst."
 categories: ["blog", "medium", "opinion"]
 author: "Alex Miller"
-source: default
+source: https://medium.com/s/story/what-good-are-business-schools-anyway-f5c399d916ef
 hero_image: https://cdn-images-1.medium.com/max/1100/1*Mtnks1PYQc06eUxYCZiojQ.jpeg
 date: 2018-06-22
 ---
