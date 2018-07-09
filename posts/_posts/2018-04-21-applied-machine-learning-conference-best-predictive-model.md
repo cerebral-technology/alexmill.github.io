@@ -348,4 +348,4 @@ To conclude, I think there are few important lessons that I took away from this 
 - **Exercise discipline during the model exploration phase** by holding out a chunk of data and not peeking at it until you are ready to make your final model choice
 - **Above all, use common sense.** Making sure my traffic model passed the eye-ball test (i.e., that my predictions actually looked like the underlying data) was a really important goal of mine. Also, realizing that Christmas was in my test set and would probably exhibit some odd behavior is not something statistics could have told me. 
 
-I want to give a big thanks to Astraea Inc. and the Applied Machine Learning Conference for putting this challenge on. While it took *way* longer than I had anticipated, it was a great experience that ened up paying off in the end!
+I want to give a big thanks to Astraea Inc. and the Applied Machine Learning Conference for putting this challenge on. While it took *way* longer than I had anticipated, it was a great experience that ended up paying off in the end!
